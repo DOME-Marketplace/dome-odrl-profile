@@ -1,0 +1,252 @@
+{
+  "id": "string",
+  "href": "string",
+  "aristocraticTitle": "string",
+  "birthDate": "2023-10-30T08:29:31.874Z",
+  "countryOfBirth": "string",
+  "deathDate": "2023-10-30T08:29:31.874Z",
+  "familyName": "string",
+  "familyNamePrefix": "string",
+  "formattedName": "string",
+  "fullName": "string",
+  "gender": "string",
+  "generation": "string",
+  "givenName": "string",
+  "legalName": "string",
+  "location": "string",
+  "maritalStatus": "string",
+  "middleName": "string",
+  "nationality": "string",
+  "placeOfBirth": "string",
+  "preferredGivenName": "string",
+  "title": "string",
+  "contactMedium": [
+    {
+      "mediumType": "string",
+      "preferred": true,
+      "characteristic": {
+        "city": "string",
+        "contactType": "string",
+        "country": "string",
+        "emailAddress": "string",
+        "faxNumber": "string",
+        "phoneNumber": "string",
+        "postCode": "string",
+        "socialNetworkId": "string",
+        "stateOrProvince": "string",
+        "street1": "string",
+        "street2": "string",
+        "@baseType": "string",
+        "@schemaLocation": "string",
+        "@type": "string"
+      },
+      "validFor": {
+        "endDateTime": "2023-10-30T08:29:31.874Z",
+        "startDateTime": "2023-10-30T08:29:31.874Z"
+      },
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string"
+    }
+  ],
+  "creditRating": [
+    {
+      "creditAgencyName": "string",
+      "creditAgencyType": "string",
+      "ratingReference": "string",
+      "ratingScore": 0,
+      "validFor": {
+        "endDateTime": "2023-10-30T08:29:31.874Z",
+        "startDateTime": "2023-10-30T08:29:31.874Z"
+      },
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string"
+    }
+  ],
+  "disability": [
+    {
+      "disabilityCode": "string",
+      "disabilityName": "string",
+      "validFor": {
+        "endDateTime": "2023-10-30T08:29:31.874Z",
+        "startDateTime": "2023-10-30T08:29:31.874Z"
+      },
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string"
+    }
+  ],
+  "externalReference": [
+    {
+      "externalReferenceType": "string",
+      "name": "string",
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string"
+    }
+  ],
+  "individualIdentification": [
+    {
+      "identificationId": "string",
+      "identificationType": "string",
+      "issuingAuthority": "string",
+      "issuingDate": "2023-10-30T08:29:31.874Z",
+      "attachment": {
+        "id": "string",
+        "href": "string",
+        "attachmentType": "string",
+        "content": "string",
+        "description": "string",
+        "mimeType": "string",
+        "name": "string",
+        "url": "string",
+        "size": {
+          "amount": 1,
+          "units": "string"
+        },
+        "validFor": {
+          "endDateTime": "2023-10-30T08:29:31.874Z",
+          "startDateTime": "2023-10-30T08:29:31.874Z"
+        },
+        "@baseType": "string",
+        "@schemaLocation": "string",
+        "@type": "string",
+        "@referredType": "string"
+      },
+      "validFor": {
+        "endDateTime": "2023-10-30T08:29:31.874Z",
+        "startDateTime": "2023-10-30T08:29:31.874Z"
+      },
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string"
+    }
+  ],
+  "languageAbility": [
+    {
+      "isFavouriteLanguage": true,
+      "languageCode": "string",
+      "languageName": "string",
+      "listeningProficiency": "string",
+      "readingProficiency": "string",
+      "speakingProficiency": "string",
+      "writingProficiency": "string",
+      "validFor": {
+        "endDateTime": "2023-10-30T08:29:31.874Z",
+        "startDateTime": "2023-10-30T08:29:31.874Z"
+      },
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string"
+    }
+  ],
+  "otherName": [
+    {
+      "aristocraticTitle": "string",
+      "familyName": "string",
+      "familyNamePrefix": "string",
+      "formattedName": "string",
+      "fullName": "string",
+      "generation": "string",
+      "givenName": "string",
+      "legalName": "string",
+      "middleName": "string",
+      "preferredGivenName": "string",
+      "title": "string",
+      "validFor": {
+        "endDateTime": "2023-10-30T08:29:31.874Z",
+        "startDateTime": "2023-10-30T08:29:31.874Z"
+      },
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string"
+    }
+  ],
+  "partyCharacteristic": [
+    {
+      "name": "string",
+      "valueType": "string",
+      "value": "string",
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string"
+    }
+  ],
+  "relatedParty": [
+    {
+      "id": "string",
+      "href": "string",
+      "name": "string",
+      "role": "string",
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string",
+      "@referredType": "string"
+    }
+  ],
+  "skill": [
+    {
+      "comment": "string",
+      "evaluatedLevel": "string",
+      "skillCode": "string",
+      "skillName": "string",
+      "validFor": {
+        "endDateTime": "2023-10-30T08:29:31.874Z",
+        "startDateTime": "2023-10-30T08:29:31.874Z"
+      },
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string"
+    }
+  ],
+  "status": "initialized",
+  "taxExemptionCertificate": [
+    {
+      "id": "string",
+      "attachment": {
+        "id": "string",
+        "href": "string",
+        "attachmentType": "string",
+        "content": "string",
+        "description": "string",
+        "mimeType": "string",
+        "name": "string",
+        "url": "string",
+        "size": {
+          "amount": 1,
+          "units": "string"
+        },
+        "validFor": {
+          "endDateTime": "2023-10-30T08:29:31.874Z",
+          "startDateTime": "2023-10-30T08:29:31.874Z"
+        },
+        "@baseType": "string",
+        "@schemaLocation": "string",
+        "@type": "string",
+        "@referredType": "string"
+      },
+      "taxDefinition": [
+        {
+          "id": "string",
+          "name": "string",
+          "taxType": "string",
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "@type": "string",
+          "@referredType": "string"
+        }
+      ],
+      "validFor": {
+        "endDateTime": "2023-10-30T08:29:31.874Z",
+        "startDateTime": "2023-10-30T08:29:31.874Z"
+      },
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string"
+    }
+  ],
+  "@baseType": "string",
+  "@schemaLocation": "string",
+  "@type": "string"
+}

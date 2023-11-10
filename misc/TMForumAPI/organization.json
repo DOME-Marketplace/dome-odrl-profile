@@ -1,0 +1,219 @@
+{
+  "isHeadOffice": true,
+  "isLegalEntity": true,
+  "name": "string",
+  "nameType": "string",
+  "organizationType": "string",
+  "tradingName": "string",
+  "contactMedium": [
+    {
+      "mediumType": "string",
+      "preferred": true,
+      "characteristic": {
+        "city": "string",
+        "contactType": "string",
+        "country": "string",
+        "emailAddress": "string",
+        "faxNumber": "string",
+        "phoneNumber": "string",
+        "postCode": "string",
+        "socialNetworkId": "string",
+        "stateOrProvince": "string",
+        "street1": "string",
+        "street2": "string",
+        "@baseType": "string",
+        "@schemaLocation": "string",
+        "@type": "string"
+      },
+      "validFor": {
+        "endDateTime": "2023-10-30T08:30:03.771Z",
+        "startDateTime": "2023-10-30T08:30:03.771Z"
+      },
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string"
+    }
+  ],
+  "creditRating": [
+    {
+      "creditAgencyName": "string",
+      "creditAgencyType": "string",
+      "ratingReference": "string",
+      "ratingScore": 0,
+      "validFor": {
+        "endDateTime": "2023-10-30T08:30:03.771Z",
+        "startDateTime": "2023-10-30T08:30:03.771Z"
+      },
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string"
+    }
+  ],
+  "existsDuring": {
+    "endDateTime": "2023-10-30T08:30:03.771Z",
+    "startDateTime": "2023-10-30T08:30:03.771Z"
+  },
+  "externalReference": [
+    {
+      "externalReferenceType": "string",
+      "name": "string",
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string"
+    }
+  ],
+  "organizationChildRelationship": [
+    {
+      "relationshipType": "string",
+      "organization": {
+        "id": "string",
+        "href": "string",
+        "name": "string",
+        "@baseType": "string",
+        "@schemaLocation": "string",
+        "@type": "string",
+        "@referredType": "string"
+      },
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string"
+    }
+  ],
+  "organizationIdentification": [
+    {
+      "identificationId": "string",
+      "identificationType": "string",
+      "issuingAuthority": "string",
+      "issuingDate": "2023-10-30T08:30:03.771Z",
+      "attachment": {
+        "id": "string",
+        "href": "string",
+        "attachmentType": "string",
+        "content": "string",
+        "description": "string",
+        "mimeType": "string",
+        "name": "string",
+        "url": "string",
+        "size": {
+          "amount": 1,
+          "units": "string"
+        },
+        "validFor": {
+          "endDateTime": "2023-10-30T08:30:03.771Z",
+          "startDateTime": "2023-10-30T08:30:03.771Z"
+        },
+        "@baseType": "string",
+        "@schemaLocation": "string",
+        "@type": "string",
+        "@referredType": "string"
+      },
+      "validFor": {
+        "endDateTime": "2023-10-30T08:30:03.771Z",
+        "startDateTime": "2023-10-30T08:30:03.771Z"
+      },
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string"
+    }
+  ],
+  "organizationParentRelationship": {
+    "relationshipType": "string",
+    "organization": {
+      "id": "string",
+      "href": "string",
+      "name": "string",
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string",
+      "@referredType": "string"
+    },
+    "@baseType": "string",
+    "@schemaLocation": "string",
+    "@type": "string"
+  },
+  "otherName": [
+    {
+      "name": "string",
+      "nameType": "string",
+      "tradingName": "string",
+      "validFor": {
+        "endDateTime": "2023-10-30T08:30:03.771Z",
+        "startDateTime": "2023-10-30T08:30:03.771Z"
+      },
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string"
+    }
+  ],
+  "partyCharacteristic": [
+    {
+      "name": "string",
+      "valueType": "string",
+      "value": "string",
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string"
+    }
+  ],
+  "relatedParty": [
+    {
+      "id": "string",
+      "href": "string",
+      "name": "string",
+      "role": "string",
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string",
+      "@referredType": "string"
+    }
+  ],
+  "status": "initialized",
+  "taxExemptionCertificate": [
+    {
+      "id": "string",
+      "attachment": {
+        "id": "string",
+        "href": "string",
+        "attachmentType": "string",
+        "content": "string",
+        "description": "string",
+        "mimeType": "string",
+        "name": "string",
+        "url": "string",
+        "size": {
+          "amount": 1,
+          "units": "string"
+        },
+        "validFor": {
+          "endDateTime": "2023-10-30T08:30:03.771Z",
+          "startDateTime": "2023-10-30T08:30:03.771Z"
+        },
+        "@baseType": "string",
+        "@schemaLocation": "string",
+        "@type": "string",
+        "@referredType": "string"
+      },
+      "taxDefinition": [
+        {
+          "id": "string",
+          "name": "string",
+          "taxType": "string",
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "@type": "string",
+          "@referredType": "string"
+        }
+      ],
+      "validFor": {
+        "endDateTime": "2023-10-30T08:30:03.772Z",
+        "startDateTime": "2023-10-30T08:30:03.772Z"
+      },
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string"
+    }
+  ],
+  "@baseType": "string",
+  "@schemaLocation": "string",
+  "@type": "string"
+}
