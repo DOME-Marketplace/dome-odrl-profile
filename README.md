@@ -1,5 +1,41 @@
-# dome-odrl-profile
+# ODRL Profile for DOME
 
-DOME Profile for Open Digital Rights Language (ODRL).
+## Draft release xx.xx.xxx
+
+### Version: 0.1
+
+### Editors:
+
+- Jörg Langkau (nicos AG)
+
+### Download serialization:
+
+- TODO
+
+### License:
+
+- TODO
+
+---
+
+## Content
+
+- [Abstract](#abstract)
+- [Introduction](#introduction)
+- [References](#references)
+
+*'Content' ODRL Profile for DOME.*
+
+---
+
+## Abstract
+
+---
+
+## Introduction
+
+---
+
+## References
 
 ---

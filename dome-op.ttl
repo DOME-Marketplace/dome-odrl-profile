@@ -1,0 +1,75 @@
+## Definition of used or common namespaces
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix odrl:    <http://www.w3.org/ns/odrl/2/> .
+@prefix profile: <http://www.w3.org/ns/dx/prof/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix role:    <http://www.w3.org/ns/dx/prof/role/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix dome-op: <https://github.com/DOME-Marketplace/odrl/profile#> .
+
+## region Ontology Metadata
+
+dome-op:
+    a                   profile:Profile ;
+    profile:isProfileOf <http://www.w3.org/ns/odrl/2/core> ;
+    profile:hasResource dome-op:ProfileSpec-md ;
+    profile:hasResource dome-op:ProfileVocabulary-ttl ;
+.
+
+dome-op:ProfileSpec-md
+    a                   profile:ResourceDescriptor ;
+    dct:title           "DOME ODRL Profile Specification" ;
+    owl:versionInfo     "0.1"^^xsd:string ;
+    dct:issued          "2023-08-10"^^xsd:date ;
+    dct:format          <https://www.iana.org/assignments/media-types/text/markdown> ;
+    profile:hasRole     role:specification ;
+    ## TODO: (find the right URL) dct:conformsTo      <https://www.w3.org/TR/html/>
+    profile:hasArtifact <https://github.com/DOME-Marketplace/dome-odrl-profile/blob/main/README.md> ;
+.
+
+dome-op:ProfileVocabulary-ttl
+    a                   profile:ResourceDescriptor ;
+    dct:title           "" ;
+    owl:versionInfo     "0.1"^^xsd:string ;
+    dct:issued          "2023-11-10"^^xsd:date ;
+    dct:publisher       "DOME PROJECT" ;
+    dct:format          <https://www.iana.org/assignments/media-types/text/turtle> ;
+    profile:hasRole     role:vocabulary ;
+    dct:conformsTo      <https://www.w3.org/TR/turtle/> ;
+    ## region profile:hasArtifact
+    profile:hasArtifact <https://github.com/DOME-Marketplace/dome-odrl-profile/blob/main/dome-op.ttl> ;
+    ## endregion profile:hasArtifact
+.
+
+<https://github.com/DOME-Marketplace/odrl/profile#>
+    a              skos:Collection ;
+    skos:prefLabel "DOME ODRL concepts"@en ;
+    skos:scopeNote "DOME ODRL profile terms"@en ;
+    ## region                   DOME
+    ## region                   DOME Policy
+#    skos:member    dome-op:DUMMY-Policy ;
+    ## endregion
+    ## region                   DOME LeftOperand
+#    skos:member    dome-op:DUMMY-LeftOperand ;
+    ## endregion
+    ## region                   DOME Operator
+#    skos:member    dome-op:DUMMY-Operator ;
+    ## endregion
+    ## region                   DOME RightOperand
+#    skos:member    dome-op:DUMMY-RightOperand ;
+    ## endregion
+    ## endregion DOME
+    ## region                   ODRL
+    ## region                   ODRL LeftOperand
+    skos:member    odrl:dateTime ;
+    ## endregion
+    ## endregion ODRL
+.
+
+## endregion Ontology Metadata
+
+## EOF dome-op.ttl

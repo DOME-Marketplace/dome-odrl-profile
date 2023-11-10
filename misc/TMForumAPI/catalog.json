@@ -1,0 +1,39 @@
+{
+  "catalogType": "string",
+  "description": "string",
+  "lastUpdate": "2023-10-30T08:26:20.938Z",
+  "lifecycleStatus": "string",
+  "name": "string",
+  "version": "string",
+  "category": [
+    {
+      "id": "string",
+      "href": "string",
+      "name": "string",
+      "version": "string",
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string",
+      "@referredType": "string"
+    }
+  ],
+  "relatedParty": [
+    {
+      "id": "string",
+      "href": "string",
+      "name": "string",
+      "role": "string",
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string",
+      "@referredType": "string"
+    }
+  ],
+  "validFor": {
+    "endDateTime": "1985-04-12T23:20:50.52Z",
+    "startDateTime": "1985-04-12T23:20:50.52Z"
+  },
+  "@baseType": "string",
+  "@schemaLocation": "string",
+  "@type": "string"
+}
