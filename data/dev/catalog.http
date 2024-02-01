@@ -1,0 +1,15 @@
+## Catalogs
+
+GET https://dome-marketplace.org/catalog/catalog
+Accept: application/json
+
+###
+
+GET https://dome-marketplace.org/catalog/catalog/urn:ngsi-ld:catalog:57149e2c-5480-40a8-a579-9cdb78df3bcc
+Accept: application/json
+
+>>! output/catalogs.json
+
+###
+
+## EOF
