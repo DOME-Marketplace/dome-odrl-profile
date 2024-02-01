@@ -2,7 +2,7 @@
 
 ## Draft release xx.xx.xxx
 
-### Version: 0.1
+### Version: 0.1.0
 
 ### Editors:
 
