@@ -1,5 +1,7 @@
 # ODRL Profile for DOME
 
+Preferred namespace prefix: `dome-op`
+
 ## Draft release xx.xx.xxx
 
 ### Version: 0.1.0

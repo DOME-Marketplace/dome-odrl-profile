@@ -9,7 +9,7 @@
 @prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix dome-op: <https://github.com/DOME-Marketplace/odrl/profile#> .
+@prefix dome-op: <https://github.com/DOME-Marketplace/dome-odrl-profile#> .
 
 ## region Ontology Metadata
 
@@ -45,7 +45,7 @@ dome-op:ProfileVocabulary-ttl
     ## endregion profile:hasArtifact
 .
 
-<https://github.com/DOME-Marketplace/odrl/profile#>
+<https://github.com/DOME-Marketplace/dome-odrl-profile#>
     a              skos:Collection ;
     skos:prefLabel "DOME ODRL concepts"@en ;
     skos:scopeNote "DOME ODRL profile terms"@en ;
@@ -72,4 +72,4 @@ dome-op:ProfileVocabulary-ttl
 
 ## endregion Ontology Metadata
 
-## EOF dome-op.ttl
+## EOF
