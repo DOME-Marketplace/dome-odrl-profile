@@ -1,0 +1,10 @@
+## Product Offerings
+
+GET https://dome-marketplace.org/catalog/productOffering
+Accept: application/json
+
+>>! output/product_offerings.json
+
+###
+
+## EOF

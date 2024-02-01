@@ -1,0 +1,9 @@
+
+## Service Specifications
+
+GET https://dome-marketplace.org/service/serviceSpecification
+Accept: application/json
+
+###
+
+## EOF

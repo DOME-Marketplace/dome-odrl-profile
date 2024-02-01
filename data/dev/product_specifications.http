@@ -1,0 +1,9 @@
+
+
+## Product Specifications
+GET https://dome-marketplace.org/catalog/productSpecification
+Accept: application/json
+
+###
+
+## EOF
