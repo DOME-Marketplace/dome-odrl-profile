@@ -10,7 +10,14 @@
 @prefix dome-op: <https://github.com/DOME-Marketplace/dome-odrl-profile#> .
 
 <https://dome-marketplace.org/policy/common/_1000>
-    a                odrl:Set ;
+    a                odrl:Policy ;
+    odrl:profile     "https://github.com/DOME-Marketplace/dome-odrl-profile/blob/main/dome-op.ttl" ;
+    odrl:permission  [ odrl:assigner "https://dome-marketplace.org/" ;
+                       ## "name": AirQuality
+                       odrl:target   "urn:ngsi-ld:product-offering:62d4f929-d29d-4070-ae1f-9fe7dd1de5f6" ;
+                       ## "tradingName": "EORI.COSO"
+                       odrl:assignee "urn:ngsi-ld:organization:0b03975e-7ded-4fbd-9c3b-a5d6550df7e2" ;
+                       odrl:action   odrl:use ] ;
     rdfs:isDefinedBy dome: .
 
 ## EOF
