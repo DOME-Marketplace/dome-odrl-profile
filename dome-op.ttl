@@ -33,7 +33,7 @@ dome-op:ProfileSpec-md
 
 dome-op:ProfileVocabulary-ttl
     a                   profile:ResourceDescriptor ;
-    dct:title           "" ;
+    dct:title           "DOME ODRL Profile turtle" ;
     owl:versionInfo     "0.1"^^xsd:string ;
     dct:issued          "2023-11-10"^^xsd:date ;
     dct:publisher       "DOME PROJECT" ;

@@ -4,6 +4,8 @@
 GET https://dome-marketplace.org/catalog/productSpecification
 Accept: application/json
 
+>>! output/product_specifications.json
+
 ###
 
 ## EOF

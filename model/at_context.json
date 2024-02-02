@@ -1,0 +1,12 @@
+{
+  "dc":      "http://purl.org/dc/elements/1.1/",
+  "dct":     "http://purl.org/dc/terms/",
+  "owl":     "http://www.w3.org/2002/07/owl#",
+  "odrl":    "http://www.w3.org/ns/odrl/2/",
+  "rdfs":    "http://www.w3.org/2000/01/rdf-schema#",
+  "skos":    "http://www.w3.org/2004/02/skos/core#",
+  "xsd":     "http://www.w3.org/2001/XMLSchema#",
+  "ngsi-ld": "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.7.jsonld",
+  "dome":    "https://www.dome-marketplace.org/",
+  "dome-op": "https://github.com/DOME-Marketplace/dome-odrl-profile#"
+}

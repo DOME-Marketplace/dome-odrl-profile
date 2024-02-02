@@ -3,6 +3,8 @@
 https://dome-marketplace.org/resource/resourceSpecification
 Accept: application/json
 
+>>! output/resource_specifications.json
+
 ###
 
 ## EOF

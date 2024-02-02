@@ -1,0 +1,374 @@
+[
+  {
+    "id": "urn:ngsi-ld:resource-specification:7adc5746-11ac-4d0e-a8f2-f51c7c7a5731",
+    "href": "urn:ngsi-ld:resource-specification:7adc5746-11ac-4d0e-a8f2-f51c7c7a5731",
+    "isBundle": false,
+    "lastUpdate": "2023-12-01T10:22:57.007201430Z",
+    "lifecycleStatus": "Launched",
+    "name": "Storage",
+    "relatedParty": [
+      {
+        "id": "urn:ngsi-ld:organization:6295e56f-96f7-4d01-a8c4-de1c6d4e4292",
+        "href": "https://dome-marketplace.org:443/party/organization/urn:ngsi-ld:organization:6295e56f-96f7-4d01-a8c4-de1c6d4e4292",
+        "role": "Owner",
+        "@referredType": null
+      }
+    ],
+    "resourceSpecCharacteristic": [
+      {
+        "id": "urn:ngsi-ld:characteristic:20dcb4f1-d2e0-4af1-af3c-9b6420f47f6c",
+        "configurable": false,
+        "name": "Size",
+        "valueType": "number",
+        "resourceSpecCharacteristicValue": [
+          {
+            "isDefault": true,
+            "unitOfMeasure": "Gb",
+            "value": 50
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "urn:ngsi-ld:resource-specification:2daf913f-9c61-40bf-b6c4-05f94369f6b8",
+    "href": "urn:ngsi-ld:resource-specification:2daf913f-9c61-40bf-b6c4-05f94369f6b8",
+    "description": "A virtual machine",
+    "isBundle": false,
+    "lastUpdate": "2023-11-14T15:48:27.434203641Z",
+    "lifecycleStatus": "Launched",
+    "name": "VM",
+    "relatedParty": [
+      {
+        "id": "urn:ngsi-ld:organization:6295e56f-96f7-4d01-a8c4-de1c6d4e4292",
+        "href": "https://dome-marketplace.org:443/party/organization/urn:ngsi-ld:organization:6295e56f-96f7-4d01-a8c4-de1c6d4e4292",
+        "role": "Owner",
+        "@referredType": null
+      }
+    ],
+    "resourceSpecCharacteristic": [
+      {
+        "id": "urn:ngsi-ld:characteristic:22719bab-fae2-4b99-b591-0d83c340dde6",
+        "configurable": false,
+        "name": "OS",
+        "valueType": "string",
+        "resourceSpecCharacteristicValue": [
+          {
+            "isDefault": true,
+            "value": "Ubuntu 20.04"
+          }
+        ]
+      },
+      {
+        "id": "urn:ngsi-ld:characteristic:a1d8270b-a886-402a-bc7f-00ca8560463d",
+        "configurable": false,
+        "name": "AMI",
+        "valueType": "string",
+        "resourceSpecCharacteristicValue": [
+          {
+            "isDefault": true,
+            "value": "t2.micro"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "urn:ngsi-ld:resource-specification:452ad931-f3ae-4fa3-bea3-c5a70b64d75b",
+    "href": "urn:ngsi-ld:resource-specification:452ad931-f3ae-4fa3-bea3-c5a70b64d75b",
+    "description": "Small and accurate stations, designed to measure and monitor various air pollutants, providing real-time data on factors such as particulate matter, ozone, nitrogen dioxide, and other contaminants, enabling assessment and management of environmental air quality.",
+    "isBundle": false,
+    "lastUpdate": "2023-12-05T10:12:45.930692920Z",
+    "lifecycleStatus": "Launched",
+    "name": "Air Quality Station",
+    "relatedParty": [
+      {
+        "id": "urn:ngsi-ld:organization:6295e56f-96f7-4d01-a8c4-de1c6d4e4292",
+        "href": "https://dome-marketplace.org:443/party/organization/urn:ngsi-ld:organization:6295e56f-96f7-4d01-a8c4-de1c6d4e4292",
+        "role": "Owner",
+        "@referredType": null
+      }
+    ],
+    "resourceSpecCharacteristic": [
+      {
+        "id": "urn:ngsi-ld:characteristic:6c6ee3c7-0ff0-490f-b020-b85d142b28fa",
+        "configurable": false,
+        "description": "NGSI-LD entities the station is generating",
+        "name": "NGSI-LD Entities",
+        "valueType": "string",
+        "resourceSpecCharacteristicValue": [
+          {
+            "isDefault": true,
+            "value": "AirQualityObserved"
+          }
+        ]
+      },
+      {
+        "id": "urn:ngsi-ld:characteristic:e42212aa-2ca5-48ad-9603-719f4f9df5e2",
+        "configurable": false,
+        "name": "Particulate matter",
+        "valueType": "string",
+        "resourceSpecCharacteristicValue": [
+          {
+            "isDefault": true,
+            "value": "PM2.5,PM10"
+          }
+        ]
+      },
+      {
+        "id": "urn:ngsi-ld:characteristic:408a4c85-b759-4b36-8b7b-b6133b99e17e",
+        "configurable": false,
+        "name": "Gases",
+        "valueType": "string",
+        "resourceSpecCharacteristicValue": [
+          {
+            "isDefault": true,
+            "value": "CO,NO2,NO,O3,SO2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "urn:ngsi-ld:resource-specification:5b8e4fd6-996e-490e-a760-f72c0c81fd13",
+    "href": "urn:ngsi-ld:resource-specification:5b8e4fd6-996e-490e-a760-f72c0c81fd13",
+    "description": "The new IONOS vCPU servers are a cost-effective instance type. They offer you optimal performance and scalability for a wide range of workloads - at an attractive price.",
+    "isBundle": false,
+    "lastUpdate": "2023-12-13T09:45:45.478917765Z",
+    "lifecycleStatus": "Obsolete",
+    "name": "vCPU",
+    "relatedParty": [
+      {
+        "id": "urn:ngsi-ld:organization:6295e56f-96f7-4d01-a8c4-de1c6d4e4292",
+        "href": "https://dome-marketplace.org:443/party/organization/urn:ngsi-ld:organization:6295e56f-96f7-4d01-a8c4-de1c6d4e4292",
+        "role": "Owner",
+        "@referredType": null
+      }
+    ],
+    "resourceSpecCharacteristic": []
+  },
+  {
+    "id": "urn:ngsi-ld:resource-specification:91eead71-1219-46f3-b983-8469a34f875a",
+    "href": "urn:ngsi-ld:resource-specification:91eead71-1219-46f3-b983-8469a34f875a",
+    "description": "The new IONOS vCPU servers are a cost-effective instance type. They offer you optimal performance and scalability for a wide range of workloads - at an attractive price.",
+    "isBundle": false,
+    "lastUpdate": "2023-12-13T09:47:41.733394575Z",
+    "lifecycleStatus": "Launched",
+    "name": "vCPU",
+    "relatedParty": [
+      {
+        "id": "urn:ngsi-ld:organization:6295e56f-96f7-4d01-a8c4-de1c6d4e4292",
+        "href": "https://dome-marketplace.org:443/party/organization/urn:ngsi-ld:organization:6295e56f-96f7-4d01-a8c4-de1c6d4e4292",
+        "role": "Owner",
+        "@referredType": null
+      }
+    ],
+    "resourceSpecCharacteristic": [
+      {
+        "id": "urn:ngsi-ld:characteristic:f78ad932-6319-4aed-bbee-5f6a93762230",
+        "configurable": true,
+        "description": "Enjoy the ease of use of vCPU. You can select up to 32vCPUs per server.",
+        "name": "Number",
+        "valueType": "number",
+        "resourceSpecCharacteristicValue": [
+          {
+            "isDefault": true,
+            "unitOfMeasure": "vCPU",
+            "value": 1
+          },
+          {
+            "isDefault": false,
+            "unitOfMeasure": "vCPU",
+            "value": 2
+          },
+          {
+            "isDefault": false,
+            "unitOfMeasure": "vCPU",
+            "value": 4
+          },
+          {
+            "isDefault": false,
+            "unitOfMeasure": "vCPU",
+            "value": 8
+          },
+          {
+            "isDefault": false,
+            "unitOfMeasure": "vCPU",
+            "value": 16
+          },
+          {
+            "isDefault": false,
+            "unitOfMeasure": "vCPU",
+            "value": 32
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "urn:ngsi-ld:resource-specification:175a716d-cbcf-42d6-9570-660fceeb03d4",
+    "href": "urn:ngsi-ld:resource-specification:175a716d-cbcf-42d6-9570-660fceeb03d4",
+    "description": "Dimension your public cloud individually and not just based on ready-made instance sizes. You get full access to the entire core, including Hyper-Threading.",
+    "isBundle": false,
+    "lastUpdate": "2023-12-13T09:51:35.927046779Z",
+    "lifecycleStatus": "Obsolete",
+    "name": "vCPU-RAM",
+    "relatedParty": [
+      {
+        "id": "urn:ngsi-ld:organization:6295e56f-96f7-4d01-a8c4-de1c6d4e4292",
+        "href": "https://dome-marketplace.org:443/party/organization/urn:ngsi-ld:organization:6295e56f-96f7-4d01-a8c4-de1c6d4e4292",
+        "role": "Owner",
+        "@referredType": null
+      }
+    ],
+    "resourceSpecCharacteristic": [
+      {
+        "id": "urn:ngsi-ld:characteristic:8cfd9e7f-ab38-40db-94b6-7b1cd8eb1006",
+        "configurable": false,
+        "description": "The IONOS Cloud relies on cloud-optimized memory. You can choose from 0.25 GB to 240 GB of RAM for your cloud server with vCPU.",
+        "name": "Amount",
+        "valueType": "number range",
+        "resourceSpecCharacteristicValue": [
+          {
+            "isDefault": true,
+            "unitOfMeasure": "GB",
+            "valueFrom": 0,
+            "valueTo": 240
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "urn:ngsi-ld:resource-specification:bbd6a6eb-391a-479b-ab0d-7fa418f5cf8e",
+    "href": "urn:ngsi-ld:resource-specification:bbd6a6eb-391a-479b-ab0d-7fa418f5cf8e",
+    "description": "Dimension your public cloud individually and not just based on ready-made instance sizes. You get full access to the entire core, including Hyper-Threading.",
+    "isBundle": false,
+    "lastUpdate": "2023-12-13T10:04:58.982095693Z",
+    "lifecycleStatus": "Launched",
+    "name": "vCPU-RAM",
+    "relatedParty": [
+      {
+        "id": "urn:ngsi-ld:organization:6295e56f-96f7-4d01-a8c4-de1c6d4e4292",
+        "href": "https://dome-marketplace.org:443/party/organization/urn:ngsi-ld:organization:6295e56f-96f7-4d01-a8c4-de1c6d4e4292",
+        "role": "Owner",
+        "@referredType": null
+      }
+    ],
+    "resourceSpecCharacteristic": [
+      {
+        "id": "urn:ngsi-ld:characteristic:1b9ecbe8-81ba-4505-b68c-a9b1585d2bbe",
+        "configurable": true,
+        "description": "The IONOS Cloud relies on cloud-optimized memory. You can choose from 1 GB to 32 GB of RAM for your cloud server with vCPU.",
+        "name": "Amount",
+        "valueType": "number",
+        "resourceSpecCharacteristicValue": [
+          {
+            "isDefault": true,
+            "unitOfMeasure": "GB",
+            "value": 1
+          },
+          {
+            "isDefault": false,
+            "unitOfMeasure": "GB",
+            "value": 2
+          },
+          {
+            "isDefault": false,
+            "unitOfMeasure": "GB",
+            "value": 4
+          },
+          {
+            "isDefault": false,
+            "unitOfMeasure": "GB",
+            "value": 8
+          },
+          {
+            "isDefault": false,
+            "unitOfMeasure": "GB",
+            "value": 16
+          },
+          {
+            "isDefault": false,
+            "unitOfMeasure": "GB",
+            "value": 32
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "urn:ngsi-ld:resource-specification:ee3bc4e9-68f8-4134-9bb8-aa12bba2ccbf",
+    "href": "urn:ngsi-ld:resource-specification:ee3bc4e9-68f8-4134-9bb8-aa12bba2ccbf",
+    "description": "An AWS EC2 virtual machine running Ubuntu 22.04 is a scalable cloud-based computing instance, combining the flexibility of EC2 with the Ubuntu 22.04 LTS operating system for robust and efficient application hosting.",
+    "isBundle": false,
+    "lastUpdate": "2023-12-12T21:20:40.483147552Z",
+    "lifecycleStatus": "Retired",
+    "name": "AWS EC2 VM",
+    "relatedParty": [
+      {
+        "id": "urn:ngsi-ld:organization:6295e56f-96f7-4d01-a8c4-de1c6d4e4292",
+        "href": "https://dome-marketplace.org:443/party/organization/urn:ngsi-ld:organization:6295e56f-96f7-4d01-a8c4-de1c6d4e4292",
+        "role": "Owner",
+        "@referredType": null
+      }
+    ],
+    "resourceSpecCharacteristic": [
+      {
+        "id": "urn:ngsi-ld:characteristic:69e1390c-08dc-46fa-9967-be31ae61e873",
+        "configurable": false,
+        "name": "OS",
+        "valueType": "string",
+        "resourceSpecCharacteristicValue": [
+          {
+            "isDefault": true,
+            "value": "Ubuntu 22.04"
+          }
+        ]
+      },
+      {
+        "id": "urn:ngsi-ld:characteristic:f7aaa3d7-6dda-4369-910f-4eaf6e26436f",
+        "configurable": false,
+        "name": "Storage",
+        "valueType": "number",
+        "resourceSpecCharacteristicValue": [
+          {
+            "isDefault": true,
+            "unitOfMeasure": "Gb",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "id": "urn:ngsi-ld:characteristic:99a47f43-f0a5-41a5-9420-d60a31106217",
+        "configurable": false,
+        "name": "AMI",
+        "valueType": "string",
+        "resourceSpecCharacteristicValue": [
+          {
+            "isDefault": true,
+            "value": "t2.medium"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "urn:ngsi-ld:resource-specification:b32d823b-b106-4cc6-aea8-2cbea56eb5ad",
+    "href": "urn:ngsi-ld:resource-specification:b32d823b-b106-4cc6-aea8-2cbea56eb5ad",
+    "description": "Virtual Machine",
+    "isBundle": false,
+    "lastUpdate": "2024-01-17T13:40:25.042385567Z",
+    "lifecycleStatus": "Launched",
+    "name": "VM",
+    "relatedParty": [
+      {
+        "id": "urn:ngsi-ld:individual:942d27e2-1bee-4436-a5fd-2505961f643f",
+        "href": "https://dome-marketplace.org:443/party/individual/urn:ngsi-ld:individual:942d27e2-1bee-4436-a5fd-2505961f643f",
+        "role": "Owner",
+        "@referredType": null
+      }
+    ],
+    "resourceSpecCharacteristic": []
+  }
+]
