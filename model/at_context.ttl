@@ -1,0 +1,13 @@
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix odrl:    <http://www.w3.org/ns/odrl/2/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix ngsi-ld: <https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.7.jsonld> .
+@prefix dome:    <https://www.dome-marketplace.org/> .
+@prefix dome-op: <https://github.com/DOME-Marketplace/dome-odrl-profile#> .
+
+## EOF
