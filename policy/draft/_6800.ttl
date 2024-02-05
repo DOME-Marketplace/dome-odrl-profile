@@ -1,0 +1,47 @@
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix odrl:    <http://www.w3.org/ns/odrl/2/> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix dome-op: <https://github.com/DOME-Marketplace/dome-odrl-profile#> .
+
+
+<https://www.all-puppets.org/policy/control/usage/_6800>
+    a                odrl:Policy ;
+    odrl:profile     "https://github.com/DOME-Marketplace/dome-odrl-profile/blob/main/dome-op.ttl" ;
+    dct:description  """Visibility Control. Only authenticated users, older than 17 years, are able to use (see) given asset (here: "Spongebob" as a product-offering). This Usage Control has to be enforced by sink-marketplace (here: Puppet-Love), visited by current user (here: urn:user) and is issued by All-Puppets (here: the source-marketplace, the odrl-assigner). Anonymous users do **NOT** see the property 'price'"""@en ;
+    odrl:permission  [ odrl:assigner "https://www.all-puppets.org/" ;
+                       odrl:target   "https://www.all-puppets.org/product/offering/puppet/spongebob" ;
+                       odrl:assignee [ a               odrl:PartyCollection ;
+                                       odrl:source     "urn:user" ;
+                                       odrl:refinement [ odrl:operator    odrl:eq ;
+                                                         odrl:leftOperand dome-op:UserIsAuthenticated ; ],
+                                                       ## REM: only to put in something more
+                                                       [ odrl:leftOperand "foaf:age" ;
+                                                         odrl:operator    odrl:gt ;
+                                                         odrl:leftOperand "17"^^xsd:nonNegativeInteger ; ] ; ] ;
+                       odrl:action   odrl:use ],
+                     ##
+                     [ odrl:assigner "https://www.all-puppets.org/" ;
+                       odrl:target   "https://www.all-puppets.org/product/offering/puppet/spongebob" ;
+                       odrl:assignee [ a               odrl:PartyCollection ;
+                                       odrl:source     "urn:user" ;
+                                       odrl:refinement [ odrl:operator    odrl:eq ;
+                                                         odrl:leftOperand dome-op:UserIsAnonymous ; ] ] ;
+                       odrl:action   [ rdf:type        odrl:use ;
+                                       odrl:refinement [ odrl:leftOperand  <https://www.all-puppets.org/model#price> ;
+                                                         odrl:operator     odrl:eq ;
+                                                         ## TODO: TBD: price-field is xsd:decimal
+                                                         ## ...here we to express that price-field is **NOT**
+                                                         ## ...visible to given anonymous user.
+                                                         odrl:rightOperand ""^^xsd:string ;
+                                                         ## ALERNATIVE: "-1" means **NOT** visible.
+                                                         odrl:rightOperand "-1"^^xsd:decimal ;
+                                                         odrl:unit:        "http://dbpedia.org/resource/Euro" ; ] ; ] ; ] ;
+    rdfs:isDefinedBy "https://www.all-puppets.org/" .
+
+## EOF
