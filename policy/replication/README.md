@@ -6,7 +6,7 @@
 - [Big Picture](#big-picture)
 - [References](#references)
 
-*'Content' DOME Replication.*
+*Content 'DOME Replication'.*
 
 ---
 
