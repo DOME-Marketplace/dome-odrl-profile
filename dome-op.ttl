@@ -13,7 +13,7 @@
 
 ## region Ontology Metadata
 
-dome-op:
+<https://github.com/DOME-Marketplace/dome-odrl-profile#>
     a                   profile:Profile ;
     profile:isProfileOf <http://www.w3.org/ns/odrl/2/core> ;
     profile:hasResource dome-op:ProfileSpec-md ;
@@ -71,5 +71,20 @@ dome-op:ProfileVocabulary-ttl
 .
 
 ## endregion Ontology Metadata
+
+## region dome-op Right Operand
+dome-op:UserIsAuthenticated
+    a                odrl:RightOperand ;
+    dct:description  """."""@en ;
+    rdfs:comment     """."""@en ;
+    rdfs:isDefinedBy dome-op: .
+
+dome-op:UserIsAnonymous
+    a                odrl:RightOperand ;
+    dct:description  """."""@en ;
+    rdfs:comment     """."""@en ;
+    rdfs:isDefinedBy dome-op: .
+
+## endregion dome-op Right Operand
 
 ## EOF
