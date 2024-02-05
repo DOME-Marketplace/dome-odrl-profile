@@ -217,7 +217,7 @@ The `source` defines Access Control Policies (hosted in its own Policy Administr
 
 #### Example
 
-Authenticated user see file 'price', anonymous once **NOT**.
+Authenticated user see file 'price', anonymous one's **NOT**.
 
 - [https://www.all-puppets.org/policy/control/usage/_6800](../draft/_6800.ttl)
 
