@@ -51,6 +51,8 @@ Preferred namespace prefix: `dome-op`
 
 ## Good to Know
 
+Some sort of introduction and some starter/helper to get in touch with policy-related topics, [here](./misc/GoodToKnow.md).
+
 ---
 
 ## References
