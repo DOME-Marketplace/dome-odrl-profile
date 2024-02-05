@@ -69,10 +69,18 @@ dome-op:ProfileVocabulary-ttl
     ## endregion
     ## endregion ODRL
 .
-
 ## endregion Ontology Metadata
 
+<https://github.com/DOME-Marketplace/dome-odrl-profile#constraintRightOperand>
+    a                skos:Collection ;
+    skos:prefLabel   "Constraint Right Operands for DOME Policies"@en ;
+    skos:scopeNote   "Constraint Right Operands for DOME Policies"@en ;
+    skos:member      dome-op:UserIsAuthenticated ;
+    skos:member      dome-op:UserIsAnonymous ;
+    rdfs:isDefinedBy dome-op: .
+
 ## region dome-op Right Operand
+
 dome-op:UserIsAuthenticated
     a                odrl:RightOperand ;
     dct:description  """."""@en ;
