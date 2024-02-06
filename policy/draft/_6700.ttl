@@ -1,0 +1,52 @@
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix odrl:    <http://www.w3.org/ns/odrl/2/> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix dome-op: <https://github.com/DOME-Marketplace/dome-odrl-profile#> .
+
+###
+# An Acceptance Policy (dome-op:ReplicationInbound), provided by potential sink-marketplace (data-consumer),
+# ...to express which offerings (from source-marketplaces, data-provider) will be accepted (so: this will
+# ...lead to an inbound-replication of offered product-offering/catalogue).
+#
+# here: sink will accept only on-boarded DOME-Participants located in Germany, France and Spain are welcome.
+###
+<https://dome-marketplace.org:443/policy/control/replication/inbound/_6700>
+    a                dome-op:ReplicationInbound ;
+    odrl:profile     "https://github.com/DOME-Marketplace/dome-odrl-profile/blob/main/dome-op.ttl" ;
+    dct:description  """Acceptance or Filtering/Gate Policy, hosted on sink-side, classifying replication-process as an inbound-replication."""@en ;
+    odrl:permission  [ a             odrl:Permission ;
+                       odrl:assigner "https://www.all-puppets.org/" ;
+                       odrl:target   "urn:asset" ;
+                       odrl:assignee [ a               odrl:PartyCollection ;
+                                       odrl:source     "urn:assignee" ;
+                                       odrl:refinement [ a             odrl:Constraint ;
+                                                         ## source has to be a proper (onboarded) participant
+                                                         odrl:operator odrl:isPartOf ;
+                                                         odrl:rightOperandReference
+                                                                       "https://dome-marketplace.org:443/participant/"^^xsd:anyURI ;
+                                                         odrl:dataType xsd:anyURI ;
+                                                         ##
+                                                       ],
+                                                       ##
+                                                       [ a                 odrl:Constraint ;
+                                                         ## REM: restriction to three countries
+                                                         odrl:leftOperand  dome-op:country ;
+                                                         odrl:operator     odrl:isPartOf ;
+                                                         odrl:rightOperand "DE"^^xsd:string, "ES"^^xsd:string,
+                                                                           "FR"^^xsd:string ;
+                                                         ## TODO: own datatype, like:
+                                                         ## ...x-ISO-3166-1:id-ISO-3166-1-SemanticsId-ALPHA-2 (missing link ontology)
+                                                         ## ... <https://github.com/nicosResearchAndDevelopment/LDS/blob/main/misc/x-ISO-3166/x-ISO-3166.ttl>
+                                                         odrl:dataType     xsd:string ;
+                                                         ##
+                                                       ] ; ] ;
+                       odrl:action   odrl:use ; ] ;
+    rdfs:isDefinedBy "https://www.all-puppets.org/" .
+
+## EOF
