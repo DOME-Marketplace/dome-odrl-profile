@@ -33,8 +33,18 @@ Taken from [**Paolo Fabriani
 
 ### On Catalog Replication (i.e. definition of Access Control Policies)
 
-As a marketplace owner (called the [*source*](#replication-source)-marketplace,
-*source*) I want to set Replication Policies (also understood as Replication Offer) based on various criteria:
+As a marketplace owner (called the [*source*](#replication-source)-marketplace, *source*) I want to set Replication Policies (also understood as Replication Offer).
+
+#### Remarks on Wording
+
+Replication Policy understood as an Access Control Policy misleads - unfortunately. So we need some thoughts for clarification:
+
+`source`-marketplace wants to place its offer to identified `sink`-marketplace. Deciding the replication-process **is a `sink`-marketplace initiated pull**, `source` will control access to requested resources (here: product-offering/catalogue). 
+
+
+---
+
+Given Replication Policy is based on various criteria:
 
 > JLA: “replication policies”: introduced here for the first time, this wording is only used once…
 >
@@ -42,14 +52,13 @@ As a marketplace owner (called the [*source*](#replication-source)-marketplace,
 
 Specific marketplaces (identified by its id) as a first, but we will consider also:
 
+- time-based
 - geographical
 - domain
-- time-based
 - legal
 - compliance
 
-...depending on **source-marketplace requirements to control where my product offerings (or catalogues) can be exposed
-** (called the *sink*-marketplace, *sink*).
+...depending on **source-marketplace requirements to control where my product offerings (or catalogues) can be exposed** (in potentially targeted *sink*-marketplace, `sink`).
 
 Replication can apply to:
 
@@ -59,8 +68,7 @@ Replication can apply to:
 
 - entire catalogs
 
-Replication policies (those are **access control** policies) are a **desiderata
-** from source marketplaces. No other marketplace is forced to publish if it does **NOT** agree.
+Replication policies (those are **access control** policies) are a **desiderata** from source marketplaces. No other marketplace is forced to publish if it does **NOT** agree.
 
 In general the replication process involves two actors and two phases:
 
