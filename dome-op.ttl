@@ -18,7 +18,7 @@
     profile:isProfileOf <http://www.w3.org/ns/odrl/2/core> ;
     profile:hasResource dome-op:ProfileSpec-md ;
     profile:hasResource dome-op:ProfileVocabulary-ttl ;
-.
+    rdfs:isDefinedBy dome-op:.
 
 dome-op:ProfileSpec-md
     a                   profile:ResourceDescriptor ;
@@ -29,7 +29,7 @@ dome-op:ProfileSpec-md
     profile:hasRole     role:specification ;
     ## TODO: (find the right URL) dct:conformsTo      <https://www.w3.org/TR/html/>
     profile:hasArtifact <https://github.com/DOME-Marketplace/dome-odrl-profile/blob/main/README.md> ;
-.
+    rdfs:isDefinedBy dome-op:.
 
 dome-op:ProfileVocabulary-ttl
     a                   profile:ResourceDescriptor ;
@@ -43,7 +43,7 @@ dome-op:ProfileVocabulary-ttl
     ## region profile:hasArtifact
     profile:hasArtifact <https://github.com/DOME-Marketplace/dome-odrl-profile/blob/main/dome-op.ttl> ;
     ## endregion profile:hasArtifact
-.
+    rdfs:isDefinedBy dome-op:.
 
 <https://github.com/DOME-Marketplace/dome-odrl-profile#>
     a              skos:Collection ;
@@ -68,27 +68,45 @@ dome-op:ProfileVocabulary-ttl
     skos:member    odrl:dateTime ;
     ## endregion
     ## endregion ODRL
-.
+    rdfs:isDefinedBy dome-op: .
 ## endregion Ontology Metadata
+
+<https://github.com/DOME-Marketplace/dome-odrl-profile#constraintLeftOperand>
+    a                skos:Collection ;
+    skos:prefLabel   "Constraint Left Operands for DOME Policies"@en ;
+    skos:scopeNote   "Constraint Left Operands for DOME Policies"@en ;
+    skos:member      dome-op:UserIsAuthenticated ;
+    skos:member      dome-op:UserIsAnonymous ;
+    rdfs:isDefinedBy dome-op: .
 
 <https://github.com/DOME-Marketplace/dome-odrl-profile#constraintRightOperand>
     a                skos:Collection ;
     skos:prefLabel   "Constraint Right Operands for DOME Policies"@en ;
     skos:scopeNote   "Constraint Right Operands for DOME Policies"@en ;
-    skos:member      dome-op:UserIsAuthenticated ;
-    skos:member      dome-op:UserIsAnonymous ;
+    skos:member      dome-op:country ;
     rdfs:isDefinedBy dome-op: .
+
+## region dome-op Left Operand
+
+dome-op:country
+    a                odrl:LeftOperand, owl:NamedIndividual, skos:Concept ;
+    ## TODO: dome-op:country: datatype to twoLetterISO
+    dct:description  """Country of given Resource. 'odrl:datatype xsd:string'."""@en ;
+    rdfs:comment     """."""@en ;
+    rdfs:isDefinedBy dome-op: .
+
+## endregion dome-op Left Operand
 
 ## region dome-op Right Operand
 
 dome-op:UserIsAuthenticated
-    a                odrl:RightOperand ;
+    a                odrl:RightOperand, owl:NamedIndividual, skos:Concept ;
     dct:description  """."""@en ;
     rdfs:comment     """."""@en ;
     rdfs:isDefinedBy dome-op: .
 
 dome-op:UserIsAnonymous
-    a                odrl:RightOperand ;
+    a                odrl:RightOperand, owl:NamedIndividual, skos:Concept ;
     dct:description  """."""@en ;
     rdfs:comment     """."""@en ;
     rdfs:isDefinedBy dome-op: .
