@@ -19,11 +19,11 @@
                        odrl:assignee [ a               odrl:PartyCollection ;
                                        odrl:source     "urn:user" ;
                                        odrl:refinement [ odrl:operator    odrl:eq ;
-                                                         odrl:leftOperand dome-op:UserIsAuthenticated ; ],
+                                                         odrl:rightOperand dome-op:UserIsAuthenticated ; ],
                                                        ## REM: only to put in something more
                                                        [ odrl:leftOperand "foaf:age" ;
                                                          odrl:operator    odrl:gt ;
-                                                         odrl:leftOperand "17"^^xsd:nonNegativeInteger ; ] ; ] ;
+                                                         odrl:rightOperand "17"^^xsd:nonNegativeInteger ; ] ; ] ;
                        odrl:action   odrl:use ],
                      ##
                      [ odrl:assigner "https://www.all-puppets.org/" ;
@@ -31,7 +31,7 @@
                        odrl:assignee [ a               odrl:PartyCollection ;
                                        odrl:source     "urn:user" ;
                                        odrl:refinement [ odrl:operator    odrl:eq ;
-                                                         odrl:leftOperand dome-op:UserIsAnonymous ; ] ] ;
+                                                         odrl:rightOperand dome-op:UserIsAnonymous ; ] ] ;
                        odrl:action   [ rdf:type        odrl:use ;
                                        odrl:refinement [ odrl:leftOperand  <https://www.all-puppets.org/model#price> ;
                                                          odrl:operator     odrl:eq ;
