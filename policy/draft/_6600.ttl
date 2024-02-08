@@ -21,7 +21,7 @@
     odrl:profile     "https://github.com/DOME-Marketplace/dome-odrl-profile/blob/main/dome-op.ttl" ;
     dct:description  """."""@en ;
     odrl:permission  [ a             odrl:Permission ;
-                       odrl:assigner "https://www.all-puppets.org/" ;
+                       odrl:assigner <https://www.all-puppets.org/> ;
                        odrl:target   <https://www.all-puppets.org/product/offering/puppet/urn:spongebob> ;
                        odrl:assignee [ a               odrl:PartyCollection ;
                                        odrl:source     "urn:assignee" ;
@@ -52,4 +52,4 @@
 #    href:            "https://www.all-puppets.org/product/offering/puppet/urn:spongebob"^^xsd:anyURI ;
     ## REM: as dcat does... <https://www.w3.org/TR/vocab-dcat-2/#Property:resource_has_policy>
     odrl:hasPolicy   <https://www.all-puppets.org/policy/control/usage/_6800> ;
-    rdfs:isDefinedBy "https://www.all-puppets.org/" .
+    rdfs:isDefinedBy <https://www.all-puppets.org/> .
