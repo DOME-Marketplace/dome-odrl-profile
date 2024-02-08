@@ -20,11 +20,13 @@
                        odrl:target     <urn:ngsi-ld:product-offering:62d4f929-d29d-4070-ae1f-9fe7dd1de5f6> ;
                        ## organization.tradingName: "EORI.COSO"
                        odrl:assignee   <urn:ngsi-ld:organization:0b03975e-7ded-4fbd-9c3b-a5d6550df7e2> ;
-                       odrl:constraint [ odrl:leftOperand  odrl:dateTime ;
+                       odrl:constraint [ a                 odrl:Constraint ;
+                                         odrl:leftOperand  odrl:dateTime ;
                                          odrl:operator     odrl:gt ;
                                          odrl:rightOperand "2023-12-31"^^xsd:date ; ],
                                        ##
-                                       [ odrl:leftOperand  odrl:dateTime ;
+                                       [ a                 odrl:Constraint ;
+                                         odrl:leftOperand  odrl:dateTime ;
                                          odrl:operator     odrl:lt ;
                                          odrl:rightOperand "2025-01-01"^^xsd:date ; ]
                                        ##

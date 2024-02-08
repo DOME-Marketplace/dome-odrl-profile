@@ -21,7 +21,8 @@
                        odrl:target     <urn:ngsi-ld:product-offering:62d4f929-d29d-4070-ae1f-9fe7dd1de5f6> ;
                        ## organization.tradingName: "EORI.COSO"
                        odrl:assignee   <urn:ngsi-ld:organization:0b03975e-7ded-4fbd-9c3b-a5d6550df7e2> ;
-                       odrl:constraint [ odrl:leftOperand  "41"^^xsd:nonNegativeInteger  ;
+                       odrl:constraint [ a                 odrl:Constraint ;
+                                         odrl:leftOperand  "41"^^xsd:nonNegativeInteger ;
                                          odrl:operator     odrl:lt ;
                                          odrl:rightOperand "42"^^xsd:nonNegativeInteger ; ]
                                        ##
