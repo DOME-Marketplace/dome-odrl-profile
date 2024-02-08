@@ -48,5 +48,3 @@
                                                        ] ; ] ;
                        odrl:action   odrl:use ; ] ;
     rdfs:isDefinedBy "https://www.all-puppets.org/" .
-
-## EOF

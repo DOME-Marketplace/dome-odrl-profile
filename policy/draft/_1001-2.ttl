@@ -48,5 +48,3 @@
                        ## end odrl:constraint
                      ] ;
     rdfs:isDefinedBy dome: .
-
-## EOF

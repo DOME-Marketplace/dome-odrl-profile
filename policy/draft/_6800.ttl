@@ -15,7 +15,7 @@
 # Visibility Control (Usage Control) on Spongebob.
 ###
 <https://www.all-puppets.org/policy/control/usage/_6800>
-    a                odrl:Policy ;
+    a                dome-op:Visibility ;
     odrl:profile     "https://github.com/DOME-Marketplace/dome-odrl-profile/blob/main/dome-op.ttl" ;
     dct:description  """Visibility Control. Only authenticated users, older than 17 years, are able to use (see) given asset (here: "Spongebob" as a product-offering). This Usage Control has to be enforced by sink-marketplace (here: Puppet-Love), visited by current user (here: urn:user) and is issued by All-Puppets (here: the source-marketplace, the odrl-assigner). Anonymous users do **NOT** see the property 'price'"""@en ;
     odrl:permission  [ a             odrl:Permission ;
@@ -76,8 +76,6 @@
 
 <https://www.all-puppets.org/product/offering/puppet/urn:spongebob>
     href:            "https://www.all-puppets.org/product/offering/puppet/urn:spongebob"^^xsd:anyURI ;
-    ## REM: as dcat does... <https://www.w3.org/TR/vocab-dcat-2/#Property:resource_has_policy>
+    ## REM: as dcat does... <https://www.w3.org/TR/vocab-dcat-2/> (search for 'hasPolicy')
     odrl:hasPolicy   <https://www.all-puppets.org/policy/control/usage/_6800> ;
     rdfs:isDefinedBy "https://www.all-puppets.org/" .
-
-## EOF

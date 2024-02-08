@@ -42,7 +42,7 @@ Preferred namespace prefix: `dome-op`
 
 ### How to read dome-odrl-profile
 
-In this piont of time (2024-02) `dome-odrl-profile` is very fuzzy and buggy - why?
+In this point of time (2024-02) `dome-odrl-profile` is very fuzzy and buggy - why?
 
 Even we can see some ODRL-Policies, started on use cases coming from DOME-Replication, used identifier (for parties, individuals, organizations, product-offerings, catalogues) and glued properties are some kind of *under-specified*, even they look proper and correctly aligned to given schema  or data-models... So, we have don't have to read it as an up-and-running solution.
 
