@@ -9,6 +9,10 @@
 @prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
+## TM Forum Specification, Product Catalog Management API, User Guide, TMF620
+
+@prefix TMF-PCMA:  <https://tmf-open-api-table-documents.s3.eu-west-1.amazonaws.com/OpenApiTable/4.1.0/user_guides/TMF620_Product_Catalog_Management_API_v4.1.0_user_guides.pdf> .
+
 @prefix dome-op: <https://github.com/DOME-Marketplace/dome-odrl-profile#> .
 
 ## region Ontology Metadata
@@ -141,7 +145,7 @@ dome-op:validFor_endDateTime
 dome-op:ReplicationOutbound
     a                rdfs:Class, owl:Class, skos:Concept ;
     rdfs:subClassOf  odrl:Set ;
-    skos:definition  "A Policy, defined by a source-marketplace (data-provider), that asserts the shape of outgoing assets (product-offerings/catalogues) in given replication-process (opponent acts as sink, data-consumer)."@en ;
+    skos:definition  "A Policy, defined by a source-marketplace (data-provider), that asserts the shape of outgoing assets (product-offerings/catalogues) in given replication-process (outbound rplication. Opponent acts as Sink, data-consumer."@en ;
     skos:note        "This Policy-Class can be understood as an Access Control Policy, too."@en ;
     rdfs:isDefinedBy dome-op: .
 
@@ -155,7 +159,7 @@ dome-op:ReplicationInbound
 dome-op:Visibility
     a                rdfs:Class, owl:Class, skos:Concept ;
     rdfs:subClassOf  odrl:Set ;
-    skos:definition  "A Policy, defined by a source-marketplace, that asserts the usage of published assets by replicating sink-marketplace."@en ;
+    skos:definition  "A Policy, defined by a Source-marketplace, that asserts the usage of published assets by replicating Sink-marketplace."@en ;
     skos:note        "A Visibility Policy - understood as some kind of Usage Control, controlling the usage of given asset - **MUST** contain a target Asset (a product-offering/catalogue), the source-marketplace as an Party role 'odrl:assigner', 'urn:user' (the customer on sink-side) as Party function 'odrl:assigner' and at least one of a Permission or Prohibition rule. Such a Visibility Policy is related to source's product-offering/catalogue and will be enforced on sink's side: sink's application will show only those information, authorized by source to end-user (e.g. an acting user on sink-side)."@en ;
     rdfs:isDefinedBy dome-op: .
 

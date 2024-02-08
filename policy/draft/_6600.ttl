@@ -53,5 +53,3 @@
     ## REM: as dcat does... <https://www.w3.org/TR/vocab-dcat-2/#Property:resource_has_policy>
     odrl:hasPolicy   <https://www.all-puppets.org/policy/control/usage/_6800> ;
     rdfs:isDefinedBy "https://www.all-puppets.org/" .
-
-## EOF

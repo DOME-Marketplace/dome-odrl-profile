@@ -4,7 +4,16 @@
 
 - [Introduction](#introduction)
 - [Big Picture](#big-picture)
-- [Use Case](#use-case)
+- [Replication](#replication)
+  - [Source](#source)
+  - [Sink](#sink)
+  - [Process](#process)
+    - [Inbound](#inbound)
+    - [Outbound](#outbound)
+  - [Offer](#offer)
+  - [Access Control](#access-control)
+  - [Acceptance Control](#acceptance-control)
+  - [Visibility Control](#visibility-control)
 - [References](#references)
 
 *Content 'DOME Replication'.*
@@ -39,7 +48,7 @@ As a marketplace owner (called the [*source*](#replication-source)-marketplace, 
 
 Replication Policy understood as an Access Control Policy misleads - unfortunately. So we need some thoughts for clarification:
 
-`source`-marketplace wants to place its offer to identified `sink`-marketplace. Deciding the replication-process **is a `sink`-marketplace initiated pull**, `source` will control access to requested resources (here: product-offering/catalogue). 
+`Source`-marketplace wants to place its offer to identified `Sink`-marketplace. Deciding the replication-process **is a `Sink`-marketplace initiated pull**, `Source` will control access to requested resources (here: product-offering/catalogue). 
 
 
 ---
@@ -58,7 +67,7 @@ Specific marketplaces (identified by its id) as a first, but we will consider al
 - legal
 - compliance
 
-...depending on **source-marketplace requirements to control where my product offerings (or catalogues) can be exposed** (in potentially targeted *sink*-marketplace, `sink`).
+...depending on **source-marketplace requirements to control where my product offerings (or catalogues) can be exposed** (in potentially targeted *sink*-marketplace, `Sink`).
 
 Replication can apply to:
 
@@ -72,20 +81,20 @@ Replication policies (those are **access control** policies) are a **desiderata*
 
 In general the replication process involves two actors and two phases:
 
-1. The [`source`](#replication-source) marketplace decides what to (ideally) replicate, where and under what conditions.
-2. The [`sink`](#replication-sink) marketplace becomes aware of such a replication wish and, if agreed ([Replication Agreement](#replication-agreement), proceeds with the replication of the offering/catalog.
+1. The [`Source`](#replication-source) marketplace decides what to (ideally) replicate, where and under what conditions.
+2. The [`Sink`](#replication-sink) marketplace becomes aware of such a replication wish and, if agreed ([Replication Agreement](#replication-agreement), proceeds with the replication of the offering/catalog.
 
 From a practical point of view, it was agreed that the process could work as follows:
 
-1. The `source` marketplace publishes an offering. This will trigger a blockchain notification to all interested marketplaces (access nodes) who can access the endpoint of the product-offering/catalogue for retrieval. Through some kind of governance rules in DOME, we’ll agree that a successful retrieval of product-offering/catalogue also
-   *entitles* replication on a `sink` marketplace.
+1. The `Source` marketplace publishes an offering. This will trigger a blockchain notification to all interested marketplaces (access nodes) who can access the endpoint of the product-offering/catalogue for retrieval. Through some kind of governance rules in DOME, we’ll agree that a successful retrieval of product-offering/catalogue also
+   *entitles* replication on a `Sink` marketplace.
 
 > TODO: TBD:
 >> notification to all interested marketplaces
 >
 > ...what does this mean?!? How is this 'group' of "interested" marketplaces (DOME-Participants) build up?!?
 
-2. At the same time, the `source` marketplace will define some Access Control Policies for given product-offering/catalogue (through the GUI, translated to ODRL and managed locally within the access node by local Policy Enforcement Point (
+2. At the same time, the `Source` marketplace will define some Access Control Policies for given product-offering/catalogue (through the GUI, translated to ODRL and managed locally within the access node by local Policy Enforcement Point (
    **PEP**), Policy Decision Point (**PDP**)).
 
 >
@@ -93,9 +102,9 @@ From a practical point of view, it was agreed that the process could work as fol
 >
 > this is the Policy Administration Point (**PAP**)
 
-3. When the `sink`-marketplace tries to access the catalogue, the `source`-marketplace will enforce the Access Control Policies (through
+3. When the `Sink`-marketplace tries to access the catalogue, the `Source`-marketplace will enforce the Access Control Policies (through
    **PEP**/**PDP**). A successful retrieval means that replication is allowed.
-4. It’s up to the `sink`-marketplace to decide whether to expose the offering or not. However, if it agrees to publish, this should happen according to Usage Control Policies (Visibility Policies, see below).
+4. It’s up to the `Sink`-marketplace to decide whether to expose the offering or not. However, if it agrees to publish, this should happen according to Usage Control Policies (Visibility Policies, see below).
 
 >
 > > if it agrees
@@ -103,9 +112,9 @@ From a practical point of view, it was agreed that the process could work as fol
 > FOR CLARIFICATION ONLY: this is some sort of quiet-agreement, there is **NO
 ** bilateral agreement (expressed in a very special Agreement Policy)
 >
-> JLA: “visibility policies”: these are the policies for Usage Control - given `source` expresses why and how given offer/catalogue could be provided on `sink's` side to third party (here: “registered/unregister user”)
+> JLA: “visibility policies”: these are the policies for Usage Control - given `Source` expresses why and how given offer/catalogue could be provided on `sink's` side to third party (here: “registered/unregister user”)
 
-Note 1: being the above process entirely on the `source`-side and assuming that granted access means *replication
+Note 1: being the above process entirely on the `Source`-side and assuming that granted access means *replication
 allowed*, every marketplace in the federation is free to implement this as it wishes (or do not implement it at all). However, the DOME central marketplace (i.e. the BAE) should implement it as we are discussing and defining here.
 
 > PAOLO :: TODO: open issue: how to manage a change in the replication policy (in particular, any restriction of it) after a catalogue has been already replicated? Should the source emit an ‘offering changed’ event to force a re-retrieval of the content possibly denying the access?
@@ -114,7 +123,7 @@ allowed*, every marketplace in the federation is free to implement this as it wi
 
 > TODO: to be clarified: JLA: this seems to be a special use case
 
-As a DOME-Marketplace operator (thus, through the BAE) I can set acceptance policies based on criteria to control which offerings from other providers can be exposed on the DOME-Marketplace. Criteria can consider attributes of the `source`-marketplace, e.g.:
+As a DOME-Marketplace operator (thus, through the BAE) I can set acceptance policies based on criteria to control which offerings from other providers can be exposed on the DOME-Marketplace. Criteria can consider attributes of the `Source`-marketplace, e.g.:
 
 - legal information
 - certification schemes
@@ -142,7 +151,7 @@ As a marketplace or product/service provider, I can set Usage Control Policies b
 - customer properties
 - > JLA: TBC@all: what are those customer *properties*?
 
-to control which customers (within federated marketplaces) can see my (here "my": this is the replication-`source`!) offerings (on given replication-`sink`). Also, depending on some other criteria, e.g.:
+to control which customers (within federated marketplaces) can see my (here "my": this is the replication-`Source`!) offerings (on given replication-`Sink`). Also, depending on some other criteria, e.g.:
 
 - registered user
 - unregistered user
@@ -160,7 +169,7 @@ I want to set **Usage Control** Policies on **specific offering metadata**, e.g.
 > JLA: let us focus on **price** at the beginning, so we can use it (if all
 *problems* are understood and/or solved) as some sort of **blue-print** for other properties...
 
-Similar to catalog replication, but enforcement (of given Usage Control Policies) here can only be done on the `sink`-marketplace. This means that the catalog/offering content should be made available entirely
+Similar to catalog replication, but enforcement (of given Usage Control Policies) here can only be done on the `Sink`-marketplace. This means that the catalog/offering content should be made available entirely
 
 > JLA: “this means”: given sink understands given usage control (exposed by source; a machine-readable policy; here: ODRL) and
 **MUST
@@ -176,57 +185,110 @@ to the sink (the source can’t know in advance who will access the sink marketp
 
 - metadata: *price*
 
-This also means that the rules visibility (nested in defined Usage Control Policies) should be made available to the `sink` (can not be enforced on the `source` as with replication) and must be understood by it (need for agreed format and semantics).
+This also means that the rules visibility (nested in defined Usage Control Policies) should be made available to the `Sink` (can not be enforced on the `Source` as with replication) and must be understood by it (need for agreed format and semantics).
 
 ---
 
-## Terminology
+## Replication
 
-### Replication Source
+### Source
 
-Replication Source (`source`, DOME-Role). `source`, a DOME-Marketplace Participant, acting as a Data Provider (DOME-Role) for its catalogues and/or product-offerings, acting as a replication partner.
+Replication-`Source` (`Source`, DOME-Role). `Source`, a DOME-Marketplace Participant, acting as a Data Provider (DOME-Role) for its catalogues and/or product-offerings, acting as a replication partner. Opponent of Replication-[`Sink`](#sink).
 
-### Replication Sink
+### Sink
 
-Replication Sink (`sink`, DOME-Role). `sink`, a DOME-Marketplace Participant, acting as a Data Consumer (DOME-Role), acting as a replication partner consuming offered catalogues and/of product-offerings.
+Replication-`Sink` (`Sink`, DOME-Role). `Sink`, a DOME-Marketplace Participant, acting as a Data Consumer (DOME-Role), acting as a replication partner consuming offered catalogues and/of product-offerings. Opponent of Replication-[`Source`](#source).
 
-### Replication Offer
+### Process
 
-Given `source` offers replication (process) to interested DOME-Marketplace Participants.
+The DOME Replication **Process** is an activity understood as a data-exchange between `Source` and `Sink`. Data:
 
-> JLA: TODO: IMPORTANT: doing so, given `source` **SHOULD
-** provide (if present/needed) correlated Usage Control Policy (Visibility Control), so interested Participants (potential `sink`-marketplaces) are able to see, what they are allowed to do with given `source's` product-offerings/catalogues and - much more interesting - what definitely
+- product-offering
+- catalogue
+
+#### Inbound
+
+Inbound Replication, a DOME Replication **Process** from the perspective of replication-party `Sink` (subject), receiving data from replication-opponent `Source`.
+
+```text
+(sink) <--- inbound.[asset] --- (source)
+```
+
+#### Outbound
+
+Outbound Replication, a DOME Replication **Process** from the perspective of replication-party `Source` (subject), sending data to replication-opponent `Sink`.
+
+```text
+(source) --- outbound.[asset] ---> (sink)
+```
+
+---
+
+### Offer
+
+Given `Source` (subject, DOME-Marketplace) offers asset(s) to DOME-Marketplace Participants.
+
+> JLA: TODO: IMPORTANT: doing so, given `Source` **SHOULD** provide (if present/needed) correlated Usage Control Policy (Visibility Control), so interested Participants (potential `Sink`-marketplaces) are able to see, what they are allowed to do with given `source's` product-offerings/catalogues and - much more interesting - what definitely
 **NOT**.
 
-> An accepted offer leads to a [Replication Agreement](#replication-agreement); in processing, given interested Participant (accepting the agreement) becoming the `sink`.
->
-> TODO: TBD: JLAs idea: but JLA thinks, this is **NOT** correct, because `source`
->> ### Replication Request
->>
->> Targeted on an existing [Replication Offer](#replication-offer) the potential `sink` sends a Replication Request.
->>
->> ### Replication Agreement
->>
->> The agreement between [`source`](#replication-source) and [`sink`](#replication-sink) (both DOME-Marketplace Participants) under which circumstances Replication Process will be performed successfully.
->>
+---
 
-### Usage Control by Replication-source
+### Access Control
 
-> REM: the artist formerly known as **Visibility Control**
+Subject `Source` defines Access Control Policies (hosted in its own Policy Administration Point (**PAP**)), those are used to control access on [offered](#offer) product-offerings/catalogues, if reacting participant (here: the potential [`Sink`](#sink)) try to replicate given assets (data-request).
 
-Usage Control in Replication, formulated by given data-owner (here: the `source`-maketplace), expresses how the Replication-Partner (`sink`) is allowed to present product-offers/catalogues to third party (here: the marketplace-customer).
+```text
+(source; access control) <--- [request; asset] --- (sink)
 
-All `sinks` **MUST** understand (**MUST** have the capability of enforcing `source's`) Usage Control Policies!
+positive, permission-rule is satisfied:
 
-### Access Control on Replication-source-side
+(source) --- outbound.[response; asset] ---> (sink)
+```
 
-The `source` defines Access Control Policies (hosted in its own Policy Administration Point (**PAP
-**)), those are used to control access on offered products/catalogues, if reacting Participants (here: potential `sink`-marketplaces) try to replicate given offerings (data-request).
+Access Control is defined in [dome-odrl-profile](../../dome-op.ttl) by `odrl-op:ReplicationOutbound`.
 
-#### Example
+---
 
-Authenticated user see file 'price', anonymous one's **NOT**.
+### Acceptance Control
 
+Subject `Sink` defines Acceptance Control Policies (hosted in its own Policy Administration Point (**PAP**)), those are used to control potential input off [offered](#offer) product-offerings/catalogues, if reacting participant (here: the potential [`Sink`](#sink)) trys to replicate given assets (data-request).
+
+```text
+(sink) --- [request; offered asset] ---> (source)
+
+(sink; acceptance control) <--- [response; asset] --- (source)
+
+positive, permission-rule is satisfied:
+
+(sink) <--- inbound.[response; asset] --- (source)
+```
+
+Acceptance Control is defined in [dome-odrl-profile](../../dome-op.ttl) by `odrl-op:ReplicationInbound`.
+
+---
+
+### Visibility Control
+
+Visibility Control, formulated by given data-owner, the Subject `Source`, expresses how given replication-partner `Sink` is allowed to present product-offers/catalogues (owned by `Source`) to third party (here: the marketplace-customer).
+
+Visibility Control can be understood more generally as [Usage Control](#usage-control), too.
+
+```text
+(source) --- outbound.[asset.odrl:hasPolicy] ---> (sink)
+```
+**Remark**: `odrl:hasPolicy`: as dcat does... <https://www.w3.org/TR/vocab-dcat-2/> (search for 'hasPolicy').
+
+> TODO: TBD: or cred:termsOfUse :: <https://w3c.github.io/vc-data-model/#terms-of-use>
+> 
+> TODO: TBD: or dome:termsOfUse :: must be defined by DOME...
+
+**IMPORTANT**: all `Sinks`- replicating ones `Source`, DOME-marketplace Participant's assest - **MUST** understand (**MUST** have the capability of enforcing `Source's`) Visibility/Usage Control Policies!
+
+Visibility Control is defined in [dome-odrl-profile](../../dome-op.ttl) by `odrl-op:Visibility`.
+
+**Example**:
+
+*'Authenticated user sees field 'price', anonymous one's does **NOT**.*
 - [https://www.all-puppets.org/policy/control/usage/_6800](../draft/_6800.ttl)
 
 ---
@@ -236,5 +298,9 @@ Authenticated user see file 'price', anonymous one's **NOT**.
 ###  
 
 ## References
+
+### Usage Control
+
+IDS usage Control.
 
 ---
