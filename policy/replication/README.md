@@ -27,7 +27,7 @@
 ## Big Picture
 
 Taken from [**Paolo Fabriani
-** (PFA), https://docs.google.com/document/d/1PdUaLQPMaaFvkU18QUcadMA8VROqpxQk1LzX5M0aLA0/](https://docs.google.com/document/d/1PdUaLQPMaaFvkU18QUcadMA8VROqpxQk1LzX5M0aLA0/) and slightly modified, to express more precise wording and spread given requirements and detailed specs. All main statements of PFAs proposal are still the same!
+** (PFA), https://docs.google.com/document/d/1PdUaLQPMaaFvkU18QUcadMA8VROqpxQk1LzX5M0aLA0/](https://docs.google.com/document/d/1PdUaLQPMaaFvkU18QUcadMA8VROqpxQk1LzX5M0aLA0/) and slightly modified, to express more precise wording and spread given requirements and detailed specifications. All main statements of PFAs proposal are still the same!
 
 > > Version by JLA (nicos), wordings only, **nothing** on main topics!
 >> - options are spreaded only
@@ -42,7 +42,7 @@ Taken from [**Paolo Fabriani
 
 ### On Catalog Replication (i.e. definition of Access Control Policies)
 
-As a marketplace owner (called the [*source*](#replication-source)-marketplace, *source*) I want to set Replication Policies (also understood as Replication Offer).
+As a marketplace owner (called the [*source*](#source)-marketplace, *source*) I want to set Replication Policies (also understood as Replication Offer).
 
 #### Remarks on Wording
 
@@ -81,8 +81,8 @@ Replication policies (those are **access control** policies) are a **desiderata*
 
 In general the replication process involves two actors and two phases:
 
-1. The [`Source`](#replication-source) marketplace decides what to (ideally) replicate, where and under what conditions.
-2. The [`Sink`](#replication-sink) marketplace becomes aware of such a replication wish and, if agreed ([Replication Agreement](#replication-agreement), proceeds with the replication of the offering/catalog.
+1. The [`Source`](#source) marketplace decides what to (ideally) replicate, where and under what conditions.
+2. The [`Sink`](#sink) marketplace becomes aware of such a replication wish and, if agreed ([Replication Agreement](#replication-agreement), proceeds with the replication of the offering/catalog.
 
 From a practical point of view, it was agreed that the process could work as follows:
 
