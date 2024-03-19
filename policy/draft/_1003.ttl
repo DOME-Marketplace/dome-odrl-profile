@@ -13,7 +13,7 @@
 ## Given is allowed to ~use, only if it's an 'on-boarder' (role 'onboarder')
 ## See also <https://dome-marketplace.github.io/iam-guide/index.html#Introduction%20of%20data%20about%20the%20Appointed%20Employee>.
 ##
-<https://dome-marketplace.org/policy/common/_1002>
+<https://dome-marketplace.org/policy/common/_1003>
     a                odrl:Policy ;
     odrl:profile     "https://github.com/DOME-Marketplace/dome-odrl-profile/blob/main/dome-op.ttl" ;
     odrl:permission  [ odrl:assigner <https://dome-marketplace.org/> ;
