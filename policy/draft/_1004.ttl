@@ -29,9 +29,8 @@
                                                          odrl:rightOperand odrl:policyUsage ; ] ;
                                        ##
                                      ] ;
-                       odrl:assignee "urn:assignee" ; ## REM: set at runtime
-                       odrl:action   dome-op:read ;   ## REM: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                       odrl:assignee "urn:assignee" ;   ## REM: set at runtime
+                       odrl:action   dome-op:read ;     ## REM: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                        ## odrl:action   dome-op:GET ;   ## REM: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                       ## end odrl:constraint
                      ] ;
     rdfs:isDefinedBy dome: .
