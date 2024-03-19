@@ -136,6 +136,11 @@ dome-op:userIsAnonymous
     a                odrl:LeftOperand, owl:NamedIndividual, skos:Concept ;
     rdfs:isDefinedBy dome-op: .
 
+dome-op:relatedParty_role
+    a                odrl:LeftOperand, owl:NamedIndividual, skos:Concept ;
+    skos:note        "."@en ;
+    rdfs:isDefinedBy dome-op: .
+
 dome-op:validFor_startDateTime
     a                odrl:LeftOperand, owl:NamedIndividual, skos:Concept ;
     skos:note        "Property on Product-Offering."@en ;
