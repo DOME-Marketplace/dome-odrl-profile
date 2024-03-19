@@ -12,12 +12,13 @@
 @prefix dome-op:  <https://github.com/DOME-Marketplace/dome-odrl-profile#> .
 
 ##
-## Access is given if enforcement fits to assets (product, etc.) "runtime"...
+## Access is given if enforcement fits to assets (product, etc.) "runtime" *and* is NOT retired...
 ##
 <https://dome-marketplace.org/policy/common/_1004>
     a                odrl:Policy ;
     odrl:profile     "https://github.com/DOME-Marketplace/dome-odrl-profile/blob/main/dome-op.ttl" ;
-    odrl:permission  [ odrl:assigner <https://dome-marketplace.org/> ;
+    odrl:assigner    <https://dome-marketplace.org/> ;
+    odrl:permission  [ a             odrl:Permission ;
                        odrl:target   [ a               odrl:AssetCollection ;
                                        odrl:source     "urn:asset" ; ## REM:  resolved to [{ @id: "", authenticated: true}]
                                        odrl:refinement [ a                 odrl:Constraint ;
@@ -30,7 +31,6 @@
                                                          odrl:operator     odrl:lt ;
                                                          odrl:rightOperand odrl:policyUsage ; ],
                                                        ##
-
                                                        [ a                 odrl:Constraint ;
                                                          odrl:leftOperand  dome-op:validFor_endDateTime ;
                                                          odrl:operator     odrl:gt ;
