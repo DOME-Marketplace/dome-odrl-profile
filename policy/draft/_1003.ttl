@@ -1,0 +1,34 @@
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix odrl:    <http://www.w3.org/ns/odrl/2/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix dome:    <https://www.dome-marketplace.org/>.
+@prefix dome-op: <https://github.com/DOME-Marketplace/dome-odrl-profile#> .
+
+##
+## Given is allowed to ~use, only if it's an 'on-boarder' (role 'onboarder')
+## See also <https://dome-marketplace.github.io/iam-guide/index.html#Introduction%20of%20data%20about%20the%20Appointed%20Employee>.
+##
+<https://dome-marketplace.org/policy/common/_1002>
+    a                odrl:Policy ;
+    odrl:profile     "https://github.com/DOME-Marketplace/dome-odrl-profile/blob/main/dome-op.ttl" ;
+    odrl:permission  [ odrl:assigner <https://dome-marketplace.org/> ;
+                       ## product.name: AirQuality
+                       odrl:target   <urn:ngsi-ld:button:onboard> ;
+                       ## organization.tradingName: "EORI.COSO"
+                       odrl:assignee [ a               odrl:PartyCollection ;
+                                       odrl:source     "urn:user" ; ## REM:  resolved to [{ @id: "", authenticated: true}]
+                                       odrl:refinement [ a                 odrl:Constraint ;
+                                                         odrl:leftOperand  dome-op:role ;
+                                                         odrl:operator     odrl:eq ;
+                                                         odrl:rightOperand "onboarder"^^xsd:string ; ] ;
+                                       ##
+                                     ] ;
+                       odrl:action   odrl:use ;
+                       ## end odrl:constraint
+                     ] ;
+    rdfs:isDefinedBy dome: .
