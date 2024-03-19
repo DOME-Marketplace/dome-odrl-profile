@@ -30,7 +30,7 @@ Taken from [**Paolo Fabriani
 ** (PFA), https://docs.google.com/document/d/1PdUaLQPMaaFvkU18QUcadMA8VROqpxQk1LzX5M0aLA0/](https://docs.google.com/document/d/1PdUaLQPMaaFvkU18QUcadMA8VROqpxQk1LzX5M0aLA0/) and slightly modified, to express more precise wording and spread given requirements and detailed specifications. All main statements of PFAs proposal are still the same!
 
 > > Version by JLA (nicos), wordings only, **nothing** on main topics!
->> - options are spreaded only
+>> - options are spread only
 >> - most of those options must be discussed/defined (so: leading to some new requirements?!?), to be usable in policies, rules and nested constraints
 >
 >> - **usage control** moves to “access control” (reason: this chapter handles “access control”)

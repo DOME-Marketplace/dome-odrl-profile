@@ -28,7 +28,7 @@
                                                          odrl:rightOperand "onboarder"^^xsd:string ; ] ;
                                        ##
                                      ] ;
-                       odrl:action   odrl:use ;
+                       odrl:action   dome-op:read ; ## REM: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                        ## end odrl:constraint
                      ] ;
     rdfs:isDefinedBy dome: .

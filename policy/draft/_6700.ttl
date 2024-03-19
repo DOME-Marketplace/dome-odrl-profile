@@ -22,6 +22,7 @@
     dct:description  """Acceptance or Filtering/Gate Policy, hosted on sink-side, classifying replication-process as an inbound-replication."""@en ;
     odrl:permission  [ a             odrl:Permission ;
                        odrl:assigner "https://www.all-puppets.org/" ;
+                       ## REM: 'odrl:target' :: fetched by PDP at runtime
                        odrl:target   "urn:asset" ;
                        odrl:assignee [ a               odrl:PartyCollection ;
                                        odrl:source     "urn:assignee" ;
