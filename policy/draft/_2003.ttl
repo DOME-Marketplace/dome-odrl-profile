@@ -1,0 +1,22 @@
+@prefix dc:       <http://purl.org/dc/elements/1.1/> .
+@prefix dct:      <http://purl.org/dc/terms/> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix odrl:     <http://www.w3.org/ns/odrl/2/> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix TMF-PCMA: <https://tmf-open-api-table-documents.s3.eu-west-1.amazonaws.com/OpenApiTable/4.1.0/user_guides/TMF620_Product_Catalog_Management_API_v4.1.0_user_guides.pdf> .
+
+@prefix dome:     <https://www.dome-marketplace.org/>.
+@prefix dome-op:  <https://github.com/DOME-Marketplace/dome-odrl-profile#> .
+
+##
+## A user is only allowed to create product-offerings (or any other entity) that is owned by
+##     the organization it acts on behalf of and if he is in rolle seller.
+##
+<https://dome-marketplace.org/policy/marketplace/_2003>
+    a                odrl:Policy ;
+    odrl:profile     "https://github.com/DOME-Marketplace/dome-odrl-profile/blob/main/dome-op.ttl" ;
+    odrl:assigner    <https://dome-marketplace.org/> ;
+    rdfs:isDefinedBy dome: .

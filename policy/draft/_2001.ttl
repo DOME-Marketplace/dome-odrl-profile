@@ -12,24 +12,33 @@
 @prefix dome-op:  <https://github.com/DOME-Marketplace/dome-odrl-profile#> .
 
 ##
-## Access is given if enforcement fits to assets (here: catalogue) to relatedParty...
+## A user is only allowed to modify product-offerings (or any other entity)
+##     that are owned by the organization it acts on behalf of and if he is in role **seller**.
 ##
-<https://dome-marketplace.org/policy/common/_1005>
+<https://dome-marketplace.org/policy/marketplace/_2001>
     a                odrl:Policy ;
     odrl:profile     "https://github.com/DOME-Marketplace/dome-odrl-profile/blob/main/dome-op.ttl" ;
     odrl:assigner    <https://dome-marketplace.org/> ;
     odrl:permission  [ a             odrl:Permission ;
+                       odrl:assignee [ a               odrl:PartyCollection ;
+                                       odrl:source     "urn:user" ;
+                                       odrl:refinement [ a                 odrl:Constraint ;
+                                                         odrl:leftOperand  dome-op:role ;
+                                                         odrl:operator     odrl:hasPart ;
+                                                         odrl:rightOperand "seller"^^xsd:string ;
+                                                         odrl:dataType     xsd:string ; ] ;
+                                       ##
+                                     ] ;
                        odrl:target   [ a               odrl:AssetCollection ;
                                        odrl:source     "urn:asset" ;                            ## REM: set at runtime
                                        odrl:refinement [ a                 odrl:Constraint ;
                                                          odrl:leftOperand  dome-op:relatedParty ;
                                                          odrl:operator     odrl:eq ;
+                                                         ## REM: the issuer-did of given VC
                                                          odrl:rightOperand dome-op:currentParty ;
                                                          odrl:dataType     xsd:anyURI ; ] ;
                                        ##
                                      ] ;
-                       odrl:assignee "urn:assignee" ;   ## REM: set at runtime
-                       odrl:action   dome-op:write ;    ## REM: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                       ## odrl:action   dome-op:GET ;   ## REM: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                       odrl:action   dome-op:modify ;
                      ] ;
     rdfs:isDefinedBy dome: .
