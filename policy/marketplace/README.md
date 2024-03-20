@@ -19,8 +19,8 @@
 
 > A user is only allowed to **modify** product-offerings (or any other entity) that are owned by the organization it acts on behalf of and if he is in role **seller**.
 
-*owned by the organization*: owned === relatedParty, did
-*acts on behalf of organization*: organization === the VC.issuer, did
+- *owned by the organization*: owned === relatedParty, did
+- *acts on behalf of organization*: organization === the VC.issuer, did
 
 
 - [_2001, ttl](../draft/_2001.ttl)
