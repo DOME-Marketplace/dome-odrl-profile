@@ -23,13 +23,16 @@
                        odrl:assignee [ a               odrl:PartyCollection ;
                                        odrl:source     "urn:user" ;
                                        odrl:refinement [ a                 odrl:Constraint ;
+                                                         ## TODO: TBC: 'dome-op:role' OR 'dome-op:rolesAndDuties'
                                                          odrl:leftOperand  dome-op:role ;
                                                          odrl:operator     odrl:hasPart ;
                                                          odrl:rightOperand "seller"^^xsd:string ;
                                                          odrl:dataType     xsd:string ; ] ;
                                        ##
                                      ] ;
-                       odrl:target   [ a               odrl:AssetCollection ;
+                       odrl:target   [
+                                         ## REM: a collection of ProductOfferings [1..1]
+                                         a               odrl:AssetCollection ;
                                        odrl:source     "urn:asset" ;                            ## REM: set at runtime
                                        odrl:refinement [ a                 odrl:Constraint ;
                                                          odrl:leftOperand  dome-op:relatedParty ;
