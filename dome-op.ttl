@@ -173,7 +173,6 @@ dome-op:validFor_endDateTime
 
 ## region dome-op Action
 
-
 dome-op:create
     a                odrl:Action, skos:Concept ;
     rdfs:isDefinedBy odrl: ;
@@ -182,6 +181,7 @@ dome-op:create
     skos:note        "Allow creation of an asset."@en ;
     rdfs:isDefinedBy dome-op: .
 
+## TODO: TBD: dome-op:read :: drop?!?
 dome-op:read
     a                odrl:Action, skos:Concept ;
     rdfs:isDefinedBy odrl: ;
@@ -190,6 +190,7 @@ dome-op:read
     skos:note        "We introduce 'read' here to de-couple from odrl-core."@en ;
     rdfs:isDefinedBy dome-op: .
 
+## TODO: TBD: dome-op:modify :: drop?!?
 dome-op:modify
     a                odrl:Action, skos:Concept ;
     rdfs:isDefinedBy odrl: ;
@@ -199,6 +200,7 @@ dome-op:modify
     skos:note        ""@en ;
     rdfs:isDefinedBy dome-op: .
 
+## TODO: TBD: dome-op:delete :: drop?!?
 dome-op:delete
     a                odrl:Action, skos:Concept ;
     rdfs:isDefinedBy odrl: ;
