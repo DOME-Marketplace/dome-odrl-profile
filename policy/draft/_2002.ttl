@@ -70,5 +70,5 @@
                                                          ] ;
                                          ##
                                      ] ;
-                       odrl:action   dome-op:modify ; ] ;
+                       odrl:action   dome-op:set_published  ; ] ;
     rdfs:isDefinedBy dome: .
