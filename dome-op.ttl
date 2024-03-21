@@ -105,6 +105,19 @@ dome-op:ProfileVocabulary-ttl
     ## endregion Replication
     rdfs:isDefinedBy dome-op: .
 
+<https://github.com/DOME-Marketplace/dome-odrl-profile#action>
+    a                skos:Collection ;
+    skos:prefLabel   "DOME Actions"@en ;
+    skos:scopeNote   "DOME Actions"@en ;
+    ## region
+    skos:member      dome-op:create ;
+    skos:member      dome-op:read ;     ## TODO: TBD:
+    skos:member      dome-op:modify ;   ## TODO: TBD:
+    skos:member      dome-op:delete ;   ## TODO: TBD:
+    skos:member      dome-op:set_published ; ## IMPORTANT EXPERIMENTAL
+    ## endregion
+    rdfs:isDefinedBy dome-op: .
+
 ## region dome-op Right Operand
 dome-op:currentParty
     a                odrl:RightOperand, owl:NamedIndividual, skos:Concept ;
@@ -169,7 +182,6 @@ dome-op:validFor_endDateTime
     rdfs:isDefinedBy dome-op: .
 
 ## endregion dome-op Left Operand
-
 
 ## region dome-op Action
 
