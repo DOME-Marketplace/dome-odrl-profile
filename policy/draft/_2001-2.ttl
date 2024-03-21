@@ -15,7 +15,7 @@
 ## A user is only allowed to modify product-offerings (or any other entity)
 ##     that are owned by the organization it acts on behalf of and if he is in role **seller**.
 ##
-<https://dome-marketplace.org/policy/marketplace/_2001>
+<https://dome-marketplace.org/policy/marketplace/_2001-2>
     a                odrl:Policy ;
     odrl:profile     "https://github.com/DOME-Marketplace/dome-odrl-profile/blob/main/dome-op.ttl" ;
     odrl:assigner    <https://dome-marketplace.org/> ;
@@ -29,11 +29,13 @@
                                                          odrl:dataType     xsd:string ; ] ;
                                        ##
                                      ] ;
-                       odrl:target   [ a           odrl:AssetCollection ;
-                                       odrl:source "urn:asset" ;                            ## REM: set at runtime
-                                       odrl:refinement
-                                                   <https://dome-marketplace.org/policy/constraint/relatedParty-eq-currentParty> ;
-                                       ##
+                       odrl:target   [
+                                         ## REM: a collection of ProductOfferings [1..1]
+                                         a           odrl:AssetCollection ;
+                                         odrl:source "urn:asset" ;                            ## REM: set at runtime
+                                         odrl:refinement
+                                                     <https://dome-marketplace.org/policy/constraint/relatedParty-eq-currentParty> ;
+                                         ##
                                      ] ;
                        odrl:action   dome-op:modify ; ] ;
     rdfs:isDefinedBy dome: .

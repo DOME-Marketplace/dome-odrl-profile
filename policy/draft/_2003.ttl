@@ -12,11 +12,43 @@
 @prefix dome-op:  <https://github.com/DOME-Marketplace/dome-odrl-profile#> .
 
 ##
-## A user is only allowed to create product-offerings (or any other entity) that is owned by
+## A user is only allowed to create product-offerings (or any other entity) that is owned ("Owner") by
 ##     the organization it acts on behalf of and if he is in rolle seller.
 ##
 <https://dome-marketplace.org/policy/marketplace/_2003>
     a                odrl:Policy ;
     odrl:profile     "https://github.com/DOME-Marketplace/dome-odrl-profile/blob/main/dome-op.ttl" ;
     odrl:assigner    <https://dome-marketplace.org/> ;
+    odrl:permission  [ a             odrl:Permission ;
+                       odrl:assignee [ a               odrl:PartyCollection ;
+                                       odrl:source     "urn:user" ;
+                                       odrl:refinement [ a                 odrl:Constraint ;
+                                                         ## TODO: TBC: 'dome-op:role' OR 'dome-op:rolesAndDuties'
+                                                         odrl:leftOperand  dome-op:role ;
+                                                         odrl:operator     odrl:hasPart ;
+                                                         odrl:rightOperand "seller"^^xsd:string ;
+                                                         odrl:dataType     xsd:string ; ] ;
+                                       ##
+                                     ] ;
+                       odrl:target   [
+                                         ## REM: a collection of Catalogs
+                                         a               odrl:AssetCollection ;
+                                         odrl:source     "urn:asset" ;                            ## REM: set at runtime
+                                         odrl:refinement [ a                 odrl:Constraint ;
+                                                           odrl:leftOperand  dome-op:relatedParty ;
+                                                           odrl:operator     odrl:eq ;
+                                                           ## REM: the issuer-did of given VC
+                                                           odrl:rightOperand dome-op:currentParty ;
+                                                           odrl:dataType     xsd:anyURI ; ],
+                                                         ##
+                                                         [ a                 odrl:Constraint ;
+                                                           odrl:leftOperand  dome-op:relatedParty_role ;
+                                                           odrl:operator     odrl:eq ;
+                                                           ## TODO: capital/lower-case?!? "Owner" *or* "owner"
+                                                           odrl:rightOperand "Owner" ;
+                                                           odrl:dataType     xsd:anyURI ; ] ;
+                                         ##
+                                     ] ;
+                       ## REM: user is allowed to 'create' a ProductOffer
+                       odrl:action   dome-op:create ; ] ;
     rdfs:isDefinedBy dome: .
