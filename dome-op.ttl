@@ -208,8 +208,17 @@ dome-op:delete
     skos:note        ""@en ;
     rdfs:isDefinedBy dome-op: .
 
-#dome-op:modifiy
-#    rdfs:isDefinedBy dome-op: .
+
+## IMPORTANT : dome-op:set_published :: EXPERIMENTAL
+dome-op:set_published
+    a                odrl:Action, skos:Concept ;
+    rdfs:isDefinedBy odrl: ;
+    rdfs:label       "Set published"@en ;
+    ## TODO: TBC: writing / modification
+    skos:definition  "Allow setting targeted assest (ProductOffer) to 'published'."@en ;
+    skos:note        ""@en ;
+    rdfs:comment     """A user is only allowed to set the status of a product-offering to "published" for offerings owned by the organization it acts on behalf of and has the role manager (or something similar, probably has to be specified more in detail)"""@en ;
+    rdfs:isDefinedBy dome-op: .
 
 ## endregion dome-op Action
 
