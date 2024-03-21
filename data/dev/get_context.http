@@ -1,0 +1,8 @@
+## Catalogs
+
+GET https://dome-marketplace.org/2022/credentials/employee/v1
+Accept: application/json
+
+>>! output/get_context.json
+
+###

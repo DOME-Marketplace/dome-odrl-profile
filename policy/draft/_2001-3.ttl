@@ -47,9 +47,9 @@
                                          a               odrl:AssetCollection ;
                                          odrl:source     "urn:asset" ;                            ## REM: set at runtime
                                          odrl:refinement [ a                 odrl:Constraint ;
-                                                           ## TODO: IMORTANT IMORTANT IMORTANT IMORTANT IMORTANT IMORTANT
+                                                           ## TODO: IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
                                                            ## TODO:    this leads to definition of 'id' in @context
-                                                           ## TODO: IMORTANT IMORTANT IMORTANT IMORTANT IMORTANT IMORTANT
+                                                           ## TODO: IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
                                                            odrl:leftOperand  "id" ;
 #                                                           odrl:leftOperand  "TMF-PCMA:id" ;
                                                            odrl:operator     odrl:eq ;
@@ -58,19 +58,19 @@
                                                            odrl:dataType     xsd:anyURI ; ],
                                                          ##
                                                          [ a                 odrl:Constraint ;
-                                                           ## TODO: IMORTANT IMORTANT IMORTANT IMORTANT IMORTANT IMORTANT
+                                                           ## TODO: IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
                                                            ## TODO:    this leads to definition of 'role' in @context
-                                                           ## TODO: IMORTANT IMORTANT IMORTANT IMORTANT IMORTANT IMORTANT
+                                                           ## TODO: IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
                                                            odrl:leftOperand  "role" ;
 #                                                           odrl:leftOperand  "TMF-PCMA:role" ;
                                                            odrl:operator     odrl:eq ;
                                                            ## TODO: capital/lower-case?!? "Owner" *or* "owner"
-                                                           ## TODO: IMORTANT IMORTANT IMORTANT IMORTANT IMORTANT IMORTANT
+                                                           ## TODO: IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
                                                            ## TODO:    this leads to definition of 'Owner' in @context
                                                            ## TODO:    ...as a sort of 'NamedIndividual'
                                                            ## TODO:    ...or we have to change datatype to xsd:string
                                                            ## TODO:    ...not so nice...
-                                                           ## TODO: IMORTANT IMORTANT IMORTANT IMORTANT IMORTANT IMORTANT
+                                                           ## TODO: IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
                                                            odrl:rightOperand "Owner" ;
                                                            odrl:dataType     xsd:anyURI ;
                                                            ## odrl:dataType     xsd:string ;
