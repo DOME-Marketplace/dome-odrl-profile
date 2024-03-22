@@ -64,6 +64,8 @@
                                                          odrl:rightOperand ""^^xsd:string ;
                                                          ## ALTERNATIVE: "-1" means **NOT** visible.
                                                          odrl:rightOperand "-1"^^xsd:decimal ;
+                                                         ## ALTERNATIVE: means **NOT** visible.
+                                                         odrl:rightOperand dome-op:HIDDEN ;
                                                          odrl:dataType     xsd:string ;
                                                          odrl:unit         "http://dbpedia.org/resource/Euro" ;
                                                          ##

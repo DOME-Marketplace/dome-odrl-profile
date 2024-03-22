@@ -11,8 +11,8 @@
 
 ###
 # An Acceptance Policy (dome-op:ReplicationInbound), provided by potential sink-marketplace (data-consumer),
-# ...to express which offerings (from source-marketplaces, data-provider) will be accepted (so: this will
-# ...lead to an inbound-replication of offered product-offering/catalogue).
+# ...to express which offerings (from source-marketplaces, data-provider) will be accepted, so: this will
+# ...lead to an inbound-replication of offered product-offering/catalogue.
 #
 # here: sink will accept only on-boarded DOME-Participants located in Germany, France and Spain are welcome.
 ###
