@@ -5,15 +5,15 @@
 - [Introduction](#introduction)
 - [Big Picture](#big-picture)
 - [Replication](#replication)
-  - [Source](#source)
-  - [Sink](#sink)
-  - [Process](#process)
-    - [Inbound](#inbound)
-    - [Outbound](#outbound)
-  - [Offer](#offer)
-  - [Access Control](#access-control)
-  - [Acceptance Control](#acceptance-control)
-  - [Visibility Control](#visibility-control)
+    - [Source](#source)
+    - [Sink](#sink)
+    - [Process](#process)
+        - [Inbound](#inbound)
+        - [Outbound](#outbound)
+    - [Offer](#offer)
+    - [Access Control](#access-control)
+    - [Acceptance Control](#acceptance-control)
+    - [Visibility Control](#visibility-control)
 - [References](#references)
 
 *Content 'DOME Replication'.*
@@ -42,13 +42,16 @@ Taken from [**Paolo Fabriani
 
 ### On Catalog Replication (i.e. definition of Access Control Policies)
 
-As a marketplace owner (called the [*source*](#source)-marketplace, *source*) I want to set Replication Policies (also understood as Replication Offer).
+As a marketplace owner (called the [*source*](#source)-marketplace,
+*source*) I want to set Replication Policies (also understood as Replication Offer).
 
 #### Remarks on Wording
 
 Replication Policy understood as an Access Control Policy misleads - unfortunately. So we need some thoughts for clarification:
 
-`Source`-marketplace wants to place its offer to identified `Sink`-marketplace. Deciding the replication-process **is a `Sink`-marketplace initiated pull**, `Source` will control access to requested resources (here: product-offering/catalogue). 
+`Source`-marketplace wants to place its offer to identified `Sink`-marketplace. Deciding the replication-process **is
+a `Sink`-marketplace initiated pull
+**, `Source` will control access to requested resources (here: product-offering/catalogue).
 
 
 ---
@@ -67,7 +70,8 @@ Specific marketplaces (identified by its id) as a first, but we will consider al
 - legal
 - compliance
 
-...depending on **source-marketplace requirements to control where my product offerings (or catalogues) can be exposed** (in potentially targeted *sink*-marketplace, `Sink`).
+...depending on **source-marketplace requirements to control where my product offerings (or catalogues) can be exposed
+** (in potentially targeted *sink*-marketplace, `Sink`).
 
 Replication can apply to:
 
@@ -77,7 +81,8 @@ Replication can apply to:
 
 - entire catalogs
 
-Replication policies (those are **access control** policies) are a **desiderata** from source marketplaces. No other marketplace is forced to publish if it does **NOT** agree.
+Replication policies (those are **access control** policies) are a **desiderata
+** from source marketplaces. No other marketplace is forced to publish if it does **NOT** agree.
 
 In general the replication process involves two actors and two phases:
 
@@ -208,7 +213,8 @@ The DOME Replication **Process** is an activity understood as a data-exchange be
 
 #### Inbound
 
-Inbound Replication, a DOME Replication **Process** from the perspective of replication-party `Sink` (subject), receiving data from replication-opponent `Source`.
+Inbound Replication, a DOME Replication **Process
+** from the perspective of replication-party `Sink` (subject), receiving data from replication-opponent `Source`.
 
 ```text
 (sink) <--- inbound.[asset] --- (source)
@@ -216,7 +222,8 @@ Inbound Replication, a DOME Replication **Process** from the perspective of repl
 
 #### Outbound
 
-Outbound Replication, a DOME Replication **Process** from the perspective of replication-party `Source` (subject), sending data to replication-opponent `Sink`.
+Outbound Replication, a DOME Replication **Process
+** from the perspective of replication-party `Source` (subject), sending data to replication-opponent `Sink`.
 
 ```text
 (source) --- outbound.[asset] ---> (sink)
@@ -228,14 +235,16 @@ Outbound Replication, a DOME Replication **Process** from the perspective of rep
 
 Given `Source` (subject, DOME-Marketplace) offers asset(s) to DOME-Marketplace Participants.
 
-> JLA: TODO: IMPORTANT: doing so, given `Source` **SHOULD** provide (if present/needed) correlated Usage Control Policy (Visibility Control), so interested Participants (potential `Sink`-marketplaces) are able to see, what they are allowed to do with given `source's` product-offerings/catalogues and - much more interesting - what definitely
+> JLA: TODO: IMPORTANT: doing so, given `Source` **SHOULD
+** provide (if present/needed) correlated Usage Control Policy (Visibility Control), so interested Participants (potential `Sink`-marketplaces) are able to see, what they are allowed to do with given `source's` product-offerings/catalogues and - much more interesting - what definitely
 **NOT**.
 
 ---
 
 ### Access Control
 
-Subject `Source` defines Access Control Policies (hosted in its own Policy Administration Point (**PAP**)), those are used to control access on [offered](#offer) product-offerings/catalogues, if reacting participant (here: the potential [`Sink`](#sink)) try to replicate given assets (data-request).
+Subject `Source` defines Access Control Policies (hosted in its own Policy Administration Point (**PAP
+**)), those are used to control access on [offered](#offer) product-offerings/catalogues, if reacting participant (here: the potential [`Sink`](#sink)) try to replicate given assets (data-request).
 
 ```text
 (source; access control) <--- [request; asset] --- (sink)
@@ -251,7 +260,8 @@ Access Control is defined in [dome-odrl-profile](../../dome-op.ttl) by `odrl-op:
 
 ### Acceptance Control
 
-Subject `Sink` defines Acceptance Control Policies (hosted in its own Policy Administration Point (**PAP**)), those are used to control potential input off [offered](#offer) product-offerings/catalogues, if reacting participant (here: the potential [`Sink`](#sink)) trys to replicate given assets (data-request).
+Subject `Sink` defines Acceptance Control Policies (hosted in its own Policy Administration Point (**PAP
+**)), those are used to control potential input off [offered](#offer) product-offerings/catalogues, if reacting participant (here: the potential [`Sink`](#sink)) trys to replicate given assets (data-request).
 
 ```text
 (sink) --- [request; offered asset] ---> (source)
@@ -276,26 +286,63 @@ Visibility Control can be understood more generally as [Usage Control](#usage-co
 ```text
 (source) --- outbound.[asset.odrl:hasPolicy] ---> (sink)
 ```
+
 **Remark**: `odrl:hasPolicy`: as dcat does... <https://www.w3.org/TR/vocab-dcat-2/> (search for 'hasPolicy').
 
 > TODO: TBD: or cred:termsOfUse :: <https://w3c.github.io/vc-data-model/#terms-of-use>
-> 
+>
 > TODO: TBD: or dome:termsOfUse :: must be defined by DOME...
 
-**IMPORTANT**: all `Sinks`- replicating ones `Source`, DOME-marketplace Participant's assest - **MUST** understand (**MUST** have the capability of enforcing `Source's`) Visibility/Usage Control Policies!
+**IMPORTANT**: all `Sinks`- replicating ones `Source`, DOME-marketplace Participant's assest - **MUST** understand (*
+*MUST** have the capability of enforcing `Source's`) Visibility/Usage Control Policies!
 
 Visibility Control is defined in [dome-odrl-profile](../../dome-op.ttl) by `odrl-op:Visibility`.
 
 **Example**:
 
 *'Authenticated user sees field 'price', anonymous one's does **NOT**.*
+
 - [https://www.all-puppets.org/policy/control/usage/_6800](../draft/_6800.ttl)
 
 ---
 
-## Use Case
+# Use Case
 
-###  
+## 6600
+
+> An Access Control Policy (dome-op:ReplicationOutbound), enforced by source-marketplace (data-data-provider),
+>
+> ...to express assets (product-offering/catalogue, here: Spongebob) will be exchanged in response, so: this will
+>
+> ...lead to an outbound-replication to replication-opponent, the sink-marketplace.
+>
+> here: source 'All-Puppets' will accept (provide assets) only on-boarded DOME-Participants located in Belgium.
+
+- [_6600, ttl](../draft/_6600.ttl)
+- [_6600, json](../draft/_6600.json)
+
+## 6700
+
+> An Acceptance Policy (dome-op:ReplicationInbound), provided by potential sink-marketplace (data-consumer),
+> 
+> ...to express which offerings (from source-marketplaces, data-provider) will be accepted, so: this will
+> 
+> ...lead to an inbound-replication of offered product-offering/catalogue.
+> 
+> here: sink will accept only on-boarded DOME-Participants located in Germany, France and Spain are welcome.
+
+- [_6700, ttl](../draft/_6700.ttl)
+- [_6700, json](../draft/_6700.json)
+
+## 6800
+
+> Visibility Control (Usage Control) on Spongebob.
+
+'price' is HIDDEN for anonymous users.
+
+
+- [_6800, ttl](../draft/_6800.ttl)
+- [_6800, json](../draft/_6800.json)
 
 ## References
 

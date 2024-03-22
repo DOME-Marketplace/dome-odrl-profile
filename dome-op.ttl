@@ -119,10 +119,17 @@ dome-op:ProfileVocabulary-ttl
     rdfs:isDefinedBy dome-op: .
 
 ## region dome-op Right Operand
+
 dome-op:currentParty
     a                odrl:RightOperand, owl:NamedIndividual, skos:Concept ;
     skos:definition  """Current user. 'odrl:datatype xsd:anyURI'."""@en ;
     rdfs:isDefinedBy dome-op: .
+
+dome-op:HIDDEN
+    a                odrl:RightOperand, owl:NamedIndividual, skos:Concept ;
+    skos:definition  """used in'odrl:action'-refinement to make special property *invisible*."""@en ;
+    rdfs:isDefinedBy dome-op: .
+
 ## endregion dome-op Right Operand
 
 ## region dome-op Left Operand

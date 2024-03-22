@@ -11,8 +11,8 @@
 
 ###
 # An Access Control Policy (dome-op:ReplicationOutbound), enforced by source-marketplace (data-data-provider),
-# ...to express assets (product-offering/catalogue, here: Spongebob) will be exchanged in response (so: this will
-# ...lead to an outbound-replication to replication-opponent, the sink-marketplace).
+# ...to express assets (product-offering/catalogue, here: Spongebob) will be exchanged in response, so: this will
+# ...lead to an outbound-replication to replication-opponent, the sink-marketplace.
 #
 # here: source 'All-Puppets' will accept (provide assets) only on-boarded DOME-Participants located in Belgium.
 ###

@@ -17,7 +17,7 @@
 ## IMPORTANT CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION
 
 ## IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
-##     ProductOffering.relatedParty is **NOT** defined so far - we cant see now!!!!!!!!!!!!!!!!!!!!!!!
+##     ProductOffering.relatedParty is **NOT** defined so far - we can't see now in example-data!!!!!!!!!!!!!!!!!!!!!!!
 ## IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
 
 ## from _2001:
@@ -25,7 +25,7 @@
 ##     that are owned by the organization it acts on behalf of and if he is in role **seller**.
 ##
 ## adding to 2001-3
-##     and must be role of "Owner"
+##     and must be of role "Owner"
 ##
 <https://dome-marketplace.org/policy/marketplace/_2001-3>
     a                odrl:Policy ;
