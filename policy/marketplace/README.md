@@ -71,6 +71,13 @@ Refinement (`odrl:refinement`) as stand-alone constraint. So this constraint is 
 
 ---
 
+## 300*
+
+Based on Example VC/LEARCredential:
+
+- [_3000_VC_1.js](../marketplace/_3000_VC_1.js)
+
+
 ## 3001
 
 > When the mandate specifies power to Execute **Onboarding**, the PDP of the DOME Operator
