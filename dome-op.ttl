@@ -190,6 +190,17 @@ dome-op:validFor_endDateTime
 
 ## endregion dome-op Left Operand
 
+## region dome-op Identity Left Operand
+
+dome-op:cs_power_onboarding_action
+    a                odrl:LeftOperand, owl:NamedIndividual, skos:Concept ;
+    skos:definition  """Fetching the 'action' from '$mandate.power[..].tmf_action'."""@en ;
+    skos:note        """IMPLEMENTATION Notes:
+needs input 'fn({"tmf_domain": "DOME", "tmf_function": "Onboarding"})'"""@en ;
+    rdfs:isDefinedBy dome-op: .
+
+## endregion dome-op Identity Left Operand
+
 ## region dome-op Action
 
 dome-op:create
@@ -239,6 +250,13 @@ dome-op:set_published
     skos:definition  "Allow setting targeted assest (ProductOffer) to 'published'."@en ;
     skos:note        ""@en ;
     rdfs:comment     """A user is only allowed to set the status of a product-offering to "published" for offerings owned by the organization it acts on behalf of and has the role manager (or something similar, probably has to be specified more in detail)"""@en ;
+    rdfs:isDefinedBy dome-op: .
+
+dome-op:onboard
+    a                odrl:Action, skos:Concept ;
+    rdfs:isDefinedBy odrl: ;
+    rdfs:label       "Onboard"@en ;
+    skos:definition  "Allow processing 'Onboarding'."@en ;
     rdfs:isDefinedBy dome-op: .
 
 ## endregion dome-op Action
