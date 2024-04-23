@@ -95,6 +95,12 @@ REM: *not* defined.
 > When the mandate specifies power to **Create ProductOffering**, the PDP of the DOME Operator
 > should enable access to the TMF APIs to **create** ALL the entities related to a **Product offering**.
 
+Additional:
+
+> Additional Constraint: the issuer **MUST** be member of DOME's Trusted Participant List
+>    taken from: "DOME D3.4 - DOME Reference Architecture and Specifications V2"
+>    (3.3.5.4 Query the Trusted Issuer Lists)
+
 - [_3002, ttl](../draft/_3002.ttl)
 - [_3002, json](../draft/_3002.json)
 
