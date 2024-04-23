@@ -30,7 +30,8 @@
                                                          odrl:dataType     xsd:boolean ;
                                                          ##
                                                        ],
-                                                       ## REM: only to put in something more
+                                                       ## REM: only to put in something more,
+                                                       ## REM:     not listed in given use case description...
                                                        [ a                 odrl:Constraint ;
                                                          odrl:leftOperand  dome-op:age ;
                                                          odrl:operator     odrl:gt ;
@@ -38,7 +39,7 @@
                                                          odrl:dataType     xsd:decimal ;
                                                          ##
                                                        ] ;
-                                       ##
+                                       ## end: odrl:refinement
                                      ] ;
                        odrl:action   odrl:use ],
                      ##

@@ -23,6 +23,7 @@
     odrl:permission  [ a             odrl:Permission ;
                        odrl:assigner "https://www.all-puppets.org/" ;
                        ## REM: 'odrl:target' :: fetched by PDP at runtime
+                       ## REM: ProductOffering(s), etc.
                        odrl:target   "urn:asset" ;
                        odrl:assignee [ a               odrl:PartyCollection ;
                                        odrl:source     "urn:assignee" ;
