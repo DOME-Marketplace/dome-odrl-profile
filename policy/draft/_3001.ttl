@@ -36,6 +36,7 @@
                                                        ## TODO:   or it "sits inside" the implementation of given
                                                        ## TODO:   dome-op:LeftOperand
                                                        odrl:leftOperand  dome-op:cs_power_onboarding_action ;
+                                                       # odrl:leftOperand  "$asdfklaslödf.asdfasdsadf.function" ;
                                                        odrl:operator     odrl:eq ;
                                                        odrl:rightOperand "Execute"^^xsd:string ;
                                                        ## REM: alternative:

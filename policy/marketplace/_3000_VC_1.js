@@ -31,12 +31,12 @@ let that = {
             "id"      : "90ea73b6-f5a6-4187-b98e-e74d5caa8129",
             "mandator": {
                 // REM: the Legal Representative
-                "commonName"            : "RUIZ MARTINEZ JESUS - 12345678H",
-                "emailAddress"          : "jesus@alastria.io",
-                "serialNumber"          : "IDCES-12345678H",
+                "commonName"  : "RUIZ MARTINEZ JESUS - 12345678H",
+                "emailAddress": "jesus@alastria.io",
+                "serialNumber": "IDCES-12345678H",
                 // TODO: 'organizationIdentifier' :: this the identifier of the
                 // TODO:    organization given 'mandator' (the Representative) is acting on behalf?
-                // TODO:    "IDCES-12345678H" are used in 'organizationIdentifier' **AND** 'serialNumber', this is confusing me...
+                // TODO:    "IDCES-12345678H" are used in 'organizationIdentifier' **AND** 'serialNumber'
                 // TODO:    ...this is confusing me.
                 "organizationIdentifier": "IDCES-12345678H",
                 "organization"          : "RUIZ MARTINEZ JESUS - 12345678H",
