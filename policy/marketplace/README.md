@@ -121,7 +121,7 @@ Based on Example VC/LEARCredential:
 
 ## 3005
 
-> The issuer **MUST** be member of DOME's Trusted Participant List (global and product-specific)
+> The issuer **MUST** be member of DOME's **Trusted Participant List** (global and product-specific)
 >     taken from: "DOME D3.4 - DOME Reference Architecture and Specifications V2"
 >     (3.3.5.4 Query the Trusted Issuer Lists)
 
