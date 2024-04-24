@@ -14,6 +14,7 @@
 - [3002, ProductOffering, **create**](#3002)
 - [3003, ProductOffering, **update**](#3003)
 - [3004, ProductOffering, **delete**](#3004)
+- [3005, Trusted Participant List](#3005)
 
 *Content 'DOME Marketplace ODRL-Policies'.*
 
@@ -90,16 +91,8 @@ Based on Example VC/LEARCredential:
 
 ## 3002
 
-REM: *not* defined.
-
 > When the mandate specifies power to **Create ProductOffering**, the PDP of the DOME Operator
 > should enable access to the TMF APIs to **create** ALL the entities related to a **Product offering**.
-
-Additional:
-
-> Additional Constraint: the issuer **MUST** be member of DOME's Trusted Participant List
->    taken from: "DOME D3.4 - DOME Reference Architecture and Specifications V2"
->    (3.3.5.4 Query the Trusted Issuer Lists)
 
 - [_3002, ttl](../draft/_3002.ttl)
 - [_3002, json](../draft/_3002.json)
@@ -107,8 +100,6 @@ Additional:
 ---
 
 ## 3003
-
-REM: *not* defined.
 
 > When the mandate specifies power to **Update ProductOffering**, the PDP of the DOME Operator
 > should enable access to the TMF APIs to **update** ALL the entities related to a **Product offering**.
@@ -120,12 +111,21 @@ REM: *not* defined.
 
 ## 3004
 
-REM: *not* defined.
-
 > When the mandate specifies power to **Delete ProductOffering**, the PDP of the DOME Operator
 > should enable access to the TMF APIs to **delete** ALL the entities related to a **Product offering**.
 
 - [_3004, ttl](../draft/_3004.ttl)
 - [_3004, json](../draft/_3004.json)
+
+---
+
+## 3005
+
+> The issuer **MUST** be member of DOME's Trusted Participant List (global and product-specific)
+>     taken from: "DOME D3.4 - DOME Reference Architecture and Specifications V2"
+>     (3.3.5.4 Query the Trusted Issuer Lists)
+
+- [_3005, ttl](../draft/_3005.ttl)
+- [_3005, json](../draft/_3005.json)
 
 ---
