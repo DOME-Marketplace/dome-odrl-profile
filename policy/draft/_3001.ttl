@@ -15,10 +15,6 @@
 ## When the mandate specifies power to Execute Onboarding, the PDP of the DOME Operator should
 ##   enable access to the onboarding process of DOME.
 ##
-## Additional Constraint: the issuer **MUST** be member of DOME's Trusted Participant List
-##     taken from: "DOME D3.4 - DOME Reference Architecture and Specifications V2"
-##     (3.3.5.4 Query the Trusted Issuer Lists)
-##
 <https://dome-marketplace.org/policy/marketplace/_3001>
     a                odrl:Policy ;
     odrl:profile     "https://github.com/DOME-Marketplace/dome-odrl-profile/blob/main/dome-op.ttl" ;
@@ -47,22 +43,6 @@
                                                        # odrl:operator     odrl:isAnyOf ;
                                                        # odrl:rightOperand "Execute"^^xsd:string ;
                                                        odrl:dataType     xsd:string ; ],
-                                                   ##
-                                                   ## IMPORTANT: Additional Constraint: the issuer **MUST** be member of DOME's Trusted Participant List
-                                                   ##     ...not included in main use case description.
-                                                   ##
-                                                   [ a                odrl:Constraint ;
-                                                     ## TODO: this must be constructed using 'mandator.organizationIdentifier'
-                                                     ##     prefixed with '"did:elsi:'
-                                                     odrl:leftOperand dome-op:issuer ;
-                                                     ## OR
-                                                     ## ...odrl:leftOperand  dome-op:cs_mandator_issuer ;
-                                                     odrl:operator    odrl:isPartOf ;
-                                                     ## REM: odrl:rightOperandReference :: this will de-referenced at runtime (PDP/PIP)
-                                                     ##     and provides the List of Trusted Participants ["did:elsi:A", "did:elsi:B", "did:elsi:Y"]
-                                                     odrl:rightOperandReference
-                                                                      "https://dome-marketplace.org/issuer/trused/" ;
-                                                     odrl:dataType    xsd:string ; ],
                                                    ##
                                                    [
                                                        ## REM: experimental, not written down in use case
