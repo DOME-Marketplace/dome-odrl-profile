@@ -1,0 +1,439 @@
+[
+  {
+    "id":                   "urn:ngsi-ld:product-offering:62d4f929-d29d-4070-ae1f-9fe7dd1de5f6",
+    "href":                 "urn:ngsi-ld:product-offering:62d4f929-d29d-4070-ae1f-9fe7dd1de5f6",
+    "description":          "..",
+    "isBundle":             false,
+    "lastUpdate":           "2023-12-05T09:40:29.507375282Z",
+    "lifecycleStatus":      "Retired",
+    "name":                 "AirQuality",
+    "version":              "0.1",
+    "productOfferingTerm":  [
+      {}
+    ],
+    "productSpecification": {
+      "id":      "urn:ngsi-ld:product-specification:5eada211-e83f-4e8f-af8d-8bc7d09f32a6",
+      "href":    "urn:ngsi-ld:product-specification:5eada211-e83f-4e8f-af8d-8bc7d09f32a6",
+      "name":    "AirQuality",
+      "version": "0.1"
+    },
+    "validFor":             {
+      "startDateTime": "2023-11-15T12:25:45Z"
+    }
+  },
+  {
+    "id":                   "urn:ngsi-ld:product-offering:c9724c53-5732-4e41-b73a-5e282eaff92b",
+    "href":                 "urn:ngsi-ld:product-offering:c9724c53-5732-4e41-b73a-5e282eaff92b",
+    "description":          "..",
+    "isBundle":             false,
+    "lastUpdate":           "2023-12-05T09:40:37.868326028Z",
+    "lifecycleStatus":      "Retired",
+    "name":                 "AirQuality Price",
+    "version":              "0.1",
+    "productOfferingPrice": [
+      {
+        "id":   "urn:ngsi-ld:product-offering-price:7b5afdeb-41df-43fa-b22a-9d84c2bef98e",
+        "href": "urn:ngsi-ld:product-offering-price:7b5afdeb-41df-43fa-b22a-9d84c2bef98e",
+        "name": "Recurring"
+      },
+      {
+        "id":   "urn:ngsi-ld:product-offering-price:adc967d4-4cea-472c-a58d-abf46d4469ae",
+        "href": "urn:ngsi-ld:product-offering-price:adc967d4-4cea-472c-a58d-abf46d4469ae",
+        "name": "Usage"
+      }
+    ],
+    "productOfferingTerm":  [
+      {}
+    ],
+    "productSpecification": {
+      "id":      "urn:ngsi-ld:product-specification:5eada211-e83f-4e8f-af8d-8bc7d09f32a6",
+      "href":    "urn:ngsi-ld:product-specification:5eada211-e83f-4e8f-af8d-8bc7d09f32a6",
+      "name":    "AirQuality",
+      "version": "0.1"
+    },
+    "validFor":             {
+      "startDateTime": "2023-11-15T15:42:43Z"
+    }
+  },
+  {
+    "id":                   "urn:ngsi-ld:product-offering:f306938d-1024-4b3d-b806-a8ccd902ec5c",
+    "href":                 "urn:ngsi-ld:product-offering:f306938d-1024-4b3d-b806-a8ccd902ec5c",
+    "description":          "Edge computing with enhanced security features. Deploy applications at the edge while ensuring data privacy and integrity.",
+    "isBundle":             false,
+    "lastUpdate":           "2023-11-15T17:58:49.152918676Z",
+    "lifecycleStatus":      "Launched",
+    "name":                 "SecureEdge Vault",
+    "version":              "0.1",
+    "category":             [
+      {
+        "id":      "urn:ngsi-ld:category:b5a00873-b1ed-4c2a-8ed6-bfb4ec5dfacf",
+        "href":    "urn:ngsi-ld:category:b5a00873-b1ed-4c2a-8ed6-bfb4ec5dfacf",
+        "name":    "Computing",
+        "version": "1.0"
+      },
+      {
+        "id":      "urn:ngsi-ld:category:34c17e23-28e9-44b9-9ec5-7081e909628d",
+        "href":    "urn:ngsi-ld:category:34c17e23-28e9-44b9-9ec5-7081e909628d",
+        "name":    "Edge Computing",
+        "version": "1.0"
+      },
+      {
+        "id":      "urn:ngsi-ld:category:8c76c67f-411a-4779-b4dd-c3d8becabffb",
+        "href":    "urn:ngsi-ld:category:8c76c67f-411a-4779-b4dd-c3d8becabffb",
+        "name":    "Cloud Services",
+        "version": "1.0"
+      }
+    ],
+    "productOfferingPrice": [
+      {
+        "id":   "urn:ngsi-ld:product-offering-price:8d34333d-322c-4a9a-a62d-45660222599a",
+        "href": "urn:ngsi-ld:product-offering-price:8d34333d-322c-4a9a-a62d-45660222599a",
+        "name": "Subscription Plan"
+      }
+    ],
+    "productOfferingTerm":  [
+      {}
+    ],
+    "productSpecification": {
+      "id":      "urn:ngsi-ld:product-specification:686d5ec7-c1eb-4ac5-9966-be2ab11636aa",
+      "href":    "urn:ngsi-ld:product-specification:686d5ec7-c1eb-4ac5-9966-be2ab11636aa",
+      "name":    "SecureEdge Vault",
+      "version": "0.1"
+    },
+    "validFor":             {
+      "startDateTime": "2023-11-15T17:58:44Z"
+    }
+  },
+  {
+    "id":                   "urn:ngsi-ld:product-offering:df7be167-3e26-4687-9b1d-610bca857886",
+    "href":                 "urn:ngsi-ld:product-offering:df7be167-3e26-4687-9b1d-610bca857886",
+    "description":          "Advanced data analytics platform for gaining actionable insights. Harness the power of AI-driven analytics to make informed decisions.",
+    "isBundle":             false,
+    "lastUpdate":           "2023-11-15T18:01:06.184809386Z",
+    "lifecycleStatus":      "Launched",
+    "name":                 "SmartInsights Analytics",
+    "version":              "0.1",
+    "category":             [
+      {
+        "id":      "urn:ngsi-ld:category:34ed079b-c861-4143-bda3-35a7de3fa8e4",
+        "href":    "urn:ngsi-ld:category:34ed079b-c861-4143-bda3-35a7de3fa8e4",
+        "name":    "Data Procesing",
+        "version": "1.0"
+      },
+      {
+        "id":      "urn:ngsi-ld:category:e010e769-bf5f-4d25-b61f-6994da15ee9b",
+        "href":    "urn:ngsi-ld:category:e010e769-bf5f-4d25-b61f-6994da15ee9b",
+        "name":    "Data",
+        "version": "1.0"
+      }
+    ],
+    "productOfferingPrice": [
+      {
+        "id":   "urn:ngsi-ld:product-offering-price:83dbaca6-1c42-4597-b100-652cda876ff6",
+        "href": "urn:ngsi-ld:product-offering-price:83dbaca6-1c42-4597-b100-652cda876ff6",
+        "name": "Subscription Plan"
+      }
+    ],
+    "productOfferingTerm":  [
+      {}
+    ],
+    "productSpecification": {
+      "id":      "urn:ngsi-ld:product-specification:e3ac27d1-a52c-4410-a19f-9af6eb249425",
+      "href":    "urn:ngsi-ld:product-specification:e3ac27d1-a52c-4410-a19f-9af6eb249425",
+      "name":    "SmartInsights Analytics",
+      "version": "0.1"
+    },
+    "validFor":             {
+      "startDateTime": "2023-11-15T18:01:02Z"
+    }
+  },
+  {
+    "id":                   "urn:ngsi-ld:product-offering:792a5143-7161-4a84-90b1-762cd4bb5c80",
+    "href":                 "urn:ngsi-ld:product-offering:792a5143-7161-4a84-90b1-762cd4bb5c80",
+    "description":          "High-performance cloud computing for quantum simulations. Accelerate your research with our quantum-ready infrastructure.",
+    "isBundle":             false,
+    "lastUpdate":           "2023-11-15T18:03:08.298185091Z",
+    "lifecycleStatus":      "Launched",
+    "name":                 "QuantumCloud Pro",
+    "version":              "0.1",
+    "category":             [
+      {
+        "id":      "urn:ngsi-ld:category:c8cc3e54-8d61-4722-992c-1407baf662f5",
+        "href":    "urn:ngsi-ld:category:c8cc3e54-8d61-4722-992c-1407baf662f5",
+        "name":    "Quantum Computing",
+        "version": "1.0"
+      },
+      {
+        "id":      "urn:ngsi-ld:category:b5a00873-b1ed-4c2a-8ed6-bfb4ec5dfacf",
+        "href":    "urn:ngsi-ld:category:b5a00873-b1ed-4c2a-8ed6-bfb4ec5dfacf",
+        "name":    "Computing",
+        "version": "1.0"
+      },
+      {
+        "id":      "urn:ngsi-ld:category:8c76c67f-411a-4779-b4dd-c3d8becabffb",
+        "href":    "urn:ngsi-ld:category:8c76c67f-411a-4779-b4dd-c3d8becabffb",
+        "name":    "Cloud Services",
+        "version": "1.0"
+      }
+    ],
+    "productOfferingPrice": [
+      {
+        "id":   "urn:ngsi-ld:product-offering-price:df5a85b4-856d-4935-af71-ce61b4213f0f",
+        "href": "urn:ngsi-ld:product-offering-price:df5a85b4-856d-4935-af71-ce61b4213f0f",
+        "name": "Usage model"
+      }
+    ],
+    "productOfferingTerm":  [
+      {}
+    ],
+    "productSpecification": {
+      "id":      "urn:ngsi-ld:product-specification:91d1bf31-b84e-4a0b-9400-4b59c0dcc6a9",
+      "href":    "urn:ngsi-ld:product-specification:91d1bf31-b84e-4a0b-9400-4b59c0dcc6a9",
+      "name":    "QuantumCloud Pro",
+      "version": "0.1"
+    },
+    "validFor":             {
+      "startDateTime": "2023-11-15T18:03:04Z"
+    }
+  },
+  {
+    "id":                   "urn:ngsi-ld:product-offering:d6a529a2-186f-4a0f-b2ae-118b59058845",
+    "href":                 "urn:ngsi-ld:product-offering:d6a529a2-186f-4a0f-b2ae-118b59058845",
+    "description":          "Genomic data processing for bioinformatics research. Unleash the potential of genomic data with our specialized bioinformatics tools.",
+    "isBundle":             false,
+    "lastUpdate":           "2023-11-15T18:04:30.101121688Z",
+    "lifecycleStatus":      "Launched",
+    "name":                 "BioGenomic Explorer",
+    "version":              "0.1",
+    "category":             [
+      {
+        "id":      "urn:ngsi-ld:category:34ed079b-c861-4143-bda3-35a7de3fa8e4",
+        "href":    "urn:ngsi-ld:category:34ed079b-c861-4143-bda3-35a7de3fa8e4",
+        "name":    "Data Procesing",
+        "version": "1.0"
+      },
+      {
+        "id":      "urn:ngsi-ld:category:e010e769-bf5f-4d25-b61f-6994da15ee9b",
+        "href":    "urn:ngsi-ld:category:e010e769-bf5f-4d25-b61f-6994da15ee9b",
+        "name":    "Data",
+        "version": "1.0"
+      }
+    ],
+    "productOfferingPrice": [
+      {
+        "id":   "urn:ngsi-ld:product-offering-price:a91048a9-39ad-4419-a4f0-bd4197e7b82e",
+        "href": "urn:ngsi-ld:product-offering-price:a91048a9-39ad-4419-a4f0-bd4197e7b82e",
+        "name": "Usage model"
+      }
+    ],
+    "productOfferingTerm":  [
+      {}
+    ],
+    "productSpecification": {
+      "id":      "urn:ngsi-ld:product-specification:e339114b-5594-4bff-8335-5d00a4c12524",
+      "href":    "urn:ngsi-ld:product-specification:e339114b-5594-4bff-8335-5d00a4c12524",
+      "name":    "BioGenomic Explorer",
+      "version": "0.1"
+    },
+    "validFor":             {
+      "startDateTime": "2023-11-15T18:04:26Z"
+    }
+  },
+  {
+    "id":                   "urn:ngsi-ld:product-offering:a49c358a-20c1-4eda-817f-6d51ee416da2",
+    "href":                 "urn:ngsi-ld:product-offering:a49c358a-20c1-4eda-817f-6d51ee416da2",
+    "description":          "Cloud-based AR development platform. Build immersive AR experiences without the hassle of infrastructure management.",
+    "isBundle":             false,
+    "lastUpdate":           "2023-11-15T18:07:10.774603328Z",
+    "lifecycleStatus":      "Launched",
+    "name":                 "Augmented Reality Suite 2.0",
+    "version":              "0.1",
+    "category":             [
+      {
+        "id":      "urn:ngsi-ld:category:34ed079b-c861-4143-bda3-35a7de3fa8e4",
+        "href":    "urn:ngsi-ld:category:34ed079b-c861-4143-bda3-35a7de3fa8e4",
+        "name":    "Data Procesing",
+        "version": "1.0"
+      },
+      {
+        "id":      "urn:ngsi-ld:category:e010e769-bf5f-4d25-b61f-6994da15ee9b",
+        "href":    "urn:ngsi-ld:category:e010e769-bf5f-4d25-b61f-6994da15ee9b",
+        "name":    "Data",
+        "version": "1.0"
+      }
+    ],
+    "productOfferingPrice": [
+      {
+        "id":   "urn:ngsi-ld:product-offering-price:de93a800-0f70-46d7-9349-d8d1d6333e35",
+        "href": "urn:ngsi-ld:product-offering-price:de93a800-0f70-46d7-9349-d8d1d6333e35",
+        "name": "Usage"
+      }
+    ],
+    "productOfferingTerm":  [
+      {}
+    ],
+    "productSpecification": {
+      "id":      "urn:ngsi-ld:product-specification:67e2d10f-17a5-42ec-913d-eacf9e8b0851",
+      "href":    "urn:ngsi-ld:product-specification:67e2d10f-17a5-42ec-913d-eacf9e8b0851",
+      "name":    "Augmented Reality Suite 2.0",
+      "version": "0.1"
+    },
+    "validFor":             {
+      "startDateTime": "2023-11-15T18:07:05Z"
+    }
+  },
+  {
+    "id":                   "urn:ngsi-ld:product-offering:6aab1234-acf4-4b44-baf9-0da25c6e558f",
+    "href":                 "urn:ngsi-ld:product-offering:6aab1234-acf4-4b44-baf9-0da25c6e558f",
+    "description":          "vCloud VDC allows you to have your own \"Virtual Data Center\" consisting of a boundle of resources (CPU, RAM, Storage, Network) that can be configured and managed autonomously\n\nWith the service, the customer can have his own \"Virtual Data Center\" consisting of a package of resources (CPU, RAM, Storage, Network) that he can configure and manage independently as if it were in all respects, a dedicated Datacenter",
+    "isBundle":             false,
+    "lastUpdate":           "2023-11-15T18:22:56.769046229Z",
+    "lifecycleStatus":      "Launched",
+    "name":                 "Virtual data center VMware",
+    "version":              "0.1",
+    "category":             [
+      {
+        "id":      "urn:ngsi-ld:category:b5a00873-b1ed-4c2a-8ed6-bfb4ec5dfacf",
+        "href":    "urn:ngsi-ld:category:b5a00873-b1ed-4c2a-8ed6-bfb4ec5dfacf",
+        "name":    "Computing",
+        "version": "1.0"
+      },
+      {
+        "id":      "urn:ngsi-ld:category:8c76c67f-411a-4779-b4dd-c3d8becabffb",
+        "href":    "urn:ngsi-ld:category:8c76c67f-411a-4779-b4dd-c3d8becabffb",
+        "name":    "Cloud Services",
+        "version": "1.0"
+      }
+    ],
+    "productOfferingPrice": [
+      {
+        "id":   "urn:ngsi-ld:product-offering-price:6a7c11b0-7ad7-487e-ba55-9b9a74274069",
+        "href": "urn:ngsi-ld:product-offering-price:6a7c11b0-7ad7-487e-ba55-9b9a74274069",
+        "name": "Flex plan"
+      },
+      {
+        "id":   "urn:ngsi-ld:product-offering-price:c57ca3e4-6091-4b01-a6a6-3dd218414558",
+        "href": "urn:ngsi-ld:product-offering-price:c57ca3e4-6091-4b01-a6a6-3dd218414558",
+        "name": "Pay-Per-Use plan"
+      }
+    ],
+    "productOfferingTerm":  [
+      {}
+    ],
+    "productSpecification": {
+      "id":      "urn:ngsi-ld:product-specification:b6717dda-0cda-4e9b-ae72-bac662af0387",
+      "href":    "urn:ngsi-ld:product-specification:b6717dda-0cda-4e9b-ae72-bac662af0387",
+      "name":    "Virtual data center VMware",
+      "version": "0.1"
+    },
+    "validFor":             {
+      "startDateTime": "2023-11-15T18:22:53Z"
+    }
+  },
+  {
+    "id":                   "urn:ngsi-ld:product-offering:5d4dea72-078f-4740-b7d4-135d8b1c7749",
+    "href":                 "urn:ngsi-ld:product-offering:5d4dea72-078f-4740-b7d4-135d8b1c7749",
+    "description":          "AWS Sustained Tenant is your AWS cloud account that allows you to access all the services available on the public provider’s catalog.\nYour AWS account with direct  access to the console to use all catalog services according to the availability and policies of the provider itself.\nGet your tenant quickly, easily and integrated with other services within your dashboard thanks to the partnership Engineering D.HUB and AWS.\nIncluding an AWS expert available on demand to support with advice, suggestions and tips on every activity and doubt in the use, choice or configuration of AWS services.",
+    "isBundle":             false,
+    "lastUpdate":           "2023-11-16T07:05:31.234720211Z",
+    "lifecycleStatus":      "Active",
+    "name":                 "AWS Sustained Tenant",
+    "version":              "0.1",
+    "category":             [
+      {
+        "id":      "urn:ngsi-ld:category:eed13132-41da-4a9e-b64c-996d0f9e4ad4",
+        "href":    "urn:ngsi-ld:category:eed13132-41da-4a9e-b64c-996d0f9e4ad4",
+        "name":    "Storage",
+        "version": "1.0"
+      },
+      {
+        "id":      "urn:ngsi-ld:category:b5a00873-b1ed-4c2a-8ed6-bfb4ec5dfacf",
+        "href":    "urn:ngsi-ld:category:b5a00873-b1ed-4c2a-8ed6-bfb4ec5dfacf",
+        "name":    "Computing",
+        "version": "1.0"
+      },
+      {
+        "id":      "urn:ngsi-ld:category:8c76c67f-411a-4779-b4dd-c3d8becabffb",
+        "href":    "urn:ngsi-ld:category:8c76c67f-411a-4779-b4dd-c3d8becabffb",
+        "name":    "Cloud Services",
+        "version": "1.0"
+      }
+    ],
+    "productOfferingPrice": [
+      {
+        "id":   "urn:ngsi-ld:product-offering-price:5a00ae5a-1f83-4a76-88fa-9edb1014a942",
+        "href": "urn:ngsi-ld:product-offering-price:5a00ae5a-1f83-4a76-88fa-9edb1014a942",
+        "name": "Pay-per-use"
+      },
+      {
+        "id":   "urn:ngsi-ld:product-offering-price:ffe4b215-1367-47ea-8de5-3d3acf02cc6b",
+        "href": "urn:ngsi-ld:product-offering-price:ffe4b215-1367-47ea-8de5-3d3acf02cc6b",
+        "name": "Flat Subscription"
+      }
+    ],
+    "productOfferingTerm":  [
+      {
+        "name": "Terms to be accepted by the customer"
+      }
+    ],
+    "productSpecification": {
+      "id":      "urn:ngsi-ld:product-specification:ea5e1610-d193-4c66-a453-df7e50cdfd03",
+      "href":    "urn:ngsi-ld:product-specification:ea5e1610-d193-4c66-a453-df7e50cdfd03",
+      "name":    "AWS Sustained Tenant",
+      "version": "0.1"
+    },
+    "validFor":             {
+      "startDateTime": "2023-11-16T07:05:31Z"
+    }
+  },
+  {
+    "id":                   "urn:ngsi-ld:product-offering:a0765d68-09fc-4a6e-b244-3cfaf363fc79",
+    "href":                 "urn:ngsi-ld:product-offering:a0765d68-09fc-4a6e-b244-3cfaf363fc79",
+    "description":          "Services and resources offering air quality data.",
+    "isBundle":             false,
+    "lastUpdate":           "2023-12-05T09:40:43.441794205Z",
+    "lifecycleStatus":      "Retired",
+    "name":                 "AirQuality Service",
+    "version":              "0.1",
+    "category":             [
+      {
+        "id":      "urn:ngsi-ld:category:34ed079b-c861-4143-bda3-35a7de3fa8e4",
+        "href":    "urn:ngsi-ld:category:34ed079b-c861-4143-bda3-35a7de3fa8e4",
+        "name":    "Data Procesing",
+        "version": "1.0"
+      },
+      {
+        "id":      "urn:ngsi-ld:category:e010e769-bf5f-4d25-b61f-6994da15ee9b",
+        "href":    "urn:ngsi-ld:category:e010e769-bf5f-4d25-b61f-6994da15ee9b",
+        "name":    "Data",
+        "version": "1.0"
+      }
+    ],
+    "productOfferingPrice": [
+      {
+        "id":   "urn:ngsi-ld:product-offering-price:57ffb9ab-57ea-4b48-988b-4d9d73a45813",
+        "href": "urn:ngsi-ld:product-offering-price:57ffb9ab-57ea-4b48-988b-4d9d73a45813",
+        "name": "Usage"
+      },
+      {
+        "id":   "urn:ngsi-ld:product-offering-price:7e84ac3d-b423-47db-a859-31077e71902f",
+        "href": "urn:ngsi-ld:product-offering-price:7e84ac3d-b423-47db-a859-31077e71902f",
+        "name": "Subscription"
+      }
+    ],
+    "productOfferingTerm":  [
+      {
+        "name": "terms and conditions to be accepted"
+      }
+    ],
+    "productSpecification": {
+      "id":      "urn:ngsi-ld:product-specification:cbe7ed03-054b-4d48-a922-52f52892c6d5",
+      "href":    "urn:ngsi-ld:product-specification:cbe7ed03-054b-4d48-a922-52f52892c6d5",
+      "name":    "AirQuality Service",
+      "version": "0.1"
+    },
+    "validFor":             {
+      "startDateTime": "2023-11-16T07:23:17Z"
+    }
+  }
+]

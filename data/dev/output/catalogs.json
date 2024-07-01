@@ -1,0 +1,175 @@
+[
+  {
+    "id":              "urn:ngsi-ld:catalog:57149e2c-5480-40a8-a579-9cdb78df3bcc",
+    "href":            "urn:ngsi-ld:catalog:57149e2c-5480-40a8-a579-9cdb78df3bcc",
+    "lifecycleStatus": "Launched",
+    "name":            "My First Catalog",
+    "relatedParty":    [
+      {
+        "id":            "urn:ngsi-ld:individual:942d27e2-1bee-4436-a5fd-2505961f643f",
+        "href":          "https://dome-marketplace.org:443/party/individual/urn:ngsi-ld:individual:942d27e2-1bee-4436-a5fd-2505961f643f",
+        "role":          "Owner",
+        "@referredType": null
+      }
+    ],
+    "validFor":        {
+      "startDateTime": "2023-10-31T14:58:35.820Z"
+    }
+  },
+  {
+    "id":              "urn:ngsi-ld:catalog:38d87aab-4485-4669-89b2-270e127c4127",
+    "href":            "urn:ngsi-ld:catalog:38d87aab-4485-4669-89b2-270e127c4127",
+    "lifecycleStatus": "Launched",
+    "name":            "A second catalogue 2",
+    "relatedParty":    [
+      {
+        "id":            "urn:ngsi-ld:individual:942d27e2-1bee-4436-a5fd-2505961f643f",
+        "href":          "https://dome-marketplace.org:443/party/individual/urn:ngsi-ld:individual:942d27e2-1bee-4436-a5fd-2505961f643f",
+        "role":          "Owner",
+        "@referredType": null
+      }
+    ],
+    "validFor":        {
+      "startDateTime": "2023-11-08T14:42:53.246Z"
+    }
+  },
+  {
+    "id":              "urn:ngsi-ld:catalog:745b0945-21e7-4a7e-847d-0fcf74cfe023",
+    "href":            "urn:ngsi-ld:catalog:745b0945-21e7-4a7e-847d-0fcf74cfe023",
+    "description":     "A catalog including services",
+    "lifecycleStatus": "Retired",
+    "name":            "Services Catalog",
+    "relatedParty":    [
+      {
+        "id":            "urn:ngsi-ld:organization:6295e56f-96f7-4d01-a8c4-de1c6d4e4292",
+        "href":          "https://dome-marketplace.org:443/party/organization/urn:ngsi-ld:organization:6295e56f-96f7-4d01-a8c4-de1c6d4e4292",
+        "role":          "Owner",
+        "@referredType": null
+      }
+    ],
+    "validFor":        {
+      "startDateTime": "2023-11-14T15:45:31.479Z"
+    }
+  },
+  {
+    "id":              "urn:ngsi-ld:catalog:c77f514e-7e5e-4cab-a36f-31d8cc4094bf",
+    "href":            "urn:ngsi-ld:catalog:c77f514e-7e5e-4cab-a36f-31d8cc4094bf",
+    "lifecycleStatus": "Launched",
+    "name":            "Computing Services",
+    "relatedParty":    [
+      {
+        "id":            "urn:ngsi-ld:organization:6295e56f-96f7-4d01-a8c4-de1c6d4e4292",
+        "href":          "https://dome-marketplace.org:443/party/organization/urn:ngsi-ld:organization:6295e56f-96f7-4d01-a8c4-de1c6d4e4292",
+        "role":          "Owner",
+        "@referredType": null
+      }
+    ],
+    "validFor":        {
+      "startDateTime": "2023-11-15T17:56:21.032Z"
+    }
+  },
+  {
+    "id":              "urn:ngsi-ld:catalog:2ab9eff2-139c-4678-9536-74c435e6cb36",
+    "href":            "urn:ngsi-ld:catalog:2ab9eff2-139c-4678-9536-74c435e6cb36",
+    "lifecycleStatus": "Launched",
+    "name":            "DHUB Services",
+    "relatedParty":    [
+      {
+        "id":            "urn:ngsi-ld:organization:6295e56f-96f7-4d01-a8c4-de1c6d4e4292",
+        "href":          "https://dome-marketplace.org:443/party/organization/urn:ngsi-ld:organization:6295e56f-96f7-4d01-a8c4-de1c6d4e4292",
+        "role":          "Owner",
+        "@referredType": null
+      }
+    ],
+    "validFor":        {
+      "startDateTime": "2023-11-15T18:17:30.995Z"
+    }
+  },
+  {
+    "id":              "urn:ngsi-ld:catalog:8bb7823f-5d93-4411-af48-c0a8b40260f1",
+    "href":            "urn:ngsi-ld:catalog:8bb7823f-5d93-4411-af48-c0a8b40260f1",
+    "lifecycleStatus": "Launched",
+    "name":            "ED Services",
+    "relatedParty":    [
+      {
+        "id":            "urn:ngsi-ld:organization:6295e56f-96f7-4d01-a8c4-de1c6d4e4292",
+        "href":          "https://dome-marketplace.org:443/party/organization/urn:ngsi-ld:organization:6295e56f-96f7-4d01-a8c4-de1c6d4e4292",
+        "role":          "Owner",
+        "@referredType": null
+      }
+    ],
+    "validFor":        {
+      "startDateTime": "2023-11-30T16:13:44.721Z"
+    }
+  },
+  {
+    "id":              "urn:ngsi-ld:catalog:ac166af9-4ec7-4af5-b99f-bedc97a1d020",
+    "href":            "urn:ngsi-ld:catalog:ac166af9-4ec7-4af5-b99f-bedc97a1d020",
+    "lifecycleStatus": "Launched",
+    "name":            "Smart Domains",
+    "relatedParty":    [
+      {
+        "id":            "urn:ngsi-ld:organization:6295e56f-96f7-4d01-a8c4-de1c6d4e4292",
+        "href":          "https://dome-marketplace.org:443/party/organization/urn:ngsi-ld:organization:6295e56f-96f7-4d01-a8c4-de1c6d4e4292",
+        "role":          "Owner",
+        "@referredType": null
+      }
+    ],
+    "validFor":        {
+      "startDateTime": "2023-11-30T18:22:06.111Z"
+    }
+  },
+  {
+    "id":              "urn:ngsi-ld:catalog:9c1e112b-6180-4651-805f-5cacc1561970",
+    "href":            "urn:ngsi-ld:catalog:9c1e112b-6180-4651-805f-5cacc1561970",
+    "lifecycleStatus": "Retired",
+    "name":            "Test Catalog",
+    "relatedParty":    [
+      {
+        "id":            "urn:ngsi-ld:organization:6295e56f-96f7-4d01-a8c4-de1c6d4e4292",
+        "href":          "https://dome-marketplace.org:443/party/organization/urn:ngsi-ld:organization:6295e56f-96f7-4d01-a8c4-de1c6d4e4292",
+        "role":          "Owner",
+        "@referredType": null
+      }
+    ],
+    "validFor":        {
+      "startDateTime": "2023-12-01T10:18:36.564Z"
+    }
+  },
+  {
+    "id":              "urn:ngsi-ld:catalog:7efd5e32-fdca-4666-81bc-2da6b68d6e5c",
+    "href":            "urn:ngsi-ld:catalog:7efd5e32-fdca-4666-81bc-2da6b68d6e5c",
+    "description":     "teste",
+    "lifecycleStatus": "Active",
+    "name":            "Teste",
+    "relatedParty":    [
+      {
+        "id":            "urn:ngsi-ld:individual:942d27e2-1bee-4436-a5fd-2505961f643f",
+        "href":          "https://dome-marketplace.org:443/party/individual/urn:ngsi-ld:individual:942d27e2-1bee-4436-a5fd-2505961f643f",
+        "role":          "Owner",
+        "@referredType": null
+      }
+    ],
+    "validFor":        {
+      "startDateTime": "2023-12-18T14:55:59.921Z"
+    }
+  },
+  {
+    "id":              "urn:ngsi-ld:catalog:b25154f6-9c14-466e-be66-5198c46343f3",
+    "href":            "urn:ngsi-ld:catalog:b25154f6-9c14-466e-be66-5198c46343f3",
+    "description":     "Some description of Catalog",
+    "lifecycleStatus": "Launched",
+    "name":            "Catalog (GTest)",
+    "relatedParty":    [
+      {
+        "id":            "urn:ngsi-ld:individual:942d27e2-1bee-4436-a5fd-2505961f643f",
+        "href":          "https://dome-marketplace.org:443/party/individual/urn:ngsi-ld:individual:942d27e2-1bee-4436-a5fd-2505961f643f",
+        "role":          "Owner",
+        "@referredType": null
+      }
+    ],
+    "validFor":        {
+      "startDateTime": "2024-01-17T10:36:08.807Z"
+    }
+  }
+]

@@ -1,0 +1,126 @@
+@prefix dc:       <http://purl.org/dc/elements/1.1/> .
+@prefix dct:      <http://purl.org/dc/terms/> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix odrl:     <http://www.w3.org/ns/odrl/2/> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix TMF-PCMA: <https://tmf-open-api-table-documents.s3.eu-west-1.amazonaws.com/OpenApiTable/4.1.0/user_guides/TMF620_Product_Catalog_Management_API_v4.1.0_user_guides.pdf> .
+
+@prefix dome:     <https://www.dome-marketplace.org/>.
+@prefix dome-op:  <https://github.com/DOME-Marketplace/dome-odrl-profile#> .
+
+##
+## When the mandate specifies power to Execute Onboarding, the PDP of the DOME Operator should
+##   enable access to the onboarding process of DOME.
+##
+<https://dome-marketplace.org/policy/marketplace/_3001>
+    a                odrl:Policy ;
+    odrl:profile     "https://github.com/DOME-Marketplace/dome-odrl-profile/blob/main/dome-op.ttl" ;
+    ## TODO: 'odrl:assigner' :: or did:key:12345678 ?!?
+    odrl:assigner    <https://dome-marketplace.org/> ;
+    ## region odrl:permission
+    odrl:permission  [ a             odrl:Permission ;
+                       ## region odrl:assignee
+                       odrl:assignee [ a           odrl:PartyCollection ;
+                                       ## TODO: 'odrl:source' :: this is set at runtime...
+                                       odrl:source "urn:user:vc:credentialSubject" ;
+                                       ## TODO: do we have to check if given Participant is already onboarded?!?
+                                       odrl:refinement
+                                       ## region odrl:assignee :: ORIGINAL
+                                                   [
+                                                       ## REM: experimental, not written down in use case
+                                                       a                 odrl:Constraint ;
+                                                       odrl:leftOperand  dome-op:cs_life_span_start ;
+                                                       odrl:operator     odrl:gt ;
+                                                       odrl:rightOperand odrl:policyUsage ;
+                                                       ## REM: VC likes to work on 'xsd:dateTimeStamp'...
+                                                       odrl:dataType     xsd:dateTimeStamp ; ],
+                                                   ##
+                                                   [
+                                                       ## REM: experimental, not written down in use case
+                                                       a                 odrl:Constraint ;
+                                                       odrl:leftOperand  dome-op:cs_life_span_end ;
+                                                       odrl:operator     odrl:lt ;
+                                                       odrl:rightOperand odrl:policyUsage ;
+                                                       ## REM: VC likes to work on 'xsd:dateTimeStamp'...
+                                                       odrl:dataType     xsd:dateTimeStamp ; ],
+                                                   ##
+                                                   [
+                                                       ## REM: experimental, not written down in use case
+                                                       a                 odrl:Constraint ;
+                                                       odrl:leftOperand  dome-op:cs_mandator_country ;
+                                                       odrl:operator     odrl:isPartOf ;
+                                                       odrl:rightOperand "ES", "DE" ;
+                                                       odrl:dataType     xsd:string ; ],
+                                                   ##
+                                                   [
+                                                       ## REM: main constraint from given use case
+                                                       a                 odrl:Constraint ;
+                                                       ## TODO: needs to have input of 'tmf_domain' (ex: "DOME")
+                                                       ## TODO:   or it "sits" inside the implementation of given
+                                                       ## TODO:   dome-op:LeftOperand
+                                                       odrl:leftOperand  dome-op:cs_power_onboarding_action ;
+                                                       odrl:operator     odrl:eq ;
+                                                       odrl:rightOperand "Execute"^^xsd:string ;
+                                                       ## REM: alternative:
+                                                       # odrl:operator     odrl:isAnyOf ;
+                                                       # odrl:rightOperand "Execute"^^xsd:string ;
+                                                       odrl:dataType     xsd:string ; ]
+                                                   ## endregion odrl:assignee :: ORIGINAL
+                                       ##
+#                                                   ## region odrl:assignee :: ALTERNATIVE
+#                                                   ## #######################################################
+#                                                   ## IMPORTANT: START: Alternative (based on _2000_VC_2.js)
+#                                                   ## >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#                                                           , [
+#                                                       ## REM: experimental, not written down in use case
+#                                                       a                 odrl:Constraint ;
+#                                                       odrl:leftOperand  "validFrom" ;
+#                                                       odrl:operator     odrl:gt ;
+#                                                       odrl:rightOperand odrl:policyUsage ;
+#                                                       ## REM: VC likes to work on 'xsd:dateTimeStamp'...
+#                                                       odrl:dataType     xsd:dateTimeStamp ; ],
+#                                                   ##
+#                                                   [
+#                                                       ## REM: experimental, not written down in use case
+#                                                       a                 odrl:Constraint ;
+#                                                       odrl:leftOperand  "validUntil" ;
+#                                                       odrl:operator     odrl:lt ;
+#                                                       odrl:rightOperand odrl:policyUsage ;
+#                                                       odrl:dataType     xsd:dateTimeStamp ; ],
+#                                                   ##
+#                                                   [
+#                                                       ## REM: experimental, not written down in use case
+#                                                       a                 odrl:Constraint ;
+#                                                       odrl:leftOperand  "country" ;
+#                                                       odrl:operator     odrl:isPartOf ;
+#                                                       odrl:rightOperand "ES", "DE" ;
+#                                                       odrl:dataType     xsd:string ; ],
+#                                                   ##
+#                                                   [
+#                                                       ## REM: main constraint from given use case
+#                                                       a                odrl:Constraint ;
+#                                                       ## TODO: needs to have input of 'tmf_domain' (ex: "DOME")
+#                                                       ##       or it "sits" inside the implementation of given
+#                                                       ##       dome-op:LeftOperand
+#                                                       odrl:leftOperand "purpose" ;
+#                                                       odrl:operator    odrl:isAnyOf ;
+#                                                       odrl:rightOperand
+#                                                                        "https://dome-marketplace.eu/purpose/Onboarding#Execute"^^xsd:anyURI ;
+#                                                       odrl:dataType    xsd:anyURI ; ]
+#                       ## <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                                       ## IMPORTANT: END: Alternative (based on _2000_VC_2.js)
+#                                       ## ################################################################
+#                                       ## endregion odrl:assignee :: ALTERNATIVE
+                                                   ; ] ;
+                       ## endregion odrl:assignee
+                       odrl:target   "urn:dome:process:onboarding" ;
+                       odrl:action   dome-op:onboard ;
+                       ## TODO: TBC: maybe 'odrl:use' is strong enough?!?
+                       # odrl:action   odrl:use ;
+                       ##
+                     ] ;
+    ## endregion odrl:permission
+    rdfs:isDefinedBy dome: .
