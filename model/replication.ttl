@@ -10,6 +10,6 @@
 @prefix repl: <https://dome-marketplace.eu/model/replication#> .
 
 repl:
-    a owl:Ontology ;
-    dc:title "DOME Replication Vocabulary" ;
+    a        owl:Ontology ;
+    dc:title "The DOME Replication Vocabulary" ;
 .

@@ -9,6 +9,6 @@
 @prefix dome: <https://dome-marketplace.eu/model/core#> .
 
 dome:
-    a owl:Ontology ;
-    dc:title "DOME Core Vocabulary" ;
+    a        owl:Ontology ;
+    dc:title "The DOME Core Vocabulary" ;
 .
