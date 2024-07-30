@@ -1,6 +1,6 @@
 # Catalogue Replication and Visibility
 
-![DOME Marketplace Model](img/dome-marketplace-model.png)
+![TMForum main entities](img/tm-forum-main-entities.png)
 
 ## Principles
 
