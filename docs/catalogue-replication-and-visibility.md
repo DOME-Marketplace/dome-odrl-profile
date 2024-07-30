@@ -1,7 +1,5 @@
 # Catalogue Replication and Visibility
 
-![TMForum main entities](img/tm-forum-main-entities.png)
-
 ## Principles
 
 1. A marketplace (P, Publisher) can’t expose offerings from another marketplace (S, Source)
