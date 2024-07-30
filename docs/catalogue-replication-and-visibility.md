@@ -1,5 +1,7 @@
 # Catalogue Replication and Visibility
 
+![DOME Marketplace Model](img/dome-marketplace-model.png)
+
 ## Principles
 
 1. A marketplace (P, Publisher) can’t expose offerings from another marketplace (S, Source)
