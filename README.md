@@ -3,6 +3,7 @@
 ## Documents
 
 - [Catalogue Replication and Visibility](docs/catalogue-replication-and-visibility.md)
+- [TMForum APIs](docs/tm-forum-apis.md)
 
 ## Model
 
