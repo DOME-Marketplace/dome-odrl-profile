@@ -1,0 +1,241 @@
+{
+  "@type": "ProductOffering",
+  id: "my-favorite-fountain-pen",
+  // Product offering version
+  version: "1.0.0",
+  // Date and time of the last update.
+  lastUpdate: "2024-07-31T09:31:48.217Z",
+  // The time period for which the product offering is valid.
+  validFor: "P1Y",
+  // Indicates the lifecycle status of the product offering.
+  lifecycleStatus: "Active",
+  // A string providing complementary information on the value of the lifecycle status attribute.
+  statusReason: "The offering has been approved, but needs to be marketed still.",
+  // Name of the product offering.
+  name: "Alexander the Great fountain pen",
+  // A narrative that explains in detail what the product offering is.
+  description: "I am offering my fountain pen to anyone in need. There is only one, so be quick.",
+  // A list of attachment references or values.
+  // Complements the description of an element (for instance a product) through video, pictures, etc.
+  attachment: [],
+  // List of Category references pointing to categories that apply to the product offering
+  category: [],
+  // A list of references to places where products linked to this product offering are sold or delivered.
+  place: [
+    {
+      "@baseType": "Place",
+      "@type": "PrintMedia",
+      id: "all-newspapers",
+      description: "Every available newspaper in the target region."
+    }
+  ],
+  // A list of references to channels through which the product offering is being sold.
+  channel: [
+    {
+      "@baseType": "Channel",
+      "@type": "Telephone",
+      id: "my-personal-number",
+      description: "You can only call me to get my pen."
+    }
+  ],
+  // A list of market segment references.
+  // provides references to the corresponding market segment as target of product offerings.
+  // A market segment is grouping of Parties, GeographicAreas, SalesChannels, and so forth.
+  marketSegment: [
+    {
+      "@baseType": "MarketSegment",
+      "@type": "GeographicArea",
+      id: "es-it-fr",
+      description: "Only in Italy, Spain and France."
+    },
+    {
+      "@baseType": "MarketSegment",
+      "@type": "PartyCollection",
+      id: "office-people",
+      description: "People that work in an office."
+    }
+  ],
+  // A list of agreement references. Agreements are defined in the Agreement Management API.
+  // An agreement represents a contract or arrangement, either written or verbal and sometimes enforceable by law,
+  // such as a service level agreement or a customer price agreement.
+  // An agreement involves a number of other business entities, such as products, services,
+  // and resources and/or their specifications
+  // A service level agreement (SLA) is a type of agreement that represents a formal negotiated agreement
+  // between two parties designed to create a common understanding about products,
+  // services, priorities, responsibilities, and so forth.
+  // The SLA is a set of appropriate procedures and targets formally or informally agreed
+  // between parties in order to achieve and maintain specified Quality of Service.
+  agreement: [
+    {
+      "@baseType": "Agreement",
+      "@type": "QualityAgreement",
+      id: "full-ink",
+      description: "The pen will be delivered with filled ink reservoir."
+    }
+  ],
+  // Whether the product offering is a bundle product offering or not.
+  isBundle: false,
+  // List of product offering references pointing to the product offerings included in the bundle,
+  // if the product offering is a bundle.
+  bundledProductOffering: [],
+  // If false the offering only can be sold within a bundle. Therefore, it is true when can be sold stand-alone.
+  isSellable: true,
+  // Reference to the product specification to which the product offering is related.
+  productSpecification: [
+    {
+      "@type": "ProductSpecification",
+      id: "alexander-the-great-fountain-pen",
+      href: "https://www.visconti.it/en/alexander-the-great-fountain-pen/",
+      // Product specification version
+      version: "1.0.0",
+      // Date and time of the last update.
+      lastUpdate: null,
+      // The time period for which the product specification is valid.
+      validFor: null,
+      // Indicates the lifecycle status of the product specification.
+      lifecycleStatus: "Launched",
+      // Name of the product specification.
+      name: "Alexander the Great fountain pen",
+      // An identification number assigned to identify the product specification.
+      productNumber: null,
+      // The manufacturer or trademark of the product specification
+      brand: "Visconti SRL",
+      // A narrative that explains in detail what the product specification is.
+      description: "This outstanding fountain pen is a Limited Edition of 323 pieces worldwide, to recall the date of the great warrior-statesman’s passing.",
+      // List of attachments that complements the description of the product (i.e. doc a video, etc.)
+      attachment: [],
+      // Whether the product specification defines a product bundle
+      isBundle: false,
+      // If the product is a bundle, references to the list of product specifications included in the bundle
+      bundledProductSpecification: [],
+      // A list of product specification characteristics. A characteristic quality or distinctive feature
+      // of a ProductSpecification. The characteristic can be taken on a discrete value, such as color,
+      // can take on a range of values, (for example, sensitivity of 100-240 mV), or can be derived
+      // from a formula (for example, usage time (hrs) = 30 - talk time *3). Certain characteristics,
+      // such as color, may be configured during the ordering or some other process.
+      productSpecCharacteristic: [
+        {
+          "@baseType": "ProductSpecCharacteristic",
+          "@type": "Color",
+          id: "ivory",
+          name: "Ivory"
+        },
+        {
+          "@baseType": "ProductSpecCharacteristic",
+          "@type": "NumberLimitation",
+          id: "limited-edition-323",
+          description: "Limited edition of 323 pieces."
+        }
+      ],
+      // List of Product Specification references. Examples are: migration, substitution,
+      // dependency or exclusivity relationships between/among product specifications.
+      productSpecificationRelationship: [],
+      // List of parties involved in the product specification as defined in the Party API,
+      // including the role the party has regarding the product specification.
+      relatedParty: [],
+      // A list of Resource Specification references, where each Resource Specification is needed
+      // to realize the product specification. Resource Specification is defined in the Resource Catalog API.
+      resourceSpecification: [],
+      // A list of Service Specification references, where each Service Specification is needed
+      // to realize the product specification. Service Specification is defined in the Service Catalog API.
+      serviceSpecification: [],
+      // The reference object to the schema and type of target product which is described by product specification.
+      targetProductSchema: []
+    }
+  ],
+  // Includes the list of product specification characteristic values that are valid
+  // in the context of the product offering.
+  prodSpecCharValueUse: [],
+  // List of references to Product Offering Prices that apply to the product offering.
+  // The price is valid for a defined period of time and may not represent the actual price paid by a customer.
+  productOfferingPrice: [
+    {
+      "@type": "ProductOfferingPrice",
+      // Product offering price version
+      version: "1.0.0",
+      // Date and time of the last update.
+      lastUpdate: null,
+      // The time period for which the product offering price is valid.
+      validFor: null,
+      lifecycleStatus: "Active",
+      // Name given to the product offering price.
+      name: "My last price",
+      // A narrative that explains in detail what the product offering price is.
+      description: "This is my last price, no chance to bargain.",
+      // A list of references to places where products with this product offering price are sold or delivered.
+      place: [],
+      // The amount of money that characterizes the price.
+      price: {
+        "@value": 5800,
+        "@type": "currency:euro"
+      },
+      // A category that describes the price, such as recurring, discount, allowance, penalty, and so forth.
+      priceType: 'once',
+      // It represents an instantiation of an interface specification to external rating function.
+      // Some of the parameters of the interface definition may be already set (such as price per unit)
+      // and some may be gathered during the rating process from the event (such as call duration)
+      // or from ProductCharacteristicValues (such as assigned bandwidth).
+      pricingLogicAlgorithm: null,
+      // The period of the recurring charge: 1, 2, ... .It is set to zero if it is not applicable.
+      recurringChargePeriodLength: 0,
+      // The period to repeat the application of the price Could be month, week…
+      recurringChargePeriodType: null,
+      // An amount of money levied on the price of a Product by a legislative body.
+      tax: null,
+      // A number and unit representing how many (for instance 1 dozen) of a ProductOffering
+      // is available at the offered price. Its meaning depends on the priceType. It could be a price,
+      // a rate, or a discount.
+      unitOfMeasure: {
+        "@value": 1,
+        "@type": "quantity:count"
+      },
+      // A list of reference to Product Offering Terms (see Product Offerings), that is conditions,
+      // under which the ProductOfferingPrice is made available to Customers. For instance,
+      // a Product Offering Price can be offered with multiple commitment periods.
+      productOfferingTerm: [],
+      // Whether the product offering price is a bundle product offering price or not.
+      isBundle: false,
+      // this object represents a bundle relationship from a bundle product offering price (parent)
+      // to a simple product offering price (child). A simple product offering price may participate
+      // in more than one bundle relationship.
+      bundledPopRelationship: null,
+      // a list of references to constraints, each of which represents a policy/rule applied to ProductOfferingPrice.
+      constraint: [],
+      // A list of product offering prices related to this Product Offering Price,
+      // for example a price alteration such as allowance or discount.
+      popRelationship: [],
+      // A use of the prodSpecCharValue by a ProductOfferingPrice to which additional properties ( attributes)
+      // apply or override the properties of similar properties contained in ProductSpecificationCharacteristicValue.
+      // It should be noted that characteristics which their value(s) addressed by this object must exist
+      // in corresponding product specification. The available characteristic values
+      // for a ProductSpecificationCharacteristic in a Product specification can be modified
+      // at the ProductOffering and ProcuctOfferingPrice level. The list of values
+      // in ProductSpecificationCharacteristicValueUse is a strict subset of the list of values as defined
+      // in the corresponding product specification characteristics.
+      prodSpecCharValueUse: []
+    }
+  ],
+  // A list of references to Product Offering Terms, each of which refers to a condition
+  // under which the product offering is made available to customers,
+  // such as the commitment period. Each term comprises:
+  // - name
+  // - description
+  // - duration: length of time associated to the term
+  // - validFor: period of dates during which the term may apply
+  productOfferingTerm: [
+    {
+      "@baseType": "ProductOfferingTerm",
+      "@type": "CountLimitation",
+      id: "only-once",
+      description: "The product can only be bought once."
+    }
+  ],
+  // A list of product offering relationships. A relationship between this product offering and other product offerings.
+  productOfferingRelationship: [],
+  // List of references to ResourceCandidates as defined in Resource Catalog API.
+  // Resource Candidates make Resource Specifications available for inclusion in Product Offerings.
+  resourceCandidate: [],
+  // List of references to ServiceCandidates as defined in the Service Catalog API.
+  // Service Candidates make Service Specification available for inclusion in Product Offerings.
+  serviceCandidate: []
+}
