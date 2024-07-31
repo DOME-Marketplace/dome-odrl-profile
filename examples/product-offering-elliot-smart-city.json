@@ -1,0 +1,218 @@
+{
+  "id": "urn:ngsi-ld:product-offering:81346322-4e4e-4aed-ac06-b831077ad48f",
+  "href": "urn:ngsi-ld:product-offering:81346322-4e4e-4aed-ac06-b831077ad48f",
+  "description": "**Fly your city assets on autopilot**\n\n**Elliot**>>**Data**>>**Planning**>>**Efficiency**\n\nContact us: [📲](https://elliotcloud.com/)   /   [📧](mailto:idi@elliotcloud.com)",
+  "isBundle": false,
+  "lastUpdate": "2024-07-04T12:05:45.476755909Z",
+  "lifecycleStatus": "Launched",
+  "name": "Elliot Smart City",
+  "version": "0.1",
+  "category": [
+    {
+      "id": "urn:ngsi-ld:category:0fdda583-93d3-4d47-b7c4-0eee368ef0c4",
+      "href": "urn:ngsi-ld:category:0fdda583-93d3-4d47-b7c4-0eee368ef0c4",
+      "name": "Water Supply"
+    },
+    {
+      "id": "urn:ngsi-ld:category:03636940-23b7-42a4-aea3-baacabdf5164",
+      "href": "urn:ngsi-ld:category:03636940-23b7-42a4-aea3-baacabdf5164",
+      "name": "Waste Collection, Treatment and Disposal Activities"
+    },
+    {
+      "id": "urn:ngsi-ld:category:2c54b902-3354-4529-9b6d-e9bb449f2397",
+      "href": "urn:ngsi-ld:category:2c54b902-3354-4529-9b6d-e9bb449f2397",
+      "name": "Transport of Persons"
+    },
+    {
+      "id": "urn:ngsi-ld:category:4bd5037e-8ce7-4205-80a8-5e66bcd1b42f",
+      "href": "urn:ngsi-ld:category:4bd5037e-8ce7-4205-80a8-5e66bcd1b42f",
+      "name": "Service Management"
+    },
+    {
+      "id": "urn:ngsi-ld:category:44ca04f9-a289-4089-862c-219d9726fae0",
+      "href": "urn:ngsi-ld:category:44ca04f9-a289-4089-862c-219d9726fae0",
+      "name": "Internet of Things (IoT)"
+    },
+    {
+      "id": "urn:ngsi-ld:category:a0f758e5-fcdb-4f3d-ade9-2272dc600fbb",
+      "href": "urn:ngsi-ld:category:a0f758e5-fcdb-4f3d-ade9-2272dc600fbb",
+      "name": "Energy and Utility Suppliers"
+    },
+    {
+      "id": "urn:ngsi-ld:category:37cc8b7f-8875-41e1-94e7-7fbb5117553d",
+      "href": "urn:ngsi-ld:category:37cc8b7f-8875-41e1-94e7-7fbb5117553d",
+      "name": "Transportation and Transportation infrastructure"
+    },
+    {
+      "id": "urn:ngsi-ld:category:75e05680-748c-4779-a049-d7fd14addb71",
+      "href": "urn:ngsi-ld:category:75e05680-748c-4779-a049-d7fd14addb71",
+      "name": "Operations"
+    },
+    {
+      "id": "urn:ngsi-ld:category:7e54033a-88f7-45a6-9f94-89db71133889",
+      "href": "urn:ngsi-ld:category:7e54033a-88f7-45a6-9f94-89db71133889",
+      "name": "Governance"
+    },
+    {
+      "id": "urn:ngsi-ld:category:a7435c54-a49d-452f-9c62-bab6d693ebb7",
+      "href": "urn:ngsi-ld:category:a7435c54-a49d-452f-9c62-bab6d693ebb7",
+      "name": "Electricity"
+    },
+    {
+      "id": "urn:ngsi-ld:category:ce577bea-a882-4505-9c45-6abb9f6e5d63",
+      "href": "urn:ngsi-ld:category:ce577bea-a882-4505-9c45-6abb9f6e5d63",
+      "name": "Maintenance"
+    }
+  ],
+  "productOfferingPrice": [
+    {
+      "id": "urn:ngsi-ld:product-offering-price:f5ed5e00-d1c3-4f99-b3bd-8628ba87d1c0",
+      "href": "urn:ngsi-ld:product-offering-price:f5ed5e00-d1c3-4f99-b3bd-8628ba87d1c0",
+      "description": "**We build a platform to perfectly fit your business**:\n\nUpon your request, our experts will gather your requirements and walk with you to through the next steps on planing, sizing and delivering your asset.\n\nContact us: [📲](https://elliotcloud.com/)   /   [📧](mailto:idi@elliotcloud.com)",
+      "lastUpdate": "2024-07-04T12:04:25.627497443Z",
+      "lifecycleStatus": "Active",
+      "name": "Project based",
+      "priceType": "custom",
+      "price": {},
+      "validFor": {
+        "startDateTime": "2024-07-02T15:52:38.976Z"
+      }
+    }
+  ],
+  "productSpecification": {
+    "id": "urn:ngsi-ld:product-specification:2ac3e133-61df-437e-a073-9f43c338087f",
+    "href": "urn:ngsi-ld:product-specification:2ac3e133-61df-437e-a073-9f43c338087f",
+    "brand": "Elliot Cloud",
+    "description": "Elliot Smart City provides the tools to get the highest performance from the city budget.\n\nFrom energy consumption optimization to route planning and digital twins, Elliot Smart City provides your city the assets to maximize the benefit from each euro invested, each drop of water consumed or each particle emitted.\n\n**Elliot Smart City ** covers all steps :\n- Data acquisition from a large set of standards and sources\n- Data processing\n- Alarms\n- Inventory management\n- Dashboards and KPIs\n- Flexible maps\n- Hypervisualization\n- Forecasts\n",
+    "isBundle": false,
+    "lastUpdate": "2024-07-15T11:20:59.771226251Z",
+    "lifecycleStatus": "Launched",
+    "name": "Elliot Smart City",
+    "productNumber": "",
+    "version": "0.1",
+    "attachment": [
+      {
+        "attachmentType": "image/webp",
+        "name": "Profile Picture",
+        "url": "https://dome-marketplace-prd.org/charging/media/assets/VAT-B71404750/ElliotSmartCity_smartcities.webp"
+      }
+    ],
+    "productSpecCharacteristic": [
+      {
+        "id": "urn:ngsi-ld:characteristic:e6e1b382-8cd7-425b-9f29-3e40f3975937",
+        "name": "ISO/IEC 27001:2022",
+        "productSpecCharacteristicValue": [
+          {
+            "isDefault": true
+          }
+        ]
+      }
+    ],
+    "relatedParty": [
+      {
+        "id": "urn:ngsi-ld:organization:f389dd59-c26d-4868-bdfc-d90e4556744d",
+        "href": "urn:ngsi-ld:organization:f389dd59-c26d-4868-bdfc-d90e4556744d",
+        "role": "Owner",
+        "@referredType": ""
+      }
+    ],
+    "serviceSpecification": [
+      {
+        "id": "urn:ngsi-ld:service-specification:e26701a6-fb71-4be8-8bed-f9a1387d47b2",
+        "href": "urn:ngsi-ld:service-specification:e26701a6-fb71-4be8-8bed-f9a1387d47b2",
+        "description": "Beyond traditional feature layers, Elliot GIS allows you to navigate through your ecosystem, its components and their relations, and see it both in maps and the rest of Elliot components.\nConsistently.",
+        "isBundle": false,
+        "lastUpdate": "2024-06-25T16:49:15.966672561Z",
+        "lifecycleStatus": "Active",
+        "name": "Elliot GIS",
+        "relatedParty": [
+          {
+            "id": "urn:ngsi-ld:organization:f389dd59-c26d-4868-bdfc-d90e4556744d",
+            "href": "urn:ngsi-ld:organization:f389dd59-c26d-4868-bdfc-d90e4556744d",
+            "role": "Owner",
+            "@referredType": ""
+          }
+        ],
+        "specCharacteristic": []
+      },
+      {
+        "id": "urn:ngsi-ld:service-specification:694d7fe7-b596-46bd-99e6-e5c4ba3ef6eb",
+        "href": "urn:ngsi-ld:service-specification:694d7fe7-b596-46bd-99e6-e5c4ba3ef6eb",
+        "description": "Elliot Telemetry provides an end to end tool to collect, process and store the data provided either by your IoT infrastructure or other sources, so that it can be processed and shown within the Elliot Ecosystem.\n\nFrom different agents, the data is collected and sent to the Elliot Core system to be processed, assigned the referenced objects and made available to your Elliot applications through a rich set of widgets that include alarms, inventories, relation graphs, dashboards and maps.\n",
+        "isBundle": false,
+        "lastUpdate": "2024-07-02T14:44:08.316546557Z",
+        "lifecycleStatus": "Active",
+        "name": "Elliot Telemetry",
+        "relatedParty": [
+          {
+            "id": "urn:ngsi-ld:organization:f389dd59-c26d-4868-bdfc-d90e4556744d",
+            "href": "urn:ngsi-ld:organization:f389dd59-c26d-4868-bdfc-d90e4556744d",
+            "role": "Owner",
+            "@referredType": ""
+          }
+        ],
+        "specCharacteristic": []
+      },
+      {
+        "id": "urn:ngsi-ld:service-specification:5dc30ea3-baba-4b47-b9f5-c8413ba8c2e0",
+        "href": "urn:ngsi-ld:service-specification:5dc30ea3-baba-4b47-b9f5-c8413ba8c2e0",
+        "description": "Elliot Energy Ontology provides a well proven configuration to be used as a base for your energy related projects.\n\nOut of the box, it includes a set of entities, attributes, relations and metrics designed to work with the most common elements of the energy universe, so that your project does not neeed to start from scratch, but from a consistent and powerful base.\n\nCombined with the rest of the Elliot Ecosystem components, your energy applications can be used to monitor, operate, forecast and plan your business",
+        "isBundle": false,
+        "lastUpdate": "2024-07-02T14:42:18.719266460Z",
+        "lifecycleStatus": "Active",
+        "name": "Elliot Energy  Ontology",
+        "relatedParty": [
+          {
+            "id": "urn:ngsi-ld:organization:f389dd59-c26d-4868-bdfc-d90e4556744d",
+            "href": "urn:ngsi-ld:organization:f389dd59-c26d-4868-bdfc-d90e4556744d",
+            "role": "Owner",
+            "@referredType": ""
+          }
+        ],
+        "specCharacteristic": []
+      },
+      {
+        "id": "urn:ngsi-ld:service-specification:4a8edf26-64e6-4810-8778-04c91614dd0c",
+        "href": "urn:ngsi-ld:service-specification:4a8edf26-64e6-4810-8778-04c91614dd0c",
+        "description": "Elliot Water Ontology provides a well proven set of assets to build your water related projects.\n\nOut of the box, it includes a set of entities, attributes, relations and metrics designed to work with the most common elements of the water universe, so that your project does not neeed to start from scratch, but from a consistent and powerful base.\n\nCombined with the rest of the Elliot Ecosystem components, your water applications can be used to monitor, operate, forecast and plan your business",
+        "isBundle": false,
+        "lastUpdate": "2024-07-02T14:43:23.138876659Z",
+        "lifecycleStatus": "Active",
+        "name": "Elliot Water Ontology",
+        "relatedParty": [
+          {
+            "id": "urn:ngsi-ld:organization:f389dd59-c26d-4868-bdfc-d90e4556744d",
+            "href": "urn:ngsi-ld:organization:f389dd59-c26d-4868-bdfc-d90e4556744d",
+            "role": "Owner",
+            "@referredType": ""
+          }
+        ],
+        "specCharacteristic": []
+      },
+      {
+        "id": "urn:ngsi-ld:service-specification:78c7f83d-9a24-4edc-80d1-08fcf2ec0067",
+        "href": "urn:ngsi-ld:service-specification:78c7f83d-9a24-4edc-80d1-08fcf2ec0067",
+        "description": "Elliot Core is the base of the Elliot Ecosystem.\n\nProvides a powerful data lake with a data model, created to be flexible and efficient, where to run different ontologies such as energy, water, smart cities,... in parallel and interconnected.\nOn top of the data structure, a set of widgets can be set up and deployed across different applications for distinct areas or use cases.\n\nElliot core puts together all the information to be shown to you so that you can take the best decisions based on knowledge.  ",
+        "isBundle": false,
+        "lastUpdate": "2024-07-02T14:41:40.902313322Z",
+        "lifecycleStatus": "Active",
+        "name": "Elliot Core",
+        "relatedParty": [
+          {
+            "id": "urn:ngsi-ld:organization:f389dd59-c26d-4868-bdfc-d90e4556744d",
+            "href": "urn:ngsi-ld:organization:f389dd59-c26d-4868-bdfc-d90e4556744d",
+            "role": "Owner",
+            "@referredType": ""
+          }
+        ],
+        "specCharacteristic": []
+      }
+    ],
+    "validFor": {
+      "startDateTime": "2024-06-25T17:03:46.785Z"
+    }
+  },
+  "validFor": {
+    "startDateTime": "2024-07-04T12:05:45.298Z"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "id": "urn:ngsi-ld:product-offering:321dc5f8-666d-426e-a82b-1169ad436fd7",
+  "href": "urn:ngsi-ld:product-offering:321dc5f8-666d-426e-a82b-1169ad436fd7",
+  "description": "Private docker registry with unlimitted number of users and repositories, shareable on request. Includes automated vulnerability scanner with recommendations to enhance your application's security and Helm charts features.\n\n[Learn more about RAMP.eu, the Robotics and Automation Marketplace](https://ramp.eu) \\\n[Get in touch with us](mailto:noreply@ramp.eu)",
+  "isBundle": false,
+  "lastUpdate": "2024-07-04T07:35:02.207172331Z",
+  "lifecycleStatus": "Launched",
+  "name": "Private docker registry",
+  "version": "0.1",
+  "category": [
+    {
+      "id": "urn:ngsi-ld:category:5071d2dc-27d9-44f0-8874-eb80226039ba",
+      "href": "urn:ngsi-ld:category:5071d2dc-27d9-44f0-8874-eb80226039ba",
+      "name": "Development and Testing"
+    },
+    {
+      "id": "urn:ngsi-ld:category:297b773e-9690-4807-915b-cec06c130811",
+      "href": "urn:ngsi-ld:category:297b773e-9690-4807-915b-cec06c130811",
+      "name": "Manufacturing"
+    },
+    {
+      "id": "urn:ngsi-ld:category:7757a469-708e-4f8e-838e-b881e410712f",
+      "href": "urn:ngsi-ld:category:7757a469-708e-4f8e-838e-b881e410712f",
+      "name": "Platform as a Service (PaaS)"
+    }
+  ],
+  "productOfferingPrice": [
+    {
+      "id": "urn:ngsi-ld:product-offering-price:64eb5d47-f8e4-478b-9a4d-07836e109828",
+      "href": "urn:ngsi-ld:product-offering-price:64eb5d47-f8e4-478b-9a4d-07836e109828",
+      "description": "Unlimited repositories and users with up to 8000 image pulls/day",
+      "lastUpdate": "2024-07-03T08:25:55.068161338Z",
+      "lifecycleStatus": "Active",
+      "name": "Private Repositories with unlimited users",
+      "priceType": "recurring",
+      "recurringChargePeriodType": "YEARLY",
+      "price": {
+        "unit": "EUR",
+        "value": 150
+      },
+      "validFor": {
+        "startDateTime": "2024-07-03T08:25:55.059Z"
+      }
+    }
+  ],
+  "productOfferingTerm": [
+    {
+      "name": "European Union Public License"
+    }
+  ],
+  "productSpecification": {
+    "id": "urn:ngsi-ld:product-specification:bfa2a05f-3eab-4380-a1da-109010aed762",
+    "href": "urn:ngsi-ld:product-specification:bfa2a05f-3eab-4380-a1da-109010aed762",
+    "brand": "European Dynamics",
+    "description": "Private docker registry with automated vulnerability scanner.",
+    "isBundle": false,
+    "lastUpdate": "2024-07-03T08:22:11.499636806Z",
+    "lifecycleStatus": "Launched",
+    "name": "Private docker registry",
+    "productNumber": "",
+    "version": "0.1",
+    "attachment": [
+      {
+        "attachmentType": "image/png",
+        "name": "Profile Picture",
+        "url": "https://dome-marketplace-prd.org/charging/media/assets/VATEL-094402295/Privatedockerregistry_docker.png"
+      }
+    ],
+    "productSpecCharacteristic": [
+      {
+        "id": "urn:ngsi-ld:characteristic:263b8dae-ca63-4d31-b84c-7fb1e8df5cb1",
+        "name": "ISO/IEC 27001:2022",
+        "productSpecCharacteristicValue": [
+          {
+            "isDefault": true
+          }
+        ]
+      }
+    ],
+    "relatedParty": [
+      {
+        "id": "urn:ngsi-ld:organization:76cfa304-4937-4d46-85c6-8291ed58f1be",
+        "href": "urn:ngsi-ld:organization:76cfa304-4937-4d46-85c6-8291ed58f1be",
+        "role": "Owner",
+        "@referredType": ""
+      }
+    ],
+    "validFor": {
+      "startDateTime": "2024-06-26T11:54:38.137Z"
+    }
+  },
+  "validFor": {
+    "startDateTime": "2024-07-04T07:35:02.654Z"
+  }
+}
