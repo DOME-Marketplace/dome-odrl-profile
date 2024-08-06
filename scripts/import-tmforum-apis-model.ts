@@ -9,14 +9,15 @@ const REPO_FOLDER = join(OUTPUT_FOLDER, 'open-api-and-data-model')
 const REPO_URL = 'https://github.com/tmforum-apis/Open_Api_And_Data_Model.git'
 const SCHEMA_FOLDER = join(REPO_FOLDER, 'schemas')
 const COLLECTED_SCHEMA = join(OUTPUT_FOLDER, 'collected.schema.json')
+const MAX_ERRORS = 5
 
 function assertNoEntError(err: unknown): asserts err is NodeJS.ErrnoException & { code: 'ENOENT' } {
   if (!(err instanceof Error)) throw new Error(typeof err === 'string' ? err : undefined)
   if ((err as NodeJS.ErrnoException).code !== 'ENOENT') throw err
 }
 
+console.group('fetching tmforum-apis/open-api-and-data-model')
 try {
-  console.log('fetching tmforum-apis/open-api-and-data-model')
   await mkdir(OUTPUT_FOLDER, { recursive: true })
   await access(REPO_FOLDER)
   console.log('already cloned')
@@ -26,9 +27,10 @@ try {
   await promisify(exec)(`git clone ${REPO_URL} ${REPO_FOLDER}`)
   console.log('successfully cloned')
 }
+console.groupEnd()
 
+console.group('fetching tmforum-apis/open-api-and-data-model/schemas')
 try {
-  console.log('fetching tmforum-apis/open-api-and-data-model/schemas')
   await access(COLLECTED_SCHEMA)
   console.log('already collected')
 } catch (err) {
@@ -51,10 +53,12 @@ try {
   console.log('writing collected schema to disc')
   await writeFile(COLLECTED_SCHEMA, JSON.stringify(schemaCollection, null, 2))
 }
+console.groupEnd()
 
-console.log('creating json ref resolver')
+console.group('dereferencing collected schema')
 // NOTE https://www.npmjs.com/package/@stoplight/json-ref-resolver
 // NOTE https://github.com/stoplightio/json-ref-resolver/blob/HEAD/src/types.ts
+
 const resolver = new Resolver({
   resolvers: {
     file: {
@@ -75,15 +79,24 @@ const resolver = new Resolver({
     return ref
   }
 })
-
-console.log('dereferencing collected schema')
 const { result, errors } = await resolver.resolve({ $ref: COLLECTED_SCHEMA })
 
 if (errors.length > 0) {
   console.log('encountered ' + errors.length + ' errors')
-  console.error('first error:', errors[0])
-  // there are many errors, because even after fixing json refs, there are many invalid references to non-existing files
+  if (errors.length > MAX_ERRORS) console.log('showing first ' + MAX_ERRORS + ' errors')
+  for (let i = 0, max = Math.min(errors.length, MAX_ERRORS) - 1; i <= max; i++) {
+    console.group('error no. ' + (i + 1) + ':')
+    let error = errors[i]
+    console.error('code:', error.code)
+    console.error('message:', error.message)
+    console.error('stack:')
+    console.group()
+    console.error('- ' + Array.from(new Set(error.uriStack)).join('\n- '))
+    console.groupEnd()
+    console.groupEnd()
+  }
 } else {
   console.log('successfully dereferenced without errors')
   console.dir(result, { depth: 0 })
 }
+console.groupEnd()
