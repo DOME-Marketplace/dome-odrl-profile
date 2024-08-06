@@ -1,5 +1,7 @@
 # Catalogue Offerings Verifiable Signature
 
+> **Author:** Simon Petrac \<spetrac@nicos-ag.com\>
+
 <!-- https://mermaid.live/edit -->
 
 ```mermaid
