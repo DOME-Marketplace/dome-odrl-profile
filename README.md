@@ -4,6 +4,7 @@
 
 - [Catalogue Replication and Visibility](docs/catalogue-replication-and-visibility.md)
 - [TMForum APIs](docs/tm-forum-apis.md)
+- [Catalogue Offerings Verifiable Signature](docs/catalogue-offerings-verifiable-signature.md)
 
 ## Model
 
