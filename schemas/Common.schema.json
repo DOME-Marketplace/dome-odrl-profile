@@ -18,10 +18,10 @@
       },
       "allOf": [
         {
-          "$ref": "/definitions/Addressable"
+          "$ref": "#/definitions/Addressable"
         },
         {
-          "$ref": "/definitions/Extensible"
+          "$ref": "#/definitions/Extensible"
         }
       ]
     },

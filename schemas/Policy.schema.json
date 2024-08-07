@@ -6,10 +6,250 @@
       "title": "Policy",
       "description": "",
       "type": "object",
+      "properties": {
+        "conflict": {
+          "$ref": "#/definitions/ConflictTerm"
+        },
+        "profile": {
+          "type": "string"
+        },
+        "inheritFrom": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Policy"
+          }
+        },
+        "permission": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Permission"
+          }
+        },
+        "prohibition": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Prohibition"
+          }
+        },
+        "obligation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Duty"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "Common.schema.json#/definitions/EntityRef"
+        }
+      ]
+    },
+    "Set": {
+      "title": "Set",
+      "description": "",
+      "type": "object",
       "properties": {},
       "allOf": [
         {
-          "$ref": "./Common.schema.json#/definitions/EntityRef"
+          "$ref": "#/definitions/Policy"
+        }
+      ]
+    },
+    "Offer": {
+      "title": "Offer",
+      "description": "",
+      "type": "object",
+      "properties": {},
+      "allOf": [
+        {
+          "$ref": "#/definitions/Policy"
+        }
+      ]
+    },
+    "Agreement": {
+      "title": "Agreement",
+      "description": "",
+      "type": "object",
+      "properties": {},
+      "allOf": [
+        {
+          "$ref": "#/definitions/Policy"
+        }
+      ]
+    },
+    "ConflictTerm": {
+      "title": "Policy",
+      "description": "",
+      "type": "string",
+      "enum": [
+        "perm",
+        "prohibit",
+        "invalid"
+      ],
+      "default": "invalid"
+    },
+    "Rule": {
+      "title": "Rule",
+      "description": "",
+      "type": "object",
+      "properties": {
+        "action": {
+          "$ref": "#/definitions/Action"
+        },
+        "target": {
+          "$ref": "#/definitions/Asset"
+        },
+        "assigner": {
+          "$ref": "#/definitions/Party"
+        },
+        "assignee": {
+          "$ref": "#/definitions/Party"
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "Common.schema.json#/definitions/EntityRef"
+        }
+      ]
+    },
+    "Permission": {
+      "title": "Permission",
+      "description": "",
+      "type": "object",
+      "properties": {
+        "duty": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Duty"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/definitions/Rule"
+        }
+      ]
+    },
+    "Prohibition": {
+      "title": "Prohibition",
+      "description": "",
+      "type": "object",
+      "properties": {
+        "remedy": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Duty"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/definitions/Rule"
+        }
+      ]
+    },
+    "Duty": {
+      "title": "Duty",
+      "description": "",
+      "type": "object",
+      "properties": {
+        "consequence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Duty"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/definitions/Rule"
+        }
+      ]
+    },
+    "Action": {
+      "title": "Action",
+      "description": "",
+      "type": "object",
+      "properties": {
+        "includedIn": {
+          "$ref": "#/definitions/Action"
+        },
+        "implies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Action"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "Common.schema.json#/definitions/EntityRef"
+        }
+      ]
+    },
+    "Asset": {
+      "title": "Asset",
+      "description": "",
+      "type": "object",
+      "properties": {
+        "partOf": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AssetCollection"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "Common.schema.json#/definitions/EntityRef"
+        }
+      ]
+    },
+    "AssetCollection": {
+      "title": "AssetCollection",
+      "description": "",
+      "type": "object",
+      "properties": {
+        "source": {
+          "$ref": "Common.schema.json#/definitions/EntityRef"
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/definitions/Asset"
+        }
+      ]
+    },
+    "Party": {
+      "title": "Party",
+      "description": "",
+      "type": "object",
+      "properties": {
+        "partOf": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PartyCollection"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "Common.schema.json#/definitions/EntityRef"
+        }
+      ]
+    },
+    "PartyCollection": {
+      "title": "PartyCollection",
+      "description": "",
+      "type": "object",
+      "properties": {
+        "source": {
+          "$ref": "Common.schema.json#/definitions/EntityRef"
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/definitions/Party"
         }
       ]
     }
