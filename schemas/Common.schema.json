@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CommonSchema",
+  "definitions": {
+    "EntityRef": {
+      "$id": "#EntityRef",
+      "description": "Entity reference schema to be use for all entityRef class.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the related entity."
+        },
+        "@referredType": {
+          "type": "string",
+          "description": "The actual type of the target instance when needed for disambiguation."
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "/definitions/Addressable"
+        },
+        {
+          "$ref": "/definitions/Extensible"
+        }
+      ]
+    },
+    "Addressable": {
+      "$id": "#Addressable",
+      "type": "object",
+      "description": "Base schema for adressable entities",
+      "properties": {
+        "href": {
+          "type": "string",
+          "format": "uri",
+          "description": "Hyperlink reference"
+        },
+        "id": {
+          "type": "string",
+          "description": "unique identifier"
+        }
+      }
+    },
+    "Extensible": {
+      "$id": "#Extensible",
+      "type": "object",
+      "description": "Base Extensible schema for use in TMForum Open-APIs",
+      "properties": {
+        "@schemaLocation": {
+          "type": "string",
+          "format": "uri",
+          "description": "A URI to a JSON-Schema file that defines additional attributes and relationships"
+        },
+        "@baseType": {
+          "type": "string",
+          "description": "When sub-classing, this defines the super-class"
+        },
+        "@type": {
+          "type": "string",
+          "description": "When sub-classing, this defines the sub-class Extensible name"
+        }
+      },
+      "dependencies": {
+        "@schemaLocation": [
+          "@baseType",
+          "@type"
+        ]
+      }
+    }
+  }
+}
