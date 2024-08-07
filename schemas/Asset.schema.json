@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AssetSchema",
+  "definitions": {
+    "AssetRef": {
+      "title": "AssetRef",
+      "description": "",
+      "type": "object",
+      "properties": {},
+      "allOf": [
+        {
+          "$ref": "Common.schema.json#/definitions/EntityRef"
+        }
+      ]
+    },
+    "Asset": {
+      "title": "Asset",
+      "description": "An Asset class is a resource or a collection of resources that are the subject of a Rule. The Asset can be any form of identifiable resource, such as data/information, content/media, applications, services, or physical artefacts. Furthermore, it can be used to represent other Asset classes that are needed to undertake the Policy expression, such as with a Duty. An Asset is referred to by the Permission and/or Prohibition, and also by the Duty.",
+      "type": "object",
+      "properties": {
+        "partOf": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AssetCollection"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/definitions/AssetRef"
+        }
+      ]
+    },
+    "AssetCollectionRef": {
+      "title": "AssetCollectionRef",
+      "description": "",
+      "type": "object",
+      "properties": {
+        "source": {
+          "$ref": "#/definitions/AssetCollectionRef"
+        },
+        "refinement": {
+          "type": "array",
+          "items": {
+            "$ref": "Constraint.schema.json#/definitions/ConstraintOrLogicalConstraint"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/definitions/AssetRef"
+        }
+      ]
+    },
+    "AssetCollection": {
+      "title": "AssetCollection",
+      "description": "An Asset that is a single resource representing a set of member resources. This indicates that all the members of the set will be the subject of the Rule.",
+      "type": "object",
+      "properties": {},
+      "allOf": [
+        {
+          "$ref": "#/definitions/Asset"
+        },
+        {
+          "$ref": "#/definitions/AssetCollectionRef"
+        }
+      ]
+    }
+  }
+}

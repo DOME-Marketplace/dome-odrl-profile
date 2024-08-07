@@ -3,7 +3,6 @@
   "title": "CommonSchema",
   "definitions": {
     "EntityRef": {
-      "$id": "#EntityRef",
       "description": "Entity reference schema to be use for all entityRef class.",
       "type": "object",
       "properties": {
@@ -26,7 +25,6 @@
       ]
     },
     "Addressable": {
-      "$id": "#Addressable",
       "type": "object",
       "description": "Base schema for adressable entities",
       "properties": {
@@ -42,7 +40,6 @@
       }
     },
     "Extensible": {
-      "$id": "#Extensible",
       "type": "object",
       "description": "Base Extensible schema for use in TMForum Open-APIs",
       "properties": {

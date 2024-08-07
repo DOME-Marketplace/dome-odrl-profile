@@ -2,84 +2,65 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "PolicySchema",
   "definitions": {
-    "Policy": {
-      "title": "Policy",
+    "PolicyRef": {
+      "title": "PolicyRef",
       "description": "",
       "type": "object",
-      "properties": {
-        "conflict": {
-          "$ref": "#/definitions/ConflictTerm"
-        },
-        "profile": {
-          "type": "string"
-        },
-        "inheritFrom": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Policy"
-          }
-        },
-        "permission": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Permission"
-          }
-        },
-        "prohibition": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Prohibition"
-          }
-        },
-        "obligation": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Duty"
-          }
-        }
-      },
+      "properties": {},
       "allOf": [
         {
           "$ref": "Common.schema.json#/definitions/EntityRef"
         }
       ]
     },
-    "Set": {
-      "title": "Set",
-      "description": "",
+    "Policy": {
+      "title": "Policy",
+      "description": "The ODRL Information Model represents Policies that express Permissions, Prohibitions and Duties related to the usage of Asset resources. The Information Model explicitly expresses what is allowed and what is not allowed by the Policy, as well as other terms, requirements, and parties involved.",
       "type": "object",
-      "properties": {},
-      "allOf": [
-        {
-          "$ref": "#/definitions/Policy"
+      "properties": {
+        "conflict": {
+          "$ref": "#/definitions/ConflictTerm"
+        },
+        "profile": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Profile"
+          }
+        },
+        "inheritFrom": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PolicyRef"
+          }
+        },
+        "permission": {
+          "type": "array",
+          "items": {
+            "$ref": "Rule.schema.json#/definitions/Permission"
+          }
+        },
+        "prohibition": {
+          "type": "array",
+          "items": {
+            "$ref": "Rule.schema.json#/definitions/Prohibition"
+          }
+        },
+        "obligation": {
+          "type": "array",
+          "items": {
+            "$ref": "Rule.schema.json#/definitions/Duty"
+          }
         }
-      ]
-    },
-    "Offer": {
-      "title": "Offer",
-      "description": "",
-      "type": "object",
-      "properties": {},
+      },
       "allOf": [
         {
-          "$ref": "#/definitions/Policy"
-        }
-      ]
-    },
-    "Agreement": {
-      "title": "Agreement",
-      "description": "",
-      "type": "object",
-      "properties": {},
-      "allOf": [
-        {
-          "$ref": "#/definitions/Policy"
+          "$ref": "#/definitions/PolicyRef"
         }
       ]
     },
     "ConflictTerm": {
-      "title": "Policy",
-      "description": "",
+      "title": "ConflictTerm",
+      "description": "The conflict property is used to establish strategies to resolve conflicts that arise from the merging of Policies or conflicts between Permissions and Prohibitions in the same Policy. Conflicts may arise when merging Policies as a result of Policy Inheritance and the resultant Rules are inconsistent.",
       "type": "string",
       "enum": [
         "perm",
@@ -88,168 +69,84 @@
       ],
       "default": "invalid"
     },
-    "Rule": {
-      "title": "Rule",
+    "Profile": {
+      "title": "Profile",
+      "description": "An ODRL Profile explicitly serves community needs by specifying the vocabulary terms they require to be supported in ODRL policy expressions. These terms may be defined explicitly or may be adopted from the ODRL Common Vocabulary.",
+      "type": "string",
+      "format": "uri"
+    },
+    "SetRef": {
+      "title": "SetRef",
       "description": "",
       "type": "object",
-      "properties": {
-        "action": {
-          "$ref": "#/definitions/Action"
+      "properties": {},
+      "allOf": [
+        {
+          "$ref": "#/definitions/PolicyRef"
+        }
+      ]
+    },
+    "Set": {
+      "title": "Set",
+      "description": "An ODRL Policy of subclass Set represents any combination of Rules. The Set Policy subclass is also the default subclass of Policy (if none is specified).",
+      "type": "object",
+      "properties": {},
+      "allOf": [
+        {
+          "$ref": "#/definitions/Policy"
         },
-        "target": {
-          "$ref": "#/definitions/Asset"
+        {
+          "$ref": "#/definitions/SetRef"
+        }
+      ]
+    },
+    "OfferRef": {
+      "title": "OfferRef",
+      "description": "",
+      "type": "object",
+      "properties": {},
+      "allOf": [
+        {
+          "$ref": "#/definitions/PolicyRef"
+        }
+      ]
+    },
+    "Offer": {
+      "title": "Offer",
+      "description": "An ODRL Policy of subclass Offer represents Rules that are being offered from assigner Parties. An Offer is typically used to make available Policies to a wider audience, but does not grant any Rules.",
+      "type": "object",
+      "properties": {},
+      "allOf": [
+        {
+          "$ref": "#/definitions/Policy"
         },
-        "assigner": {
-          "$ref": "#/definitions/Party"
+        {
+          "$ref": "#/definitions/OfferRef"
+        }
+      ]
+    },
+    "AgreementRef": {
+      "title": "AgreementRef",
+      "description": "",
+      "type": "object",
+      "properties": {},
+      "allOf": [
+        {
+          "$ref": "#/definitions/PolicyRef"
+        }
+      ]
+    },
+    "Agreement": {
+      "title": "Agreement",
+      "description": "An ODRL Policy of subclass Agreement represents Rules that have been granted from assigner to assignee Parties. An Agreement is typically used to grant the terms of the Rules between the Parties.",
+      "type": "object",
+      "properties": {},
+      "allOf": [
+        {
+          "$ref": "#/definitions/Policy"
         },
-        "assignee": {
-          "$ref": "#/definitions/Party"
-        }
-      },
-      "allOf": [
         {
-          "$ref": "Common.schema.json#/definitions/EntityRef"
-        }
-      ]
-    },
-    "Permission": {
-      "title": "Permission",
-      "description": "",
-      "type": "object",
-      "properties": {
-        "duty": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Duty"
-          }
-        }
-      },
-      "allOf": [
-        {
-          "$ref": "#/definitions/Rule"
-        }
-      ]
-    },
-    "Prohibition": {
-      "title": "Prohibition",
-      "description": "",
-      "type": "object",
-      "properties": {
-        "remedy": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Duty"
-          }
-        }
-      },
-      "allOf": [
-        {
-          "$ref": "#/definitions/Rule"
-        }
-      ]
-    },
-    "Duty": {
-      "title": "Duty",
-      "description": "",
-      "type": "object",
-      "properties": {
-        "consequence": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Duty"
-          }
-        }
-      },
-      "allOf": [
-        {
-          "$ref": "#/definitions/Rule"
-        }
-      ]
-    },
-    "Action": {
-      "title": "Action",
-      "description": "",
-      "type": "object",
-      "properties": {
-        "includedIn": {
-          "$ref": "#/definitions/Action"
-        },
-        "implies": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Action"
-          }
-        }
-      },
-      "allOf": [
-        {
-          "$ref": "Common.schema.json#/definitions/EntityRef"
-        }
-      ]
-    },
-    "Asset": {
-      "title": "Asset",
-      "description": "",
-      "type": "object",
-      "properties": {
-        "partOf": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/AssetCollection"
-          }
-        }
-      },
-      "allOf": [
-        {
-          "$ref": "Common.schema.json#/definitions/EntityRef"
-        }
-      ]
-    },
-    "AssetCollection": {
-      "title": "AssetCollection",
-      "description": "",
-      "type": "object",
-      "properties": {
-        "source": {
-          "$ref": "Common.schema.json#/definitions/EntityRef"
-        }
-      },
-      "allOf": [
-        {
-          "$ref": "#/definitions/Asset"
-        }
-      ]
-    },
-    "Party": {
-      "title": "Party",
-      "description": "",
-      "type": "object",
-      "properties": {
-        "partOf": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/PartyCollection"
-          }
-        }
-      },
-      "allOf": [
-        {
-          "$ref": "Common.schema.json#/definitions/EntityRef"
-        }
-      ]
-    },
-    "PartyCollection": {
-      "title": "PartyCollection",
-      "description": "",
-      "type": "object",
-      "properties": {
-        "source": {
-          "$ref": "Common.schema.json#/definitions/EntityRef"
-        }
-      },
-      "allOf": [
-        {
-          "$ref": "#/definitions/Party"
+          "$ref": "#/definitions/AgreementRef"
         }
       ]
     }
