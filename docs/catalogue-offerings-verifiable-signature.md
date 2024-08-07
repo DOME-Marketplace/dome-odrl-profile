@@ -251,6 +251,67 @@ Catalogue:
       signature: proof on data from "C corp."
 ```
 
+### Catalogue Signature with VP and Catalogue included in Offerings VC
+
+Of course we could go one step further and package the catalogue as VP anyway to make the catalogue itself shareable between parties
+while on the other hand making it immune to manipulation:
+
+```yaml
+VP:
+  data:
+    marketplace: Offering Marketplace
+    policies: marketplace catalogue exchange policies
+    children:
+      - VC:
+        data: Offer A
+          provider: A corp.
+          product: A prod.
+          policies: product usage policies
+          sourceMarketplace: Offering Marketplace
+          marketplacePolicies: marketplace replication policies
+        signature: proof on data from "A corp."
+      - VC:
+        data: Offer B
+          provider: B corp.
+          product: B prod.
+          policies: offering replication policies
+          sourceMarketplace: Offering Marketplace
+          marketplacePolicies: marketplace replication policies
+        signature: proof on data from "B corp."
+  signature: proof on data from "Offering Marketplace"
+```
+
+```yaml
+VP:
+  data:
+    marketplace: Replicating Marketplace
+    policies: marketplace catalogue exchange policies
+    children:
+      - VP:
+        data:
+          intermediateMarketplace: Replicating Marketplace
+          additionalFees: any
+          children:
+            - VC:
+              data: Offer B
+                provider: B corp.
+                product: B prod.
+                policies: offering replication policies
+                sourceMarketplace: Offering Marketplace
+                marketplacePolicies: marketplace replication policies
+              signature: proof on data from "B corp."
+        signature: proof on data from "B corp."
+      - VC:
+        data: Offer C
+          provider: C corp.
+          product: C prod.
+          policies: product usage policies
+          sourceMarketplace: Replicating Marketplace
+          marketplacePolicies: marketplace replication policies
+        signature: proof on data from "C corp."
+  signature: proof on data from "Offering Marketplace"
+```
+
 ### Resumee
 
 The mechanisms for a change on a replicated offering are quite complicated, if everything must be signed be the provider, 
