@@ -3,6 +3,7 @@
   "title": "CommonSchema",
   "definitions": {
     "EntityRef": {
+      "title": "EntityRef",
       "description": "Entity reference schema to be use for all entityRef class.",
       "type": "object",
       "properties": {
@@ -25,8 +26,9 @@
       ]
     },
     "Addressable": {
-      "type": "object",
+      "title": "Addressable",
       "description": "Base schema for adressable entities",
+      "type": "object",
       "properties": {
         "href": {
           "type": "string",
@@ -40,8 +42,9 @@
       }
     },
     "Extensible": {
-      "type": "object",
+      "title": "Extensible",
       "description": "Base Extensible schema for use in TMForum Open-APIs",
+      "type": "object",
       "properties": {
         "@schemaLocation": {
           "type": "string",
@@ -62,6 +65,31 @@
           "@baseType",
           "@type"
         ]
+      }
+    },
+    "TimePeriod": {
+      "title": "TimePeriod",
+      "description": "A period of time, either as a deadline (endDateTime only) a startDateTime only, or both",
+      "type": "object",
+      "properties": {
+        "startDateTime": {
+          "description": "Start of the time period, using IETC-RFC-3339 format",
+          "type": "string",
+          "format": "date-time",
+          "examples": [
+            "1985-04-12T23:20:50.52Z",
+            "2018-09-21T09:13:16-07:00"
+          ]
+        },
+        "endDateTime": {
+          "description": "End of the time period, using IETC-RFC-3339 format",
+          "type": "string",
+          "format": "date-time",
+          "examples": [
+            "1985-04-12T23:20:50.52Z",
+            "2018-09-21T09:13:16-07:00"
+          ]
+        }
       }
     }
   }
