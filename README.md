@@ -32,3 +32,10 @@
   - [ServiceSchema](schemas/tmforum/Service.schema.json)
   - [EngagedPartySchema](schemas/tmforum/EngagedParty.schema.json)
   - [MarketingSalesSchema](schemas/tmforum/MarketingSales.schema.json)
+
+## Draft
+
+- [dome-op](draft/dome-op.md)
+- [TMForum APIs Model](draft/tmforum-apis-model.md)
+- [DOME Marketplace ODRL-Policies](draft/marketplace-policies.md)
+- [DOME Replication](draft/replication-policies.md)
