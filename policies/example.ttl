@@ -1,0 +1,12 @@
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix dome: <https://dome-marketplace.eu/model/core#> .
+@prefix repl: <https://dome-marketplace.eu/model/replication#> .
+
+<HelloWorld>
+    a rdfs:Resource ;
+.

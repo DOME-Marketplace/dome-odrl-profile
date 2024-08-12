@@ -1,0 +1,325 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CommonSchema",
+  "definitions": {
+    "Any": {
+      "title": "Any"
+    },
+    "EntityRef": {
+      "title": "EntityRef",
+      "description": "Entity reference schema to be use for all entityRef class.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the related entity."
+        },
+        "@referredType": {
+          "type": "string",
+          "description": "The actual type of the target instance when needed for disambiguation."
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/definitions/Addressable"
+        },
+        {
+          "$ref": "#/definitions/Extensible"
+        }
+      ]
+    },
+    "Entity": {
+      "title": "Entity",
+      "description": "Base entity schema for use in TMForum Open-APIs",
+      "type": "object",
+      "properties": {},
+      "allOf": [
+        {
+          "$ref": "#/definitions/Addressable"
+        },
+        {
+          "$ref": "#/definitions/Extensible"
+        }
+      ]
+    },
+    "Addressable": {
+      "title": "Addressable",
+      "description": "Base schema for adressable entities",
+      "type": "object",
+      "properties": {
+        "href": {
+          "type": "string",
+          "format": "uri",
+          "description": "Hyperlink reference"
+        },
+        "id": {
+          "type": "string",
+          "description": "unique identifier"
+        }
+      }
+    },
+    "Extensible": {
+      "title": "Extensible",
+      "description": "Base Extensible schema for use in TMForum Open-APIs",
+      "type": "object",
+      "properties": {
+        "@schemaLocation": {
+          "type": "string",
+          "format": "uri",
+          "description": "A URI to a JSON-Schema file that defines additional attributes and relationships"
+        },
+        "@baseType": {
+          "type": "string",
+          "description": "When sub-classing, this defines the super-class"
+        },
+        "@type": {
+          "type": "string",
+          "description": "When sub-classing, this defines the sub-class Extensible name"
+        }
+      },
+      "dependencies": {
+        "@schemaLocation": [
+          "@baseType",
+          "@type"
+        ]
+      }
+    },
+    "TimePeriod": {
+      "title": "TimePeriod",
+      "description": "A period of time, either as a deadline (endDateTime only) a startDateTime only, or both",
+      "type": "object",
+      "properties": {
+        "startDateTime": {
+          "description": "Start of the time period, using IETC-RFC-3339 format",
+          "type": "string",
+          "format": "date-time",
+          "examples": [
+            "1985-04-12T23:20:50.52Z",
+            "2018-09-21T09:13:16-07:00"
+          ]
+        },
+        "endDateTime": {
+          "description": "End of the time period, using IETC-RFC-3339 format",
+          "type": "string",
+          "format": "date-time",
+          "examples": [
+            "1985-04-12T23:20:50.52Z",
+            "2018-09-21T09:13:16-07:00"
+          ]
+        }
+      }
+    },
+    "PlaceRef": {
+      "title": "PlaceRef",
+      "description": "Place reference. PlaceRef defines the placeRefs where the products are sold or delivered.",
+      "type": "object",
+      "properties": {},
+      "allOf": [
+        {
+          "$ref": "#/definitions/EntityRef"
+        }
+      ]
+    },
+    "ChannelRef": {
+      "title": "ChannelRef",
+      "description": "The channel to which the resource reference to. e.g. channel for selling product offerings, channel for opening a trouble ticket etc..",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the channel."
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/definitions/EntityRef"
+        }
+      ]
+    },
+    "AttachmentRefOrValue": {
+      "title": "AttachmentRefOrValue",
+      "description": "An attachment by value or by reference. An attachment complements the description of an element, for example through a document, a video, a picture.",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/AttachmentRef"
+        },
+        {
+          "$ref": "#/definitions/Attachment"
+        }
+      ]
+    },
+    "AttachmentRef": {
+      "title": "AttachmentRef",
+      "description": "Attachment reference. An attachment complements the description of an element (for instance a product) through video, pictures",
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "A narrative text describing the content of the attachment"
+        },
+        "href": {
+          "type": "string",
+          "description": "URL serving as reference for the attachment resource",
+          "format": "uri"
+        },
+        "id": {
+          "description": "Unique-Identifier for this attachment",
+          "type": "string"
+        },
+        "url": {
+          "description": "Link to the attachment media/content",
+          "type": "string",
+          "format": "uri"
+        },
+        "@referredType": {
+          "type": "string",
+          "description": "The actual type of the target instance when needed for disambiguation."
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/definitions/EntityRef"
+        }
+      ]
+    },
+    "Attachment": {
+      "title": "Attachment",
+      "description": "Complements the description of an element (for instance a product) through video, pictures...",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for this particular attachment",
+          "examples": [
+            "4aafacbd-11ff-4dc8-b445-305f2215715f",
+            "2334bc59-726e-4d34-ab96-f50e0561412f"
+          ]
+        },
+        "href": {
+          "type": "string",
+          "format": "uri",
+          "description": "URI for this Attachment",
+          "examples": [
+            "http://host/Attachment/4aafacbd-11ff-4dc8-b445-305f2215715f"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the attachment"
+        },
+        "description": {
+          "type": "string",
+          "description": "A narrative text describing the content of the attachment",
+          "examples": [
+            "Photograph of the Product",
+            "Explanation Video"
+          ]
+        },
+        "attachmentType": {
+          "type": "string",
+          "description": "Attachment type such as video, picture",
+          "examples": [
+            "video",
+            "picture"
+          ]
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Uniform Resource Locator, is a web page address (a subset of URI)",
+          "examples": [
+            "http://host/Content/4aafacbd-11ff-4dc8-b445-305f2215715f"
+          ]
+        },
+        "mimeType": {
+          "type": "string",
+          "description": "Attachment mime type such as extension file for video, picture and document"
+        },
+        "content": {
+          "type": "string",
+          "format": "base64",
+          "description": "The actual contents of the attachment object, if embedded, encoded as base64"
+        },
+        "size": {
+          "$ref": "#/definitions/Quantity",
+          "description": "The size of the attachment."
+        },
+        "validFor": {
+          "$ref": "#/definitions/TimePeriod",
+          "description": "The period of time for which the attachment is valid"
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/definitions/Entity"
+        }
+      ]
+    },
+    "Quantity": {
+      "title": "Quantity",
+      "description": "An amount in a given unit",
+      "type": "object",
+      "properties": {
+        "amount": {
+          "type": "number",
+          "format": "float",
+          "default": 1,
+          "description": "Numeric value in a given unit"
+        },
+        "units": {
+          "type": "string",
+          "description": "Unit"
+        }
+      }
+    },
+    "CharacteristicValueSpecification": {
+      "title": "CharacteristicValueSpecification",
+      "description": "specification of a value (number or text or an object) that can be assigned to a Characteristic.",
+      "type": "object",
+      "properties": {
+        "valueType": {
+          "type": "string",
+          "description": "A kind of value that the characteristic value can take on, such as numeric, text and so forth"
+        },
+        "isDefault": {
+          "type": "boolean",
+          "description": "If true, the Boolean Indicates if the value is the default value for a characteristic"
+        },
+        "value": {
+          "$ref": "#/definitions/Any",
+          "description": "A discrete value that the characteristic can take on, or the actual value of the characteristic"
+        },
+        "unitOfMeasure": {
+          "type": "string",
+          "description": "A length, surface, volume, dry measure, liquid measure, money, weight, time, and the like. In general, a determinate quantity or magnitude of the kind designated, taken as a standard of comparison for others of the same kind, in assigning to them numerical values, as 1 foot, 1 yard, 1 mile, 1 square foot."
+        },
+        "validFor": {
+          "$ref": "#/definitions/TimePeriod",
+          "description": "The period of time for which a value is applicable."
+        },
+        "valueFrom": {
+          "type": "integer",
+          "description": "The low range value that a characteristic can take on"
+        },
+        "valueTo": {
+          "type": "integer",
+          "description": "The upper range value that a characteristic can take on"
+        },
+        "rangeInterval": {
+          "type": "string",
+          "description": "An indicator that specifies the inclusion or exclusion of the valueFrom and valueTo attributes. If applicable, possible values are \"open\", \"closed\", \"closedBottom\" and \"closedTop\"."
+        },
+        "regex": {
+          "type": "string",
+          "description": "A regular expression constraint for given value"
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/definitions/Extensible"
+        }
+      ]
+    }
+  }
+}

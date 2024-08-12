@@ -1,0 +1,95 @@
+{
+  "id": "urn:ngsi-ld:product-offering:cca377ba-f9eb-4e27-af17-0566e9e821be",
+  "href": "urn:ngsi-ld:product-offering:cca377ba-f9eb-4e27-af17-0566e9e821be",
+  "description": "#### Meet **ETABox**, the AI-powered platform revolutionizing predictive analytics in maritime logistics.\nAt the core of ETABox lies the transformative power of artificial intelligence, engineered to deliver unparalleled accuracy in predicting the Estimated Time of Arrival (ETA) and Departure (ETD) of vessels and containers.",
+  "isBundle": false,
+  "lastUpdate": "2024-07-17T08:35:48.495239451Z",
+  "lifecycleStatus": "Launched",
+  "name": "ETABox",
+  "version": "0.1",
+  "category": [
+    {
+      "id": "urn:ngsi-ld:category:ac997289-76fa-4323-8b62-31202c06ba61",
+      "href": "urn:ngsi-ld:category:ac997289-76fa-4323-8b62-31202c06ba61",
+      "name": "Artificial Intelligence and Machine Learning"
+    },
+    {
+      "id": "urn:ngsi-ld:category:73720e4b-7d7a-42db-a65c-1a4113d1a0af",
+      "href": "urn:ngsi-ld:category:73720e4b-7d7a-42db-a65c-1a4113d1a0af",
+      "name": "Data as a Service (DaaS)"
+    },
+    {
+      "id": "urn:ngsi-ld:category:01bc2b6f-3f91-42b0-8422-49369d233f1f",
+      "href": "urn:ngsi-ld:category:01bc2b6f-3f91-42b0-8422-49369d233f1f",
+      "name": "Business Analytics"
+    },
+    {
+      "id": "urn:ngsi-ld:category:37cc8b7f-8875-41e1-94e7-7fbb5117553d",
+      "href": "urn:ngsi-ld:category:37cc8b7f-8875-41e1-94e7-7fbb5117553d",
+      "name": "Transportation and Transportation infrastructure"
+    },
+    {
+      "id": "urn:ngsi-ld:category:34daa315-f0f0-46f2-89e0-f9257dfeb6bc",
+      "href": "urn:ngsi-ld:category:34daa315-f0f0-46f2-89e0-f9257dfeb6bc",
+      "name": "Data management"
+    },
+    {
+      "id": "urn:ngsi-ld:category:7757a469-708e-4f8e-838e-b881e410712f",
+      "href": "urn:ngsi-ld:category:7757a469-708e-4f8e-838e-b881e410712f",
+      "name": "Platform as a Service (PaaS)"
+    }
+  ],
+  "productOfferingPrice": [
+    {
+      "id": "urn:ngsi-ld:product-offering-price:2c63bf32-37b3-4fe7-aaf1-9a18133f5fd0",
+      "href": "urn:ngsi-ld:product-offering-price:2c63bf32-37b3-4fe7-aaf1-9a18133f5fd0",
+      "description": "",
+      "lastUpdate": "2024-07-02T20:25:52.217527674Z",
+      "lifecycleStatus": "Active",
+      "name": "Subscription",
+      "priceType": "recurring",
+      "recurringChargePeriodType": "MONTHLY",
+      "price": {
+        "unit": "EUR",
+        "value": 250
+      },
+      "validFor": {
+        "startDateTime": "2024-07-02T20:25:52.210Z"
+      }
+    }
+  ],
+  "productSpecification": {
+    "id": "urn:ngsi-ld:product-specification:d92b7617-6ab2-45c4-8963-bcb11c8bbd38",
+    "href": "urn:ngsi-ld:product-specification:d92b7617-6ab2-45c4-8963-bcb11c8bbd38",
+    "brand": "IDOM",
+    "description": "#### Meet **ETABox**, the AI-powered platform revolutionizing predictive analytics in maritime logistics.\nAt the core of ETABox lies the transformative power of artificial intelligence, engineered to deliver unparalleled accuracy in predicting the Estimated Time of Arrival (ETA) and Departure (ETD) of vessels and containers.\n\n**Key Features:**\n- **AI-Driven Predictive Analytics:** Leverage advanced AI algorithms to integrate data from ship calls, AIS tracking, PMS events, and marine conditions, crafting precise ETA and ETD forecasts.\n- **Seamless Data Integration:** Experience a smooth data journey, from environmental data collection via buoys, radar, and weather stations to port facilities equipped with cutting-edge sensors.\n- **User-Friendly Interface:** Streamline decision-making with an intuitive interface designed for effortless vessel tracking and port activity monitoring.\n- **Real-Time Data Access:** Benefit from real-time data integration with existing port systems, enhancing operational efficiency and reducing wait times.\n- **API Integration:** Enhance stakeholder access to predictive data through an external API for querying vessel or port calls.\n\n#### Our Vision:\n**ETABox** envisions a smarter, more efficient maritime industry where data-driven operations and predictive analytics transform port operations. By embedding AI at the heart of predictive modeling, we aim to pioneer the future of smart ports, contributing to digital twin frameworks, enriching simulations, and setting new standards for operational resilience and sustainability.\n\n#### Impact and Opportunity:\n- **Enhancing Operational Efficiency:** Optimize port operations by reducing wait times, streamlining cargo flows, and promoting competitive, transparent port activities.\n- **Promoting Sustainability:** Support eco-friendly operations by optimizing resource management and reducing emissions, aligning with global environmental sustainability goals.\n- **Empowering Port Authorities:** Provide actionable insights, enabling port authorities and operators to make informed decisions and elevate efficiency.\n- **Facilitating Smart Port Initiatives:** Contribute to the development of smart ports through data-driven predictions and advanced simulations, enhancing port resilience and adaptability.\n\nDiscover the future of maritime logistics with **ETABox** – where innovative AI meets data integration and real-time analytics to drive port efficiency and sustainability. Join us in navigating the path to smarter, more resilient port operations, and unlock the potential to revolutionize the maritime industry on a global scale.\n\nInterested in how our solutions can enhance your port operations? Contact us to learn more.\n\n**Pedro Garcia** - pedro.garciag@idom.com",
+    "isBundle": false,
+    "lastUpdate": "2024-07-04T11:47:26.578497413Z",
+    "lifecycleStatus": "Launched",
+    "name": "ETABox",
+    "productNumber": "",
+    "version": "0.1",
+    "attachment": [
+      {
+        "attachmentType": "image/png",
+        "name": "Profile Picture",
+        "url": "https://dome-marketplace-prd.org/charging/media/assets/A48283964/ETABox_imageedit_12_6630203688.png"
+      }
+    ],
+    "productSpecCharacteristic": [],
+    "relatedParty": [
+      {
+        "id": "urn:ngsi-ld:organization:d817c6a0-5b5e-4cbc-b1b9-786396c69f49",
+        "href": "urn:ngsi-ld:organization:d817c6a0-5b5e-4cbc-b1b9-786396c69f49",
+        "role": "Owner",
+        "@referredType": ""
+      }
+    ],
+    "validFor": {
+      "startDateTime": "2024-06-26T06:48:36.953Z"
+    }
+  },
+  "validFor": {
+    "startDateTime": "2024-07-17T08:35:48.420Z"
+  }
+}

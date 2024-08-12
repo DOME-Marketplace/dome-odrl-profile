@@ -1,0 +1,97 @@
+{
+  "id": "urn:ngsi-ld:product-offering:eedfc2d9-3003-407a-aa1c-358fee128fca",
+  "href": "urn:ngsi-ld:product-offering:eedfc2d9-3003-407a-aa1c-358fee128fca",
+  "description": " **Process Data Analyzer** \n\nContact: [✉️](mailto:info@inno-focus.com)  [🔗](https://www.inno-focus.com/en/software-and-consulting-for-digitization-collaboration-and-industry-4-0/)\n\nA digital representation of your production processes fosters transparency and serves as a foundational element for various analyses and optimizations. A distinctive feature of the Process Data Analyzer is its ability to meticulously monitor components throughout the entirety of production processes and create digital shadows for each of them. The Process Data Analyzer delineates the manufacturing workflows within a company, elucidating the sequential stages that a component undergoes during its production journey, encompassing individual production steps, quality assurance measures, and logistical operations. \n\n This software visually maps out the processes, encompassing switches, interfaces, and other elements, adhering to the BPMN model. It enables the integration of all pertinent data with the respective production or quality assurance steps, thereby establishing a nexus between real-time production processes and their corresponding digital counterparts. In essence, the Process Data Analyzer constructs a digital shadow of the manufacturing operations. \n\n Moreover, the Process Data Analyzer facilitates a comprehensive analysis of your entire manufacturing chain, identifying specific tasks and pinpointing areas necessitating additional sensors or data sources.  \n\nBy interfacing with other systems such as ERP and planning tools for product design, process simulation, and manufacturing planning, the software aids in optimizing these tools by leveraging manufacturing production data from digital representations, thereby enhancing digital twin models. \n\nIn addition to its utility in the planning phase, the software provides support during both the ramp-up phase and ongoing production. Through preconfigured visualizations, users can monitor the adherence of data pertaining to specific workpieces within defined production, quality, and logistical contexts, ensuring accurate data capture and transmission. \n\nThis tool is accessible as a web-based service with an edge-based database. Additionally, an On-Premise service is available upon request.\n\n\n **How does it work?** \n\nThe software's process modeling adheres to the international standard Business Process Model and Notation (BPMN) as outlined in ISO/IEC 19510 (2013), empowering users to craft processes augmented with systems, machines, sensors, data sources, quality assurance measures, logistics, and IT components. Processes are manually developed, and subsequently, our team of IT specialists implements the requisite data sources, drawing upon a diverse array of existing machine connections. Data can then be accessed, gathered, and further manipulated. \n\n Ideally, the software is utilized in conjunction with the visualization module Machining Analyzer to graphically represent process data in diverse formats. \n\n\n **What are the benefits?** \n\n- Generates digital shadows for every workpiece/component along any production process. \n- IT systems (hardware and software) are completely organized in the Process Data Analyzer. \n- Establishment of a scope of consideration for digitalization, in particular production, that can be expanded at any time to form a holistic view. \n- Facilitates user access to and manipulation of process-generated data. \n- Supplies data for subsequent processing, such as visualization, analysis, or AI methodologies. \n- Generates comprehensive documentation for all digital shadows within production. \n- Enhances transparency regarding production outcomes. \n- Enables users to pinpoint areas requiring additional data sources or sensors for specific process information. \n- Requires no programming proficiency from the user. \n- Provides clarity regarding connections, even in cases of complex interactions between IT and OT (Information Technology and Operational Technology). \n\n **Who is it for?** \n\nThe software is designed for: \n- Organizations utilizing complex data collection and processing systems, primarily leveraging Edge Data, particularly those centered around IoT data. \n- Entities seeking to transition to a comprehensive holistic digitalization system. \n- Companies within the manufacturing industry, encompassing simulation and planning tools as well as logistic systems characterized by numerous diverse connections. \n\n **Further services** \n\nIn addition to the software components described here, we offer you further services to integrate them seamlessly into your existing systems. We will be happy to advise you. \n\n- As-is analysis \n- System design \n- System implementation \n- System integration: This service will usually run on-premises in the cloud. An Azure environment is preferred for this. \n- Individualized evaluations ",
+  "isBundle": false,
+  "lastUpdate": "2024-07-12T10:00:34.272739876Z",
+  "lifecycleStatus": "Launched",
+  "name": "Process Data Analyzer",
+  "version": "1.0",
+  "category": [
+    {
+      "id": "urn:ngsi-ld:category:297b773e-9690-4807-915b-cec06c130811",
+      "href": "urn:ngsi-ld:category:297b773e-9690-4807-915b-cec06c130811",
+      "name": "Manufacturing"
+    },
+    {
+      "id": "urn:ngsi-ld:category:015221e2-7de5-4939-a6ab-5b66e4782808",
+      "href": "urn:ngsi-ld:category:015221e2-7de5-4939-a6ab-5b66e4782808",
+      "name": "Other (manufacturing)"
+    },
+    {
+      "id": "urn:ngsi-ld:category:44ca04f9-a289-4089-862c-219d9726fae0",
+      "href": "urn:ngsi-ld:category:44ca04f9-a289-4089-862c-219d9726fae0",
+      "name": "Internet of Things (IoT)"
+    },
+    {
+      "id": "urn:ngsi-ld:category:5cee9b52-3c11-45b4-896b-03f8e988788c",
+      "href": "urn:ngsi-ld:category:5cee9b52-3c11-45b4-896b-03f8e988788c",
+      "name": "Software as a Service (SaaS)"
+    },
+    {
+      "id": "urn:ngsi-ld:category:3da777ed-e7dd-41c8-aefa-9287af34d62b",
+      "href": "urn:ngsi-ld:category:3da777ed-e7dd-41c8-aefa-9287af34d62b",
+      "name": "Manufacturing of Metal Products"
+    }
+  ],
+  "productOfferingPrice": [
+    {
+      "id": "urn:ngsi-ld:product-offering-price:4eb6ec97-2d02-4c21-accd-b3d3f63f1ad5",
+      "href": "urn:ngsi-ld:product-offering-price:4eb6ec97-2d02-4c21-accd-b3d3f63f1ad5",
+      "description": "Please get in contact with us for individual pricing tailored towards your needs.",
+      "lastUpdate": "2024-07-04T08:38:35.153712631Z",
+      "lifecycleStatus": "Active",
+      "name": "Enterprise",
+      "priceType": "custom",
+      "price": {},
+      "validFor": {
+        "startDateTime": "2024-07-04T08:38:35.143Z"
+      }
+    }
+  ],
+  "productSpecification": {
+    "id": "urn:ngsi-ld:product-specification:5a8db3e6-dd17-482d-8618-87214ccb221c",
+    "href": "urn:ngsi-ld:product-specification:5a8db3e6-dd17-482d-8618-87214ccb221c",
+    "brand": "inno-focus",
+    "description": " **Process Data Analyzer** \n\nContact: [✉️](mailto:info@inno-focus.com)  [🔗](https://www.inno-focus.com/en/software-and-consulting-for-digitization-collaboration-and-industry-4-0/)\n\nA digital representation of your production processes fosters transparency and serves as a foundational element for various analyses and optimizations. A distinctive feature of the Process Data Analyzer is its ability to meticulously monitor components throughout the entirety of production processes and create digital shadows for each of them. The Process Data Analyzer delineates the manufacturing workflows within a company, elucidating the sequential stages that a component undergoes during its production journey, encompassing individual production steps, quality assurance measures, and logistical operations. \n\n This software visually maps out the processes, encompassing switches, interfaces, and other elements, adhering to the BPMN model. It enables the integration of all pertinent data with the respective production or quality assurance steps, thereby establishing a nexus between real-time production processes and their corresponding digital counterparts. In essence, the Process Data Analyzer constructs a digital shadow of the manufacturing operations. \n\n Moreover, the Process Data Analyzer facilitates a comprehensive analysis of your entire manufacturing chain, identifying specific tasks and pinpointing areas necessitating additional sensors or data sources.  \n\nBy interfacing with other systems such as ERP and planning tools for product design, process simulation, and manufacturing planning, the software aids in optimizing these tools by leveraging manufacturing production data from digital representations, thereby enhancing digital twin models. \n\nIn addition to its utility in the planning phase, the software provides support during both the ramp-up phase and ongoing production. Through preconfigured visualizations, users can monitor the adherence of data pertaining to specific workpieces within defined production, quality, and logistical contexts, ensuring accurate data capture and transmission. \n\nThis tool is accessible as a web-based service with an edge-based database. Additionally, an On-Premise service is available upon request.\n\n\n **How does it work?** \n\nThe software's process modeling adheres to the international standard Business Process Model and Notation (BPMN) as outlined in ISO/IEC 19510 (2013), empowering users to craft processes augmented with systems, machines, sensors, data sources, quality assurance measures, logistics, and IT components. Processes are manually developed, and subsequently, our team of IT specialists implements the requisite data sources, drawing upon a diverse array of existing machine connections. Data can then be accessed, gathered, and further manipulated. \n\n Ideally, the software is utilized in conjunction with the visualization module Machining Analyzer to graphically represent process data in diverse formats. \n\n\n **What are the benefits?** \n\n- Generates digital shadows for every workpiece/component along any production process. \n- IT systems (hardware and software) are completely organized in the Process Data Analyzer. \n- Establishment of a scope of consideration for digitalization, in particular production, that can be expanded at any time to form a holistic view. \n- Facilitates user access to and manipulation of process-generated data. \n- Supplies data for subsequent processing, such as visualization, analysis, or AI methodologies. \n- Generates comprehensive documentation for all digital shadows within production. \n- Enhances transparency regarding production outcomes. \n- Enables users to pinpoint areas requiring additional data sources or sensors for specific process information. \n- Requires no programming proficiency from the user. \n- Provides clarity regarding connections, even in cases of complex interactions between IT and OT (Information Technology and Operational Technology). \n\n **Who is it for?** \n\nThe software is designed for: \n- Organizations utilizing complex data collection and processing systems, primarily leveraging Edge Data, particularly those centered around IoT data. \n- Entities seeking to transition to a comprehensive holistic digitalization system. \n- Companies within the manufacturing industry, encompassing simulation and planning tools as well as logistic systems characterized by numerous diverse connections. \n\n **Further services** \n\nIn addition to the software components described here, we offer you further services to integrate them seamlessly into your existing systems. We will be happy to advise you. \n\n- As-is analysis \n- System design \n- System implementation \n- System integration: This service will usually run on-premises in the cloud. An Azure environment is preferred for this. \n- Individualized evaluations ",
+    "isBundle": false,
+    "lastUpdate": "2024-07-12T10:07:18.441550438Z",
+    "lifecycleStatus": "Launched",
+    "name": "Process Data Analyzer",
+    "productNumber": "PDA",
+    "version": "1.0",
+    "attachment": [
+      {
+        "attachmentType": "image/png",
+        "name": "Profile Picture",
+        "url": "https://dome-marketplace-prd.org/charging/media/assets/VATDE-351057490/ProcessDataAnalyzer_Bild2.png"
+      }
+    ],
+    "productSpecCharacteristic": [
+      {
+        "id": "urn:ngsi-ld:characteristic:0e8843f9-4fc3-4e5d-988c-b7f1d8c5d1f3",
+        "name": "ISO/IEC 27001:2022",
+        "productSpecCharacteristicValue": [
+          {
+            "isDefault": true,
+            "value": "ISO 27001 Certification"
+          }
+        ]
+      }
+    ],
+    "relatedParty": [
+      {
+        "id": "urn:ngsi-ld:organization:db7b28c5-f2f5-4d66-ab02-dfaa4eb68a19",
+        "href": "urn:ngsi-ld:organization:db7b28c5-f2f5-4d66-ab02-dfaa4eb68a19",
+        "role": "Owner",
+        "@referredType": ""
+      }
+    ],
+    "validFor": {
+      "startDateTime": "2024-07-04T08:06:11.022Z"
+    }
+  },
+  "validFor": {
+    "startDateTime": "2024-07-12T10:00:34.122Z"
+  }
+}
