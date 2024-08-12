@@ -30,9 +30,9 @@ Please read [Good to Know](#good-to-know).
 
 ### Replication
 
-[Here, <https://github.com/DOME-Marketplace/dome-odrl-profile/tree/main/policy/replication>](./policy/replication/).
+[Here, <examples/replication-policies.md>](examples/replication-policies.md).
 
 ## Good to Know
 
-Some sort of introduction and some starter/helper to get in touch with policy-related topics, [here](./misc/GoodToKnow.md).
+Some sort of introduction and some starter/helper to get in touch with policy-related topics, [here](docs/good-to-know.md).
 
