@@ -101,3 +101,27 @@
 > - <https://en.wikipedia.org/wiki/XACML>
 
 - [eXtensible Access Control Markup Language (XACML) Version 3.0](https://docs.oasis-open.org/xacml/3.0/xacml-3.0-core-spec-os-en.html)
+
+## Distributed Open Marketplace for Europe
+
+- **Abbreviation:** `DOME`
+
+> The Distributed Open Marketplace for Europe (DOME) Project
+> will be a single point of access in Europe for trusted Cloud
+> and Edge services across different domains.
+>
+> The aim of the project is to support businesses
+> and public organisations digital transformation making available
+> a catalogue of cloud-to-edge offerings in Europe.
+>
+> - <https://dome-marketplace.eu/about/>
+
+### DOME Public Endpoints
+
+- **Catalogs**: [`/catalog/catalog`](https://yumket.eu/catalog/catalog)
+- **Product Offerings**: [`/catalog/productOffering`](https://yumket.eu/catalog/productOffering)
+- **Product Specifications**: [`/catalog/productSpecification`](https://yumket.eu/catalog/productSpecification)
+- **Service Specifications**: [`/service/serviceSpecification`](https://yumket.eu/service/serviceSpecification)
+- **Resource Specifications**: [`/resource/resourceSpecification`](https://yumket.eu/resource/resourceSpecification)
+- **Categories**: [`/catalog/category`](https://yumket.eu/catalog/category)
+- **Organizations**: [`/party/organization/`](https://yumket.eu/party/organization/)
