@@ -1,6 +1,6 @@
-# dome-op
+# DOME ODRL Profile
 
-- [Turtle File](dome-op.ttl)
+- [`dome-op.ttl`](dome-op.ttl)
 
 > https://www.ldf.fi/service/rdf-grapher
 
