@@ -9,7 +9,7 @@
       "properties": {},
       "allOf": [
         {
-          "$ref": "Common.schema.json#/definitions/EntityRef"
+          "$ref": "../tmforum/Common.schema.json#/definitions/EntityRef"
         }
       ]
     },
@@ -19,21 +19,21 @@
       "type": "object",
       "properties": {
         "action": {
-          "$ref": "Action.schema.json#/definitions/ActionRef"
+          "$ref": "./Action.schema.json#/definitions/ActionRef"
         },
         "target": {
-          "$ref": "Asset.schema.json#/definitions/AssetRef"
+          "$ref": "./Asset.schema.json#/definitions/AssetRef"
         },
         "assigner": {
-          "$ref": "Party.schema.json#/definitions/PartyRef"
+          "$ref": "./Party.schema.json#/definitions/PartyRef"
         },
         "assignee": {
-          "$ref": "Party.schema.json#/definitions/PartyRef"
+          "$ref": "./Party.schema.json#/definitions/PartyRef"
         },
         "constraint": {
           "type": "array",
           "items": {
-            "$ref": "Constraint.schema.json#/definitions/ConstraintOrLogicalConstraint"
+            "$ref": "./Constraint.schema.json#/definitions/ConstraintOrLogicalConstraint"
           }
         }
       },

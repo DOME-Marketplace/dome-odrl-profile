@@ -21,7 +21,7 @@
       "properties": {},
       "allOf": [
         {
-          "$ref": "Common.schema.json#/definitions/EntityRef"
+          "$ref": "../tmforum/Common.schema.json#/definitions/EntityRef"
         }
       ],
       "oneOf": [
@@ -90,7 +90,7 @@
       },
       "allOf": [
         {
-          "$ref": "Common.schema.json#/definitions/EntityRef"
+          "$ref": "../tmforum/Common.schema.json#/definitions/EntityRef"
         }
       ],
       "oneOf": [
