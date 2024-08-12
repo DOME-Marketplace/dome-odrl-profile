@@ -223,7 +223,7 @@ positive, permission-rule is satisfied:
 (source) --- outbound.[response; asset] ---> (sink)
 ```
 
-Access Control is defined in [dome-odrl-profile](../../dome-op.ttl) by `odrl-op:ReplicationOutbound`.
+Access Control is defined in [dome-odrl-profile](../dome-op.ttl) by `odrl-op:ReplicationOutbound`.
 
 ### Acceptance Control
 
@@ -240,7 +240,7 @@ positive, permission-rule is satisfied:
 (sink) <--- inbound.[response; asset] --- (source)
 ```
 
-Acceptance Control is defined in [dome-odrl-profile](../../dome-op.ttl) by `odrl-op:ReplicationInbound`.
+Acceptance Control is defined in [dome-odrl-profile](../dome-op.ttl) by `odrl-op:ReplicationInbound`.
 
 ### Visibility Control
 
@@ -261,13 +261,13 @@ Visibility Control can be understood more generally as [Usage Control](#usage-co
 **IMPORTANT**: all `Sinks`- replicating ones `Source`, DOME-marketplace Participant's assest - **MUST** understand (*
 *MUST** have the capability of enforcing `Source's`) Visibility/Usage Control Policies!
 
-Visibility Control is defined in [dome-odrl-profile](../../dome-op.ttl) by `odrl-op:Visibility`.
+Visibility Control is defined in [dome-odrl-profile](../dome-op.ttl) by `odrl-op:Visibility`.
 
 **Example**:
 
 *'Authenticated user sees field 'price', anonymous one's does **NOT**.*
 
-- [https://www.all-puppets.org/policy/control/usage/_6800](../draft/_6800.ttl)
+- [https://www.all-puppets.org/policy/control/usage/_6800](draft/_6800.ttl)
 
 ## Use Case
 
@@ -281,8 +281,8 @@ Visibility Control is defined in [dome-odrl-profile](../../dome-op.ttl) by `odrl
 >
 > here: source 'All-Puppets' will accept (provide assets) only on-boarded DOME-Participants located in Belgium.
 
-- [_6600, ttl](../draft/_6600.ttl)
-- [_6600, json](../draft/_6600.json)
+- [_6600, ttl](draft/_6600.ttl)
+- [_6600, json](draft/_6600.json)
 
 ### 6700
 
@@ -294,8 +294,8 @@ Visibility Control is defined in [dome-odrl-profile](../../dome-op.ttl) by `odrl
 > 
 > here: sink will accept only on-boarded DOME-Participants located in Germany, France and Spain are welcome.
 
-- [_6700, ttl](../draft/_6700.ttl)
-- [_6700, json](../draft/_6700.json)
+- [_6700, ttl](draft/_6700.ttl)
+- [_6700, json](draft/_6700.json)
 
 ### 6800
 
@@ -304,8 +304,8 @@ Visibility Control is defined in [dome-odrl-profile](../../dome-op.ttl) by `odrl
 'price' is HIDDEN for anonymous users.
 
 
-- [_6800, ttl](../draft/_6800.ttl)
-- [_6800, json](../draft/_6800.json)
+- [_6800, ttl](draft/_6800.ttl)
+- [_6800, json](draft/_6800.json)
 
 ## References
 

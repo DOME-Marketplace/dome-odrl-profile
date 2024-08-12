@@ -7,7 +7,7 @@
 @prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix href:    <https://dome-marketplace.org:443/model#href> .
+@prefix href:    <https://dome-marketplace.org/model#href> .
 
 @prefix dome-op: <https://github.com/DOME-Marketplace/dome-odrl-profile#> .
 
