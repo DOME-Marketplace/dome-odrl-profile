@@ -1,26 +1,9 @@
 # Good to Know
 
-## Table of Content
-
-- [Resource Description Framework](#resource-description-framework)
-- [Notation](#notation)
-  - [json-ld](#json-ld)
-  - [turtle](#turtle)
-- [Rights Expression Language](#rights-expression-language)
-  - [ODRL](#odrl)
-- [ODRL Profile](#odrl-profile)
-- [XACML](#xacml)
-
-*Table of Content: Good to Know*.
-
----
-
 ## Resource Description Framework
 
 - Resource Description Framework (`RDF`), the very base of **semantic web**. <[https://www.w3.org/RDF/](https://www.w3.org/RDF/)>
 - Resource Description Framework, Wikipedia (en) <[https://en.wikipedia.org/wiki/Resource_Description_Framework](https://en.wikipedia.org/wiki/Resource_Description_Framework)>
-
----
 
 ## Notation
 
@@ -34,13 +17,10 @@
 - RDF 1.1 Turtle, <[https://www.w3.org/TR/turtle/](https://www.w3.org/TR/turtle/)>
 - Turtle (syntax), Wikibedia (en) <[https://en.wikipedia.org/wiki/Turtle_(syntax)](https://en.wikipedia.org/wiki/Turtle_(syntax))>
 
----
-
 ## Rights Expression Language
 
 Rights Expression Language (`REL`), <[https://en.wikipedia.org/wiki/Rights_Expression_Language](https://en.wikipedia.org/wiki/Rights_Expression_Language)>
 
----
 ### ODRL
 
 Open Digital Rights Language (`ODRL`).
@@ -55,7 +35,6 @@ Introducing older version "ODRL Version **2.1** Ontology" for one reason, there 
 
 - ODRL Version **2.1** Ontology, <[https://www.w3.org/ns/odrl/2/ODRL21](https://www.w3.org/ns/odrl/2/ODRL21)
 
-
 ### ODRL Profile
 
 - ODRL Profile Best Practices, <[https://w3c.github.io/odrl/profile-bp/](https://w3c.github.io/odrl/profile-bp/)>
@@ -67,8 +46,6 @@ Introducing older version "ODRL Version **2.1** Ontology" for one reason, there 
 
 - IPTC RightsML Standard 2.0, <[https://iptc.org/std/RightsML/2.0/RightsML_2.0-specification.html](https://iptc.org/std/RightsML/2.0/RightsML_2.0-specification.html)>
 
----
-
 ### XACML
 
 *eXtensible Access Control Markup Language* (`XACML`).
@@ -77,5 +54,3 @@ Introducing older version "ODRL Version **2.1** Ontology" for one reason, there 
 
 *Taken from XACML Version 3.0, OASIS Standard, 22 January 2013 (November
 2023)*: <[https://docs.oasis-open.org/xacml/3.0/xacml-3.0-core-spec-os-en.html](https://docs.oasis-open.org/xacml/3.0/xacml-3.0-core-spec-os-en.html)>
-
----

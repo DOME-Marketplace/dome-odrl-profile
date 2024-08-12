@@ -1,30 +1,8 @@
 # DOME Marketplace ODRL-Policies
 
-## Content
-
-- [Introduction](#introduction)
-- 200*, **TMF**
-- [2001, modify, seller](#2001)
-- [2001-2, ...with non-blank-node constraint](#2001-2)
-- [2001-3, `relatedParty` as `odrl:AssetCollection`](#2001-3)
-- [2002, set status 'published', manager](#2002)
-- [2003, create offering, seller](#2003)
-- 300*, **Identity**
-- [3001, Onboarding](#3001)
-- [3002, ProductOffering, **create**](#3002)
-- [3003, ProductOffering, **update**](#3003)
-- [3004, ProductOffering, **delete**](#3004)
-- [3005, Trusted Participant List](#3005)
-
-*Content 'DOME Marketplace ODRL-Policies'.*
-
----
-
 ## Introduction
 
 (ttl's are preferred to read, because we see some clarifying annotations here...)
-
----
 
 ## 2001
 
@@ -51,8 +29,6 @@ Refinement (`odrl:refinement`) as stand-alone constraint. So this constraint is 
 - [_2001-3, ttl](../draft/_2001-3.ttl)
 - [_2001-3, json](../draft/_2001-3.json)
 
---
-
 ## 2002
 
 > A user is only allowed to **set the status of a product-offering** to **"published"**
@@ -70,7 +46,6 @@ Refinement (`odrl:refinement`) as stand-alone constraint. So this constraint is 
 - [_2003, ttl](../draft/_2003.ttl)
 - [_2003, json](../draft/_2003.json)
 
----
 
 ## 300*
 
@@ -87,8 +62,6 @@ Based on Example VC/LEARCredential:
 - [_3001, ttl](../draft/_3001.ttl)
 - [_3001, json](../draft/_3001.json)
 
----
-
 ## 3002
 
 > When the mandate specifies power to **Create ProductOffering**, the PDP of the DOME Operator
@@ -96,8 +69,6 @@ Based on Example VC/LEARCredential:
 
 - [_3002, ttl](../draft/_3002.ttl)
 - [_3002, json](../draft/_3002.json)
-
----
 
 ## 3003
 
@@ -107,8 +78,6 @@ Based on Example VC/LEARCredential:
 - [_3003, ttl](../draft/_3003.ttl)
 - [_3003, json](../draft/_3003.json)
 
----
-
 ## 3004
 
 > When the mandate specifies power to **Delete ProductOffering**, the PDP of the DOME Operator
@@ -116,8 +85,6 @@ Based on Example VC/LEARCredential:
 
 - [_3004, ttl](../draft/_3004.ttl)
 - [_3004, json](../draft/_3004.json)
-
----
 
 ## 3005
 
@@ -127,5 +94,3 @@ Based on Example VC/LEARCredential:
 
 - [_3005, ttl](../draft/_3005.ttl)
 - [_3005, json](../draft/_3005.json)
-
----

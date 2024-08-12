@@ -1,29 +1,5 @@
 # DOME Replication
 
-## Content
-
-- [Introduction](#introduction)
-- [Big Picture](#big-picture)
-- [Replication](#replication)
-    - [Source](#source)
-    - [Sink](#sink)
-    - [Process](#process)
-        - [Inbound](#inbound)
-        - [Outbound](#outbound)
-    - [Offer](#offer)
-    - [Access Control](#access-control)
-    - [Acceptance Control](#acceptance-control)
-    - [Visibility Control](#visibility-control)
-- [References](#references)
-
-*Content 'DOME Replication'.*
-
----
-
-## Introduction
-
----
-
 ## Big Picture
 
 Taken from [**Paolo Fabriani
@@ -52,7 +28,6 @@ Replication Policy understood as an Access Control Policy misleads - unfortunate
 `Source`-marketplace wants to place its offer to identified `Sink`-marketplace. Deciding the replication-process **is
 a `Sink`-marketplace initiated pull
 **, `Source` will control access to requested resources (here: product-offering/catalogue).
-
 
 ---
 
@@ -192,8 +167,6 @@ to the sink (the source can’t know in advance who will access the sink marketp
 
 This also means that the rules visibility (nested in defined Usage Control Policies) should be made available to the `Sink` (can not be enforced on the `Source` as with replication) and must be understood by it (need for agreed format and semantics).
 
----
-
 ## Replication
 
 ### Source
@@ -229,8 +202,6 @@ Outbound Replication, a DOME Replication **Process
 (source) --- outbound.[asset] ---> (sink)
 ```
 
----
-
 ### Offer
 
 Given `Source` (subject, DOME-Marketplace) offers asset(s) to DOME-Marketplace Participants.
@@ -238,8 +209,6 @@ Given `Source` (subject, DOME-Marketplace) offers asset(s) to DOME-Marketplace P
 > JLA: TODO: IMPORTANT: doing so, given `Source` **SHOULD
 ** provide (if present/needed) correlated Usage Control Policy (Visibility Control), so interested Participants (potential `Sink`-marketplaces) are able to see, what they are allowed to do with given `source's` product-offerings/catalogues and - much more interesting - what definitely
 **NOT**.
-
----
 
 ### Access Control
 
@@ -255,8 +224,6 @@ positive, permission-rule is satisfied:
 ```
 
 Access Control is defined in [dome-odrl-profile](../../dome-op.ttl) by `odrl-op:ReplicationOutbound`.
-
----
 
 ### Acceptance Control
 
@@ -274,8 +241,6 @@ positive, permission-rule is satisfied:
 ```
 
 Acceptance Control is defined in [dome-odrl-profile](../../dome-op.ttl) by `odrl-op:ReplicationInbound`.
-
----
 
 ### Visibility Control
 
@@ -304,11 +269,9 @@ Visibility Control is defined in [dome-odrl-profile](../../dome-op.ttl) by `odrl
 
 - [https://www.all-puppets.org/policy/control/usage/_6800](../draft/_6800.ttl)
 
----
+## Use Case
 
-# Use Case
-
-## 6600
+### 6600
 
 > An Access Control Policy (dome-op:ReplicationOutbound), enforced by source-marketplace (data-data-provider),
 >
@@ -321,7 +284,7 @@ Visibility Control is defined in [dome-odrl-profile](../../dome-op.ttl) by `odrl
 - [_6600, ttl](../draft/_6600.ttl)
 - [_6600, json](../draft/_6600.json)
 
-## 6700
+### 6700
 
 > An Acceptance Policy (dome-op:ReplicationInbound), provided by potential sink-marketplace (data-consumer),
 > 
@@ -334,7 +297,7 @@ Visibility Control is defined in [dome-odrl-profile](../../dome-op.ttl) by `odrl
 - [_6700, ttl](../draft/_6700.ttl)
 - [_6700, json](../draft/_6700.json)
 
-## 6800
+### 6800
 
 > Visibility Control (Usage Control) on Spongebob.
 
@@ -346,8 +309,4 @@ Visibility Control is defined in [dome-odrl-profile](../../dome-op.ttl) by `odrl
 
 ## References
 
-### Usage Control
-
-IDS usage Control.
-
----
+- IDS usage control
