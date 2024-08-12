@@ -35,7 +35,7 @@
 
 ## Draft
 
-- [dome-op](draft/dome-op.md)
+- [DOME ODRL Profile](draft/dome-op.md)
 - [TMForum APIs Model](draft/tmforum-apis-model.md)
 - [DOME Marketplace ODRL-Policies](draft/marketplace-policies.md)
 - [DOME Replication](draft/replication-policies.md)
