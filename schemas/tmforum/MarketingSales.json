@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MarketingSalesSchema",
+  "definitions": {
+    "MarketSegmentRef": {
+      "title": "MarketSegmentRef",
+      "description": "provides references to the corresponding market segment as target of product offerings. A market segment is grouping of Parties, GeographicAreas, SalesChannels, and so forth.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier of the market segment"
+        },
+        "href": {
+          "type": "string",
+          "description": "Reference of the market segment"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the market segment"
+        },
+        "@referredType": {
+          "type": "string",
+          "description": "(Class) type of the referred market segment"
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "./Common.schema.json#/definitions/Entity"
+        }
+      ]
+    }
+  }
+}
