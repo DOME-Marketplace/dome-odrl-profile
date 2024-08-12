@@ -1,0 +1,81 @@
+@prefix dc:       <http://purl.org/dc/elements/1.1/> .
+@prefix dct:      <http://purl.org/dc/terms/> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix odrl:     <http://www.w3.org/ns/odrl/2/> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix TMF-PCMA: <https://tmf-open-api-table-documents.s3.eu-west-1.amazonaws.com/OpenApiTable/4.1.0/user_guides/TMF620_Product_Catalog_Management_API_v4.1.0_user_guides.pdf> .
+
+@prefix dome:     <https://www.dome-marketplace.org/>.
+@prefix dome-op:  <https://github.com/DOME-Marketplace/dome-odrl-profile#> .
+
+## IMPORTANT CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION
+##     this is a drastic game-changer: the AssetCollection is an array of related parties 'relatedParty'
+##     carried (here) by given a given product-offering (ProductOffer)
+## IMPORTANT CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION
+
+## IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
+##     ProductOffering.relatedParty is **NOT** defined so far - we can't see now in example-data!!!!!!!!!!!!!!!!!!!!!!!
+## IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
+
+## from _2001:
+## A user is only allowed to modify product-offerings (or any other entity)
+##     that are owned by the organization it acts on behalf of and if he is in role **seller**.
+##
+## adding to 2001-3
+##     and must be of role "Owner"
+##
+<https://dome-marketplace.org/policy/marketplace/_2001-3>
+    a                odrl:Policy ;
+    odrl:profile     "https://github.com/DOME-Marketplace/dome-odrl-profile/blob/main/dome-op.ttl" ;
+    odrl:assigner    <https://dome-marketplace.org/> ;
+    odrl:permission  [ a             odrl:Permission ;
+                       odrl:assignee [ a               odrl:PartyCollection ;
+                                       odrl:source     "urn:user" ;
+                                       odrl:refinement [ a                 odrl:Constraint ;
+                                                         ## TODO: TBC: 'dome-op:role' OR 'dome-op:rolesAndDuties'
+                                                         odrl:leftOperand  dome-op:role ;
+                                                         odrl:operator     odrl:hasPart ;
+                                                         odrl:rightOperand "seller"^^xsd:string ;
+                                                         odrl:dataType     xsd:string ; ] ;
+                                       ##
+                                     ] ;
+                       odrl:target   [
+                                         ## REM: a collection of ProductOffering.relatedParty [0..n]
+                                         a               odrl:AssetCollection ;
+                                         odrl:source     "urn:asset" ;                            ## REM: set at runtime
+                                         odrl:refinement [ a                 odrl:Constraint ;
+                                                           ## TODO: IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
+                                                           ## TODO:    this leads to definition of 'id' in @context
+                                                           ## TODO: IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
+                                                           odrl:leftOperand  "id" ;
+#                                                           odrl:leftOperand  "TMF-PCMA:id" ;
+                                                           odrl:operator     odrl:eq ;
+                                                           ## REM: the issuer-did of given VC
+                                                           odrl:rightOperand dome-op:currentParty ;
+                                                           odrl:dataType     xsd:anyURI ; ],
+                                                         ##
+                                                         [ a                 odrl:Constraint ;
+                                                           ## TODO: IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
+                                                           ## TODO:    this leads to definition of 'role' in @context
+                                                           ## TODO: IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
+                                                           odrl:leftOperand  "role" ;
+#                                                           odrl:leftOperand  "TMF-PCMA:role" ;
+                                                           odrl:operator     odrl:eq ;
+                                                           ## TODO: capital/lower-case?!? "Owner" *or* "owner"
+                                                           ## TODO: IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
+                                                           ## TODO:    this leads to definition of 'Owner' in @context
+                                                           ## TODO:    ...as a sort of 'NamedIndividual'
+                                                           ## TODO:    ...or we have to change datatype to xsd:string
+                                                           ## TODO:    ...not so nice...
+                                                           ## TODO: IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
+                                                           odrl:rightOperand "Owner" ;
+                                                           odrl:dataType     xsd:anyURI ;
+                                                           ## odrl:dataType     xsd:string ;
+                                                         ] ;
+                                         ##
+                                     ] ;
+                       odrl:action   dome-op:modify ; ] ;
+    rdfs:isDefinedBy dome: .

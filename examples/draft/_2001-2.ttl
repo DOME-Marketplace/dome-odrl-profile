@@ -1,0 +1,50 @@
+@prefix dc:       <http://purl.org/dc/elements/1.1/> .
+@prefix dct:      <http://purl.org/dc/terms/> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix odrl:     <http://www.w3.org/ns/odrl/2/> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix TMF-PCMA: <https://tmf-open-api-table-documents.s3.eu-west-1.amazonaws.com/OpenApiTable/4.1.0/user_guides/TMF620_Product_Catalog_Management_API_v4.1.0_user_guides.pdf> .
+
+@prefix dome:     <https://www.dome-marketplace.org/>.
+@prefix dome-op:  <https://github.com/DOME-Marketplace/dome-odrl-profile#> .
+
+##
+## A user is only allowed to modify product-offerings (or any other entity)
+##     that are owned by the organization it acts on behalf of and if he is in role **seller**.
+##
+<https://dome-marketplace.org/policy/marketplace/_2001-2>
+    a                odrl:Policy ;
+    odrl:profile     "https://github.com/DOME-Marketplace/dome-odrl-profile/blob/main/dome-op.ttl" ;
+    odrl:assigner    <https://dome-marketplace.org/> ;
+    odrl:permission  [ a             odrl:Permission ;
+                       odrl:assignee [ a               odrl:PartyCollection ;
+                                       odrl:source     "urn:user" ;
+                                       odrl:refinement [ a                 odrl:Constraint ;
+                                                         odrl:leftOperand  dome-op:role ;
+                                                         odrl:operator     odrl:hasPart ;
+                                                         odrl:rightOperand "seller"^^xsd:string ;
+                                                         odrl:dataType     xsd:string ; ] ;
+                                       ##
+                                     ] ;
+                       odrl:target   [
+                                         ## REM: a collection of ProductOfferings [1..1]
+                                         a           odrl:AssetCollection ;
+                                         odrl:source "urn:asset" ;                            ## REM: set at runtime
+                                         odrl:refinement
+                                                     <https://dome-marketplace.org/policy/constraint/relatedParty-eq-currentParty> ;
+                                         ##
+                                     ] ;
+                       odrl:action   dome-op:modify ; ] ;
+    rdfs:isDefinedBy dome: .
+
+<https://dome-marketplace.org/policy/constraint/relatedParty-eq-currentParty>
+    a                 odrl:Constraint ;
+    odrl:leftOperand  dome-op:relatedParty ;
+    odrl:operator     odrl:eq ;
+    ## REM: the issuer-did of given VC
+    odrl:rightOperand dome-op:currentParty ;
+    odrl:dataType     xsd:anyURI ;
+    rdfs:isDefinedBy  dome: .
