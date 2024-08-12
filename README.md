@@ -19,12 +19,12 @@
 ## Schemas
 
 - **ODRL**
-  - [PolicySchema](schemas/tmforum/Policy.schema.json)
-  - [RuleSchema](schemas/tmforum/Rule.schema.json)
-  - [ActionSchema](schemas/tmforum/Action.schema.json)
-  - [AssetSchema](schemas/tmforum/Asset.schema.json)
-  - [PartySchema](schemas/tmforum/Party.schema.json)
-  - [ConstraintSchema](schemas/tmforum/Constraint.schema.json)
+  - [PolicySchema](schemas/odrl/Policy.schema.json)
+  - [RuleSchema](schemas/odrl/Rule.schema.json)
+  - [ActionSchema](schemas/odrl/Action.schema.json)
+  - [AssetSchema](schemas/odrl/Asset.schema.json)
+  - [PartySchema](schemas/odrl/Party.schema.json)
+  - [ConstraintSchema](schemas/odrl/Constraint.schema.json)
 - **TMForum** _(only necessary parts for ODRL)_
   - [CommonSchema](schemas/tmforum/Common.schema.json)
   - [ProductSchema](schemas/tmforum/Product.schema.json)
