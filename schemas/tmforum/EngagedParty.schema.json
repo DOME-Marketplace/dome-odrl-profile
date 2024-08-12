@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EngagedPartySchema",
+  "definitions": {
+    "RelatedParty": {
+      "title": "RelatedParty",
+      "description": "Related Entity reference. A related party defines party or party role linked to a specific entity.",
+      "type": "object",
+      "required": [
+        "id",
+        "@referredType"
+      ],
+      "properties": {
+        "role": {
+          "type": "string",
+          "description": "Role played by the related party"
+        },
+        "@referredType": {
+          "type": "string",
+          "description": "The actual type of the target instance when needed for disambiguation."
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "./Common.schema.json#/definitions/EntityRef"
+        }
+      ]
+    },
+    "SLARef": {
+      "title": "SLARef",
+      "description": "ServiceLevelAgreement reference: A service level agreement (SLA) is a type of agreement that represents a formal negotiated agreement between two parties designed to create a common understanding about products, services, priorities, responsibilities, and so forth. The SLA is a set of appropriate procedures and targets formally or informally agreed between parties in order to achieve and maintain specified Quality of Service.",
+      "type": "object",
+      "properties": {
+        "href": {
+          "type": "string",
+          "description": "Reference of the service level agreement"
+        },
+        "id": {
+          "type": "string",
+          "description": "Unique identifier of service level agreement"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the service level agreement"
+        },
+        "@referredType": {
+          "type": "string",
+          "description": "The actual type of the target instance when needed for disambiguation."
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "./Common.schema.json#/definitions/Entity"
+        }
+      ]
+    },
+    "AgreementRef": {
+      "title": "AgreementRef",
+      "description": "Agreement reference. An agreement represents a contract or arrangement, either written or verbal and sometimes enforceable by law, such as a service level agreement or a customer price agreement. An agreement involves a number of other business entities, such as products, services, and resources and/or their specifications.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the agreement"
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "./Common.schema.json#/definitions/EntityRef"
+        }
+      ]
+    }
+  }
+}

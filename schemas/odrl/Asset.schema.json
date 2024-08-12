@@ -9,7 +9,7 @@
       "properties": {},
       "allOf": [
         {
-          "$ref": "Common.schema.json#/definitions/EntityRef"
+          "$ref": "../tmforum/Common.schema.json#/definitions/EntityRef"
         }
       ]
     },
@@ -42,7 +42,7 @@
         "refinement": {
           "type": "array",
           "items": {
-            "$ref": "Constraint.schema.json#/definitions/ConstraintOrLogicalConstraint"
+            "$ref": "./Constraint.schema.json#/definitions/ConstraintOrLogicalConstraint"
           }
         }
       },

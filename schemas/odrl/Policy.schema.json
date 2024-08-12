@@ -9,7 +9,7 @@
       "properties": {},
       "allOf": [
         {
-          "$ref": "Common.schema.json#/definitions/EntityRef"
+          "$ref": "../tmforum/Common.schema.json#/definitions/EntityRef"
         }
       ]
     },
@@ -36,19 +36,19 @@
         "permission": {
           "type": "array",
           "items": {
-            "$ref": "Rule.schema.json#/definitions/Permission"
+            "$ref": "./Rule.schema.json#/definitions/Permission"
           }
         },
         "prohibition": {
           "type": "array",
           "items": {
-            "$ref": "Rule.schema.json#/definitions/Prohibition"
+            "$ref": "./Rule.schema.json#/definitions/Prohibition"
           }
         },
         "obligation": {
           "type": "array",
           "items": {
-            "$ref": "Rule.schema.json#/definitions/Duty"
+            "$ref": "./Rule.schema.json#/definitions/Duty"
           }
         }
       },
