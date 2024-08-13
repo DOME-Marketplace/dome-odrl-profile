@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "Policy": {
+      "title": "Policy",
+      "description": "A policy that applies to a ProductOffering and its lifecycle. This does not only include the usage of the ProductOffering, but also conditions for the surrounding environment.",
+      "type": "object",
+      "properties": {
+        "permission": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Rule"
+          }
+        },
+        "prohibition": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Rule"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "./tmforum/Product.schema.json#/definitions/ProductOfferingTerm"
+        }
+      ]
+    },
+    "Rule": {
+      "title": "Rule",
+      "type": "object",
+      "properties": {
+        "action": {
+          "$ref": "#/definitions/Action"
+        },
+        "condition": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Constraint"
+          }
+        }
+      },
+      "required": [
+        "action"
+      ]
+    },
+    "Action": {
+      "title": "Action",
+      "type": "string"
+    },
+    "Constraint": {
+      "title": "Constraint",
+      "type": "object",
+      "properties": {
+        "leftOperand": {
+          "$ref": "#/definitions/LeftOperand"
+        },
+        "operator": {
+          "$ref": "#/definitions/Operator"
+        },
+        "rightOperand": {
+          "$ref": "#/definitions/RightOperand"
+        }
+      },
+      "required": [
+        "leftOperand",
+        "operator",
+        "rightOperand"
+      ]
+    },
+    "LeftOperand": {
+      "title": "LeftOperand",
+      "type": "string"
+    },
+    "Operator": {
+      "title": "Operator",
+      "type": "string"
+    },
+    "RightOperand": {
+      "title": "RightOperand",
+      "oneOf": [
+        {
+          "description": "RightOperand for single comparison.",
+          "$ref": "./tmforum/Common.schema.json#/definitions/Any"
+        },
+        {
+          "description": "RightOperand for set-based comparison.",
+          "type": "array",
+          "items": {
+            "$ref": "./tmforum/Common.schema.json#/definitions/Any"
+          }
+        }
+      ]
+    }
+  }
+}
