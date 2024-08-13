@@ -4,12 +4,17 @@
   "license": "UNLICENSED",
   "type": "module",
   "scripts": {
-    "import-tmforum-apis-model": "tsx import-tmforum-apis-model.ts"
+    "import-tmforum-apis-model": "tsx import-tmforum-apis-model.ts",
+    "generate-digitalbazaar-declarations": "tsx generate-digitalbazaar-declarations",
+    "create-signed-offering": "tsx create-signed-offering"
   },
   "dependencies": {
+    "@digitalbazaar/ed25519-signature-2020": "^5.4.0",
+    "@digitalbazaar/ed25519-verification-key-2020": "^4.1.0",
     "@digitalbazaar/vc": "^7.0.0",
     "@stoplight/json-ref-resolver": "^3.1.6",
     "@types/node": "^22.1.0",
-    "tsx": "^4.16.5"
+    "tsx": "^4.16.5",
+    "typescript": "^5.5.4"
   }
 }
