@@ -1,0 +1,60 @@
+{
+  "@schemaLocation": "../schemas/custom/Draft-01.schema.json",
+  "@type": "ProductOffering",
+  "id": "urn:ngsi-ld:product-offering:...",
+  productOfferingTerm: [{
+    "@baseType": "ProductOfferingTerm",
+    "@type": "Policy",
+    permission: [{
+      "@type": "Rule",
+      action: "replicate-offering",
+      condition: [{
+        leftOperand: "target-marketplace",
+        operator: "included-in",
+        rightOperand: [{
+          "@type": "PlaceRef",
+          href: "https://dome-marketplace-prd.org/"
+        }, {
+          "@type": "PlaceRef",
+          href: "https://yumket.eu/"
+        }]
+      }, {
+        leftOperand: "shared-fee",
+        operator: "equals",
+        rightOperand: {
+          "@type": "Quantity",
+          amount: 50,
+          units: "Percent"
+        }
+      }]
+    }],
+    prohibition: [{
+      "@type": "Rule",
+      action: "offer-product",
+      condition: [{
+        leftOperand: "customer-location",
+        operator: "not-equal",
+        rightOperand: {
+          "@type": "PlaceRef",
+          "id": "Germany"
+        }
+      }, {
+        leftOperand: "marketplace-fee",
+        operator: "less-than-or-equal",
+        rightOperand: {
+          "@type": "Quantity",
+          amount: 2,
+          units: "Euro"
+        }
+      }, {
+        leftOperand: "shared-fee",
+        operator: "greater-than-or-equal",
+        rightOperand: {
+          "@type": "Quantity",
+          amount: 0.5,
+          units: "Euro"
+        }
+      }]
+    }]
+  }]
+}
