@@ -1,5 +1,5 @@
 import { promisify } from 'node:util'
-import { join } from 'node:path'
+import { join, dirname } from 'node:path'
 import { readFile, writeFile, rm } from 'node:fs/promises'
 import { exec } from 'node:child_process'
 
@@ -23,10 +23,19 @@ await writeFile(TSCONFIG_FILE, JSON.stringify(tsconfig, null, 2))
 await promisify(exec)(`npx tsc -p ${TSCONFIG_FILE}`)
 await rm(TSCONFIG_FILE)
 
-// TODO improve
-const declarations = await readFile(DECLARATION_FILE, 'utf-8')
-const transformed = declarations.replace(
-  /declare module "([^"]*)"/g,
-  (match, name) => `declare module "@digitalbazaar/${name.replace(/\/lib\/index$/, '')}"`
-)
-await await writeFile(DECLARATION_FILE, transformed, 'utf-8')
+const generatedDeclarations = await readFile(DECLARATION_FILE, 'utf-8')
+const moduleDeclarations = generatedDeclarations
+  .split(/\r?\n(?=declare module)/g)
+  .map(declaration => {
+    const generatedName = declaration.match(/declare module "([^"]*)"/)?.[1] as string
+    const moduleName = '@digitalbazaar/' + generatedName.replace(/\/lib\/index$/, '')
+    return declaration
+      .replace(`declare module "${generatedName}"`, `declare module "${moduleName}"`)
+      .replace(/from "(\.[^"]*)"/g, (match, generatedPath) => {
+        const modulePath = '@digitalbazaar/' + join(dirname(generatedName), generatedPath).replace(/\\/g, '/').replace('.js', '')
+        return `from "${modulePath}"`
+      })
+  })
+  .join('\n\n')
+
+await await writeFile(DECLARATION_FILE, moduleDeclarations, 'utf-8')
