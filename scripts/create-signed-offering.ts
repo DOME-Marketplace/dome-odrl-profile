@@ -1,6 +1,8 @@
-import * as vc from '@digitalbazaar/vc'
+import { issue, defaultDocumentLoader } from '@digitalbazaar/vc'
 import { Ed25519VerificationKey2020 } from '@digitalbazaar/ed25519-verification-key-2020'
 import { Ed25519Signature2020 } from '@digitalbazaar/ed25519-signature-2020'
+import { join } from 'node:path'
+import { readFile, writeFile } from 'node:fs/promises'
 
 type ContextDocument = { '@context': Record<string, any> }
 
@@ -20,21 +22,22 @@ async function documentLoader(url: string): Promise<{ documentUrl: string, docum
       contexts[url] = document
     } catch (err) {
       console.error(err)
-      return vc.defaultDocumentLoader(url)
+      return defaultDocumentLoader(url)
     }
   }
-
-  return {
-    documentUrl: url,
-    document: contexts[url]
-  }
+  return { documentUrl: url, document: contexts[url] }
 }
 
-const suite = new Ed25519Signature2020({
-  key: await Ed25519VerificationKey2020.generate()
-})
+const suite = new Ed25519Signature2020({ key: await Ed25519VerificationKey2020.generate() })
 
-const offering = (await import('../examples/product-offering-elliot-smart-city.json')).default
+const EXAMPLES_FOLDER = join(import.meta.dirname, '../examples')
+const OFFERING_INPUT_FILE = join(EXAMPLES_FOLDER, 'product-offering-elliot-smart-city.json')
+const VC_OUTPUT_FILE = join(EXAMPLES_FOLDER, 'product-offering-elliot-smart-city.vc.json')
+
+const offering = JSON.parse(
+  await readFile(OFFERING_INPUT_FILE, 'utf-8'),
+  (key, value) => key.startsWith('@') ? undefined : value
+)
 
 const credential = {
   "@context": [
@@ -43,7 +46,7 @@ const credential = {
     DOME_CONTEXT_V1_URL
   ],
   "id": "https://example.com/credentials/" + offering.id,
-  "type": ["VerifiableCredential"],
+  "type": ["VerifiableCredential", "SignedOffering"],
   "issuer": offering.productSpecification.relatedParty[0].href,
   "issuanceDate": new Date().toISOString(),
   "credentialSubject": offering
@@ -52,5 +55,6 @@ const credential = {
 //@ts-ignore // NOTE quick fix for suite error
 suite.verificationMethod = () => true
 
-const signedVC = await vc.issue({ credential, suite, documentLoader })
-console.log(JSON.stringify(signedVC, null, 2))
+const signedOffering = await issue({ credential, suite, documentLoader })
+// console.log(JSON.stringify(signedOffering, null, 2))
+await writeFile(VC_OUTPUT_FILE, JSON.stringify(signedOffering, null, 2), 'utf-8')
