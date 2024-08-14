@@ -28,11 +28,11 @@ const moduleDeclarations = generatedDeclarations
   .split(/\r?\n(?=declare module)/g)
   .map(declaration => {
     const generatedName = declaration.match(/declare module "([^"]*)"/)?.[1] as string
-    const moduleName = '@digitalbazaar/' + generatedName.replace(/\/lib\/index$/, '')
+    const moduleName = '@digitalbazaar/' + generatedName.replace(/\/(?:lib|js)\/index$/, '')
     return declaration
       .replace(`declare module "${generatedName}"`, `declare module "${moduleName}"`)
       .replace(/from "(\.[^"]*)"/g, (match, generatedPath) => {
-        const modulePath = '@digitalbazaar/' + join(dirname(generatedName), generatedPath).replace(/\\/g, '/').replace('.js', '')
+        const modulePath = '@digitalbazaar/' + join(dirname(generatedName), generatedPath).replace(/\\/g, '/').replace(/\.(?:js)$/, '')
         return `from "${modulePath}"`
       })
   })
