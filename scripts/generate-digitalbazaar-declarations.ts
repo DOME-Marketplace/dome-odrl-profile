@@ -38,4 +38,4 @@ const moduleDeclarations = generatedDeclarations
   })
   .join('\n\n')
 
-await await writeFile(DECLARATION_FILE, moduleDeclarations, 'utf-8')
+await writeFile(DECLARATION_FILE, moduleDeclarations, 'utf-8')
