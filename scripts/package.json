@@ -9,13 +9,18 @@
     "create-signed-offering": "tsx create-signed-offering"
   },
   "dependencies": {
+    "@digitalbazaar/data-integrity": "^2.2.0",
+    "@digitalbazaar/ecdsa-multikey": "^1.7.0",
+    "@digitalbazaar/ecdsa-sd-2023-cryptosuite": "^3.4.0",
     "@digitalbazaar/ed25519-signature-2020": "^5.4.0",
     "@digitalbazaar/ed25519-verification-key-2020": "^4.1.0",
     "@digitalbazaar/security-context": "^1.0.1",
     "@digitalbazaar/vc": "^7.0.0",
     "@stoplight/json-ref-resolver": "^3.1.6",
     "@types/node": "^22.1.0",
+    "@types/uuid": "^10.0.0",
     "tsx": "^4.16.5",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "uuid": "^10.0.0"
   }
 }

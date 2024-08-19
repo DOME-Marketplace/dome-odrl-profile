@@ -1,0 +1,119 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://dome-marketplace.eu/credentials/v1",
+    "https://w3id.org/security/data-integrity/v2"
+  ],
+  "id": "https://example.com/credentials/urn:ngsi-ld:product-offering:eedfc2d9-3003-407a-aa1c-358fee128fca",
+  "type": [
+    "VerifiableCredential",
+    "SignedOffering"
+  ],
+  "issuanceDate": "2024-08-19T10:36:24.434Z",
+  "issuer": "urn:ngsi-ld:organization:db7b28c5-f2f5-4d66-ab02-dfaa4eb68a19",
+  "credentialSubject": {
+    "id": "urn:ngsi-ld:product-offering:eedfc2d9-3003-407a-aa1c-358fee128fca",
+    "href": "urn:ngsi-ld:product-offering:eedfc2d9-3003-407a-aa1c-358fee128fca",
+    "description": " **Process Data Analyzer** \n\nContact: [✉️](mailto:info@inno-focus.com)  [🔗](https://www.inno-focus.com/en/software-and-consulting-for-digitization-collaboration-and-industry-4-0/)\n\nA digital representation of your production processes fosters transparency and serves as a foundational element for various analyses and optimizations. A distinctive feature of the Process Data Analyzer is its ability to meticulously monitor components throughout the entirety of production processes and create digital shadows for each of them. The Process Data Analyzer delineates the manufacturing workflows within a company, elucidating the sequential stages that a component undergoes during its production journey, encompassing individual production steps, quality assurance measures, and logistical operations. \n\n This software visually maps out the processes, encompassing switches, interfaces, and other elements, adhering to the BPMN model. It enables the integration of all pertinent data with the respective production or quality assurance steps, thereby establishing a nexus between real-time production processes and their corresponding digital counterparts. In essence, the Process Data Analyzer constructs a digital shadow of the manufacturing operations. \n\n Moreover, the Process Data Analyzer facilitates a comprehensive analysis of your entire manufacturing chain, identifying specific tasks and pinpointing areas necessitating additional sensors or data sources.  \n\nBy interfacing with other systems such as ERP and planning tools for product design, process simulation, and manufacturing planning, the software aids in optimizing these tools by leveraging manufacturing production data from digital representations, thereby enhancing digital twin models. \n\nIn addition to its utility in the planning phase, the software provides support during both the ramp-up phase and ongoing production. Through preconfigured visualizations, users can monitor the adherence of data pertaining to specific workpieces within defined production, quality, and logistical contexts, ensuring accurate data capture and transmission. \n\nThis tool is accessible as a web-based service with an edge-based database. Additionally, an On-Premise service is available upon request.\n\n\n **How does it work?** \n\nThe software's process modeling adheres to the international standard Business Process Model and Notation (BPMN) as outlined in ISO/IEC 19510 (2013), empowering users to craft processes augmented with systems, machines, sensors, data sources, quality assurance measures, logistics, and IT components. Processes are manually developed, and subsequently, our team of IT specialists implements the requisite data sources, drawing upon a diverse array of existing machine connections. Data can then be accessed, gathered, and further manipulated. \n\n Ideally, the software is utilized in conjunction with the visualization module Machining Analyzer to graphically represent process data in diverse formats. \n\n\n **What are the benefits?** \n\n- Generates digital shadows for every workpiece/component along any production process. \n- IT systems (hardware and software) are completely organized in the Process Data Analyzer. \n- Establishment of a scope of consideration for digitalization, in particular production, that can be expanded at any time to form a holistic view. \n- Facilitates user access to and manipulation of process-generated data. \n- Supplies data for subsequent processing, such as visualization, analysis, or AI methodologies. \n- Generates comprehensive documentation for all digital shadows within production. \n- Enhances transparency regarding production outcomes. \n- Enables users to pinpoint areas requiring additional data sources or sensors for specific process information. \n- Requires no programming proficiency from the user. \n- Provides clarity regarding connections, even in cases of complex interactions between IT and OT (Information Technology and Operational Technology). \n\n **Who is it for?** \n\nThe software is designed for: \n- Organizations utilizing complex data collection and processing systems, primarily leveraging Edge Data, particularly those centered around IoT data. \n- Entities seeking to transition to a comprehensive holistic digitalization system. \n- Companies within the manufacturing industry, encompassing simulation and planning tools as well as logistic systems characterized by numerous diverse connections. \n\n **Further services** \n\nIn addition to the software components described here, we offer you further services to integrate them seamlessly into your existing systems. We will be happy to advise you. \n\n- As-is analysis \n- System design \n- System implementation \n- System integration: This service will usually run on-premises in the cloud. An Azure environment is preferred for this. \n- Individualized evaluations ",
+    "isBundle": false,
+    "lastUpdate": "2024-07-12T10:00:34.272739876Z",
+    "lifecycleStatus": "Launched",
+    "name": "Process Data Analyzer",
+    "version": "1.0",
+    "category": [
+      {
+        "id": "urn:ngsi-ld:category:297b773e-9690-4807-915b-cec06c130811",
+        "href": "urn:ngsi-ld:category:297b773e-9690-4807-915b-cec06c130811",
+        "name": "Manufacturing"
+      },
+      {
+        "id": "urn:ngsi-ld:category:015221e2-7de5-4939-a6ab-5b66e4782808",
+        "href": "urn:ngsi-ld:category:015221e2-7de5-4939-a6ab-5b66e4782808",
+        "name": "Other (manufacturing)"
+      },
+      {
+        "id": "urn:ngsi-ld:category:44ca04f9-a289-4089-862c-219d9726fae0",
+        "href": "urn:ngsi-ld:category:44ca04f9-a289-4089-862c-219d9726fae0",
+        "name": "Internet of Things (IoT)"
+      },
+      {
+        "id": "urn:ngsi-ld:category:5cee9b52-3c11-45b4-896b-03f8e988788c",
+        "href": "urn:ngsi-ld:category:5cee9b52-3c11-45b4-896b-03f8e988788c",
+        "name": "Software as a Service (SaaS)"
+      },
+      {
+        "id": "urn:ngsi-ld:category:3da777ed-e7dd-41c8-aefa-9287af34d62b",
+        "href": "urn:ngsi-ld:category:3da777ed-e7dd-41c8-aefa-9287af34d62b",
+        "name": "Manufacturing of Metal Products"
+      }
+    ],
+    "productOfferingPrice": [
+      {
+        "id": "urn:ngsi-ld:product-offering-price:4eb6ec97-2d02-4c21-accd-b3d3f63f1ad5",
+        "href": "urn:ngsi-ld:product-offering-price:4eb6ec97-2d02-4c21-accd-b3d3f63f1ad5",
+        "description": "Please get in contact with us for individual pricing tailored towards your needs.",
+        "lastUpdate": "2024-07-04T08:38:35.153712631Z",
+        "lifecycleStatus": "Active",
+        "name": "Enterprise",
+        "priceType": "custom",
+        "price": {},
+        "validFor": {
+          "startDateTime": "2024-07-04T08:38:35.143Z"
+        }
+      }
+    ],
+    "productSpecification": {
+      "id": "urn:ngsi-ld:product-specification:5a8db3e6-dd17-482d-8618-87214ccb221c",
+      "href": "urn:ngsi-ld:product-specification:5a8db3e6-dd17-482d-8618-87214ccb221c",
+      "brand": "inno-focus",
+      "description": " **Process Data Analyzer** \n\nContact: [✉️](mailto:info@inno-focus.com)  [🔗](https://www.inno-focus.com/en/software-and-consulting-for-digitization-collaboration-and-industry-4-0/)\n\nA digital representation of your production processes fosters transparency and serves as a foundational element for various analyses and optimizations. A distinctive feature of the Process Data Analyzer is its ability to meticulously monitor components throughout the entirety of production processes and create digital shadows for each of them. The Process Data Analyzer delineates the manufacturing workflows within a company, elucidating the sequential stages that a component undergoes during its production journey, encompassing individual production steps, quality assurance measures, and logistical operations. \n\n This software visually maps out the processes, encompassing switches, interfaces, and other elements, adhering to the BPMN model. It enables the integration of all pertinent data with the respective production or quality assurance steps, thereby establishing a nexus between real-time production processes and their corresponding digital counterparts. In essence, the Process Data Analyzer constructs a digital shadow of the manufacturing operations. \n\n Moreover, the Process Data Analyzer facilitates a comprehensive analysis of your entire manufacturing chain, identifying specific tasks and pinpointing areas necessitating additional sensors or data sources.  \n\nBy interfacing with other systems such as ERP and planning tools for product design, process simulation, and manufacturing planning, the software aids in optimizing these tools by leveraging manufacturing production data from digital representations, thereby enhancing digital twin models. \n\nIn addition to its utility in the planning phase, the software provides support during both the ramp-up phase and ongoing production. Through preconfigured visualizations, users can monitor the adherence of data pertaining to specific workpieces within defined production, quality, and logistical contexts, ensuring accurate data capture and transmission. \n\nThis tool is accessible as a web-based service with an edge-based database. Additionally, an On-Premise service is available upon request.\n\n\n **How does it work?** \n\nThe software's process modeling adheres to the international standard Business Process Model and Notation (BPMN) as outlined in ISO/IEC 19510 (2013), empowering users to craft processes augmented with systems, machines, sensors, data sources, quality assurance measures, logistics, and IT components. Processes are manually developed, and subsequently, our team of IT specialists implements the requisite data sources, drawing upon a diverse array of existing machine connections. Data can then be accessed, gathered, and further manipulated. \n\n Ideally, the software is utilized in conjunction with the visualization module Machining Analyzer to graphically represent process data in diverse formats. \n\n\n **What are the benefits?** \n\n- Generates digital shadows for every workpiece/component along any production process. \n- IT systems (hardware and software) are completely organized in the Process Data Analyzer. \n- Establishment of a scope of consideration for digitalization, in particular production, that can be expanded at any time to form a holistic view. \n- Facilitates user access to and manipulation of process-generated data. \n- Supplies data for subsequent processing, such as visualization, analysis, or AI methodologies. \n- Generates comprehensive documentation for all digital shadows within production. \n- Enhances transparency regarding production outcomes. \n- Enables users to pinpoint areas requiring additional data sources or sensors for specific process information. \n- Requires no programming proficiency from the user. \n- Provides clarity regarding connections, even in cases of complex interactions between IT and OT (Information Technology and Operational Technology). \n\n **Who is it for?** \n\nThe software is designed for: \n- Organizations utilizing complex data collection and processing systems, primarily leveraging Edge Data, particularly those centered around IoT data. \n- Entities seeking to transition to a comprehensive holistic digitalization system. \n- Companies within the manufacturing industry, encompassing simulation and planning tools as well as logistic systems characterized by numerous diverse connections. \n\n **Further services** \n\nIn addition to the software components described here, we offer you further services to integrate them seamlessly into your existing systems. We will be happy to advise you. \n\n- As-is analysis \n- System design \n- System implementation \n- System integration: This service will usually run on-premises in the cloud. An Azure environment is preferred for this. \n- Individualized evaluations ",
+      "isBundle": false,
+      "lastUpdate": "2024-07-12T10:07:18.441550438Z",
+      "lifecycleStatus": "Launched",
+      "name": "Process Data Analyzer",
+      "productNumber": "PDA",
+      "version": "1.0",
+      "attachment": [
+        {
+          "attachmentType": "image/png",
+          "name": "Profile Picture",
+          "url": "https://dome-marketplace-prd.org/charging/media/assets/VATDE-351057490/ProcessDataAnalyzer_Bild2.png"
+        }
+      ],
+      "productSpecCharacteristic": [
+        {
+          "id": "urn:ngsi-ld:characteristic:0e8843f9-4fc3-4e5d-988c-b7f1d8c5d1f3",
+          "name": "ISO/IEC 27001:2022",
+          "productSpecCharacteristicValue": [
+            {
+              "isDefault": true,
+              "value": "ISO 27001 Certification"
+            }
+          ]
+        }
+      ],
+      "relatedParty": [
+        {
+          "id": "urn:ngsi-ld:organization:db7b28c5-f2f5-4d66-ab02-dfaa4eb68a19",
+          "href": "urn:ngsi-ld:organization:db7b28c5-f2f5-4d66-ab02-dfaa4eb68a19",
+          "role": "Owner"
+        }
+      ],
+      "validFor": {
+        "startDateTime": "2024-07-04T08:06:11.022Z"
+      }
+    },
+    "validFor": {
+      "startDateTime": "2024-07-12T10:00:34.122Z"
+    }
+  },
+  "proof": {
+    "id": "urn:uuid:385311fa-5a56-459f-b9e6-39c127ba46f1",
+    "type": "DataIntegrityProof",
+    "created": "2024-08-19T10:36:24Z",
+    "verificationMethod": "https://example.edu/issuers/keys/2",
+    "cryptosuite": "ecdsa-sd-2023",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "u2V0BhVhAyedf9gk-O1GHKxOY4Dtx-G5ByZLF0R_489imZ_ikHwTOXpQOSVvEDLDRD0vrLuYx711Feli5-fEye6p33Hh4CVgjgCQDFCU8ihEF-PWcr4W8vliL7b6_YmCtEFez77Jrjq2dykyYO1hAaf5OfubMWqlaSm9u4_qKTBoB53ESytT8YPEA2LczGDWFnJkYx0ngGIbn3nBekB-q6MAYnvVtfzff89JGrej-T1hA35eL2S3kdVNZHn1fPrfMu3AmXuxtW4CNj9xMXM1Q7pIy7SnBwIWpNwr_dCY25yLGkNYrSWTSDIdKYCKrashO4FhAtvTF845wQziJP8rThkoiT8RAsb0wOq06zxFbSXRg4MGCZS3y5Axkgn8pvfgmoCS-7IpaBTVHL6AZaAJoeiIt6VhAoZ8W4KFbo6aVedmPK5msj_EQ-cX-JGsNfGl2AT7ADdGjwNsAbdmbYUaD69JNBsL9jH3yO7D8EecatGo7ORshYFhAHuVoO7jYF4QInpyjotQ1zs0tY0zehsUilj1VTW88fPsZrR9JR-eASa4rpHGblueYhYPI_1wcKTF-5Xe5hZJP4FhA3PCahJcdhA957JwGvLWLLPNStSlfTH61dvQcIqORo1oquGd2W9jcP4hrE501G99REoxnSBHKXpipbubf8tho-FhAGj38oy9orJ0bEFjX9iyENOi8LkC8AmtJ_93nFT8YndV1Igi0QC0AqA94olzGb8gWEAJk_hLhA7D2PN2h3IRCN1hA3yUBoPys5clSsIgxSHtpft1JxpNM-xX3rSsTeI729lQA32Y9iVugJxaVmgap-W_oPO0xxEQdrOoH6H5tx2u0LVhAtvhtT1eCKRguhZr7no186L0f-1XziKKSKXVeUUaqoW-wyRncfXIlWK450whSNnrkMtpu2M68rcCl2KOw6FcV8FhAuvBVoU6DRfVTF1_YBjO8ko6wwcNi5ZITkqgoSOnjCL2lbO4ZmsMKnzvTjJ59DFUg_EyMBGVJekXamUZq_9mLVlhAVgfp9fNDRjaO_nHVJEZRJhoW0lapvafiyKyibzXM3sBFD2a6x6eJX-fhb2gtQT4vi6PAsaU9vsgjpxfmab6jiVhAFoy37blI73NzaEETLA9of0JqLPbDdvvrPgmlnhVBxFQFWjiPLWcOc_mG74gxzT_I_DgA87aoYC_PKGbr3OQGFFhAtehAJMNZs28ba3izHrkBRJG3fmv8LiGf3ygt4nsYgLttZIm5JRJzNqzFgrdaSKnK3YvaLydJQ9UeBmsHJTcMNlhAsht9aUmH9qCbjNqVKimcRlEDI4BrjOfMOaHw9BkxsBjsZf_aSXKyvDeov8D6JiZHDAy5itzRYiVQc_RxoJMXbFhAu2mcdafE4iN550VuN3CPDLpopQq-3Hl2MHpcB9me9P7Z9rvRNsAmQnWt4knpcDBG9MBF9eof4dysNGoCSROla1hAWksLMU7oNiFXVB3WORJbsPjhacfrzBAZOnTHkR1Tq_fE2hWIFPYspmp3bjYGvRfzc4ULUo3tlJxNVERdvlWxLVhA4uDKorUzK1kCHp-8o3B0IDeRqxOHO9IbVeXIez4P3G4EAzo1_ANBPSmYi9kqDPN0Kpjox9M4wrqVEvJLGEEIuVhAq07G5v5mUSTpD14rvnQt9RYJF-VAEHpJm-236eOYOssGHXOuoSwtTCy_NDoPj0ZzBuidEy6l3yYZERWrHKmlJFhAza5lvinTDNDzdlkUI4xFllicHih8G3Rw4loVeIkk__6TuYMc1e4GqKTAsoQ__N0XGzIKEoQ1idWtYHaVepthu1hAdQ7Jb01THQE47v3X1s-jN-u_NPQw21p1SMovU60rbJA8sjSXp6yoqGRi0qSxnXhMwh1n2p1BW4FGlWXKyg4tolhA4uDVqFhe9QodRuh9YnYUu5yfthUJOsUiOVcoX_x2Eiqip1VdXhuHl6WOQNLD5b3G4hF79K540EvXyUyeBr1Ob1hANOC5_DR5nHiQK7ev_7rWmhwKyC2bVpl98K1AUbc6YMNpIT0P0f1ZKESZPOWiWuiu-jP1Whj1QCQDZhlFSrMVjVhABzy5uQ37FXWO26hJCzCoirRfhq-6AtuzMdwrTmK1l2M7JdGHWs2sz266OQGBKP65RjCZNuKF6MYQ3ZtW2U567FhAGhKuZyuP63rtd2xV6_YX5aOke0mIMb5YXpdo93H2iT0txatBtkh5aG7O3Gv5lBN_vReASrvwMCDzUP8AmC1CXFhAiZq4ZnyjiUwsFpuTJ1iumiEM4Cem5h6zbYkQZZlBAjAqY6mt7F5bWVACOVqstI7tO5uvFB5Hbdc2dZN9Ueoup1hAoJIuhUxbxwtfmEtWeLShvy0mx1iSOc-3snsPKCc4fchbof4ZixM6yn7-Bid3ZtAqOMCsXV9jZcrJq96BWil4eVhAI58TS_NZoKIIjYm-3MptZRUZ3FtnUE7tUDiz3s_xkMYvudyFk2KEkKp6EVxgS5M2lGO8MWeW-vIw6G8P9STCD1hA7xOuqKg8nUR65_Fm53Jtqr0qlp98lwYyt2k2snYOs3wGks-YzNuTllzn9FN4q_VahyQjrUgI2rNYF7hZr47GbVhAheTCJ0CZPL592IKz-G2-zgWYJxS2b00F8CbrfJqFLJHBwZsDQXa4y15qzLIWDFx0pPr8hgqu2gWMFV0FR5wBiVhAILAAaw7C8WK2vkHzWX2_tDoStfL9SJ_-vX3HhxhEuR7TLR8eSGGXLyI8yIrME2VqitNjWEGzeIZzf_hRSb2tvlhA5EVHS6Uwie3LuoOf4hxkcD32jJjl9wLv2o1a37Xl_k0qD7vkNyk1GIDpQ0ZeDWtue-gk4UP4bnVKkDV1seyVTVhANvPyiqCtAkZAPDhCOoY6VxHGbu6MEHqBvHy-q-bd5d7P9Wm7GIXU2SeHdiF5Vuw95FLRpQdZ_UmtusXH0jv2G1hAsONJUqZKr4n4fqLmt1J1CK0id5MpuS6YRl9QOTEhCPUoqesJzujeImsln2tx4AkEps4JH-_3wpatyEF7bUh2ZlhAuqz4S8PxkP0sNtItzCfhcW_U2yC6KX7reMAYWLNVkiWeYSagNlGJpQ8N7jwgHAlmM5rpw94sqQwxpi1KY5fy1lhAlD20uxrGtlce5sU-NefqTxwWRJudqQKBmhEwrWkEVOqBiz40zQ-IsmclQdfxGRVXslqZy4fs2AB0Hhz3UEkhnFhABTu6C7p6V27weG484k0dt2ou4R_PjLcRk75vVjdAvIJh5_cqq-DnQ3pk4rQjm9cvCM6rlRktn4_AhbdHQU-Uf1hA3z1IeRCXUTz3ftoEa1YPU2uURwEtcCokO1RIWwi12mbuiJz4j6SgXXDuYGM1UlNEerQ9J_PCkmINjQ-Ej8eW61hAGdPGcICFUSLgncE0d9Fce1nGJU3YgO4xY5Yp3h6fKNYTDi_NBLG0AvTNnvv2fridwYlx32PIln8JWDxJMjPEtlhA_0bZ1LE68f1OFGlzrQBnVoPnfWkL-dwBkkCSpXrwaVVL9xCuAI5VjmjNkjTh6d6E0zvTI200nmLIRqtCb7ZlRVhA3bj0rir7OtiJ-06pPX0y7g8s99WzeQVtSM9Q_BN7AqWTOZPXOYptUjIpWrBxYkN6vsf3EAGNJSNvfuaQBAi1xlhAR6QkaatZ1-tdL7Tbjd2ZkWnza9_4CVUKAauig4VxvaF9MbwTVQT3gfrxd1i2MYqxIxLkM86V3lQvuugGZ3GCEVhA-DGod2dV1QU5mPMJNohqjZOB-PLMm_eCixtmwxbAbc076BIh1hSjJnorSgtnT7-dQvVHYdnW7fdJ_ToUYRZnvFhAJV8T-hk76oEjbRhVSqgwxPJz1g24AbWIup53f6LYve9G9rb3IJhGNM6RGhFecd6QMjQbmSFsoHmHM4HdfVWqt1hAgIW-uucBoWVCepm_H7-Ry9aNV2hp1IcDSTfUO3Pj92fCZr2BZZMRoK0SbuIolbGkWb4OcPTHPEm8LxY9N8Csk1hAOs8hI67AgA0OdrbANwPz2fI2iSPecdOg0-dIG0CVMt6M4syLMsDxWnamc91tyoeZtOLEJEd45AyZNPaH_oqgPVhAM80gpCWVHz9_ADTbV73CLvdZQGRknSJmrqR7b_T4pFDdqGnKRv19rCObvYkzdvw_70dPV8LlXGz9pUbRxwy1hlhAERgE3kqizq8tquYOZHoXRWfuBBr2wJbTBacfLgNOPa0-73FR6sadsWumE83PveoQyMkLqqEq7WdilzGqwm6MplhAB4ekzg2Vz9o5So6B1w9TpuiIZx3dyH3Gk4HuJBIpBc-EwLwIykhuyPLaZWDHx7YBry0TLzUps8FC9kUAWfJY_VhAzpUREh6rNx9qzPMn4k528InsDJLtCOF6KnRkJljNtj6qfcZ70LgWH6aYv1DVwDJe30VrDJH0kDBu5rztOz5melhA8Y2sYH7jZIF9FElDPnteWACXi0AnqJxAfr3SL4Ynhgy1mUaVaaGUa8MUp5OXKuT9oy4M4662CcmcSKk4b30HS1hAFOdbgdXQOG26nCC2tZOdRFgCi9pEa_WkcwzKU5rPCPYVz7NWYNw60G7h_94LkSebKIdhUwKdUfEtk2yYCZkoD1hADO5YTw_cO_MyT5hTPiXx3lyg5x-1k0_MXqftixYrAfpfZ_CXpGyKDrFYk-tc6lMZw9BoIP41zSQFZPHxtic4V1hAL-WpsfFwYWc6lnMlxIDGTRD44ZcpzPiSuJRcYoRrRxJI7NS25fnIaduMdzCk1KfAh0gAYWaZzt_ptJyLUFG481hAqqYfF5zli1HF89EV0QNWbX5cdXmIJ_3DE8Y4uoKaJUvSgW7L9d5hTprp3RaGhwpYs3Ul3Zrj37NiVg41iskaelhAMEz7ApR3LByEp-Cn_xVzJR2ysb6isCBhvgLlPibN1coBJM8g_ZcTwSDJRj-Rz_owS4GwGCOoUI2AgkcFmmKvz1hAWAuHDUFQGfxtcKQQyxxHYzUEyIBmA1OwxjgFUuNWkUl9u0gPAfI5nRFf0KraUybKTvi9HBLnlnFVXDcdYpVD1FhARr4SxFrSqVYOPx78rFsdrNnrgIuB9qBtQAR9uClNV6-kDcV7EyHlJNWdwIZvMEEBwg5nkOxvmv70aacZAZGebFhAIwfuC741L3UszRA-shgRipHapfYtQd22mKe7l5RTjidrX-4GytVQsdfIKOt2Om-5YZVHTq4dtbx7ivEieycdXFhA3fsGLPmwM54WTo9bZNZWdO6JShusmrk8T6XabKtQ8ecFFHzmjkegsSdTWSYefDhRCU6pYrdM6-qh6KGHlxoXeKYAWCDdsDougoO65T0q-dIHztu1RFck0r7fRmt_ZUx4bJNWkAFYIAP_FdM7Xk63T-kbihRqZHiYgMtsOA2Tqwd_mh2esHkPAlggzxD7MYZxUx3U4xSUQSR28zvDRD6nMpn9WP5JwBNQMGIDWCBrOoJiDDcEUhIgy4h1TMo2a8kxh-pcgBIy3y6zoBU8OgRYIEBvcfXa4arIKutNFIT1tnnIk8d6Vei2Coydq9kU9xU1BVggHt9HmJVsufxHrL0zxuOVgkr9Npu4Es-OhD4gOlkD8bKEAAEDBA"
+  }
+}
