@@ -29,6 +29,8 @@ async function documentLoader(url: string): Promise<{ documentUrl: string, docum
 }
 
 const suite = new Ed25519Signature2020({ key: await Ed25519VerificationKey2020.generate() })
+//@ts-ignore // NOTE quick fix for suite error
+suite.verificationMethod = () => true
 
 const EXAMPLES_FOLDER = join(import.meta.dirname, '../examples')
 const OFFERING_INPUT_FILE = join(EXAMPLES_FOLDER, 'product-offering-elliot-smart-city.json')
@@ -51,9 +53,6 @@ const credential = {
   "issuanceDate": new Date().toISOString(),
   "credentialSubject": offering
 }
-
-//@ts-ignore // NOTE quick fix for suite error
-suite.verificationMethod = () => true
 
 const signedOffering = await issue({ credential, suite, documentLoader })
 // console.log(JSON.stringify(signedOffering, null, 2))
