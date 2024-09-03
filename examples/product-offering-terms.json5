@@ -1,0 +1,20 @@
+[{
+  '@baseType': 'ProductOfferingTerm',
+  '@type': 'GeographicRestriction',
+  name: 'DE-only',
+  description: 'The offering is restricted to only be published and accepted in germany.',
+  customerLocation: {
+    '@type': 'GeographicAddress',
+    country: 'DE'
+  }
+}, {
+  '@baseType': 'ProductOfferingTerm',
+  '@type': 'CompensationRestriction',
+  name: '5pct-fee',
+  description: 'The offering is restricted to add a 5% fee that compensates the marketplace.',
+  marketplaceFee: {
+    '@type': 'Quantity',
+    amount: 5.0,
+    units: 'percent'
+  }
+}]

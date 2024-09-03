@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "ProductOfferingTerm": {
+      "title": "ProductOfferingTerm",
+      "description": "",
+      "type": "object",
+      "properties": {},
+      "allOf": [
+        {
+          "$ref": "./tmforum/Product.schema.json#/definitions/ProductOfferingTerm"
+        }
+      ]
+    }
+  }
+}
