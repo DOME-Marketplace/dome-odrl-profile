@@ -6,11 +6,13 @@
 - [TMForum APIs](docs/tm-forum-apis.md)
 - [Catalogue Offerings Verifiable Signature](docs/catalogue-offerings-verifiable-signature.md)
 - [Good to Know](docs/good-to-know.md)
+- [Policy Use Cases](docs/policy-use-cases.md)
 
 ## Model
 
 - [Core Vocabulary](model/dome.ttl)
 - [Replication Vocabulary](model/replication.ttl)
+- [LD-Proof Credentials](model/credentials.json)
 
 ## Policies
 
@@ -32,6 +34,9 @@
   - [ServiceSchema](schemas/tmforum/Service.schema.json)
   - [EngagedPartySchema](schemas/tmforum/EngagedParty.schema.json)
   - [MarketingSalesSchema](schemas/tmforum/MarketingSales.schema.json)
+- **Custom**
+  - [Draft 01](schemas/custom/Draft-01.schema.json)
+  - [Draft 02](schemas/custom/Draft-02.schema.json)
 
 ## Draft
 
