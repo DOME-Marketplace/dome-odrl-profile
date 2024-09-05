@@ -36,3 +36,21 @@ The `ProductOfferingTerm` is already defined to include a temporal validity of t
   }
 }
 ```
+
+## Marketplace Restriction
+
+```json
+{
+  "@baseType": "ProductOfferingTerm",
+  "@type": "MarketplaceRestriction",
+  "targetMarketplace": [{
+    "@type": "PlaceRef",
+    "id": "urn:ngsi-ld:place:...",
+    "href": "https://yumket.eu/"
+  }],
+  "excludedMarketplace": [{
+    "@type": "PlaceRef",
+    "id": "urn:ngsi-ld:place:..."
+  }]
+}
+```
