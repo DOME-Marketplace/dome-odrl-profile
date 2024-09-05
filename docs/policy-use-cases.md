@@ -64,3 +64,8 @@ The `ProductOfferingTerm` is already defined to include a temporal validity of t
   "authenticatedOnly": true
 }
 ```
+
+## Thoughts
+
+- the type of restriction could also differentiate the target of the enforcement of the restriction:
+  e.g. ReplicationRestriction, MarketplaceRestriction, VisibilityRestriction, OfferingRestriction, ContractRestriction
