@@ -54,3 +54,13 @@ The `ProductOfferingTerm` is already defined to include a temporal validity of t
   }]
 }
 ```
+
+## Other
+
+```json
+{
+  "@baseType": "ProductOfferingTerm",
+  "@type": "CustomerRestriction",
+  "authenticatedOnly": true
+}
+```
