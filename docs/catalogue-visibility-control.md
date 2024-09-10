@@ -2,6 +2,8 @@
 
 ## Use cases
 
+**Refernce:** [Catalogue visibility control - use cases](https://docs.google.com/document/d/1z5v3qLh_CMqzTedNcaIobvn-qvDzAaDcpMHlgEBr7CY)
+
 > **Use case:** I don’t want my product to be published on Aruba marketplaces due to competition.  
 > **Partner:** DHUB (Beppe Cafiso)
 
