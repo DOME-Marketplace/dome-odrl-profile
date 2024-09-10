@@ -6,7 +6,16 @@
 - [TMForum APIs](docs/tm-forum-apis.md)
 - [Catalogue Offerings Verifiable Signature](docs/catalogue-offerings-verifiable-signature.md)
 - [Good to Know](docs/good-to-know.md)
-- [Policy Use Cases](docs/policy-use-cases.md)
+  - [Resource Description Framework](docs/good-to-know.md#resource-description-framework)
+  - [Turtle Format](docs/good-to-know.md#turtle-format)
+  - [JSON-LD Format](docs/good-to-know.md#json-ld-format)
+  - [Rights Expression Language](docs/good-to-know.md#rights-expression-language)
+  - [Open Digital Rights Language](docs/good-to-know.md#open-digital-rights-language)
+  - [eXtensible Access Control Markup Language](docs/good-to-know.md#extensible-access-control-markup-language)
+  - [Distributed Open Marketplace for Europe](docs/good-to-know.md#distributed-open-marketplace-for-europe)
+- [~~Policy Use Cases~~](docs/policy-use-cases.md)
+- [Catalogue visibility control](docs/catalogue-visibility-control.md)
+  - [Use cases](docs/catalogue-visibility-control.md#use-cases)
 
 ## Model
 
