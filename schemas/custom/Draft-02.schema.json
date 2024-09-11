@@ -1,16 +1,35 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
-    "ProductOfferingTerm": {
-      "title": "ProductOfferingTerm",
+    "MarketplaceRestriction": {
+      "title": "MarketplaceRestriction",
+      "description": "",
+      "type": "object",
+      "properties": {
+        "prohibitedMarketplace": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MarketplaceRef"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "../tmforum/Product.schema.json#/definitions/ProductOfferingTerm"
+        }
+      ]
+    },
+    "MarketplaceRef": {
+      "title": "MarketplaceRef",
       "description": "",
       "type": "object",
       "properties": {},
       "allOf": [
         {
-          "$ref": "./tmforum/Product.schema.json#/definitions/ProductOfferingTerm"
+          "$ref": "../tmforum/Common.schema.json#/definitions/EntityRef"
         }
       ]
     }
-  }
+  },
+  // TODO
 }
