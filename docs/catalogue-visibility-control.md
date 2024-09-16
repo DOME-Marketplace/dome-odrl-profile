@@ -274,3 +274,78 @@
 
 > **Use case:** I want to underline that my offer is dedicated (80%) to Public Administration and Entities, Government Agencies, NPO in the public administration field. The PA contract generally follows a tailored method.  
 > **Partner:** CSI (Davide De Santis)
+
+## Schema
+
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "MarketplaceRestriction": {
+      "title": "MarketplaceRestriction",
+      "description": "",
+      "type": "object",
+      "properties": {
+        "prohibitedMarketplace": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MarketplaceRef"
+          }
+        },
+        "prohibitedLegalRegion": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/GeographicAddressRefOrValue"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/definitions/ProductOfferingTerm"
+        }
+      ]
+    },
+    "CustomerRestriction": {
+      "title": "CustomerRestriction",
+      "description": "",
+      "type": "object",
+      "properties": {
+        "permittedCustomerRegion": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/GeographicAddressRefOrValue"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/definitions/ProductOfferingTerm"
+        }
+      ]
+    },
+    "GeographicAddressRefOrValue": {
+      "title": "GeographicAddressRefOrValue",
+      "description": "",
+      "type": "object",
+      "oneOf": [
+        {
+          "$ref": "#/definitions/GeographicAddressRef"
+        },
+        {
+          "$ref": "#/definitions/GeographicAddress"
+        }
+      ]
+    },
+    "MarketplaceRef": {
+      "title": "MarketplaceRef",
+      "description": "",
+      "type": "object",
+      "oneOf": [
+        {
+          "$ref": "#/definitions/EntityRef"
+        }
+      ]
+    }
+  }
+}
+```
