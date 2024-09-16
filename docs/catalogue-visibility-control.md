@@ -269,3 +269,11 @@
 
 > **Use case:** I want to underline that my offer is dedicated (80%) to Public Administration and Entities, Government Agencies, NPO in the public administration field. The PA contract generally follows a tailored method.  
 > **Partner:** CSI (Davide De Santis)
+
+## Methodology
+
+```json
+{
+  "@baseType": "ProductOfferingTerm"
+}
+```
