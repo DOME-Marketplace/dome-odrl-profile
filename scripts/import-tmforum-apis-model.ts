@@ -5,12 +5,20 @@ import { exec } from 'node:child_process'
 import { Resolver } from '@stoplight/json-ref-resolver'
 
 const OUTPUT_FOLDER = join(import.meta.dirname, 'tmforum-apis').replace(/\\/g, '/')
-const REPO_FOLDER = join(OUTPUT_FOLDER, 'open-api-and-data-model').replace(/\\/g, '/')
-const REPO_URL = 'https://github.com/tmforum-apis/Open_Api_And_Data_Model.git'
-const SCHEMA_FOLDER = join(REPO_FOLDER, 'schemas').replace(/\\/g, '/')
-const COLLECTED_SCHEMA = join(OUTPUT_FOLDER, 'collected.schema.json').replace(/\\/g, '/')
+
+// const REPO_FOLDER = join(OUTPUT_FOLDER, 'open-api-and-data-model').replace(/\\/g, '/')
+// const REPO_URL = 'https://github.com/tmforum-apis/Open_Api_And_Data_Model.git'
+// const SCHEMA_FOLDER = join(REPO_FOLDER, 'schemas').replace(/\\/g, '/')
+
+const REPO_FOLDER = join(OUTPUT_FOLDER, 'tmforum-rand-schemas').replace(/\\/g, '/')
+const REPO_URL = 'https://github.com/tmforum-rand/schemas.git'
+const SCHEMA_FOLDER = REPO_FOLDER
+
 const DATA_MODELS_FOLDER = join(OUTPUT_FOLDER, 'data-models').replace(/\\/g, '/')
 const DATA_MODELS_URL = 'https://github.com/FIWARE/data-models.git'
+
+const COLLECTED_SCHEMA = join(OUTPUT_FOLDER, 'collected.schema.json').replace(/\\/g, '/')
+const COLLECTED_SCHEMA_DEREF = join(OUTPUT_FOLDER, 'deref.schema.json').replace(/\\/g, '/')
 const MAX_ERRORS = 5
 
 function assertNoEntError(err: unknown): asserts err is NodeJS.ErrnoException & { code: 'ENOENT' } {
@@ -68,7 +76,11 @@ try {
   schemaCollection.Data = {
     // fix to resolve some weird references
     Common: { $ref: relative(dirname(COLLECTED_SCHEMA), join(DATA_MODELS_FOLDER, 'common-schema.json')).replace(/\\/g, '/') },
-    Geometry: { $ref: relative(dirname(COLLECTED_SCHEMA), join(DATA_MODELS_FOLDER, 'geometry-schema.json')).replace(/\\/g, '/') }
+    Geometry: { $ref: relative(dirname(COLLECTED_SCHEMA), join(DATA_MODELS_FOLDER, 'geometry-schema.json')).replace(/\\/g, '/') },
+    Device: { $ref: relative(dirname(COLLECTED_SCHEMA), join(DATA_MODELS_FOLDER, 'specs/Device/device-schema.json')).replace(/\\/g, '/') },
+    // UrbanMobility: { $ref: relative(dirname(COLLECTED_SCHEMA), join(DATA_MODELS_FOLDER, 'specs/UrbanMobility/gtfs-schema.json')).replace(/\\/g, '/') },
+    // Alert: { $ref: relative(dirname(COLLECTED_SCHEMA), join(DATA_MODELS_FOLDER, 'specs/Alert/alert-schema.json')).replace(/\\/g, '/') },
+    // Weather: { $ref: relative(dirname(COLLECTED_SCHEMA), join(DATA_MODELS_FOLDER, 'specs/Weather/weather-schema.json')).replace(/\\/g, '/') }
   }
   console.log('writing collected schema to disc')
   await writeFile(COLLECTED_SCHEMA, JSON.stringify(schemaCollection, null, 2))
@@ -122,13 +134,10 @@ const resolver = new Resolver({
     const refProtocol = ref.protocol()
     if (refProtocol.length > 0) {
       // @ts-ignore
-      if (ref._parts.urn) {
-        // @ts-ignore
-        ref._parts.protocol = refProtocol.toUpperCase()
-      } else {
+      if (!ref._parts.urn) {
         // @ts-ignore
         const URI = ref.__proto__.constructor
-        let altRef: typeof ref | null = null
+        let altRef: typeof ref | undefined
         const refValue = ref.toString()
         if (refValue.startsWith('https://github.com/tmforum-rand/schemas/blob/master/')) {
           const altRefPath = relative(dirname(COLLECTED_SCHEMA), SCHEMA_FOLDER).replace(/\\/g, '/')
@@ -207,6 +216,32 @@ if (errors.length > 0) {
   }
 } else {
   console.log('successfully dereferenced without errors')
-  console.dir(result, { depth: 0 })
+  // console.dir(result, { depth: 0 })
+  console.log('generating dereferenced collected schema')
+  const refToValue: Map<string, Record<string, any>> = new Map()
+  const valueToRef: Map<Record<string, any>, string> = new Map()
+  const collectedSchemaDeref = JSON.stringify(result, (key, value) => {
+    if (key === '$id') return
+    if (key === '$schema') return
+    if (value && typeof value === 'object') {
+      const ref = valueToRef.get(value) || '#'
+      if (refToValue.has(ref)) {
+        return { $ref: ref }
+      } else {
+        for (let [childKey, childValue] of Object.entries(value)) {
+          if (childValue && typeof childValue === 'object') {
+            const childRef = ref + '/' + childKey
+            valueToRef.set(childValue, childRef)
+          }
+        }
+        refToValue.set(ref, value)
+        return value
+      }
+    } else {
+      return value
+    }
+  }, 2)
+  console.log('writing dereferenced schema to disc')
+  await writeFile(COLLECTED_SCHEMA_DEREF, collectedSchemaDeref)
 }
 console.groupEnd()
