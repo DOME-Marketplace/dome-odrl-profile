@@ -38,14 +38,8 @@
 ```json
 // Simplified Term
 {
-  "prohibitedMarketplace": [
-    { 
-      "legalEntity": {
-        "location": {
-          "country": "RU"
-        }
-      }
-    }
+  "prohibitedLegalRegion": [
+    { "id": "urn:ngsi-ld:country:russia" }
   ]
 }
 ```
@@ -107,12 +101,8 @@
 ```json
 // Simplified Term
 {
-  "validCustomer": [
-    {
-      "location": {
-        "country": "ES"
-      }
-    }
+  "permittedCustomerRegion": [
+    { "id": "urn:ngsi-ld:country:spain" }
   ]
 }
 ```
@@ -146,19 +136,34 @@
 ```json
 // Simplified Term
 {
-  "validCustomer": [
-    {
-      "location": {
-        "country": [
-          "AT", "BE", "BG", "HR", "CY", 
-          "CZ", "DK", "EE", "FI", "FR", 
-          "DE", "GR", "HU", "IE", "IT", 
-          "LV", "LT", "LU", "MT", "NL", 
-          "PL", "PT", "RO", "SK", "SI", 
-          "ES", "SE"
-        ]
-      }
-    }
+  "permittedCustomerRegion": [
+    { "id": "urn.ngsi-ld:country:AT" },
+    { "id": "urn.ngsi-ld:country:BE" },
+    { "id": "urn.ngsi-ld:country:BG" },
+    { "id": "urn.ngsi-ld:country:HR" },
+    { "id": "urn.ngsi-ld:country:CY" },
+    { "id": "urn.ngsi-ld:country:CZ" },
+    { "id": "urn.ngsi-ld:country:DK" },
+    { "id": "urn.ngsi-ld:country:EE" },
+    { "id": "urn.ngsi-ld:country:FI" },
+    { "id": "urn.ngsi-ld:country:FR" },
+    { "id": "urn.ngsi-ld:country:DE" },
+    { "id": "urn.ngsi-ld:country:GR" },
+    { "id": "urn.ngsi-ld:country:HU" },
+    { "id": "urn.ngsi-ld:country:IE" },
+    { "id": "urn.ngsi-ld:country:IT" },
+    { "id": "urn.ngsi-ld:country:LV" },
+    { "id": "urn.ngsi-ld:country:LT" },
+    { "id": "urn.ngsi-ld:country:LU" },
+    { "id": "urn.ngsi-ld:country:MT" },
+    { "id": "urn.ngsi-ld:country:NL" },
+    { "id": "urn.ngsi-ld:country:PL" },
+    { "id": "urn.ngsi-ld:country:PT" },
+    { "id": "urn.ngsi-ld:country:RO" },
+    { "id": "urn.ngsi-ld:country:SK" },
+    { "id": "urn.ngsi-ld:country:SI" },
+    { "id": "urn.ngsi-ld:country:ES" },
+    { "id": "urn.ngsi-ld:country:SE" },
   ]
 }
 ```
@@ -193,11 +198,11 @@
 ```json
 // Simplified Term
 {
-  "validCustomer": {
-    "location": {
+  "permittedCustomerRegion": [
+    { 
       // geospatial area 3000km of italy as TMForum GeographicAddress
     }
-  }
+  ]
 }
 ```
 
@@ -269,11 +274,3 @@
 
 > **Use case:** I want to underline that my offer is dedicated (80%) to Public Administration and Entities, Government Agencies, NPO in the public administration field. The PA contract generally follows a tailored method.  
 > **Partner:** CSI (Davide De Santis)
-
-## Methodology
-
-```json
-{
-  "@baseType": "ProductOfferingTerm"
-}
-```
