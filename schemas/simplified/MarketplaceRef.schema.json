@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "MarketplaceRef.schema.json",
+  "title": "Any",
+  "definitions": {
+    "MarketplaceRef": {
+      "$id": "#MarketplaceRef",
+      "type": "object",
+      "description": "",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier of a related marketplace."
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "allOf": [
+        {
+          "$ref": "https://tmforum-rand.github.io/schemas/Common/EntityRef.schema.json#/definitions/EntityRef"
+        }
+      ]
+    }
+  }
+}
