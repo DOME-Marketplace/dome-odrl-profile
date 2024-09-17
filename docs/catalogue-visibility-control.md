@@ -1,5 +1,7 @@
 # Catalogue visibility control
 
+> **Author:** Simon Petrac \<spetrac@nicos-ag.com\>
+
 ## Use cases
 
 **Refernce:** [Catalogue visibility control - use cases](https://docs.google.com/document/d/1z5v3qLh_CMqzTedNcaIobvn-qvDzAaDcpMHlgEBr7CY)
