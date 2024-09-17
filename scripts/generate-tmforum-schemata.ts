@@ -1,30 +1,40 @@
-import * as util from './util.js'
+import * as _ from './util.js'
 
-const OUTPUT_FOLDER = util.joinPath(import.meta.dirname, 'tmforum')
+const OUTPUT_FOLDER = _.joinPath(import.meta.dirname, 'tmforum')
 
 const SCHEMA_REPOSITORY = 'https://github.com/tmforum-rand/schemas.git'
-const SCHEMA_FOLDER = util.joinPath(OUTPUT_FOLDER, 'tmforum-rand-schemas')
+const SCHEMA_FOLDER = _.joinPath(OUTPUT_FOLDER, 'tmforum-rand-schemas')
 
-const MODEL_REPOSITORY = 'https://github.com/FIWARE/data-models.git'
-const MODEL_FOLDER = util.joinPath(OUTPUT_FOLDER, 'fiware-data-models')
-const MODEL_URI = 'https://fiware.github.io/dataModels/'
+const EXT_SCHEMA_REPOSITORY = 'https://github.com/FIWARE/data-models.git'
+const EXT_SCHEMA_FOLDER = _.joinPath(OUTPUT_FOLDER, 'fiware-data-models')
 
-if (!await util.pathExists(SCHEMA_FOLDER)) {
+if (!await _.pathExists(SCHEMA_FOLDER)) {
   console.log('cloning ' + SCHEMA_REPOSITORY)
-  await util.gitClone(SCHEMA_REPOSITORY, SCHEMA_FOLDER)
+  await _.gitClone(SCHEMA_REPOSITORY, SCHEMA_FOLDER)
 }
 
-if (!await util.pathExists(MODEL_FOLDER)) {
-  console.log('cloning ' + MODEL_REPOSITORY)
-  await util.gitClone(MODEL_REPOSITORY, MODEL_FOLDER)
+if (!await _.pathExists(EXT_SCHEMA_FOLDER)) {
+  console.log('cloning ' + EXT_SCHEMA_REPOSITORY)
+  await _.gitClone(EXT_SCHEMA_REPOSITORY, EXT_SCHEMA_FOLDER)
 }
 
-const schemaFiles = await util.collectFiles(SCHEMA_FOLDER, /\.schema\.json$/, true)
-const schemata = await Promise.all(schemaFiles.map(path => util.readJSON(path)))
+const schemaFiles = [
+  ...await _.collectFiles(SCHEMA_FOLDER, /\.schema\.json$/, true),
+  // https://fiware.github.io/dataModels/common-schema.json
+  // https://fiware.github.io/data-models/common-schema.json
+  _.joinPath(EXT_SCHEMA_FOLDER, 'common-schema.json'),
+  // http://geojson.org/schema/Geometry.json
+  _.joinPath(EXT_SCHEMA_FOLDER, 'geometry-schema.json'),
+  // https://fiware.github.io/dataModels/specs/Device/device-schema.json
+  _.joinPath(EXT_SCHEMA_FOLDER, 'specs/Device/device-schema.json')
+]
+const schemata = await Promise.all(schemaFiles.map(path => _.readJSON(path)))
 
 const refs = new Set<string>()
-util.traverseObject(schemata, (ref, value) => {
-  if (ref.endsWith('/$ref')) refs.add(value)
+_.traverseObject(schemata, (ref, value) => {
+  if (_.isRecord(value) && _.isString(value.$ref)) {
+    refs.add(value.$ref)
+  }
 })
 console.dir(Array.from(refs).sort(), { maxArrayLength: 1000 })
 
