@@ -1,5 +1,8 @@
 # Policy Use Cases
 
+> **DEPRICATED**  
+> **Author:** Simon Petrac \<spetrac@nicos-ag.com\>
+
 This is a collection of use cases and requirements that should be covered by policy or term expressions. Please feel free to create issues to discuss and add new requirements to the list. Keep in mind that this should generally align to the already existing `ProductOfferingTerm` of the TMForum API, regardless of the policy expression language. This also means that policies or terms are focused on the product offerings. If there is need to add policies elsewhere, the integration of those could also be discussed.
 
 ## Geographic Restriction
