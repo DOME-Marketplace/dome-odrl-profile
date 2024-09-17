@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "GeographicAddressRefOrValue.schema.json",
+  "title": "GeographicAddressRefOrValue",
+  "definitions": {
+    "GeographicAddressRefOrValue": {
+      "$id": "#GeographicAddressRefOrValue",
+      "description": "",
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "allOf": [
+        {
+          "$ref": "https://tmforum-rand.github.io/schemas/Common/GeographicAddressRef.schema.json#/definitions/GeographicAddressRef"
+        },
+        {
+          "$ref": "https://tmforum-rand.github.io/schemas/Common/GeographicAddress.schema.json#/definitions/GeographicAddress"
+        }
+      ]
+    }
+  }
+}
