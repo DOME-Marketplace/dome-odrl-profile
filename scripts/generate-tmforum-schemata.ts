@@ -4,9 +4,13 @@ const OUTPUT_FOLDER = _.joinPath(import.meta.dirname, 'tmforum')
 
 const SCHEMA_REPOSITORY = 'https://github.com/tmforum-rand/schemas.git'
 const SCHEMA_FOLDER = _.joinPath(OUTPUT_FOLDER, 'tmforum-rand-schemas')
+const SCHEMA_URI = 'https://tmforum-rand.github.io/schemas/'
 
 const EXT_SCHEMA_REPOSITORY = 'https://github.com/FIWARE/data-models.git'
 const EXT_SCHEMA_FOLDER = _.joinPath(OUTPUT_FOLDER, 'fiware-data-models')
+const EXT_SCHEMA_URI = 'https://fiware.github.io/data-models/'
+const EXT_SCHEMA_URI_ALT = 'https://fiware.github.io/dataModels/'
+const EXT_SCHEMA_URI_GEO = 'http://geojson.org/schema/Geometry.json#'
 
 if (!await _.pathExists(SCHEMA_FOLDER)) {
   console.log('cloning ' + SCHEMA_REPOSITORY)
