@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "#Rule",
+  "title": "Rule",
+  "description": "The Rule class is the parent of the Permission, Prohibition, and Duty classes. The Rule class represents the common characteristics of these three classes. A Rule class MUST be disjoint with all other Rule subclasses.",
+  "type": "object",
+  "required": [
+    "action"
+  ],
+  "properties": {
+    "uid": {
+      "description": "A Rule MAY have none or one uid property values (of type IRI) to identify the Rule so it MAY be referenced by other Rules.",
+      "$ref": "IRI.schema.json#IRI"
+    },
+    "action": {
+      "description": "A Rule MUST have one action property value of type Action.",
+      "oneOf": [
+        {
+          "$ref": "Action.schema.json#Action"
+        },
+        {
+          "$ref": "ActionInstance.schema.json#ActionInstance"
+        }
+      ]
+    },
+    "refinement": {
+      "description": "A Rule MAY have none, one or many constraint property values of type Constraint/LogicalConstraint.",
+      "type": "array",
+      "items": {
+        "$ref": "ConstraintOrLogicalConstraint.schema.json#ConstraintOrLogicalConstraint"
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "https://tmforum-rand.github.io/schemas/Common/EntityRef.schema.json#EntityRef"
+    }
+  ]
+}

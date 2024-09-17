@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "#Policy",
+  "title": "Policy",
+  "description": "The ODRL Information Model represents Policies that express Permissions, Prohibitions and Duties related to the usage of Asset resources. The Information Model explicitly expresses what is allowed and what is not allowed by the Policy, as well as other terms, requirements, and parties involved.",
+  "type": "object",
+  "required": [
+    "uid"
+  ],
+  "properties": {
+    "uid": {
+      "description": "A Policy MUST have one uid property value (of type IRI) to identify the Policy.",
+      "$ref": "IRI.schema.json#IRI"
+    },
+    "permission": {
+      "description": "A Policy MUST have at least one permission, prohibition, or obligation property values of type Rule.",
+      "type": "array",
+      "items": {
+        "$ref": "Permission.schema.json#Permission"
+      }
+    },
+    "prohibition": {
+      "description": "A Policy MUST have at least one permission, prohibition, or obligation property values of type Rule.",
+      "type": "array",
+      "items": {
+        "$ref": "Prohibition.schema.json#Prohibition"
+      }
+    },
+    "obligation": {
+      "description": "A Policy MUST have at least one permission, prohibition, or obligation property values of type Rule.",
+      "type": "array",
+      "items": {
+        "$ref": "Duty.schema.json#Duty"
+      }
+    },
+    "profile": {
+      "description": "A Policy MAY have none, one, or many profile property values (of type IRI) to identify the ODRL Profile that this Policy conforms to.",
+      "type": "array",
+      "items": {
+        "$ref": "IRI.schema.json#IRI"
+      }
+    },
+    "inheritFrom": {
+      "description": "A Policy MAY have none, one, or many inheritFrom property values (of type IRI) to identify the parent Policy from which this child Policy inherits from.",
+      "type": "array",
+      "items": {
+        "$ref": "IRI.schema.json#IRI"
+      }
+    },
+    "conflict": {
+      "description": "A Policy MAY have none or one conflict property values (of type ConflictTerm) for Conflict Strategy Preferences indicating how to handle Policy conflicts.",
+      "$ref": "ConflictTermInstance.schema.json#ConflictTermInstance"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "https://tmforum-rand.github.io/schemas/Common/EntityRef.schema.json#EntityRef"
+    },
+    {
+      "$ref": "https://tmforum-rand.github.io/schemas/Product/ProductOfferingTerm.schema.json#ProductOfferingTerm"
+    }
+  ]
+}

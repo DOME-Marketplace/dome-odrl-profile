@@ -1,32 +1,26 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "MarketplaceRestriction.schema.json",
+  "$id": "#MarketplaceRestriction",
   "title": "MarketplaceRestriction",
-  "definitions": {
-    "MarketplaceRestriction": {
-      "$id": "#MarketplaceRestriction",
-      "description": "",
-      "type": "object",
-      "properties": {
-        "prohibitedMarketplace": {
-          "type": "array",
-          "items": {
-            "$ref": "MarketplaceRef.schema.json#/definitions/MarketplaceRef"
-          }
-        },
-        "prohibitedLegalRegion": {
-          "type": "array",
-          "items": {
-            "$ref": "GeographicAddressRefOrValue.schema.json#/definitions/GeographicAddressRefOrValue"
-          }
-        }
-      },
-      "required": [],
-      "allOf": [
-        {
-          "$ref": "https://tmforum-rand.github.io/schemas/Product/ProductOfferingTerm.schema.json#/definitions/ProductOfferingTerm"
-        }
-      ]
+  "description": "",
+  "type": "object",
+  "properties": {
+    "prohibitedMarketplace": {
+      "type": "array",
+      "items": {
+        "$ref": "MarketplaceRef.schema.json#MarketplaceRef"
+      }
+    },
+    "prohibitedLegalRegion": {
+      "type": "array",
+      "items": {
+        "$ref": "GeographicAddressRefOrValue.schema.json#GeographicAddressRefOrValue"
+      }
     }
-  }
+  },
+  "allOf": [
+    {
+      "$ref": "https://tmforum-rand.github.io/schemas/Product/ProductOfferingTerm.schema.json#ProductOfferingTerm"
+    }
+  ]
 }

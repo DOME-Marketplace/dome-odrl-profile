@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "#ConstraintOrLogicalConstraint",
+  "title": "ConstraintOrLogicalConstraint",
+  "description": "Constraints are boolean/logical expressions that can be used to refine the semantics of an Action and Party/Asset Collection or declare the conditions applicable to a Rule. Constraints can be represented as a Constraint class or Logical Constraint class. A Logical Constraint will refer to existing Constraints as its operands. When multiple Constraints apply to the same Rule, Action, Party/Asset Collection, then they are interpreted as conjunction and all MUST be satisfied.",
+  "type": "object",
+  "oneOf": [
+    {
+      "$ref": "Constraint.schema.json#Constraint"
+    },
+    {
+      "$ref": "LogicalConstraint.schema.json#LogicalConstraint"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "#LogicalConstraint",
+  "title": "LogicalConstraint",
+  "description": "A Logical Constraint class is used for expressions which compare two or more operands which are existing Constraints by one logical operator. If the comparison returns a logical match, then the Logical Constraint is satisfied, otherwise it is not satisfied. For example, three Constraints could be logically and-ed indicating that all three must be true for the Logical Constraint to be satisfied.",
+  "type": "object",
+  "properties": {
+    "uid": {
+      "description": "A Logical Constraint MAY have none or one uid property value (of type IRI) to identify the Logical Constraint.",
+      "$ref": "IRI.schema.json#IRI"
+    }
+  },
+  "oneOf": [
+    {
+      "description": "at least one of the Constraints MUST be satisfied",
+      "required": [
+        "or"
+      ],
+      "properties": {
+        "or": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "$ref": "Constraint.schema.json#Constraint"
+          }
+        }
+      }
+    },
+    {
+      "description": "only one, and not more, of the Constraints MUST be satisfied",
+      "required": [
+        "xone"
+      ],
+      "properties": {
+        "xone": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "$ref": "Constraint.schema.json#Constraint"
+          }
+        }
+      }
+    },
+    {
+      "description": "all of the Constraints MUST be satisfied",
+      "required": [
+        "and"
+      ],
+      "properties": {
+        "and": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "$ref": "Constraint.schema.json#Constraint"
+          }
+        }
+      }
+    },
+    {
+      "description": "all of the Constraints - in sequence - MUST be satisfied",
+      "required": [
+        "andSequence"
+      ],
+      "properties": {
+        "andSequence": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "$ref": "Constraint.schema.json#Constraint"
+          }
+        }
+      }
+    }
+  ],
+  "allOf": [
+    {
+      "$ref": "https://tmforum-rand.github.io/schemas/Common/EntityRef.schema.json#EntityRef"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "#DataTypeInstance",
+  "title": "DataTypeInstance",
+  "description": "",
+  "type": "string",
+  "enum": [
+    "xsd:duration",
+    "xsd:dateTime",
+    "xsd:time",
+    "xsd:date",
+    "xsd:string",
+    "xsd:boolean",
+    "xsd:decimal",
+    "xsd:integer",
+    "xsd:anyURI"
+  ]
+}

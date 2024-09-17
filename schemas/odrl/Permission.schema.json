@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "#Permission",
+  "title": "Permission",
+  "description": "A Permission allows an action, with all refinements satisfied, to be exercised on an Asset if all constraints are satisfied and if all duties are fulfilled.",
+  "type": "object",
+  "required": [
+    "target"
+  ],
+  "properties": {
+    "target": {
+      "description": "A Permission MUST have one target property value of type Asset.",
+      "$ref": "Asset.schema.json#Asset"
+    },
+    "assigner": {
+      "description": "A Permission MAY have none or one assigner property value of type Party.",
+      "$ref": "Party.schema.json#Party"
+    },
+    "assignee": {
+      "description": "A Permission MAY have none or one assignee property value of type Party.",
+      "$ref": "Party.schema.json#Party"
+    },
+    "duty": {
+      "description": "A Permission MAY have none, one, or more duty property values of type Duty.",
+      "type": "array",
+      "items": {
+        "$ref": "Duty.schema.json#Duty"
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "https://tmforum-rand.github.io/schemas/Common/EntityRef.schema.json#EntityRef"
+    },
+    {
+      "$ref": "Rule.schema.json#Rule"
+    }
+  ]
+}

@@ -1,16 +1,15 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "#MarketplaceRef",
-  "title": "MarketplaceRef",
-  "description": "",
+  "$id": "#Operator",
+  "title": "Operator",
+  "description": "Operator for constraint expression.",
   "type": "object",
   "required": [
     "id"
   ],
   "properties": {
     "id": {
-      "type": "string",
-      "description": "Unique identifier of a related marketplace."
+      "$ref": "OperatorInstance.schema.json#OperatorInstance"
     }
   },
   "allOf": [

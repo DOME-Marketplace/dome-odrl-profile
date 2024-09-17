@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "#UnitInstance",
+  "title": "UnitInstance",
+  "description": "",
+  "type": "string",
+  "format": "uri",
+  "enum": [
+    "http://dbpedia.org/resource/Euro"
+  ]
+}
