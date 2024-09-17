@@ -12,6 +12,7 @@
 ```json
 // Simplified Term
 {
+  "@type": "MarketplaceRestriction",
   "prohibitedMarketplace": [
     { "id": "urn:ngsi-ld:marketplace:uuid-of-aruba-marketplace" }
   ]
@@ -21,12 +22,11 @@
 ```json
 // ODRL Policy
 {
+  "@type": "Policy",
   "prohibition": [
     {
       "action": "use",
-      "target": { "uid": "urn:ngsi-ld:product-offering:uuid-of-this-offering" },
-      "assignee": { "uid": "urn:ngsi-ld:marketplace:uuid-of-aruba-marketplace" },
-      "assigner": { "uid": "urn:ngsi-ld:marketplace:uuid-of-dhub-marketplace" }
+      "assignee": { "uid": "urn:ngsi-ld:marketplace:uuid-of-aruba-marketplace" }
     }
   ]
 }
@@ -38,6 +38,7 @@
 ```json
 // Simplified Term
 {
+  "@type": "MarketplaceRestriction",
   "prohibitedLegalRegion": [
     { "id": "urn:ngsi-ld:country:russia" }
   ]
@@ -47,17 +48,17 @@
 ```json
 // ODRL Policy
 {
+  "@type": "Policy",
   "prohibition": [
     {
       "action": "use",
-      "target": { "uid": "urn:ngsi-ld:product-offering:uuid-of-this-offering" },
       "assignee": { 
         "source": "urn:ngsi-ld:marketplace-group:federated-marketplaces",
         "refinement": [
           {
             "leftOperand": "legalEntity",
             "operator": "locatedIn",
-            "rightOperand": { "uid": "urn:ngsi-ld:country:russia" }
+            "rightOperand": { "id": "urn:ngsi-ld:country:russia" }
           }
         ]
       }
@@ -72,6 +73,7 @@
 ```json
 // Simplified Term
 {
+  "@type": "MarketplaceRestriction",
   "prohibitedMarketplace": [
     { "id": "urn:ngsi-ld:marketplace:uuid-of-competitors-marketplace" }
   ]
@@ -81,12 +83,11 @@
 ```json
 // ODRL Policy
 {
+  "@type": "Policy",
   "prohibition": [
     {
       "action": "use",
-      "target": { "uid": "urn:ngsi-ld:product-offering:uuid-of-this-offering" },
-      "assignee": { "uid": "urn:ngsi-ld:marketplace:uuid-of-competitors-marketplace" },
-      "assigner": { "uid": "urn:ngsi-ld:marketplace:uuid-of-csi-marketplace" }
+      "assignee": { "uid": "urn:ngsi-ld:marketplace:uuid-of-competitors-marketplace" }
     }
   ]
 }
@@ -101,6 +102,7 @@
 ```json
 // Simplified Term
 {
+  "@type": "CustomerRestriction",
   "permittedCustomerRegion": [
     { "id": "urn:ngsi-ld:country:spain" }
   ]
@@ -110,21 +112,20 @@
 ```json
 // ODRL Policy
 {
+  "@type": "Policy",
   "permission": [
     {
       "action": "accept",
-      "target": { "uid": "urn:ngsi-ld:product-offering:uuid-of-this-offering" },
-      "assignee": { 
+      "assignee": {
         "source": "urn:ngsi-ld:customer-group:all-customers",
         "refinement": [
           {
             "leftOperand": "customerResidence",
             "operator": "locatedIn",
-            "rightOperand": { "uid": "urn:ngsi-ld:country:spain" }
+            "rightOperand": { "id": "urn:ngsi-ld:country:spain" }
           }
         ]
-       },
-      "assigner": { "uid": "urn:ngsi-ld:marketplace:uuid-of-da-marketplace" }
+       }
     }
   ]
 }
@@ -136,6 +137,17 @@
 ```json
 // Simplified Term
 {
+  "@type": "CustomerRestriction",
+  "permittedCustomerRegion": [
+    { "id": "urn.ngsi-ld:country-group:europe" }
+  ]
+}
+```
+
+```json
+// Simplified Term
+{
+  "@type": "CustomerRestriction",
   "permittedCustomerRegion": [
     { "id": "urn.ngsi-ld:country:AT" },
     { "id": "urn.ngsi-ld:country:BE" },
@@ -171,10 +183,10 @@
 ```json
 // ODRL Policy
 {
+  "@type": "Policy",
   "permission": [
     {
       "action": "accept",
-      "target": { "uid": "urn:ngsi-ld:product-offering:uuid-of-this-offering" },
       "assignee": { 
         "source": "urn:ngsi-ld:customer-group:all-customers",
         "refinement": [
@@ -182,11 +194,10 @@
             "leftOperand": "customerResidence",
             "operator": "locatedIn",
             // can be resolved into geospacial area
-            "rightOperand": { "uid": "urn:ngsi-ld:country-group:europe" } 
+            "rightOperand": { "id": "urn:ngsi-ld:country-group:europe" } 
           }
         ]
-       },
-      "assigner": { "uid": "urn:ngsi-ld:marketplace:uuid-of-csi-marketplace" }
+       }
     }
   ]
 }
@@ -198,9 +209,19 @@
 ```json
 // Simplified Term
 {
+  "@type": "CustomerRestriction",
   "permittedCustomerRegion": [
-    { 
-      // geospatial area 3000km of italy as TMForum GeographicAddress
+    {
+      "geographicLocation": {
+        "@type": "GeoJsonPolygon",
+        "bbox": [],
+        "geoJson": {
+          "type": "Polygon",
+          "coordinates": [
+            // area 3000km of italy as geojson polygon
+          ]
+        }
+      }
     }
   ]
 }
@@ -212,20 +233,18 @@
   "permission": [
     {
       "action": "accept",
-      "target": { "uid": "urn:ngsi-ld:product-offering:uuid-of-the-specific-offering-option" },
       "assignee": { 
         "source": "urn:ngsi-ld:customer-group:all-customers",
         "refinement": [
           {
             "leftOperand": "customerResidence",
             "operator": "locatedIn",
-            "rightOperand": { 
+            "rightOperand": {
               // geospatial area 3000km of italy as GeoJSON-format
             }
           }
         ]
-       },
-      "assigner": { "uid": "urn:ngsi-ld:marketplace:uuid-of-dhub-marketplace" }
+       }
     }
   ]
 }
@@ -239,6 +258,7 @@
 ```json
 // Simplified Term
 {
+  "@type": "VisibilityRestriction",
   "hiddenProperty": [
     "productOfferingPrice"
   ]
@@ -252,6 +272,7 @@
 ```json
 // Simplified Term
 {
+  "@type": "VisibilityRestriction",
   "hiddenProperty": [
     "productOfferingPrice"
   ]
@@ -264,6 +285,7 @@
 ```json
 // Simplified Term
 {
+  "@type": "VisibilityRestriction",
   "hiddenProperty": [
     "productOfferingPrice"
   ]
@@ -277,75 +299,5 @@
 
 ## Schema
 
-```json
-{
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "definitions": {
-    "MarketplaceRestriction": {
-      "title": "MarketplaceRestriction",
-      "description": "",
-      "type": "object",
-      "properties": {
-        "prohibitedMarketplace": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/MarketplaceRef"
-          }
-        },
-        "prohibitedLegalRegion": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/GeographicAddressRefOrValue"
-          }
-        }
-      },
-      "allOf": [
-        {
-          "$ref": "#/definitions/ProductOfferingTerm"
-        }
-      ]
-    },
-    "CustomerRestriction": {
-      "title": "CustomerRestriction",
-      "description": "",
-      "type": "object",
-      "properties": {
-        "permittedCustomerRegion": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/GeographicAddressRefOrValue"
-          }
-        }
-      },
-      "allOf": [
-        {
-          "$ref": "#/definitions/ProductOfferingTerm"
-        }
-      ]
-    },
-    "GeographicAddressRefOrValue": {
-      "title": "GeographicAddressRefOrValue",
-      "description": "",
-      "type": "object",
-      "oneOf": [
-        {
-          "$ref": "#/definitions/GeographicAddressRef"
-        },
-        {
-          "$ref": "#/definitions/GeographicAddress"
-        }
-      ]
-    },
-    "MarketplaceRef": {
-      "title": "MarketplaceRef",
-      "description": "",
-      "type": "object",
-      "oneOf": [
-        {
-          "$ref": "#/definitions/EntityRef"
-        }
-      ]
-    }
-  }
-}
-```
+- [Simplified Schema](../schemas/simplified/)
+- [ODRL Schema](../schemas/odrl/)
