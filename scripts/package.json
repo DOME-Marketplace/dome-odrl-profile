@@ -6,7 +6,8 @@
   "scripts": {
     "import-tmforum-apis-model": "tsx import-tmforum-apis-model.ts",
     "generate-digitalbazaar-declarations": "tsx generate-digitalbazaar-declarations",
-    "create-signed-offering": "tsx create-signed-offering"
+    "create-signed-offering": "tsx create-signed-offering",
+    "generate-tmforum-schemata": "tsx generate-tmforum-schemata.ts"
   },
   "dependencies": {
     "@digitalbazaar/data-integrity": "^2.2.0",
