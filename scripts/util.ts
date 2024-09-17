@@ -11,6 +11,18 @@ export function isObject(value: unknown): value is Record<any, any> | Array<any>
   return value !== null && typeof value === 'object'
 }
 
+export function isArray(value: unknown): value is Array<any> {
+  return isObject(value) && Array.isArray(value)
+}
+
+export function isRecord(value: unknown): value is Record<any, any> {
+  return isObject(value) && !Array.isArray(value)
+}
+
+export function isString(value: unknown): value is string {
+  return typeof value === 'string'
+}
+
 export function normalizePath(path: string): string {
   return _path.normalize(path).replace(/\\/g, '/')
 }
