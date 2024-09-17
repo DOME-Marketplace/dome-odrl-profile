@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "#Party",
+  "title": "Party",
+  "description": "A Party Class is an entity or a collection of entities that undertake functional roles in a Rule, such as a person, collection of people, organisation, or agent. An agent is a person or thing that takes an active role or produces a specified effect. The Party performs (or does not perform) Actions or has a function in a Duty (i.e., assigns the Party to the Rule by associating it with the function it plays in the Rule).",
+  "type": "object",
+  "properties": {
+    "uid": {
+      "description": "A Party SHOULD have one uid property value (of type IRI) to identify the Party.",
+      "$ref": "IRI.schema.json#IRI"
+    },
+    "partOf": {
+      "description": "A Party MAY have none, one, or many partOf property values (of type PartyCollection) to identify the PartyCollection that this Party is a member of.",
+      "type": "array",
+      "items": {
+        "$ref": "PartyCollection.schema.json#PartyCollection"
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "https://tmforum-rand.github.io/schemas/Common/EntityRef.schema.json#EntityRef"
+    }
+  ]
+}

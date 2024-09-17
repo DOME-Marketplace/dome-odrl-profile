@@ -1,0 +1,91 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "#Constraint",
+  "title": "Constraint",
+  "description": "A Constraint class is used for expressions which compare two operands (which are not Constraints) by one relational operator. If the comparison returns a match the Constraint is satisfied, otherwise it is not satisfied. The Constraint class formulates a comparison expression, such as, the number of usages (the leftOperand) must be smaller than (the operator) the number 10 (the rightOperand).",
+  "type": "object",
+  "required": [],
+  "properties": {
+    "uid": {
+      "description": "A Constraint MAY have none or one uid property value (of type IRI) to identify the Constraint.",
+      "$ref": "IRI.schema.json#IRI"
+    },
+    "leftOperand": {
+      "description": "A Constraint MUST have one leftOperand property value of type LeftOperand.",
+      "$ref": "LeftOperandInstance.schema.json#LeftOperandInstance"
+    },
+    "operator": {
+      "description": "A Constraint MUST have one operator property value of type Operator.",
+      "$ref": "OperatorInstance.schema.json#OperatorInstance"
+    },
+    "dataType": {
+      "description": "A Constraint MAY have none or one dataType property value for the data type of the rightOperand/Reference.",
+      "$ref": "DataTypeInstance.schema.json#DataTypeInstance"
+    },
+    "unit": {
+      "description": "A Constraint MAY have none or one unit property value (of type IRI) to set the unit used for the value of the rightOperand/Reference.",
+      "$ref": "UnitInstance.schema.json#UnitInstance"
+    }
+  },
+  "oneOf": [
+    {
+      "description": "A Constraint MUST have either one rightOperand property value of type literal, or IRI, or RightOperand; or for set-based operators; list of literals, or list of IRIs, or list of RightOperands;",
+      "properties": {
+        "rightOperand": {
+          "oneOf": [
+            {
+              "$ref": "https://tmforum-rand.github.io/schemas/Common/Entity.schema.json#Entity"
+            },
+            {
+              "$ref": "https://tmforum-rand.github.io/schemas/Common/EntityRef.schema.json#EntityRef"
+            },
+            {
+              "$ref": "RightOperand.schema.json#RightOperand"
+            },
+            {
+              "type": "array",
+              "items": {
+                "$ref": "https://tmforum-rand.github.io/schemas/Common/Entity.schema.json#Entity"
+              }
+            },
+            {
+              "type": "array",
+              "items": {
+                "$ref": "https://tmforum-rand.github.io/schemas/Common/EntityRef.schema.json#EntityRef"
+              }
+            },
+            {
+              "type": "array",
+              "items": {
+                "$ref": "RightOperand.schema.json#RightOperand"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "description": "or one rightOperandReference property value of type IRI; or for set-based operators; list of IRIs; for a reference to a right operand value.",
+      "properties": {
+        "rightOperandReference": {
+          "oneOf": [
+            {
+              "$ref": "IRI.schema.json#IRI"
+            },
+            {
+              "type": "array",
+              "items": {
+                "$ref": "IRI.schema.json#IRI"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "allOf": [
+    {
+      "$ref": "https://tmforum-rand.github.io/schemas/Common/EntityRef.schema.json#EntityRef"
+    }
+  ]
+}

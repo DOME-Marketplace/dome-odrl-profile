@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "#IRI",
+  "title": "IRI",
+  "description": "[RFC3987]: IRIs are defined similarly to URIs in [RFC3986], but the class of unreserved characters is extended by adding the characters of the UCS (Universal Character Set, [ISO10646]) beyond U+007F, subject to the limitations given in the syntax rules below and in section 6.1. Otherwise, the syntax and use of components and reserved characters is the same as that in [RFC3986]. All the operations defined in [RFC3986], such as the resolution of relative references, can be applied to IRIs by IRI-processing software in exactly the same way as they are for URIs by URI-processing software. Characters outside the US-ASCII repertoire are not reserved and therefore MUST NOT be used for syntactical purposes, such as to delimit components in newly defined schemes. For example, U+00A2, CENT SIGN, is not allowed as a delimiter in IRIs, because it is in the 'iunreserved' category. This is similar to the fact that it is not possible to use '-' as a delimiter in URIs, because it is in the 'unreserved' category.",
+  "type": "string",
+  "format": "uri"
+}

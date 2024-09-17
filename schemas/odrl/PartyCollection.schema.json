@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "#PartyCollection",
+  "title": "PartyCollection",
+  "description": "a Party that is a single entity representing a set of member entities. This indicates that all the members of the set will undertake the same functional role in the Rule.",
+  "type": "object",
+  "properties": {
+    "source": {
+      "description": "A PartyCollection MAY have one source property value (of type IRI) to reference the PartyCollection.",
+      "$ref": "IRI.schema.json#IRI"
+    },
+    "refinement": {
+      "description": "A PartyCollection MAY include a refinement property to indicate the refinement context under which to identify individual Party(ies) of the complete collection. The refinement property applies to the characteristics of each member of the collection (and not the resource as a whole). To meet this condition of identifying individual Party(ies) of the complete PartyCollection, all of the Constraints/Logical Constraints referenced by the refinement property MUST be satisfied.",
+      "type": "array",
+      "items": {
+        "$ref": "ConstraintOrLogicalConstraint.schema.json#ConstraintOrLogicalConstraint"
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "https://tmforum-rand.github.io/schemas/Common/EntityRef.schema.json#EntityRef"
+    },
+    {
+      "$ref": "Party.schema.json#Party"
+    }
+  ]
+}

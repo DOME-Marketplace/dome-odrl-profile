@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "#Asset",
+  "title": "Asset",
+  "description": "An Asset class is a resource or a collection of resources that are the subject of a Rule. The Asset can be any form of identifiable resource, such as data/information, content/media, applications, services, or physical artefacts. Furthermore, it can be used to represent other Asset classes that are needed to undertake the Policy expression, such as with a Duty. An Asset is referred to by the Permission and/or Prohibition, and also by the Duty.",
+  "type": "object",
+  "properties": {
+    "uid": {
+      "description": "An Asset SHOULD have one uid property value (of type IRI) to identify the Asset.",
+      "$ref": "IRI.schema.json#IRI"
+    },
+    "partOf": {
+      "description": "An Asset MAY have none, one, or many partOf property values (of type AssetCollection) to identify the AssetCollection that this Asset is in a collection of.",
+      "type": "array",
+      "items": {
+        "$ref": "AssetCollection.schema.json#AssetCollection"
+      }
+    },
+    "hasPolicy": {
+      "description": "An ODRL Policy class MAY also be referenced by the hasPolicy property. This supports ODRL Policy Rules being the object of external metadata expressions (that identifies an Asset). When hasPolicy has been asserted between a metadata expression and an ODRL Policy, the Asset being identified MUST be inferred to be the target Asset of all the Rules of that Policy. If there are multiple Rules in the Policy, then the inferred Asset will be the target Asset to every Rule in the Policy.",
+      "type": "array",
+      "items": {
+        "$ref": "Policy.schema.json#Policy"
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "https://tmforum-rand.github.io/schemas/Common/EntityRef.schema.json#EntityRef"
+    }
+  ]
+}

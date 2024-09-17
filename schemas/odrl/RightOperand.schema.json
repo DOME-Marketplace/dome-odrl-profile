@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "#MarketplaceRef",
-  "title": "MarketplaceRef",
+  "$id": "#RightOperand",
+  "title": "RightOperand",
   "description": "",
   "type": "object",
   "required": [
@@ -9,8 +9,7 @@
   ],
   "properties": {
     "id": {
-      "type": "string",
-      "description": "Unique identifier of a related marketplace."
+      "$ref": "RightOperandInstance.schema.json#RightOperandInstance"
     }
   },
   "allOf": [

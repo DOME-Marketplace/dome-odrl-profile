@@ -1,26 +1,20 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "CustomerRestriction.schema.json",
+  "$id": "#CustomerRestriction",
   "title": "CustomerRestriction",
-  "definitions": {
-    "CustomerRestriction": {
-      "$id": "#CustomerRestriction",
-      "description": "",
-      "type": "object",
-      "properties": {
-        "permittedCustomerRegion": {
-          "type": "array",
-          "items": {
-            "$ref": "GeographicAddressRefOrValue.schema.json#/definitions/GeographicAddressRefOrValue"
-          }
-        }
-      },
-      "required": [],
-      "allOf": [
-        {
-          "$ref": "https://tmforum-rand.github.io/schemas/Product/ProductOfferingTerm.schema.json#/definitions/ProductOfferingTerm"
-        }
-      ]
+  "description": "",
+  "type": "object",
+  "properties": {
+    "permittedCustomerRegion": {
+      "type": "array",
+      "items": {
+        "$ref": "GeographicAddressRefOrValue.schema.json#GeographicAddressRefOrValue"
+      }
     }
-  }
+  },
+  "allOf": [
+    {
+      "$ref": "https://tmforum-rand.github.io/schemas/Product/ProductOfferingTerm.schema.json#ProductOfferingTerm"
+    }
+  ]
 }

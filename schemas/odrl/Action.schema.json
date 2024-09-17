@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "#Action",
+  "title": "Action",
+  "description": "An Action class indicates an operation that can be exercised on an Asset. An Action is associated with the Asset via the action property in a Rule. The Rule provides the specific interpretations of the Action. For example; an Action is permitted to be exercised on the target Asset when related to a Permission. When related to a Prohibition, the Action indicates the operation that is prohibited to be exercised on the target Asset. When related to a Duty, the Action indicates the agreed operation that is obligatory to be fulfilled by a Party.",
+  "type": "object",
+  "required": [
+    "id"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "ActionInstance.schema.json#ActionInstance"
+    },
+    "refinement": {
+      "description": "An Action MAY have none, one or more refinement property values (of type Constraint) that refine the semantics of the Action operation. See Constraints section for more details.",
+      "type": "array",
+      "items": {
+        "$ref": "ConstraintOrLogicalConstraint.schema.json#ConstraintOrLogicalConstraint"
+      }
+    },
+    "includedIn": {
+      "description": "An Action (except for use and transfer) MUST have one includedIn property value (of type Action) to transitively assert this Action that encompasses its operational semantics.",
+      "$ref": "#Action"
+    },
+    "implies": {
+      "description": "An Action MAY have none, one or more implies property values (of type Action) to assert this Action is not prohibited to enable its operational semantics.",
+      "type": "array",
+      "items": {
+        "$ref": "#Action"
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "https://tmforum-rand.github.io/schemas/Common/EntityRef.schema.json#EntityRef"
+    }
+  ]
+}

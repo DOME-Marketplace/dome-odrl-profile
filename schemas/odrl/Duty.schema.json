@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "#Duty",
+  "title": "Duty",
+  "description": "A Duty is the obligation to exercise an action, with all refinements satisfied. A Duty is fulfilled if all constraints are satisfied and if its action, with all refinements satisfied, has been exercised. If its action has not been exercised, then all consequences must also be fulfilled to fulfil the Duty. That is, consequences are additional Duties that must also be fulfilled. (Note: only Duties referenced by duty or obligation properties may use consequence properties.)",
+  "type": "object",
+  "properties": {
+    "target": {
+      "description": "A Duty MAY have none or one target property values (of type Asset) to indicate the Asset that is the primary subject to which the Duty directly applies.",
+      "$ref": "Asset.schema.json#Asset"
+    },
+    "assigner": {
+      "description": "A Duty MAY have none or one assigner property value of type Party.",
+      "$ref": "Party.schema.json#Party"
+    },
+    "assignee": {
+      "description": "A Duty MAY have none or one assignee property value of type Party.",
+      "$ref": "Party.schema.json#Party"
+    },
+    "consequence": {
+      "description": "A Duty MAY have none, one or many consequence property values of type Duty only when the Duty is referenced by a Rule with the duty or obligation properties.",
+      "type": "array",
+      "items": {
+        "$ref": "#Duty"
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "https://tmforum-rand.github.io/schemas/Common/EntityRef.schema.json#EntityRef"
+    },
+    {
+      "$ref": "Rule.schema.json#Rule"
+    }
+  ]
+}
