@@ -19,7 +19,7 @@
           "$ref": "Action.schema.json#Action"
         },
         {
-          "$ref": "ActionInstance.schema.json#ActionInstance"
+          "$ref": "ActionValue.schema.json#ActionValue"
         }
       ]
     },

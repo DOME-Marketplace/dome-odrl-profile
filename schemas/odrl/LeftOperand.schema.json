@@ -9,7 +9,7 @@
   ],
   "properties": {
     "id": {
-      "$ref": "LeftOperandInstance.schema.json#LeftOperandInstance"
+      "$ref": "LeftOperandValue.schema.json#LeftOperandValue"
     }
   },
   "allOf": [

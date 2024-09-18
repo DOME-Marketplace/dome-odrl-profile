@@ -9,7 +9,7 @@
   ],
   "properties": {
     "id": {
-      "$ref": "ActionInstance.schema.json#ActionInstance"
+      "$ref": "ActionValue.schema.json#ActionValue"
     },
     "refinement": {
       "description": "An Action MAY have none, one or more refinement property values (of type Constraint) that refine the semantics of the Action operation. See Constraints section for more details.",
