@@ -14,14 +14,7 @@
     },
     "action": {
       "description": "A Rule MUST have one action property value of type Action.",
-      "oneOf": [
-        {
-          "$ref": "Action.schema.json#Action"
-        },
-        {
-          "$ref": "ActionValue.schema.json#ActionValue"
-        }
-      ]
+      "$ref": "ActionOrId.schema.json#ActionOrId"
     },
     "refinement": {
       "description": "A Rule MAY have none, one or many constraint property values of type Constraint/LogicalConstraint.",

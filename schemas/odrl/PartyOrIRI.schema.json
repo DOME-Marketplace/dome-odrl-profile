@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "#PartyOrIRI",
+  "title": "PartyOrIRI",
+  "description": "",
+  "oneOf": [
+    {
+      "$ref": "Party.schema.json#Party"
+    },
+    {
+      "$ref": "IRI.schema.json#IRI"
+    }
+  ]
+}

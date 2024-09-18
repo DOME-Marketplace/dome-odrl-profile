@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "#UnitValue",
-  "title": "UnitValue",
+  "$id": "#UnitId",
+  "title": "UnitId",
   "description": "",
   "type": "string",
   "format": "uri",

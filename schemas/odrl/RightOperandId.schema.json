@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "#RightOperandValue",
-  "title": "RightOperandValue",
+  "$id": "#RightOperandId",
+  "title": "RightOperandId",
   "description": "Instances of the RightOperand class are used as the rightOperand of a Constraint.",
   "type": "string",
   "enum": [

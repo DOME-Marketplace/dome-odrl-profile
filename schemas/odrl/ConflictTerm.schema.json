@@ -9,7 +9,7 @@
   ],
   "properties": {
     "id": {
-      "$ref": "ConflictTermValue.schema.json#ConflictTermValue"
+      "$ref": "ConflictTermId.schema.json#ConflictTermId"
     }
   },
   "allOf": [

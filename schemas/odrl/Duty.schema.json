@@ -7,15 +7,15 @@
   "properties": {
     "target": {
       "description": "A Duty MAY have none or one target property values (of type Asset) to indicate the Asset that is the primary subject to which the Duty directly applies.",
-      "$ref": "Asset.schema.json#Asset"
+      "$ref": "AssetOrIRI.schema.json#AssetOrIRI"
     },
     "assigner": {
       "description": "A Duty MAY have none or one assigner property value of type Party.",
-      "$ref": "Party.schema.json#Party"
+      "$ref": "PartyOrIRI.schema.json#PartyOrIRI"
     },
     "assignee": {
       "description": "A Duty MAY have none or one assignee property value of type Party.",
-      "$ref": "Party.schema.json#Party"
+      "$ref": "PartyOrIRI.schema.json#PartyOrIRI"
     },
     "consequence": {
       "description": "A Duty MAY have none, one or many consequence property values of type Duty only when the Duty is referenced by a Rule with the duty or obligation properties.",
