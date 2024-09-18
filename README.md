@@ -61,6 +61,10 @@
   - [LogicalConstraint](schemas/odrl/LogicalConstraint.schema.json)
     - [ConstraintOrLogicalConstraint](schemas/odrl/ConstraintOrLogicalConstraint.schema.json)
 
+## Profiles
+
+- [Marketplace Offerings](profiles/marketplace-offerings.md)
+
 ## Model
 
 - [Core Vocabulary](model/dome.ttl)
