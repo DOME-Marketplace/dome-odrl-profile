@@ -26,7 +26,7 @@
 {
   "@type": "Policy",
   "uid": "urn:ngsi-ld:policy:uuid-of-the-policy",
-  "profile": "https://dome-marketplace.eu/odrl-profile/catalogue-replication",
+  "profile": "https://dome-marketplace.eu/odrl-profile/marketplace-offerings",
   "prohibition": [
     {
       "action": "use",
@@ -59,7 +59,7 @@
 {
   "@type": "Policy",
   "uid": "urn:ngsi-ld:policy:uuid-of-the-policy",
-  "profile": "https://dome-marketplace.eu/odrl-profile/catalogue-replication",
+  "profile": "https://dome-marketplace.eu/odrl-profile/marketplace-offerings",
   "prohibition": [
     {
       "action": "use",
@@ -96,7 +96,7 @@
 {
   "@type": "Policy",
   "uid": "urn:ngsi-ld:policy:uuid-of-the-policy",
-  "profile": "https://dome-marketplace.eu/odrl-profile/catalogue-replication",
+  "profile": "https://dome-marketplace.eu/odrl-profile/marketplace-offerings",
   "prohibition": [
     {
       "action": "use",
@@ -127,7 +127,7 @@
 {
   "@type": "Policy",
   "uid": "urn:ngsi-ld:policy:uuid-of-the-policy",
-  "profile": "https://dome-marketplace.eu/odrl-profile/catalogue-replication",
+  "profile": "https://dome-marketplace.eu/odrl-profile/marketplace-offerings",
   "permission": [
     {
       "action": "accept",
@@ -135,7 +135,7 @@
         "source": "urn:ngsi-ld:customer-group:all-customers",
         "refinement": [
           {
-            "leftOperand": "customerResidence",
+            "leftOperand": "residence",
             "operator": "locatedIn",
             "rightOperand": { "id": "urn:ngsi-ld:country:spain" }
           }
@@ -200,7 +200,7 @@
 {
   "@type": "Policy",
   "uid": "urn:ngsi-ld:policy:uuid-of-the-policy",
-  "profile": "https://dome-marketplace.eu/odrl-profile/catalogue-replication",
+  "profile": "https://dome-marketplace.eu/odrl-profile/marketplace-offerings",
   "permission": [
     {
       "action": "accept",
@@ -208,7 +208,7 @@
         "source": "urn:ngsi-ld:customer-group:all-customers",
         "refinement": [
           {
-            "leftOperand": "customerResidence",
+            "leftOperand": "residence",
             "operator": "locatedIn",
             // can be resolved into geospacial area
             "rightOperand": { "id": "urn:ngsi-ld:country-group:europe" } 
@@ -247,6 +247,9 @@
 ```json
 // ODRL Policy
 {
+  "@type": "Policy",
+  "uid": "urn:ngsi-ld:policy:uuid-of-the-policy",
+  "profile": "https://dome-marketplace.eu/odrl-profile/marketplace-offerings",
   "permission": [
     {
       "action": "accept",
@@ -254,7 +257,7 @@
         "source": "urn:ngsi-ld:customer-group:all-customers",
         "refinement": [
           {
-            "leftOperand": "customerResidence",
+            "leftOperand": "residence",
             "operator": "locatedIn",
             "rightOperand": {
               // geospatial area 3000km of italy as GeoJSON-format
