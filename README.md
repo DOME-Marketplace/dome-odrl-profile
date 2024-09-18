@@ -1,5 +1,10 @@
 # ODRL Profile for DOME
 
+## Links
+
+- [ODRL Information Model](https://www.w3.org/TR/odrl-model/)
+- [ODRL Vocabulary & Expression](https://www.w3.org/TR/odrl-vocab/)
+
 ## Documents
 
 - [Catalogue Replication and Visibility](docs/catalogue-replication-and-visibility.md)
@@ -17,6 +22,45 @@
 - [Catalogue visibility control](docs/catalogue-visibility-control.md)
   - [Use cases](docs/catalogue-visibility-control.md#use-cases)
 
+## Schemas
+
+- **Simplified**
+  - [MarketplaceRestriction](schemas/simplified/MarketplaceRestriction.schema.json)
+    - [MarketplaceRef](schemas/simplified/MarketplaceRef.schema.json)
+    - [GeographicAddressRefOrValue](schemas/simplified/GeographicAddressRefOrValue.schema.json)
+  - [CustomerRestriction](schemas/simplified/CustomerRestriction.schema.json)
+  - [VisibilityRestriction](schemas/simplified/VisibilityRestriction.schema.json)
+- **ODRL**
+  - [Policy](schemas/odrl/Policy.schema.json)
+    - [IRI](schemas/odrl/IRI.schema.json)
+    - [ConflictTerm](schemas/odrl/ConflictTerm.schema.json)
+      - [ConflictTermId](schemas/odrl/ConflictTermId.schema.json)
+  - [Rule](schemas/odrl/Rule.schema.json)
+    - [Permission](schemas/odrl/Permission.schema.json)
+    - [Prohibition](schemas/odrl/Prohibition.schema.json)
+    - [Duty](schemas/odrl/Duty.schema.json)
+  - [Action](schemas/odrl/Action.schema.json)
+    - [ActionId](schemas/odrl/ActionId.json)
+    - [ActionOrId](schemas/odrl/ActionOrId.schema.json)
+  - [Asset](schemas/odrl/Asset.schema.json)
+    - [AssetCollection](schemas/odrl/AssetCollection.schema.json)
+    - [AssetOrIRI](schemas/odrl/AssetOrIRI.schema.json)
+  - [Party](schemas/odrl/Party.schema.json)
+    - [PartyCollection](schemas/odrl/PartyCollection.schema.json)
+    - [PartyOrIRI](schemas/odrl/PartyOrIRI.schema.json)
+  - [Constraint](schemas/odrl/Constraint.schema.json)
+    - [LeftOperand](schemas/odrl/LeftOperand.schema.json)
+      - [LeftOperandId](schemas/odrl/LeftOperandId.schema.json)
+    - [Operator](schemas/odrl/Operator.schema.json)
+      - [OperatorId](schemas/odrl/OperatorId.schema.json)
+    - [RightOperand](schemas/odrl/RightOperand.schema.json)
+      - [RightOperandId](schemas/odrl/RightOperandId.schema.json)
+      - [RightOperandReference](schemas/odrl/RightOperandReference.schema.json)
+    - [UnitId](schemas/odrl/UnitId.schema.json)
+    - [DataTypeId](schemas/odrl/DataTypeId.schema.json)
+  - [LogicalConstraint](schemas/odrl/LogicalConstraint.schema.json)
+    - [ConstraintOrLogicalConstraint](schemas/odrl/ConstraintOrLogicalConstraint.schema.json)
+
 ## Model
 
 - [Core Vocabulary](model/dome.ttl)
@@ -26,26 +70,6 @@
 ## Policies
 
 - [Example](policies/example.ttl)
-
-## Schemas
-
-- **ODRL**
-  - [PolicySchema](schemas/odrl/Policy.schema.json)
-  - [RuleSchema](schemas/odrl/Rule.schema.json)
-  - [ActionSchema](schemas/odrl/Action.schema.json)
-  - [AssetSchema](schemas/odrl/Asset.schema.json)
-  - [PartySchema](schemas/odrl/Party.schema.json)
-  - [ConstraintSchema](schemas/odrl/Constraint.schema.json)
-- **TMForum** _(only necessary parts for ODRL)_
-  - [CommonSchema](schemas/tmforum/Common.schema.json)
-  - [ProductSchema](schemas/tmforum/Product.schema.json)
-  - [ResourceSchema](schemas/tmforum/Resource.schema.json)
-  - [ServiceSchema](schemas/tmforum/Service.schema.json)
-  - [EngagedPartySchema](schemas/tmforum/EngagedParty.schema.json)
-  - [MarketingSalesSchema](schemas/tmforum/MarketingSales.schema.json)
-- **Custom**
-  - [Draft 01](schemas/custom/Draft-01.schema.json)
-  - [Draft 02](schemas/custom/Draft-02.schema.json)
 
 ## Draft
 
