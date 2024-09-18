@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "#LeftOperandValue",
-  "title": "LeftOperandValue",
+  "$id": "#LeftOperandId",
+  "title": "LeftOperandId",
   "description": "Instances of the LeftOperand class are used as the leftOperand of a Constraint.",
   "type": "string",
   "enum": [

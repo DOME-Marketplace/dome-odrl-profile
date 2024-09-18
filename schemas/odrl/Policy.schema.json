@@ -35,10 +35,17 @@
     },
     "profile": {
       "description": "A Policy MAY have none, one, or many profile property values (of type IRI) to identify the ODRL Profile that this Policy conforms to.",
-      "type": "array",
-      "items": {
-        "$ref": "IRI.schema.json#IRI"
-      }
+      "oneOf": [
+        {
+          "$ref": "IRI.schema.json#IRI"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "IRI.schema.json#IRI"
+          }
+        }
+      ]
     },
     "inheritFrom": {
       "description": "A Policy MAY have none, one, or many inheritFrom property values (of type IRI) to identify the parent Policy from which this child Policy inherits from.",
@@ -49,7 +56,7 @@
     },
     "conflict": {
       "description": "A Policy MAY have none or one conflict property values (of type ConflictTerm) for Conflict Strategy Preferences indicating how to handle Policy conflicts.",
-      "$ref": "ConflictTermValue.schema.json#ConflictTermValue"
+      "$ref": "ConflictTermId.schema.json#ConflictTermId"
     }
   },
   "allOf": [

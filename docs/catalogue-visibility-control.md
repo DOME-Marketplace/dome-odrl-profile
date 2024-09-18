@@ -25,9 +25,16 @@
 // ODRL Policy
 {
   "@type": "Policy",
+  "uid": "urn:ngsi-ld:policy:uuid-of-the-policy",
+  "profile": "https://dome-marketplace.eu/odrl-profile/catalogue-replication",
   "prohibition": [
     {
       "action": "use",
+      // Because the policy is references by the offering, it could be seen as if referenced by an asset via hasPolicy.
+      // The hasPolicy reference has to be interpreted as if the asset is the target for each rule of the policy.
+      // If this interpretation is not intended and a rule should be able to address specific entities in the offering,
+      // the target property must always be used to specify the target of the rule, even if the target is the offering itself.
+      // E.g. "target": { "uid": "urn:ngsi-ld:product-offering:81346322-4e4e-4aed-ac06-b831077ad48f" }
       "assignee": { "uid": "urn:ngsi-ld:marketplace:uuid-of-aruba-marketplace" }
     }
   ]
@@ -51,6 +58,8 @@
 // ODRL Policy
 {
   "@type": "Policy",
+  "uid": "urn:ngsi-ld:policy:uuid-of-the-policy",
+  "profile": "https://dome-marketplace.eu/odrl-profile/catalogue-replication",
   "prohibition": [
     {
       "action": "use",
@@ -86,6 +95,8 @@
 // ODRL Policy
 {
   "@type": "Policy",
+  "uid": "urn:ngsi-ld:policy:uuid-of-the-policy",
+  "profile": "https://dome-marketplace.eu/odrl-profile/catalogue-replication",
   "prohibition": [
     {
       "action": "use",
@@ -115,6 +126,8 @@
 // ODRL Policy
 {
   "@type": "Policy",
+  "uid": "urn:ngsi-ld:policy:uuid-of-the-policy",
+  "profile": "https://dome-marketplace.eu/odrl-profile/catalogue-replication",
   "permission": [
     {
       "action": "accept",
@@ -186,6 +199,8 @@
 // ODRL Policy
 {
   "@type": "Policy",
+  "uid": "urn:ngsi-ld:policy:uuid-of-the-policy",
+  "profile": "https://dome-marketplace.eu/odrl-profile/catalogue-replication",
   "permission": [
     {
       "action": "accept",

@@ -10,15 +10,15 @@
   "properties": {
     "target": {
       "description": "A Prohibition MUST have one target property value of type Asset.",
-      "$ref": "Asset.schema.json#Asset"
+      "$ref": "AssetOrIRI.schema.json#AssetOrIRI"
     },
     "assigner": {
       "description": "A Prohibition MAY have none or one assigner property value of type Party.",
-      "$ref": "Party.schema.json#Party"
+      "$ref": "PartyOrIRI.schema.json#PartyOrIRI"
     },
     "assignee": {
       "description": "A Prohibition MAY have none or one assignee property value of type Party.",
-      "$ref": "Party.schema.json#Party"
+      "$ref": "PartyOrIRI.schema.json#PartyOrIRI"
     },
     "remedy": {
       "description": "A Prohibition MAY have none, one, or more remedy property values of type Duty.",

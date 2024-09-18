@@ -9,7 +9,7 @@
   ],
   "properties": {
     "id": {
-      "$ref": "OperatorValue.schema.json#OperatorValue"
+      "$ref": "OperatorId.schema.json#OperatorId"
     }
   },
   "allOf": [

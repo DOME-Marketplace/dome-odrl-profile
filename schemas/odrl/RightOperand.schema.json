@@ -11,7 +11,7 @@
       ],
       "properties": {
         "id": {
-          "$ref": "RightOperandValue.schema.json#RightOperandValue"
+          "$ref": "RightOperandId.schema.json#RightOperandId"
         }
       },
       "allOf": [
