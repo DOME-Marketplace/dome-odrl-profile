@@ -12,19 +12,19 @@
     },
     "leftOperand": {
       "description": "A Constraint MUST have one leftOperand property value of type LeftOperand.",
-      "$ref": "LeftOperandInstance.schema.json#LeftOperandInstance"
+      "$ref": "LeftOperandValue.schema.json#LeftOperandValue"
     },
     "operator": {
       "description": "A Constraint MUST have one operator property value of type Operator.",
-      "$ref": "OperatorInstance.schema.json#OperatorInstance"
+      "$ref": "OperatorValue.schema.json#OperatorValue"
     },
     "dataType": {
       "description": "A Constraint MAY have none or one dataType property value for the data type of the rightOperand/Reference.",
-      "$ref": "DataTypeInstance.schema.json#DataTypeInstance"
+      "$ref": "DataTypeValue.schema.json#DataTypeValue"
     },
     "unit": {
       "description": "A Constraint MAY have none or one unit property value (of type IRI) to set the unit used for the value of the rightOperand/Reference.",
-      "$ref": "UnitInstance.schema.json#UnitInstance"
+      "$ref": "UnitValue.schema.json#UnitValue"
     }
   },
   "oneOf": [

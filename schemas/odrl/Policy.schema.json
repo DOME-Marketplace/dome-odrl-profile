@@ -49,7 +49,7 @@
     },
     "conflict": {
       "description": "A Policy MAY have none or one conflict property values (of type ConflictTerm) for Conflict Strategy Preferences indicating how to handle Policy conflicts.",
-      "$ref": "ConflictTermInstance.schema.json#ConflictTermInstance"
+      "$ref": "ConflictTermValue.schema.json#ConflictTermValue"
     }
   },
   "allOf": [

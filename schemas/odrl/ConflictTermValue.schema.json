@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "#ConflictTermInstance",
-  "title": "ConflictTermInstance",
+  "$id": "#ConflictTermValue",
+  "title": "ConflictTermValue",
   "description": "The conflict property SHOULD take one of the following Conflict Strategy Preference values (instance of the ConflictTerm class): 1. perm: the Permissions MUST override the Prohibitions. 2. prohibit: the Prohibitions MUST override the Permissions. 3. invalid: the entire Policy MUST be void if any conflict is detected. If the conflict property is not explicitly set, the default of invalid will be used.",
   "type": "string",
   "enum": [
