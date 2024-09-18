@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "#RightOperandReference",
+  "title": "RightOperandReference",
+  "description": "The rightOperandReference represents an IRI that MUST be de-referenced first to obtain the actual value of the rightOperand. A rightOperandReference is used in cases where the value of the rightOperand MUST be obtained from dereferencing an IRI first.",
+  "oneOf": [
+    {
+      "$ref": "IRI.schema.json#IRI"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "IRI.schema.json#IRI"
+      }
+    }
+  ]
+}
