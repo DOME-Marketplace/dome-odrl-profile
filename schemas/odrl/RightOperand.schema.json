@@ -2,19 +2,41 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "#RightOperand",
   "title": "RightOperand",
-  "description": "",
-  "type": "object",
-  "required": [
-    "id"
-  ],
-  "properties": {
-    "id": {
-      "$ref": "RightOperandValue.schema.json#RightOperandValue"
-    }
-  },
-  "allOf": [
+  "description": "The rightOperand property values are defined as instances of the RightOperand class, or IRIs, or Literal values. The rightOperand is the value of the Constraint that is to be compared to the leftOperand.",
+  "oneOf": [
+    {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "RightOperandValue.schema.json#RightOperandValue"
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "https://tmforum-rand.github.io/schemas/Common/EntityRef.schema.json#EntityRef"
+        }
+      ]
+    },
+    {
+      "$ref": "https://tmforum-rand.github.io/schemas/Common/Entity.schema.json#Entity"
+    },
     {
       "$ref": "https://tmforum-rand.github.io/schemas/Common/EntityRef.schema.json#EntityRef"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "https://tmforum-rand.github.io/schemas/Common/Entity.schema.json#Entity"
+      }
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "https://tmforum-rand.github.io/schemas/Common/EntityRef.schema.json#EntityRef"
+      }
     }
   ]
 }

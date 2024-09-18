@@ -32,35 +32,7 @@
       "description": "A Constraint MUST have either one rightOperand property value of type literal, or IRI, or RightOperand; or for set-based operators; list of literals, or list of IRIs, or list of RightOperands;",
       "properties": {
         "rightOperand": {
-          "oneOf": [
-            {
-              "$ref": "https://tmforum-rand.github.io/schemas/Common/Entity.schema.json#Entity"
-            },
-            {
-              "$ref": "https://tmforum-rand.github.io/schemas/Common/EntityRef.schema.json#EntityRef"
-            },
-            {
-              "$ref": "RightOperand.schema.json#RightOperand"
-            },
-            {
-              "type": "array",
-              "items": {
-                "$ref": "https://tmforum-rand.github.io/schemas/Common/Entity.schema.json#Entity"
-              }
-            },
-            {
-              "type": "array",
-              "items": {
-                "$ref": "https://tmforum-rand.github.io/schemas/Common/EntityRef.schema.json#EntityRef"
-              }
-            },
-            {
-              "type": "array",
-              "items": {
-                "$ref": "RightOperand.schema.json#RightOperand"
-              }
-            }
-          ]
+          "$ref": "RightOperand.schema.json#RightOperand"
         }
       }
     },
@@ -68,17 +40,7 @@
       "description": "or one rightOperandReference property value of type IRI; or for set-based operators; list of IRIs; for a reference to a right operand value.",
       "properties": {
         "rightOperandReference": {
-          "oneOf": [
-            {
-              "$ref": "IRI.schema.json#IRI"
-            },
-            {
-              "type": "array",
-              "items": {
-                "$ref": "IRI.schema.json#IRI"
-              }
-            }
-          ]
+          "$ref": "RightOperandReference.schema.json#RightOperandReference"
         }
       }
     }
