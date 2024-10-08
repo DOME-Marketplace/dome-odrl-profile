@@ -2,7 +2,8 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "#GeographicAddressRefOrValue",
   "title": "GeographicAddressRefOrValue",
-  "description": "",
+  "description": "This reference or value is meant as a filter for comparison against other geographic entities.",
+  "$comment": "If the geographic address only partially defines attributes, all geographic entities that share this attributes should match this value.",
   "type": "object",
   "allOf": [
     {
