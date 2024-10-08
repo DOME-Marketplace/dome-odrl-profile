@@ -2,10 +2,21 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "#CustomerRestriction",
   "title": "CustomerRestriction",
-  "description": "",
+  "description": "A term definition that collects all attributes, which specifies restrictions on a product offering for customer groups.",
+  "$comment": "The enforcement of this term can only be done by the offering marketplace. It should prevent customers to request offerings that are not meant for them. Public visibility is not restricted by this.",
   "type": "object",
   "properties": {
     "permittedCustomerRegion": {
+      "description": "A list of well defined regions, e.g. countries, where the provider of an offering only can supply the associated service or product and therefore only wants requests to come from corresponding customers.",
+      "$comment": "The supplied physical address of the customer should be used for comparison. This could very well mean matching geographic boundaries. Because this property is about availability of services and products, the target address for the product should be used in favor of the actual address of the customer or the billing address.",
+      "type": "array",
+      "items": {
+        "$ref": "GeographicAddressRefOrValue.schema.json#GeographicAddressRefOrValue"
+      }
+    },
+    "prohibitedCustomerRegion": {
+      "description": "A list of well defined regions, e.g. countries, where the provider of an offering cannot supply the associated service or product and therefore does not want requests to come from corresponding customers.",
+      "$comment": "The supplied physical address of the customer should be used for comparison. This could very well mean matching geographic boundaries. Because this property is about availability of services and products, the target address for the product should be used in favor of the actual address of the customer or the billing address.",
       "type": "array",
       "items": {
         "$ref": "GeographicAddressRefOrValue.schema.json#GeographicAddressRefOrValue"
