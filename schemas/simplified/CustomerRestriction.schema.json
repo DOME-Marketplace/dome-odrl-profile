@@ -5,7 +5,14 @@
   "description": "A term definition that collects all attributes, which specifies restrictions on product- and offering details for customer groups.",
   "$comment": "The enforcement of this term can only be done by the offering marketplace. It should prevent data about the product to be leaked to non authorized customers.",
   "type": "object",
+  "required": [
+    "@type"
+  ],
   "properties": {
+    "@type": {
+      "type": "string",
+      "const": "CustomerRestriction"
+    },
     "hiddenProperty": {
       "description": "A list of all the properties of a product offering that should not be visible to customers whatsoever, even if those attributes are necessary for the marketplace.",
       "$comment": "In many cases, the unconditional restriction of property visibility can be solved by not including the data in the offering. The protection of potential personal information is important nonetheless, therefore this feature should be available for future use cases.",
