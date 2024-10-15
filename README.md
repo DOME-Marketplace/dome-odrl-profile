@@ -21,6 +21,7 @@
 - [~~Policy Use Cases~~](docs/policy-use-cases.md)
 - [Catalogue visibility control](docs/catalogue-visibility-control.md)
   - [Use cases](docs/catalogue-visibility-control.md#use-cases)
+- [Policy Evaluation Strategy](docs/policy-evaluation-strategy.md)
 
 ## Schemas
 
