@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "#ProductRestriction",
+  "title": "ProductRestriction",
+  "description": "A term definition that collects all attributes, which specifies restrictions on a product itself.",
+  "$comment": "The enforcement of this term can only be done by the offering marketplace. It should prevent customers to contract offerings that cannot be supplied to them. Visibility is not restricted by this per se and enforcement of this term is not critical, because the provider can always deny a product request.",
+  "type": "object",
+  "properties": {
+    "availableRegion": {
+      "description": "A list of well defined regions, e.g. countries, where the provider of an offering only can supply the associated service or product.",
+      "$comment": "The supplied physical address of the customer could be used for comparison. This could very well mean matching geographic boundaries. Because this property is about availability of services and products, the target address for the product should be used in favor of the actual address of the customer or the billing address.",
+      "type": "array",
+      "items": {
+        "$ref": "GeographicAddressRefOrValue.schema.json#GeographicAddressRefOrValue"
+      }
+    },
+    "unavailableRegion": {
+      "description": "A list of well defined regions, e.g. countries, where the provider of an offering cannot supply the associated service or product.",
+      "$comment": "The supplied physical address of the customer could be used for comparison. This could very well mean matching geographic boundaries. Because this property is about availability of services and products, the target address for the product should be used in favor of the actual address of the customer or the billing address.",
+      "type": "array",
+      "items": {
+        "$ref": "GeographicAddressRefOrValue.schema.json#GeographicAddressRefOrValue"
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "https://tmforum-rand.github.io/schemas/Product/ProductOfferingTerm.schema.json#ProductOfferingTerm"
+    }
+  ]
+}

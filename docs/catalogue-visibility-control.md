@@ -114,9 +114,22 @@
 
 ```json
 // Simplified Term
+// (if it is about restricting customers, because of legal reasons)
 {
   "@type": "CustomerRestriction",
+  "authenticatedOnly": true,
   "permittedCustomerRegion": [
+    { "id": "urn:ngsi-ld:country:spain" }
+  ]
+}
+```
+
+```json
+// Simplified Term
+// (if it is about restricting contracting, because of availability reasons)
+{
+  "@type": "ProductRestriction",
+  "availableRegion": [
     { "id": "urn:ngsi-ld:country:spain" }
   ]
 }
@@ -151,8 +164,10 @@
 
 ```json
 // Simplified Term
+// (with the EU as conglomerate region)
 {
   "@type": "CustomerRestriction",
+  "authenticatedOnly": true,
   "permittedCustomerRegion": [
     { "id": "urn.ngsi-ld:country-group:europe" }
   ]
@@ -161,8 +176,10 @@
 
 ```json
 // Simplified Term
+// (with each individual EU country)
 {
   "@type": "CustomerRestriction",
+  "authenticatedOnly": true,
   "permittedCustomerRegion": [
     { "id": "urn.ngsi-ld:country:AT" },
     { "id": "urn.ngsi-ld:country:BE" },
@@ -227,6 +244,7 @@
 // Simplified Term
 {
   "@type": "CustomerRestriction",
+  "authenticatedOnly": true,
   "permittedCustomerRegion": [
     {
       "geographicLocation": {
@@ -278,7 +296,7 @@
 ```json
 // Simplified Term
 {
-  "@type": "VisibilityRestriction",
+  "@type": "CustomerRestriction",
   "hiddenProperty": [
     "productOfferingPrice"
   ]
@@ -292,7 +310,7 @@
 ```json
 // Simplified Term
 {
-  "@type": "VisibilityRestriction",
+  "@type": "CustomerRestriction",
   "hiddenProperty": [
     "productOfferingPrice"
   ]
@@ -305,7 +323,7 @@
 ```json
 // Simplified Term
 {
-  "@type": "VisibilityRestriction",
+  "@type": "CustomerRestriction",
   "hiddenProperty": [
     "productOfferingPrice"
   ]
