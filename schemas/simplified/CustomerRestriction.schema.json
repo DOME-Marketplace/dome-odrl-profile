@@ -2,21 +2,37 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "#CustomerRestriction",
   "title": "CustomerRestriction",
-  "description": "A term definition that collects all attributes, which specifies restrictions on a product offering for customer groups.",
-  "$comment": "The enforcement of this term can only be done by the offering marketplace. It should prevent customers to request offerings that are not meant for them. Public visibility is not restricted by this.",
+  "description": "A term definition that collects all attributes, which specifies restrictions on product- and offering details for customer groups.",
+  "$comment": "The enforcement of this term can only be done by the offering marketplace. It should prevent data about the product to be leaked to non authorized customers.",
   "type": "object",
   "properties": {
+    "hiddenProperty": {
+      "description": "A list of all the properties of a product offering that should not be visible to customers whatsoever, even if those attributes are necessary for the marketplace.",
+      "$comment": "In many cases, the unconditional restriction of property visibility can be solved by not including the data in the offering. The protection of potential personal information is important nonetheless, therefore this feature should be available for future use cases.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "productOfferingPrice"
+        ]
+      }
+    },
+    "authenticatedOnly": {
+      "description": "This property decides whether an offering should be visible to non authenticated customers at all. It also controls if further restrictions on the customer can be applied.",
+      "$comment": "If truthy, the associated offering must not be displayed publicly. If falsy or missing, all further customer restriction might not be able to be enforced.",
+      "type": "boolean"
+    },
     "permittedCustomerRegion": {
-      "description": "A list of well defined regions, e.g. countries, where the provider of an offering only can supply the associated service or product and therefore only wants requests to come from corresponding customers.",
-      "$comment": "The supplied physical address of the customer should be used for comparison. This could very well mean matching geographic boundaries. Because this property is about availability of services and products, the target address for the product should be used in favor of the actual address of the customer or the billing address.",
+      "description": "A list of well defined regions, e.g. countries, where a provider of an offering wants to publish.",
+      "$comment": "The supplied physical address of the customer should be used for comparison. This could very well mean matching geographic boundaries. This is not about the current physical location of the user, but about the address of the contracting party, e.g. the company.",
       "type": "array",
       "items": {
         "$ref": "GeographicAddressRefOrValue.schema.json#GeographicAddressRefOrValue"
       }
     },
     "prohibitedCustomerRegion": {
-      "description": "A list of well defined regions, e.g. countries, where the provider of an offering cannot supply the associated service or product and therefore does not want requests to come from corresponding customers.",
-      "$comment": "The supplied physical address of the customer should be used for comparison. This could very well mean matching geographic boundaries. Because this property is about availability of services and products, the target address for the product should be used in favor of the actual address of the customer or the billing address.",
+      "description": "A list of well defined regions, e.g. countries, where the provider of an offering do not want to publish.",
+      "$comment": "The supplied physical address of the customer should be used for comparison. This could very well mean matching geographic boundaries. This is not about the current physical location of the user, but about the address of the contracting party, e.g. the company.",
       "type": "array",
       "items": {
         "$ref": "GeographicAddressRefOrValue.schema.json#GeographicAddressRefOrValue"

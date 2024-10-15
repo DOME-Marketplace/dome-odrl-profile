@@ -30,7 +30,7 @@
     - [MarketplaceRef](schemas/simplified/MarketplaceRef.schema.json)
     - [GeographicAddressRefOrValue](schemas/simplified/GeographicAddressRefOrValue.schema.json)
   - [CustomerRestriction](schemas/simplified/CustomerRestriction.schema.json)
-  - [VisibilityRestriction](schemas/simplified/VisibilityRestriction.schema.json)
+  - [ProductRestriction](schemas/simplified/ProductRestriction.schema.json)
 - **ODRL**
   - [Policy](schemas/odrl/Policy.schema.json)
     - [IRI](schemas/odrl/IRI.schema.json)
