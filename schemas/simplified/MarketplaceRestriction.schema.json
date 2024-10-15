@@ -5,7 +5,14 @@
   "description": "A term definition that collects all attributes, which specifies restrictions on a product offering for whole marketplaces.",
   "$comment": "The enforcement of this term should ideally be done by the source marketplace before the offering gets replicated to another marketplace.",
   "type": "object",
+  "required": [
+    "@type"
+  ],
   "properties": {
+    "@type": {
+      "type": "string",
+      "const": "MarketplaceRestriction"
+    },
     "permittedMarketplace": {
       "description": "A list of marketplaces that are exclusively permitted to publish this offering. If no marketplace is specified, the offering is generally permitted everywhere, except when there are specifically prohibited marketplaces.",
       "$comment": "The identifier of the destination marketplace for the replication should be used for comparison.",
