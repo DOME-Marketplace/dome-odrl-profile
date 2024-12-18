@@ -14,10 +14,5 @@
       "format": "uri-reference",
       "description": "Unique identifier of a related marketplace."
     }
-  },
-  "allOf": [
-    {
-      "$ref": "https://tmforum-rand.github.io/schemas/Common/EntityRef.schema.json#EntityRef"
-    }
-  ]
+  }
 }
