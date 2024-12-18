@@ -45,10 +45,5 @@
         "$ref": "CountryCode.schema.json#CountryCode"
       }
     }
-  },
-  "allOf": [
-    {
-      "$ref": "https://tmforum-rand.github.io/schemas/Product/ProductOfferingTerm.schema.json#ProductOfferingTerm"
-    }
-  ]
+  }
 }
