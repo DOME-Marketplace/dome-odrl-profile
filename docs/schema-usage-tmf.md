@@ -4,7 +4,7 @@ In order to extend entities in TMForum, the [```@schemaLocation```](https://gith
 
 In DOME this will be use for:
 
-* extending the [ProductOfferingTerm](https://github.com/tmforum-rand/schemas/blob/candidates/Product/ProductOfferingTerm.schema.json) to replication-restrictions. The schema is located at [MarketplaceReplicationRestriction](../schemas/simplified/MarketplaceReplicationRestriction.schema.json)
+* extending the [ProductOfferingTerm](https://github.com/tmforum-rand/schemas/blob/candidates/Product/ProductOfferingTerm.schema.json) to replication-restrictions. The schema is located at [OperatorReplicationRestriction](../schemas/simplified/OperatorReplicationRestriction.schema.json)
 
 ```shell
     curl -X POST  http://<TMFORUM_API>/tmf-api/productCatalogManagement/v4/productOffering
@@ -13,20 +13,20 @@ In DOME this will be use for:
                 "description": "Product Offering with a restriction.",
                 "productOfferingTerm": [
                     { 
-                        "@type": "MarketplaceRestriction",
-                        "permittedMarketplace": [
+                        "@type": "OperatorRestriction",
+                        "permittedOperator": [
                         {
-                            "id": "did:web:mymarketplace.org"
+                            "id": "did:web:myOperator.org"
                         }
                         ],
-                        "prohibitedMarketplace": [
+                        "prohibitedOperator": [
                         {
                             "id": "did:web:the-competitor.org"
                         }
                         ],
                         "permittedLegalRegion": ["DE", "AU"],
                         "prohibitedLegalRegion": ["FR"],
-                        "@schemaLocation": "https://raw.githubusercontent.com/DOME-Marketplace/dome-odrl-profile/refs/heads/replication-restriction/schemas/simplified/MarketplaceReplicationRestriction.schema.json"
+                        "@schemaLocation": "https://raw.githubusercontent.com/DOME-Marketplace/dome-odrl-profile/refs/heads/replication-restriction/schemas/simplified/OperatorReplicationRestriction.schema.json"
                     }
                 ]
             }'
