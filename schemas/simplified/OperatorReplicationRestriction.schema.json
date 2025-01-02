@@ -13,7 +13,7 @@
       "type": "string",
       "const": "MarketplaceRestriction"
     },
-    "permittedMarketplace": {
+    "permittedOperator": {
       "description": "A list of marketplaces that are exclusively permitted to publish this offering. If no marketplace is specified, the offering is generally permitted everywhere, except when there are specifically prohibited marketplaces.",
       "$comment": "The identifier of the destination marketplace for the replication should be used for comparison.",
       "type": "array",
@@ -21,7 +21,7 @@
         "$ref": "MarketplaceRef.schema.json#MarketplaceRef"
       }
     },
-    "prohibitedMarketplace": {
+    "prohibitedOperator": {
       "description": "A list of all marketplaces that are specifically prohibited to publish this offering.",
       "$comment": "The identifier of the destination marketplace for the replication should be used for comparison.",
       "type": "array",
