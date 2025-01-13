@@ -1,9 +1,9 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "#MarketplaceRef",
-  "title": "MarketplaceRef",
-  "description": "This reference should always identify a specific marketplace.",
-  "$comment": "Generally, the marketplace id is enough for equality comparison.",
+  "$id": "#OperatorRef",
+  "title": "OperatorRef",
+  "description": "This reference should always identify a specific access node operator.",
+  "$comment": "Generally, the operators id is enough for equality comparison.",
   "type": "object",
   "required": [
     "id"
@@ -12,7 +12,7 @@
     "id": {
       "type": "string",
       "format": "uri-reference",
-      "description": "Unique identifier of a related marketplace."
+      "description": "Unique identifier of a related access node operator."
     }
   }
 }

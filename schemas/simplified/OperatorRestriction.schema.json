@@ -1,9 +1,9 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "#MarketplaceRestriction",
-  "title": "MarketplaceRestriction",
-  "description": "A term definition that collects all attributes, which specifies restrictions on a product offering for whole marketplaces.",
-  "$comment": "The enforcement of this term should ideally be done by the source marketplace before the offering gets replicated to another marketplace.",
+  "$id": "#OperatorRestriction",
+  "title": "OperatorRestriction",
+  "description": "A term definition that collects all attributes, which specifies restrictions on a product offering for access node operators.",
+  "$comment": "The enforcement of this term should ideally be done by the source operator before the offering gets replicated to another operator.",
   "type": "object",
   "required": [
     "@type"
@@ -11,35 +11,35 @@
   "properties": {
     "@type": {
       "type": "string",
-      "const": "MarketplaceRestriction"
+      "const": "OperatorRestriction"
     },
-    "permittedMarketplace": {
-      "description": "A list of marketplaces that are exclusively permitted to publish this offering. If no marketplace is specified, the offering is generally permitted everywhere, except when there are specifically prohibited marketplaces.",
-      "$comment": "The identifier of the destination marketplace for the replication should be used for comparison.",
+    "permittedOperator": {
+      "description": "A list of operators that are exclusively permitted to use, e.g. publish, this offering. If no operator is specified, the offering is generally permitted everywhere, except when there are specifically prohibited operators.",
+      "$comment": "The identifier of the destination operator for the replication should be used for comparison.",
       "type": "array",
       "items": {
-        "$ref": "MarketplaceRef.schema.json#MarketplaceRef"
+        "$ref": "OperatorRef.schema.json#OperatorRef"
       }
     },
-    "prohibitedMarketplace": {
-      "description": "A list of all marketplaces that are specifically prohibited to publish this offering.",
-      "$comment": "The identifier of the destination marketplace for the replication should be used for comparison.",
+    "prohibitedOperator": {
+      "description": "A list of all operators that are specifically prohibited to use, e.g. publish, this offering.",
+      "$comment": "The identifier of the destination operator for the replication should be used for comparison.",
       "type": "array",
       "items": {
-        "$ref": "MarketplaceRef.schema.json#MarketplaceRef"
+        "$ref": "OperatorRef.schema.json#OperatorRef"
       }
     },
     "permittedLegalRegion": {
-      "description": "A list of well defined regions, e.g. countries, where only those marketplace that fall under legal jurisdiction of that region as permitted to publish the offering. If no region is specified, the offering is generally permitted everywhere, except when there are specifically prohibited regions.",
-      "$comment": "The supplied legal region of the destination marketplace should be used for comparison. This could also mean matching a sub-region of this property. Every marketplace that does not supply its legal region is per se prohibited.",
+      "description": "A list of well defined regions, e.g. countries, where only those operators that fall under legal jurisdiction of that region are permitted to use, e.g. publish, the offering. If no region is specified, the offering is generally permitted everywhere, except when there are specifically prohibited regions.",
+      "$comment": "The supplied legal region of the destination operator should be used for comparison. This could also mean matching a sub-region of this property. Every operator that does not supply its legal region is per se prohibited.",
       "type": "array",
       "items": {
         "$ref": "GeographicAddressRefOrValue.schema.json#GeographicAddressRefOrValue"
       }
     },
     "prohibitedLegalRegion": {
-      "description": "A list of well defined regions, e.g. countries, where every marketplace that falls under legal jurisdiction of that region as prohibited to publish the offering.",
-      "$comment": "The supplied legal region of the destination marketplace should be used for comparison. This could also mean matching a sub-region of this property. Every marketplace that does not supply its legal region is per se prohibited.",
+      "description": "A list of well defined regions, e.g. countries, where every operator that falls under legal jurisdiction of that region is prohibited to use, e.g. publish, the offering.",
+      "$comment": "The supplied legal region of the destination operator should be used for comparison. This could also mean matching a sub-region of this property. Every operator that does not supply its legal region is per se prohibited.",
       "type": "array",
       "items": {
         "$ref": "GeographicAddressRefOrValue.schema.json#GeographicAddressRefOrValue"
