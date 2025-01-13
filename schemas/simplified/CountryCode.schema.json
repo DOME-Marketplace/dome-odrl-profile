@@ -1,8 +1,0 @@
-{
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "#CountryCode",
-  "title": "CountryCode",
-  "description": "A definition of country codes according to ISO 3166-1.",
-  "type": "string",
-  "pattern": "^([a-z]{2,3}|[0-9]{3})$"
-}
