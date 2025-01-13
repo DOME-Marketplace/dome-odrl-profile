@@ -16,7 +16,8 @@
     },
     "country": {
       "type": "string",
-      "description": "Country that the address is in."
+      "description": "Country that the address is in according to ISO 3166-1 country codes.",
+      "pattern": "^([a-z]{2,3}|[0-9]{3})$"
     },
     "stateOrProvince": {
       "type": "string",
