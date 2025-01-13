@@ -34,7 +34,7 @@
       "$comment": "The supplied legal region of the destination operator should be used for comparison. This could also mean matching a sub-region of this property. Every operator that does not supply its legal region is per se prohibited.",
       "type": "array",
       "items": {
-        "$ref": "GeographicAddressRefOrValue.schema.json#GeographicAddressRefOrValue"
+        "$ref": "GeographicAddress.schema.json#GeographicAddress"
       }
     },
     "prohibitedLegalRegion": {
@@ -42,7 +42,7 @@
       "$comment": "The supplied legal region of the destination operator should be used for comparison. This could also mean matching a sub-region of this property. Every operator that does not supply its legal region is per se prohibited.",
       "type": "array",
       "items": {
-        "$ref": "GeographicAddressRefOrValue.schema.json#GeographicAddressRefOrValue"
+        "$ref": "GeographicAddress.schema.json#GeographicAddress"
       }
     }
   },

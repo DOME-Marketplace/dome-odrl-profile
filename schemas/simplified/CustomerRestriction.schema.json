@@ -34,7 +34,7 @@
       "$comment": "The supplied physical address of the customer should be used for comparison. This could very well mean matching geographic boundaries. This is not about the current physical location of the user, but about the address of the contracting party, e.g. the company.",
       "type": "array",
       "items": {
-        "$ref": "GeographicAddressRefOrValue.schema.json#GeographicAddressRefOrValue"
+        "$ref": "GeographicAddress.schema.json#GeographicAddress"
       }
     },
     "prohibitedCustomerRegion": {
@@ -42,7 +42,7 @@
       "$comment": "The supplied physical address of the customer should be used for comparison. This could very well mean matching geographic boundaries. This is not about the current physical location of the user, but about the address of the contracting party, e.g. the company.",
       "type": "array",
       "items": {
-        "$ref": "GeographicAddressRefOrValue.schema.json#GeographicAddressRefOrValue"
+        "$ref": "GeographicAddress.schema.json#GeographicAddress"
       }
     }
   },
