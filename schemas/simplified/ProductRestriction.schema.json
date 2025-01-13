@@ -29,10 +29,5 @@
         "$ref": "GeographicAddress.schema.json#GeographicAddress"
       }
     }
-  },
-  "allOf": [
-    {
-      "$ref": "https://tmforum-rand.github.io/schemas/Product/ProductOfferingTerm.schema.json#ProductOfferingTerm"
-    }
-  ]
+  }
 }
