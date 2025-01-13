@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "#OperatorRef",
   "title": "OperatorRef",
-  "description": "This reference should always identify a specific access node operator.",
+  "description": "This reference should always identify a specific access node operator, e.g. a federated marketplace.",
   "$comment": "Generally, the operators id is enough for equality comparison.",
   "type": "object",
   "required": [
