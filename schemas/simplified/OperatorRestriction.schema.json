@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "#OperatorRestriction",
   "title": "OperatorRestriction",
-  "description": "A term definition that collects all attributes, which specifies restrictions on a product offering for access node operators.",
+  "description": "A term definition that collects all attributes, which specifies restrictions on a product offering for access node operators, e.g. marketplaces.",
   "$comment": "The enforcement of this term should ideally be done by the source operator before the offering gets replicated to another operator.",
   "type": "object",
   "required": [

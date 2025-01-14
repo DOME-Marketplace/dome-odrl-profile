@@ -1,5 +1,5 @@
 {
-  "id": "urn:ngsi-ld:product-offering:81346322-4e4e-4aed-ac06-b831077ad48f",
+  "id": "urn:ngsi-ld:product-offering:12345678-1234-5678-9abc-123456789abc",
   "name": "Product offering with restriction on operators legal region.",
   "productOfferingTerm": [
     {
