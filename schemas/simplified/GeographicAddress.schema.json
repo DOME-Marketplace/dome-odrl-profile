@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "#GeographicAddress",
+  "title": "GeographicAddress",
+  "description": "Structured textual way of describing how to find a Property in an urban area (country properties are often defined differently).",
+  "$comment": "If this entity is used as a filter, it will match all other geographic addresses with the same properties. If the geographicLocation is used, it must match inside the geo-fence.",
+  "type": "object",
+  "properties": {
+    "href": {
+      "type": "string",
+      "description": "Unique reference of the place."
+    },
+    "id": {
+      "type": "string",
+      "description": "Unique identifier of the place."
+    },
+    "country": {
+      "type": "string",
+      "description": "Country that the address is in according to ISO 3166-1 country codes.",
+      "pattern": "^([a-z]{2,3}|[0-9]{3})$"
+    },
+    "stateOrProvince": {
+      "type": "string",
+      "description": "The State or Province that the address is in."
+    },
+    "city": {
+      "type": "string",
+      "description": "City that the address is in."
+    },
+    "postcode": {
+      "type": "string",
+      "description": "Descriptor for a postal delivery area, used to speed and simplify the delivery of mail (also know as zipcode)."
+    },
+    "streetName": {
+      "type": "string",
+      "description": "Name of the street."
+    },
+    "streetNr": {
+      "type": "string",
+      "description": "Number identifying a specific property on a public street."
+    },
+    "geographicLocation": {
+      "$ref": "GeographicLocation.schema.json#GeographicLocation"
+    }
+  }
+}

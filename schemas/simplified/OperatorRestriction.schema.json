@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "#OperatorRestriction",
+  "title": "OperatorRestriction",
+  "description": "A term definition that collects all attributes, which specifies restrictions on a product offering for access node operators, e.g. marketplaces.",
+  "$comment": "The enforcement of this term should ideally be done by the source operator before the offering gets replicated to another operator.",
+  "type": "object",
+  "required": [
+    "@type"
+  ],
+  "properties": {
+    "@type": {
+      "type": "string",
+      "const": "OperatorRestriction"
+    },
+    "permittedOperator": {
+      "description": "A list of operators that are exclusively permitted to use, e.g. publish, this offering. If no operator is specified, the offering is generally permitted everywhere, except when there are specifically prohibited operators.",
+      "$comment": "The identifier of the destination operator for the replication should be used for comparison.",
+      "type": "array",
+      "items": {
+        "$ref": "OperatorRef.schema.json#OperatorRef"
+      }
+    },
+    "prohibitedOperator": {
+      "description": "A list of all operators that are specifically prohibited to use, e.g. publish, this offering.",
+      "$comment": "The identifier of the destination operator for the replication should be used for comparison.",
+      "type": "array",
+      "items": {
+        "$ref": "OperatorRef.schema.json#OperatorRef"
+      }
+    },
+    "permittedLegalRegion": {
+      "description": "A list of well defined regions, e.g. countries, where only those operators that fall under legal jurisdiction of that region are permitted to use, e.g. publish, the offering. If no region is specified, the offering is generally permitted everywhere, except when there are specifically prohibited regions.",
+      "$comment": "The supplied legal region of the destination operator should be used for comparison. This could also mean matching a sub-region of this property. Every operator that does not supply its legal region is per se prohibited.",
+      "type": "array",
+      "items": {
+        "$ref": "GeographicAddress.schema.json#GeographicAddress"
+      }
+    },
+    "prohibitedLegalRegion": {
+      "description": "A list of well defined regions, e.g. countries, where every operator that falls under legal jurisdiction of that region is prohibited to use, e.g. publish, the offering.",
+      "$comment": "The supplied legal region of the destination operator should be used for comparison. This could also mean matching a sub-region of this property. Every operator that does not supply its legal region is per se prohibited.",
+      "type": "array",
+      "items": {
+        "$ref": "GeographicAddress.schema.json#GeographicAddress"
+      }
+    }
+  }
+}

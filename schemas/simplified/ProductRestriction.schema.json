@@ -18,7 +18,7 @@
       "$comment": "The supplied physical address of the customer could be used for comparison. This could very well mean matching geographic boundaries. Because this property is about availability of services and products, the target address for the product should be used in favor of the actual address of the customer or the billing address.",
       "type": "array",
       "items": {
-        "$ref": "GeographicAddressRefOrValue.schema.json#GeographicAddressRefOrValue"
+        "$ref": "GeographicAddress.schema.json#GeographicAddress"
       }
     },
     "unavailableRegion": {
@@ -26,13 +26,8 @@
       "$comment": "The supplied physical address of the customer could be used for comparison. This could very well mean matching geographic boundaries. Because this property is about availability of services and products, the target address for the product should be used in favor of the actual address of the customer or the billing address.",
       "type": "array",
       "items": {
-        "$ref": "GeographicAddressRefOrValue.schema.json#GeographicAddressRefOrValue"
+        "$ref": "GeographicAddress.schema.json#GeographicAddress"
       }
     }
-  },
-  "allOf": [
-    {
-      "$ref": "https://tmforum-rand.github.io/schemas/Product/ProductOfferingTerm.schema.json#ProductOfferingTerm"
-    }
-  ]
+  }
 }

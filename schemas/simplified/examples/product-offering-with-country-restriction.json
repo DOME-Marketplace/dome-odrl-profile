@@ -1,0 +1,21 @@
+{
+  "id": "urn:ngsi-ld:product-offering:12345678-1234-5678-9abc-123456789abc",
+  "name": "Product offering with restriction on operators legal region.",
+  "productOfferingTerm": [
+    {
+      "@type": "OperatorRestriction",
+      "@schemaLocation": "../OperatorRestriction.schema.json",
+      "permittedLegalRegion": [
+        {
+          "id": "urn:iso-3166-1:DE"
+        },
+        {
+          "href": "https://dome-marketplace.eu/countries/IT"
+        },
+        {
+          "country": "FR"
+        }
+      ]
+    }
+  ]
+}
