@@ -22,6 +22,7 @@
 - [Catalogue visibility control](docs/catalogue-visibility-control.md)
   - [Use cases](docs/catalogue-visibility-control.md#use-cases)
 - [Policy Evaluation Strategy](docs/policy-evaluation-strategy.md)
+- [Schema Extension of Entities in TMForum](docs/tm-forum-schema-extension.md)
 
 ## Schemas
 

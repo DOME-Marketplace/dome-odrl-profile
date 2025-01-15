@@ -31,7 +31,7 @@ Content-Type: application/json
   "productOfferingTerm": [
     {
       "@type": "OperatorRestriction",
-      "@schemaLocation": "https://raw.githubusercontent.com/DOME-Marketplace/dome-odrl-profile/refs/heads/replication-restriction/schemas/simplified/OperatorRestriction.schema.json",
+      "@schemaLocation": "https://raw.githubusercontent.com/DOME-Marketplace/dome-odrl-profile/refs/heads/main/schemas/simplified/OperatorRestriction.schema.json",
       "permittedLegalRegion": [
         {
           "country": "DEU"
