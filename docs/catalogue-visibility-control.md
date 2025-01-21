@@ -15,7 +15,7 @@
 // Simplified Term
 {
   "@type": "MarketplaceRestriction",
-  "prohibitedMarketplace": [
+  "prohibitedOperator": [
     { "id": "urn:ngsi-ld:marketplace:uuid-of-aruba-marketplace" }
   ]
 }
@@ -85,7 +85,7 @@
 // Simplified Term
 {
   "@type": "MarketplaceRestriction",
-  "prohibitedMarketplace": [
+  "prohibitedOperator": [
     { "id": "urn:ngsi-ld:marketplace:uuid-of-competitors-marketplace" }
   ]
 }
