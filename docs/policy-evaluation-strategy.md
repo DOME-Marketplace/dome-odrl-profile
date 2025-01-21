@@ -8,7 +8,7 @@
 
 The different term types of the simplified approach are used for different scenarios,
 therefore only one term type must be used at a specific enforcement point,
-e.g. at replication of offerings only the marketplace restrictions are relevant.
+e.g. at replication of offerings only the operator restrictions are relevant.
 
 > There can be as many terms on a product offering as needed.
 > Usually, multiple terms are used for different term types,
@@ -20,13 +20,13 @@ e.g. at replication of offerings only the marketplace restrictions are relevant.
 stateDiagram-v2
   [*] --> Q1_1
 
-  Q1_1 : Does a marketplace try to replicate an offering?
+  Q1_1 : Does an operator try to replicate an offering?
   Q1_1 --> Q1_2 : Yes
   Q1_1 --> Q2_1 : No
-  Q1_2 : Are there any marketplace restrictions applied to that offering?
+  Q1_2 : Are there any operator restrictions applied to that offering?
   Q1_2 --> Q1_3 : Yes
   Q1_2 --> VALID : No
-  Q1_3 : Does all marketplace restrictions evaluate to be valid?
+  Q1_3 : Does all operator restrictions evaluate to be valid?
   Q1_3 --> VALID : Yes
   Q1_3 --> INVALID : No
 
@@ -57,43 +57,43 @@ stateDiagram-v2
   classDef ErrorEvent fill:darkred,color:white
 ```
 
-### Marketplace Restriction
+### Operator Restriction
 
-A term definition that collects all attributes,
-which specifies restrictions on a product offering for whole marketplaces.
+A term definition that collects all attributes, 
+which specifies restrictions on a product offering for access node operators, e.g. marketplaces.
 
-> The enforcement of this term should ideally be done by the source marketplace
-> before the offering gets replicated to another marketplace.
+> The enforcement of this term should ideally be done by the source operator 
+> before the offering gets replicated to another operator.
 
 ```mermaid
 stateDiagram-v2
   [*] --> Q1_1
 
-  Q1_1 : Are there any prohibited marketplaces listed in the policy?
+  Q1_1 : Are there any prohibited operators listed in the policy?
   Q1_1 --> Q1_2 : Yes
   Q1_1 --> Q2_1 : No
-  Q1_2 : Is the destination marketplace in the list of prohibited marketplaces?
+  Q1_2 : Is the destination operator in the list of prohibited operators?
   Q1_2 --> INVALID : Yes
   Q1_2 --> Q2_1 : No
 
-  Q2_1 : Are there any permitted marketplaces listed in the policy?
+  Q2_1 : Are there any permitted operators listed in the policy?
   Q2_1 --> Q2_2 : Yes
   Q2_1 --> Q3_1 : No
-  Q2_2 : Is the destination marketplaces in the list of permitted marketplaces?
+  Q2_2 : Is the destination operator in the list of permitted operators?
   Q2_2 --> Q3_1 : Yes
   Q2_2 --> INVALID : No
 
   Q3_1 : Are there any legally prohibited regions listed in the policy?
   Q3_1 --> Q3_2 : Yes
   Q3_1 --> Q4_1 : No
-  Q3_2 : Is the legal entity of the destination marketplace inside the listed prohibited region?
+  Q3_2 : Is the legal entity of the destination operator inside the listed prohibited region?
   Q3_2 --> INVALID : Yes
   Q3_2 --> Q4_1 : No
 
   Q4_1 : Are there any legally permitted regions listed in the policy?
   Q4_1 --> Q4_2 : Yes
   Q4_1 --> VALID : No
-  Q4_2 : Is the legal entity of the destination marketplace inside the listed permitted region?
+  Q4_2 : Is the legal entity of the destination operator inside the listed permitted region?
   Q4_2 --> VALID : Yes
   Q4_2 --> INVALID : No
 

@@ -27,9 +27,11 @@
 ## Schemas
 
 - **Simplified**
-  - [MarketplaceRestriction](schemas/simplified/MarketplaceRestriction.schema.json)
-    - [MarketplaceRef](schemas/simplified/MarketplaceRef.schema.json)
-    - [GeographicAddressRefOrValue](schemas/simplified/GeographicAddressRefOrValue.schema.json)
+  - [OperatorRestriction](schemas/simplified/OperatorRestriction.schema.json)
+    - [OperatorRef](schemas/simplified/OperatorRef.schema.json)
+    - [GeographicAddress](schemas/simplified/GeographicAddress.schema.json)
+      - [Example: _Product offering with restriction on operators legal region._](schemas/simplified/examples/product-offering-with-country-restriction.json)
+    - [GeographicLocation](schemas/simplified/GeographicLocation.schema.json)
   - [CustomerRestriction](schemas/simplified/CustomerRestriction.schema.json)
   - [ProductRestriction](schemas/simplified/ProductRestriction.schema.json)
 - **ODRL**
