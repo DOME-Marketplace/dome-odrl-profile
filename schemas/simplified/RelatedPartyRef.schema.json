@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "#RelatedPartyRef",
+    "title": "RelatedPartyRef",
+    "description": "This reference contains a list of related party references.",
+    "type": "object",
+    "properties": {
+      "relatedParty": {
+        "type": "array",
+        "description": "List of references to related parties.",
+        "items": {
+            "required": ["id", "href"],
+            "type": "object",
+            "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "href": {
+                  "type": "string"
+                },
+                "role": {
+                  "type": "string"
+                } 
+            }
+        }
+      }
+    }
+  }
