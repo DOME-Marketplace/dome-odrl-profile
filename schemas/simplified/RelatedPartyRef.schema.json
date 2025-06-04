@@ -15,6 +15,9 @@
                 "id": {
                   "type": "string"
                 },
+                "did": {
+                  "type": "string"
+                },
                 "href": {
                   "type": "string"
                 },
