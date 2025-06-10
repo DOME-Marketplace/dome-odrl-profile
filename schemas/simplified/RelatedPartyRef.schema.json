@@ -16,16 +16,41 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "string",
+            "description": "Unique identifier of a related entity."
           },
           "did": {
-            "type": "string"
+            "type": "string",
+            "description": "eIDAS identifier of a related entity in did:elsi format."
           },
           "href": {
-            "type": "string"
+            "type": "string",
+            "description": "Reference of the related entity."
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the related entity."
           },
           "role": {
-            "type": "string"
+            "type": "string",
+            "description": "Role played by the related party"
+          },
+          "@baseType": {
+            "type": "string",
+            "description": "When sub-classing, this defines the super-class"
+          },
+          "@schemaLocation": {
+            "type": "string",
+            "description": "A URI to a JSON-Schema file that defines additional attributes and relationships",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "When sub-classing, this defines the sub-class entity name"
+          },
+          "@referredType": {
+            "type": "string",
+            "description": "The actual type of the target instance when needed for disambiguation."
           }
         }
       }
