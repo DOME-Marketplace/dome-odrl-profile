@@ -16,7 +16,7 @@
 		"appliedTax": {
 			"type": "array",
 			"items": {
-				"$ref": "https://github.com/tmforum-rand/schemas/blob/candidates/Customer/AppliedBillingTaxRate.schema.json#AppliedBillingTaxRate"
+				"$ref": "https://raw.githubusercontent.com/tmforum-rand/schemas/refs/heads/candidates/Customer/AppliedBillingTaxRate.schema.json#AppliedBillingTaxRate"
 			}
 		},
 		"isBilled": {
@@ -24,7 +24,7 @@
 			"description": "If isBilled = true then bill should be provided, if false then billingAccount should be provided"
 		},
 		"bill": {
-			"$ref": "https://github.com/tmforum-rand/schemas/blob/candidates/Customer/CustomerBillRef.schema.json#CustomerBillRef"
+			"$ref": "https://raw.githubusercontent.com/tmforum-rand/schemas/refs/heads/candidates/Customer/CustomerBillRef.schema.json#CustomerBillRef"
 		},
 		"date": {
 			"type": "string",
@@ -40,37 +40,37 @@
 			"description": "Name of the customer applied billing rate"
 		},
 		"periodCoverage": {
-			"$ref": "https://github.com/tmforum-rand/schemas/blob/candidates/Common/TimePeriod.schema.json#TimePeriod",
+			"$ref": "https://raw.githubusercontent.com/tmforum-rand/schemas/refs/heads/candidates/Common/TimePeriod.schema.json#TimePeriod",
 			"description": "periodCoverage for RecurringCharge (RC) indicating the RC coverage period dates for different purposes, such as RC proration, display on bill, GL reporting, etc. periodCoverage for OC start and end date will be the same"
 		},
 		"taxExcludedAmount": {
-			"$ref": "https://github.com/tmforum-rand/schemas/blob/candidates/Common/Money.schema.json#Money"
+			"$ref": "https://raw.githubusercontent.com/tmforum-rand/schemas/refs/heads/candidates/Common/Money.schema.json#Money"
 		},
 		"taxIncludedAmount": {
-			"$ref": "https://github.com/tmforum-rand/schemas/blob/candidates/Common/Money.schema.json#Money"
+			"$ref": "https://raw.githubusercontent.com/tmforum-rand/schemas/refs/heads/candidates/Common/Money.schema.json#Money"
 		},
 		"appliedBillingRateType": {
 			"type": "string",
 			"description": "Type of the applied billing rate : appliedBillingCharge (any kind of charge except taxation charges : recurringCharge, oneTimeCharge, usageCharge),  appliedBillingCredit (any kind of credit : rebate or productAlteration) or appliedPenaltyCharge (penalty charges such as late fees, payment rejection fees,...)"
 		},
 		"billingAccount": {
-			"$ref": "https://github.com/tmforum-rand/schemas/blob/candidates/Customer/BillingAccountRef.schema.json#BillingAccountRef"
+			"$ref": "https://raw.githubusercontent.com/tmforum-rand/schemas/refs/heads/candidates/Customer/BillingAccountRef.schema.json#BillingAccountRef"
 		},
 		"product": {
-			"$ref": "https://github.com/tmforum-rand/schemas/blob/candidates/Product/ProductRef.schema.json#ProductRef",
+			"$ref": "https://raw.githubusercontent.com/tmforum-rand/schemas/refs/heads/candidates/Product/ProductRef.schema.json#ProductRef",
 			"description": "Usually this information should be provided by the PRODUCT, which implies that there is a valid reference to product. In this case, this property should be empty. For all other situations, a text or structured info could be provided using this property. Regular modelling would suggest tu use the reforvalue pattern for this case. It is not choosen here because it would generate declarational dependencies which would be hard to maintain."
 		},
 		"characteristic": {
 			"type": "array",
 			"items": {
-				"$ref": "https://github.com/tmforum-rand/schemas/blob/candidates/Common/Characteristic.schema.json#Characteristic",
+				"$ref": "https://raw.githubusercontent.com/tmforum-rand/schemas/refs/heads/candidates/Common/Characteristic.schema.json#Characteristic",
 				"description": "Dynnamically needed additional information for the specific billitem, here named 'appliedCustomerBillingRate'. It should come from a catalog with the value and the schemas for the presentation on the bill"
 			}
 		},
 		"relatedParty": {
           "type": "array",
           "items": {
-            "$ref": "https://github.com/tmforum-rand/schemas/blob/candidates/EngagedParty/RelatedParty.schema.json#RelatedParty"
+            "$ref": "https://raw.githubusercontent.com/tmforum-rand/schemas/refs/heads/candidates/EngagedParty/RelatedParty.schema.json#RelatedParty"
           }
         }
 	}
