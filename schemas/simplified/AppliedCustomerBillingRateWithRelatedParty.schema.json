@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AppliedCustomerBillingRateWithRelatedParty",
+  "description": "Extension of the AppliedCustomerBillingRate with relatedParty attribute",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://github.com/tmforum-rand/schemas/blob/candidates/Customer/AppliedCustomerBillingRate.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string",
+          "const": "AppliedCustomerBillingRateWithRelatedParty"
+        },
+        "relatedParty": {
+          "type": "array",
+          "items": {
+            "$ref": "https://raw.githubusercontent.com/FIWARE/tmforum-api/refs/heads/main/extension-schemas/related-party-extension.json"
+          },
+          "description": "Related Party Extension"
+        }
+      },
+      "required": ["@type"]
+    }
+  ]
+}
